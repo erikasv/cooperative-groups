@@ -1,0 +1,12 @@
+1. No se usa una función para dar aptitud al cromosoma, se usa una matriz de pago.
+
+---------------------------------------------------------------------------------------------------------------
+
+CROMOSOMA:
+
+*Solo 1 gen, coopera o traiciona.
+	|  cop	 |  traic
+  ------|--------|-------
+  cop	|  3,3	 |  0,5
+  ------|--------|-------
+  traic	|  5,0	 |  1,1
