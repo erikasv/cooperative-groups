@@ -1,12 +1,24 @@
-1. No se usa una funciÃ³n para dar aptitud al cromosoma, se usa una matriz de pago.
+PRIMERA PARTE:
+
+1. No se usa una función para dar aptitud al cromosoma, se usa una matriz de pago.
+
+	|  cop	 |  traic
+  ------|--------|-------
+  cop	|  3,3	 |  0,5
+  ------|--------|-------
+  traic	|  5,0	 |  1,1
+  
+2. DS Wilson establece que el tamaño del grupo no importa cuando la variación de la composición del mismo sigue una distribución binomial, es decir que los tipos son organizados por algún proceso estocastico aleatoriamente. (fd > 0 para el tipo A). => Se usa la implementación de Mersenne Twister de ruby para determinar que individuo va a cada gruo, etc.
 
 ---------------------------------------------------------------------------------------------------------------
 
 CROMOSOMA:
 
 *Solo 1 gen, coopera o traiciona.
-	|  cop	 |  traic
-  ------|--------|-------
-  cop	|  3,3	 |  0,5
-  ------|--------|-------
-  traic	|  5,0	 |  1,1
+
+---------------------------------------------------------------------------------------------------------------
+
+ALGORITMO:
+
+1. Entrada del algoritmo: Cantidad de generaciones, cantidad de grupos y cantidad de individuos por grupo
+2. Selección por torneo. Reemplazo por inserción (nuevamente toca hacer torneo)
