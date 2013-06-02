@@ -25,6 +25,7 @@ class AlgoritmoGenetico
 	def correrGrupos
 		@arrGrupos.each do |grupo|
 			grupo.correr @generacionesGrupo
+			#~ QUEDE AQUÍ
 		end
 	end
 	

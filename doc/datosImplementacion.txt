@@ -15,6 +15,7 @@ PRIMERA PARTE:
 CROMOSOMA:
 
 *Solo 1 gen, coopera o traiciona.
+*DEBERÏA SUMARSE LA APTITUD DE LOS DIFERENTES ENCUENTROS CON LOS INDIVIDUOS????
 
 ---------------------------------------------------------------------------------------------------------------
 
