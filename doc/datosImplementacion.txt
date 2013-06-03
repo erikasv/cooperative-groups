@@ -10,12 +10,14 @@ PRIMERA PARTE:
   
 2. DS Wilson establece que el tamaño del grupo no importa cuando la variación de la composición del mismo sigue una distribución binomial, es decir que los tipos son organizados por algún proceso estocastico aleatoriamente. (fd > 0 para el tipo A). => Se usa la implementación de Mersenne Twister de ruby para determinar que individuo va a cada gruo, etc.
 
+3. En el ejemplo gráfico del artículo se trabaja con promedios sobre las proporciones de cada uno de los tipos con respecto a cada grupo, es decir la proporcion de a en el grupo1 y en el grupo2 es promediada, no se específica nada respecto a las cantidades como tal. El paso B de la figura 2 es erroneo el resultado de tal promedio.
+
 ---------------------------------------------------------------------------------------------------------------
 
 CROMOSOMA:
 
 *Solo 1 gen, coopera o traiciona.
-*DEBERÏA SUMARSE LA APTITUD DE LOS DIFERENTES ENCUENTROS CON LOS INDIVIDUOS????
+*DEBERÍA SUMARSE LA APTITUD DE LOS DIFERENTES ENCUENTROS CON LOS INDIVIDUOS????, creo que no, porque entonces daría problemas para asignar una aptitud a los cromosomas nuevos.
 
 ---------------------------------------------------------------------------------------------------------------
 

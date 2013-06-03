@@ -9,6 +9,9 @@ class AlgoritmoGenetico
 		@tamGrupo=tamGrupo
 		@generacionesGrupo=generacionesGrupo
 		
+		@promCooperadores=0
+		@promTraicioneros=0
+		
 		@arrGrupos=Array[cantGrupos]
 		@arrGrupos.each do |grupo|
 			grupo= Grupo.new tamGrupo
@@ -17,16 +20,20 @@ class AlgoritmoGenetico
 	end
 	
 	def correrAlgoritmo
-		generaciones.times do |i|
-			correrGrupos #Será necesario send???
+		generaciones.times
+			correrGrupos
 		end
 	end
 	
 	def correrGrupos
 		@arrGrupos.each do |grupo|
 			grupo.correr @generacionesGrupo
-			#~ QUEDE AQUÍ
+			@promCooperadores+=grupo.cantidadCooperadores
+			@promTraicioneros+=grupo.cantidadTraicioneros
 		end
+		#Promedio sobre el total de la población
+		@promCooperadores/=(cantGrupos*tamGrupo)
+		@promTraicioneros/=(cantGrupos*tamGrupo)
 	end
 	
 end
