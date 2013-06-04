@@ -11,7 +11,7 @@ class Grupo
 		@cantidadCooperadores=0.0
 		@cantidadTraicioneros=0.0
 		
-		@matrizPago=Array[[[3,3],[0,5]],[[5,0],[1,1]]] #Mas clara en los datos de la implementción
+		@matrizPago=Array[ [[3,3],[0,5]] , [[5,0],[1,1]] ] #Mas clara en los datos de la implementción
 	end
 	
 	def agregar individuo
@@ -37,7 +37,7 @@ class Grupo
 	end
 	
 	def seleccionarCromosomas
-		result=Array[]
+		result=Array.new
 		tamPool=(0.6*@tamano).to_i
 		
 		tamPool.times do

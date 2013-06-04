@@ -23,5 +23,5 @@ CROMOSOMA:
 
 ALGORITMO:
 
-1. Entrada del algoritmo: Cantidad de generaciones, cantidad de grupos y cantidad de individuos por grupo
+1. Entrada del algoritmo: Cantidad de generaciones, cantidad de grupos, cantidad de individuos por grupo y cantidad de generaciones en el grupo
 2. Selección por torneo. Reemplazo por inserción (nuevamente toca hacer torneo)
