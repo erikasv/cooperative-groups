@@ -13,7 +13,7 @@ class AlgoritmoGenetico
 		@traicioneros=Array.new
 		
 		@arrGrupos=Array.new
-		@tamGrupo.times do
+		@cantGrupos.times do
 			grupo= Grupo.new tamGrupo
 			grupo.poblar
 			@arrGrupos << grupo
