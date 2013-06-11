@@ -171,7 +171,7 @@ par}
 \backslash
 large
 \backslash
-bf marvinesv@gmail.com} 
+bf erika.suarez@correunivalle.com} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -254,7 +254,7 @@ par}
 \backslash
 large
 \backslash
-bf Ssntiago de Cali, Noviembre 13 de 2013 
+bf Ssntiago de Cali, Junio 11 de 2013 
 \backslash
 par} 
 \end_layout
@@ -569,13 +569,13 @@ Finalmente, se concluye que determinando la composición de los grupos de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename EstadoDelArte/ATheoryOfGroupSelection.png
+	filename img/EstadoDelArte/ATheoryOfGroupSelection.png
 	lyxscale 50
 	scale 50
 
@@ -781,7 +781,7 @@ ANEXOS
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "Terminados/A_Theory_of_Group_Selection,Terminados/Individual_selection_for_cooperative_group_formation,Terminados/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback"
+bibfiles "bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback"
 options "bibtotoc,IEEEtran"
 
 \end_inset

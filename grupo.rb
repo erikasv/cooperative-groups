@@ -21,7 +21,7 @@ class Grupo
 	def poblar
 		#Solo es necesario la primera vez que el algoritmo se ejecuta, 
 		#después los grupos de destruyen y se crean nuevamente pero los individuos no
-		@tamano.times
+		@tamano.times do
 			@arrCromosomas << Cromosoma.new
 		end
 	end
@@ -45,12 +45,12 @@ class Grupo
 			indv2=@arrCromosomas[@genRandom.rand(@tamano)]
 			
 			#Asignar a cada uno el puntaje de acuerdo a la matriz de pago
-			indv1.aptitud=matrizPago[indv1.decision][indv2.decision][0]
-			indv2.aptitud=matrizPago[indv1.decision][indv2.decision][1]
+			indv1.aptitud=@matrizPago[indv1.decision][indv2.decision][0]
+			indv2.aptitud=@matrizPago[indv1.decision][indv2.decision][1]
 			
 			if(indv1.aptitud>indv1.aptitud)
 				result << indv1
-			if(indv1.aptitud<indv2.aptitud)
+			elsif(indv1.aptitud<indv2.aptitud)
 				result << indv2
 			else
 				cual=@genRandom.rand(1..2)
@@ -61,46 +61,54 @@ class Grupo
 	end
 	
 	def mutarSeleccion seleccion
-		cantMutados=(0.01*seleccion.size).to_i
+		cantMutados=(0.01*seleccion.size).ceil.to_i
 		cantMutados.times do
-			cual=genRandom.rand(seleccion.size-1)
+			cual=@genRandom.rand(seleccion.size)
 			seleccion[cual].mutar # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???
 		end
 		return seleccion
 	end
 	
 	def reemplazarSeleccion seleccion
-		seleccion.size.times do
-			pos1=@genRandom.rand(@tamano)
-			pos2=@genRandom.rand(@tamano)
+		cant=seleccion.size
+		cant.times do |i|
+			pos1=@genRandom.rand(@tamano-i)
+			pos2=@genRandom.rand(@tamano-i)
+			while pos1 == pos2 do
+				pos2=@genRandom.rand(@tamano-i)
+			end
 			indv1=@arrCromosomas[pos1]
 			indv2=@arrCromosomas[pos2]
 			
 			#Asignar a cada uno el puntaje de acuerdo a la matriz de pago
-			indv1.aptitud=matrizPago[indv1.decision][indv2.decision][0]
-			indv2.aptitud=matrizPago[indv1.decision][indv2.decision][1]
+			indv1.aptitud=@matrizPago[indv1.decision][indv2.decision][0]
+			indv2.aptitud=@matrizPago[indv1.decision][indv2.decision][1]
 			
 			if(indv1.aptitud>indv2.aptitud)
 				@arrCromosomas.delete_at pos2
-			if(indv1.aptitud<indv2.aptitud)
+			elsif(indv1.aptitud<indv2.aptitud)
 				@arrCromosomas.delete_at pos1
 			else
 				cual=@genRandom.rand(1..2)
-				(cual.eql? 1)? @arrCromosomas.delete_at pos1: @arrCromosomas.delete_at pos2
+				(cual.eql? 1)? (@arrCromosomas.delete_at pos1) : (@arrCromosomas.delete_at pos2)
 			end
 		end
 		@arrCromosomas.concat seleccion
 	end
 	
 	def contarcomposicion
+		@cantidadCooperadores=0
+		@cantidadTraicioneros=0
 		@arrCromosomas.each do |crom|
-			if crom.desicion == 0
+			if crom.decision == 0
 				@cantidadCooperadores+=1
 			else
 				@cantidadTraicioneros+=1
 			end
 		end
 	end
+	#~ 
+	attr_reader :cantidadCooperadores, :cantidadTraicioneros, :arrCromosomas
 	
 	#Fue para hacer algunas pruebas
 	#~ def arrCromosomas
@@ -114,6 +122,4 @@ class Grupo
 			#~ return "Grupo vacio"
 		#~ end
 	#~ end
-	
-	attr_reader :cantidadCooperadores :cantidadTraicioneros
 end
