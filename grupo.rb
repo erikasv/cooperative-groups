@@ -3,7 +3,7 @@ require 'cromosoma'
 
 class Grupo
 
-	def initialize tamano#Por el momento no se si necesito algo
+	def initialize tamano
 		@tamano = tamano
 		@arrCromosomas=Array.new
 		@genRandom=Random.new
@@ -36,6 +36,7 @@ class Grupo
 		contarcomposicion
 	end
 	
+	#Selección
 	def seleccionarCromosomas
 		result=Array.new
 		tamPool=(0.6*@tamano).to_i
@@ -60,6 +61,7 @@ class Grupo
 		return result
 	end
 	
+	#Mutación
 	def mutarSeleccion seleccion
 		cantMutados=(0.01*seleccion.size).ceil.to_i
 		cantMutados.times do
@@ -69,6 +71,7 @@ class Grupo
 		return seleccion
 	end
 	
+	#Reemplazo
 	def reemplazarSeleccion seleccion
 		cant=seleccion.size
 		cant.times do |i|

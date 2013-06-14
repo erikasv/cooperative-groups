@@ -39,8 +39,7 @@ class AlgoritmoGenetico
 		#Promedio sobre el total de la población
 		#~ @cooperadores/=(cantGrupos*tamGrupo)
 		#~ @traicioneros/=(cantGrupos*tamGrupo)
-		
-		#Por ahora, mejor tengo la cantidad total
+			#Por ahora, mejor tengo la cantidad total
 		
 	end
 
