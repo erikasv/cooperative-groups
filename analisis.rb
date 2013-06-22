@@ -13,7 +13,7 @@ for i in 2..grupos_maximo do
 	fila=Array.new
 	for j in 2..individuos_maximo do
 		columna=Array.new
-		algoritmo=AlgoritmoGenetico.new 10, i, j, 10
+		algoritmo=AlgoritmoGenetico.new 100, i, j, 100
 		algoritmo.correrAlgoritmo
 		
 		cantCoop=algoritmo.cooperadores
