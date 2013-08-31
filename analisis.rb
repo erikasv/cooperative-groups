@@ -16,13 +16,13 @@ for i in 2..grupos_maximo do
 		algoritmo=AlgoritmoGenetico.new 100, i, j, 100
 		algoritmo.correrAlgoritmo
 		
-		cantCoop=algoritmo.cooperadores
-		cantTrai=algoritmo.traicioneros
+		coop=algoritmo.cooperadores
+		trai=algoritmo.traicioneros
 
-		columna << algoritmo.cooperadores << algoritmo.traicioneros
+		columna << coop << traic
 		fila << columna
 		#Se escriben los datos de todas las generaciones por si las moscas
-		datos_generaciones.write("10:#{i}:#{j}:10 => #{cantCoop}-#{cantTrai}\n")
+		datos_generaciones.write("10:#{i}:#{j}:10 => #{coop}-#{trai}\n")
 	end
 	resultados << fila
 end
@@ -40,13 +40,13 @@ c = pv.Scale.linear(0, 1).range( "red","blue")
 
 # Poblaciones iniciales (generación 0)
 ## Datos
-d_iniciales=Array.new
+d_iniciales=Array.new #Array con los valores de cada celda que se va a graficar
 for i in 0..grupos_maximo-2
 	for j in 0..individuos_maximo-2
 		#como siempre se tomara en cuenta los cooperadores, no es necesario
 		#revisar ambos arreglos
-		d_iniciales << OpenStruct.new(x: i+2, y: j+2, 
-		z:resultados[i][j][0][0] / ((i+2.0)*(j+2.0)))
+		d_iniciales << OpenStruct.new(x: i+2, y: j+2, # x=valor para grupos, y=valor para individuos
+		z:resultados[i][j][0][0] / ((i+2.0)*(j+2.0)) ) #z: Porcentaje de cooperadores en cada celda
 	end
 end
 
@@ -102,12 +102,12 @@ svg=nil
 
 # Poblaciones finales (ultima generación)
 ## Datos
-d_finales=Array.new
+d_finales=Array.new #Array con los valores de cada celda que se va a graficar
 for i in 0..grupos_maximo-2
 	for j in 0..individuos_maximo-2
 		#como siempre se tomara en cuenta los cooperadores, no es necesario
 		#revisar ambos arreglos
-		gen=resultados[i][j][0].size-1 #corresponde a la cantidad de coop en la ultima generación
+		gen=resultados[i][j][0].size-1 #corresponde a la cantidad de cooperadores en la ultima generación
 		d_finales << OpenStruct.new(x: i+2, y: j+2, 
 		z:resultados[i][j][0][gen] / ((i+2.0)*(j+2.0)))
 	end

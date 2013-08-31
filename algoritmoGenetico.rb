@@ -34,8 +34,8 @@ class AlgoritmoGenetico
 			coop+=grupo.cantidadCooperadores
 			trai+=grupo.cantidadTraicioneros
 		end
-		cooperadores << coop
-		traicioneros << trai
+		@cooperadores << coop
+		@traicioneros << trai
 		#Promedio sobre el total de la población
 		#~ @cooperadores/=(cantGrupos*tamGrupo)
 		#~ @traicioneros/=(cantGrupos*tamGrupo)

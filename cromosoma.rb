@@ -1,10 +1,9 @@
 class Cromosoma
 	
 	def initialize
-		@genRandom=Random.new
-		@val=@genRandom.rand
+		@val=rand
 		@decision=((@val<0.5)?0:1) # < 0.5 coopera, >= 05 traiciona
-		@aptitud=-1
+		@aptitud=nil
 	end
 	
 	def mutar

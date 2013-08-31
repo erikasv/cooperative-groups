@@ -6,7 +6,6 @@ class Grupo
 	def initialize tamano
 		@tamano = tamano
 		@arrCromosomas=Array.new
-		@genRandom=Random.new
 		
 		@cantidadCooperadores=0.0
 		@cantidadTraicioneros=0.0
@@ -42,8 +41,8 @@ class Grupo
 		tamPool=(0.6*@tamano).to_i
 		
 		tamPool.times do
-			indv1=@arrCromosomas[@genRandom.rand(@tamano)]
-			indv2=@arrCromosomas[@genRandom.rand(@tamano)]
+			indv1=@arrCromosomas[rand(@tamano)]
+			indv2=@arrCromosomas[rand(@tamano)]
 			
 			#Asignar a cada uno el puntaje de acuerdo a la matriz de pago
 			indv1.aptitud=@matrizPago[indv1.decision][indv2.decision][0]
@@ -54,7 +53,7 @@ class Grupo
 			elsif(indv1.aptitud<indv2.aptitud)
 				result << indv2
 			else
-				cual=@genRandom.rand(1..2)
+				cual=rand(1..2)
 				result << ((cual.eql? 1)? indv1: indv2)
 			end
 		end
@@ -65,7 +64,7 @@ class Grupo
 	def mutarSeleccion seleccion
 		cantMutados=(0.01*seleccion.size).ceil.to_i
 		cantMutados.times do
-			cual=@genRandom.rand(seleccion.size)
+			cual=rand(seleccion.size)
 			seleccion[cual].mutar # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???
 		end
 		return seleccion
@@ -75,10 +74,10 @@ class Grupo
 	def reemplazarSeleccion seleccion
 		cant=seleccion.size
 		cant.times do |i|
-			pos1=@genRandom.rand(@tamano-i)
-			pos2=@genRandom.rand(@tamano-i)
+			pos1=rand(@tamano-i)
+			pos2=rand(@tamano-i)
 			while pos1 == pos2 do
-				pos2=@genRandom.rand(@tamano-i)
+				pos2=rand(@tamano-i)
 			end
 			indv1=@arrCromosomas[pos1]
 			indv2=@arrCromosomas[pos2]
@@ -92,7 +91,7 @@ class Grupo
 			elsif(indv1.aptitud<indv2.aptitud)
 				@arrCromosomas.delete_at pos1
 			else
-				cual=@genRandom.rand(1..2)
+				cual=rand(1..2)
 				(cual.eql? 1)? (@arrCromosomas.delete_at pos1) : (@arrCromosomas.delete_at pos2)
 			end
 		end
