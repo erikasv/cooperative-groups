@@ -7,7 +7,7 @@ class Cromosoma
 	end
 	
 	def mutar
-		@val=@genRandom.rand
+		@val=rand
 		@decision=((@val<0.5)?0:1) # < 0.5 coopera, >= 05 traiciona
 	end
 	

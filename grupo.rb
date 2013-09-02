@@ -53,7 +53,8 @@ class Grupo
 			elsif(indv1.aptitud<indv2.aptitud)
 				result << indv2
 			else
-				cual=rand(1..2)
+				#cual=rand(1..2)
+				cual=rand(2) +1
 				result << ((cual.eql? 1)? indv1: indv2)
 			end
 		end
@@ -91,7 +92,8 @@ class Grupo
 			elsif(indv1.aptitud<indv2.aptitud)
 				@arrCromosomas.delete_at pos1
 			else
-				cual=rand(1..2)
+				#cual=rand(1..2)
+				cual=rand(2) +1
 				(cual.eql? 1)? (@arrCromosomas.delete_at pos1) : (@arrCromosomas.delete_at pos2)
 			end
 		end
