@@ -5,8 +5,8 @@ require 'rubyvis'
 #Ejecucución del algoritmo con diferentes parametros
 grupos_maximo=10
 individuos_maximo=10
-generaciones=10
-generacionesGrupo=10
+generaciones=1000
+generacionesGrupo=1000
 
 datos_generaciones=File.new("generaciones.txt","w+")
 
