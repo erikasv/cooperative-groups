@@ -26,8 +26,7 @@ class Environment
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	def createGridSpace numPatchesRow
 		@@grid=Array.new
-		
-		
+		 
 		numPatchesRow.times do #Filas de parches
 			@widthPatch.times do #Filas de celdas en cada parche
 				row=Array.new
