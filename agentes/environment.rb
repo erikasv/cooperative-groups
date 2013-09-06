@@ -7,7 +7,6 @@ class Environment
 		@gapPatch=gap
 		@widthPatch=width
 		
-		numPatchesRow=0 #Necesario aqui?
 		if(@plants<@widthPatch**2)
 			#El espacio tiene solo un parche
 			numPatchesRow=1
@@ -24,49 +23,43 @@ class Environment
 		createGridSpace numPatchesRow
 	end
 	
+	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	def createGridSpace numPatchesRow
 		@@grid=Array.new
 		
-		#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
-		#Filas de parches:
-		numPatchesRow.times do
 		
-			#Filas en cada parche:
-			@widthPatch.times do
+		numPatchesRow.times do #Filas de parches
+			@widthPatch.times do #Filas de celdas en cada parche
 				row=Array.new
 				
-				#Columnas de parches:
-				numPatchesRow.times do
-				
-					#Columnas en cada parche
-					@widthPatch.times do
+				numPatchesRow.times do #Columnas de parches
+					@widthPatch.times do #Columnas de celdas en cada parche
 						row<< "p" #TEMPORAL!! Crear planta aqui	###[i][j]="p", j++
 					end
 					
-					#Columnas de espacio entre parches
-					@gapPatch.times do
+					@gapPatch.times do #Columnas de espacio entre parches
 						row<<" " #TEMPORAL?? -> Espacio vacío	###[i][j]=nil, j++
 					end
 				end
 				@@grid<<row	###i++
 			end
 			
-			#Filas de espacio entre parches:
-			@gapPatch.times do
+			@gapPatch.times do #Filas de espacio entre parches
 				@@grid<<Array.new(@@gridSize){" "} #Filas de espacios vacios ###for para columnas->[i][j]=nil, i++
 			end
 		end
 		
 	end
 	
-	def myPrint
-		@@grid.each{
-			|i|
-			p i
-		}
-	end
+	#~ #Función de prueba
+	#~ def myPrint
+		#~ @@grid.each{
+			#~ |i|
+			#~ p i
+		#~ }
+	#~ end
 	
 end
 
-prueba=Environment.new 4, 10, 1000
-prueba.myPrint
+prueba=Environment.new 2, 5, 10
+#~ prueba.myPrint
