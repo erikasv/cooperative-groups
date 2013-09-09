@@ -1,0 +1,9 @@
+-Falta tener en cuenta la implemetación para hacerlo ciclico.
+-Falta meter las plantas en un array para hacerlas crecer.
+	1: Variable global??? - mala práctica?
+	2: Pasarle una varaible al ambiente
+
+*******************************************************************+
+
+-La energía inicial de las plantas es un número entero por el uso de rand del modulo Kernel
+

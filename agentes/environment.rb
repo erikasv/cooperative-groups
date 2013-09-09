@@ -1,11 +1,15 @@
+$:.unshift '.' #Necesario desde 1.9
+require 'plant'
+
 class Environment
-	@@grid
+	@@grid ##Probablemente no se necesite de clase.
 	@@gridSize ##Aun no estoy segura si es necesario
 	
-	def initialize width, gap, minPlants
+	def initialize width, gap, minPlants, maxEnergyPlants
 		@plants=minPlants
 		@gapPatch=gap
 		@widthPatch=width
+		Plant.maxSize=maxEnergyPlants
 		
 		if(@plants<@widthPatch**2)
 			#El espacio tiene solo un parche
@@ -26,6 +30,8 @@ class Environment
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	def createGridSpace numPatchesRow
 		@@grid=Array.new
+		i=0
+		j=0
 		 
 		numPatchesRow.times do #Filas de parches
 			@widthPatch.times do #Filas de celdas en cada parche
@@ -33,32 +39,39 @@ class Environment
 				
 				numPatchesRow.times do #Columnas de parches
 					@widthPatch.times do #Columnas de celdas en cada parche
-						row<< "p" #TEMPORAL!! Crear planta aqui	###[i][j]="p", j++
+						row<< Hash.new
+						newPlant=Plant.new(i, j)
+						row[j]['plant']=newPlant
+						j=j+1
 					end
 					
-					@gapPatch.times do #Columnas de espacio entre parches
-						row<<" " #TEMPORAL?? -> Espacio vacío	###[i][j]=nil, j++
-					end
+					row.concat(Array.new(@gapPatch){Hash.new})
+					j=j+@gapPatch
 				end
 				@@grid<<row	###i++
+				i=i+1
+				j=0
 			end
 			
 			@gapPatch.times do #Filas de espacio entre parches
-				@@grid<<Array.new(@@gridSize){" "} #Filas de espacios vacios ###for para columnas->[i][j]=nil, i++
+				@@grid<<Array.new(@@gridSize){Hash.new} #Filas de espacios vacios
+				i=i+1
 			end
 		end
 		
 	end
 	
-	#~ #Función de prueba
-	#~ def myPrint
+	#attr_reader para @@grid
+	def grid
+		@@grid
 		#~ @@grid.each{
-			#~ |i|
-			#~ p i
+			#~ |row|
+			#~ p row
 		#~ }
-	#~ end
+	end
 	
 end
 
-prueba=Environment.new 2, 5, 10
-#~ prueba.myPrint
+
+prueba=Environment.new 2, 5, 10, 12
+prueba.grid
