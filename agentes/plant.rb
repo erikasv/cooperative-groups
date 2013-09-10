@@ -1,6 +1,6 @@
 class Plant
-	@@maxSize=10 #Valor por defecto= al expuesto en el artículo
-	@@logisticRate=0.2 #Valor por defecto= al expuesto en el artículo
+	@@maxSize #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
+	@@logisticRate #Valor por defecto= al expuesto en el artículo puesto en modelo.rb
 	#Posición
 	
 	def initialize posX, posY
@@ -9,18 +9,23 @@ class Plant
 		@posY=posY
 	end
 	
-	#Función de crecimiento dado por una curva logistica.
+	#Función de crecimiento dado por la curva logistica del artículo.
 	def grow
 		stepGrowth=@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
 		@energy=@energy+stepGrowth
 	end
 	
-	#~ def to_s
-		#~ "#{@energy}: #{@posX}-#{@posY}"
-	#~ end
+	def to_s
+		"#{@energy}: #{@posX}-#{@posY}"
+	end
 	
-	#Por la pereza de escribir los métodos para cada variable
-	#~ self.class_variables.each{ |sym| class_eval("def self.#{sym.to_s.gsub('@@','')}; #{sym}; end;")}
-	self.class_variables.each{ |sym| class_eval("def self.#{sym.to_s.gsub('@@','')}= val; #{sym}=val; end;")}
+	#Writers para las variables de clase
+	def self.maxSize= val
+		@@maxSize=val
+	end
+	
+	def self.logisticRate= val
+		@@logisticRate=val
+	end
 end
 
