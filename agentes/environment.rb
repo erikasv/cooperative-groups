@@ -32,6 +32,7 @@ class Environment
 		@@grid=Array.new
 		i=0
 		j=0
+		allPlants=Array.new
 		 
 		numPatchesRow.times do #Filas de parches
 			@widthPatch.times do #Filas de celdas en cada parche
@@ -42,6 +43,7 @@ class Environment
 						row<< Hash.new
 						newPlant=Plant.new(i, j)
 						row[j]['plant']=newPlant
+						allPlants<< newPlant
 						j=j+1
 					end
 					
@@ -58,7 +60,7 @@ class Environment
 				i=i+1
 			end
 		end
-		
+		return allPlants
 	end
 	
 	#attr_reader para @@grid
