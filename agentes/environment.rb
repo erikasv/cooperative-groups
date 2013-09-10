@@ -2,11 +2,9 @@ $:.unshift '.' #Necesario desde 1.9
 require 'plant'
 
 class Environment
-	@@grid ##Probablemente no se necesite de clase.
-	@@gridSize ##Aun no estoy segura si es necesario
 	
 	def initialize width, gap, minPlants, maxEnergyPlants
-		@plants=minPlants
+		@amountPlants=minPlants
 		@gapPatch=gap
 		@widthPatch=width
 		Plant.maxSize=maxEnergyPlants
@@ -20,19 +18,19 @@ class Environment
 			numPatchesRow=Math.sqrt(numPatches).ceil
 			
 			#Se actualiza la cantidad de plantas
-			@plants=numPatches*@widthPatch**2
+			@amountPlants=numPatches*@widthPatch**2
 		end
 		
-		@@gridSize=numPatchesRow*(@widthPatch+@gapPatch)
-		createGridSpace numPatchesRow
+		@gridSize=numPatchesRow*(@widthPatch+@gapPatch)
+		@plants=createGridSpace numPatchesRow
 	end
 	
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	def createGridSpace numPatchesRow
-		@@grid=Array.new
+		@grid=Array.new
 		i=0
 		j=0
-		allPlants=Array.new
+		plants=Array.new
 		 
 		numPatchesRow.times do #Filas de parches
 			@widthPatch.times do #Filas de celdas en cada parche
@@ -43,34 +41,33 @@ class Environment
 						row<< Hash.new
 						newPlant=Plant.new(i, j)
 						row[j]['plant']=newPlant
-						allPlants<< newPlant
+						plants<< newPlant
 						j=j+1
 					end
 					
 					row.concat(Array.new(@gapPatch){Hash.new})
 					j=j+@gapPatch
 				end
-				@@grid<<row	###i++
+				@grid<<row	###i++
 				i=i+1
 				j=0
 			end
 			
 			@gapPatch.times do #Filas de espacio entre parches
-				@@grid<<Array.new(@@gridSize){Hash.new} #Filas de espacios vacios
+				@grid<<Array.new(@gridSize){Hash.new} #Filas de espacios vacios
 				i=i+1
 			end
 		end
-		return allPlants
+		return plants
 	end
 	
-	#attr_reader para @@grid
-	def grid
-		@@grid
-		#~ @@grid.each{
+	attr_reader :grid
+	#~ def grid
+		#~ @grid.each{
 			#~ |row|
 			#~ p row
 		#~ }
-	end
+	#~ end
 	
 end
 
