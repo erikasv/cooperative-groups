@@ -93,7 +93,7 @@ class Environment
 	def run generations
 		generations.times do
 			growPlants #Importa el orden?, primero deberían moverse y comer los animales?
-			moveAnimals
+			@animals=moveAnimals
 			nextGeneration
 		end
 	end
@@ -107,9 +107,10 @@ class Environment
 	
 	#Mover y alimentar los animales
 	def moveAnimals
-		deltaX=[0,-1,-1,-1,0,1,1,1]
-		deltaY=[-1,-1,0,1,1,1,0,-1]
-		while not @animals.empty?
+		newAnimals=Array.new
+		while not @animals.empty? do
+			deltaX=[0,-1,-1,-1,0,1,1,1]
+			deltaY=[-1,-1,0,1,1,1,0,-1]
 			pos=rand(@animals.size)
 			animal=@animals.delete_at(pos)
 			best=nil
@@ -120,32 +121,113 @@ class Environment
 				newX=animal.posX+deltaX[i]
 				newY=animal.posY+deltaY[i]
 				newCell=@grid[newX][newY]
-				if(newCell['plant']!=nil && newCell['animal']==nil)
+				if newCell['plant']!=nil && newCell['animal']==nil
 					newEnergy=newCell['plant'].energy
-					if(best==nil || ( newEnergy > best.energy && newEnergy > Animal.metabolicCost))
+					if best==nil || ( newEnergy > best.energy && newEnergy > Animal.metabolicCost)
 						best=@grid[newX][newY]['plant']
 					end
 				end
 			}
 			
 			#Moverse y comer
-			if(best!=nil) #Si hay una planta
+			if best!=nil #Si hay una planta
 				animal.move best.posX, best.posY
 				amuntOfFood=animal.feedRatePercent*best.energy
 				animal.eat amuntOfFood
 				best.beEaten animal.feedRatePercent
 			else #Sino, moverse a un espacio desocupado cualquiera
-				#Moverse a una celda aleatoria
+				newCell=nil
+				while newCell==nil do
+					pos=rand(deltaX.size)
+					newX=animal.posX+deltaX[pos]
+					newY=animal.posY+deltaY[pos]
+					if @grid[newX][newY]['animal']==nil
+						animal.move newX, newY
+						newCell=@grid[newX][newY]
+						if(newCell['plant']!=nil) #Si hay una planta en ese espacio comer
+							amuntOfFood=animal.feedRatePercent*newCell['plant'].energy
+							animal.eat amuntOfFood
+							newCell['plant'].beEaten animal.feedRatePercent
+						end
+					else
+						deltaX.delete_at(pos)
+						deltaY.delete_at(pos)
+					end
+				end
 			end
+			newAnimals<< animal
 		end
-		#move
-		#eat
+		return newAnimals
 	end
 	
 	def nextGeneration
-		#select
-		#reproduce
-		#mutate
+		newAnimals=selectAnimals
+		newAnimals=mutateAnimals newAnimals
+		replaceAnimals newAnimals
+	end
+	
+	#Selección, por torneo y quien tenga mayor reserva de energía
+	def selectAnimals
+		result=Array.new
+		populationSize=@animals.size
+		poolSize=(0.6*populationSize).to_i
+		
+		poolSize.times do
+			pos1=rand(populationSize)
+			pos2=rand(populationSize)
+			while pos1 == pos2 do
+				pos2=rand(populationSize)
+			end
+			agent1=@animals[pos1]
+			agent2=@animals[pos2]
+			
+			#Debería considerarse algún costo por reproducción??
+			if agent1.energy>agent2.energy
+				result << agent1
+			elsif agent1.energy < agent2.energy
+				result << agent2
+			else
+				which=rand(2)
+				result << ((which.eql? 0)? agent1: agent2)
+			end
+		end
+		return result
+	end
+	
+	#Mutación
+	def mutateAnimals selection
+		amount=(0.01*selection.size).ceil.to_i
+		amount.times do
+			which=rand(seleccion.size)
+			selection[which].mutate # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???
+		end
+		return selection
+	end
+	
+	#Reemplazo
+	def replaceAnimals selection
+		selectionSize=selection.size
+		populationSize=@animals.size
+		selectionSize.times do |i|
+			pos1=rand(populationSize-i)
+			pos2=rand(populationSize-i)
+			while pos1 == pos2 do
+				pos2=rand(populationSize-i)
+			end
+			agent1=@animals[pos1]
+			agent2=@animals[pos2]
+			
+			if agent1.energy > agent2.energy
+				@animals.delete_at pos2
+			elsif agent1.energy < agent2.energy
+				@animals.delete_at pos1
+			else
+				which=rand(2)
+				(which.eql? 0)? (@animals.delete_at pos1): (@animals.delete_at pos2)
+			end
+			
+		end
+		@animals.concat selection
 	end
 	
 	attr_reader :grid

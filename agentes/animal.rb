@@ -24,6 +24,10 @@ class Animal
 		@energy=@energy+amount
 	end
 	
+	def mutate
+		@feedRatePercent=rand
+	end
+	
 	#Writers para las variables de clase
 	def self.metabolicCost= val
 		@@metabolicCost=val
