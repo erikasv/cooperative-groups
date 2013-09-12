@@ -6,7 +6,7 @@ class Animal
 	def initialize posX, posY
 		@posX=posX
 		@posY=posY
-		@energy=rand(10) #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
+		@energy=rand(10).to_f #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
 		@feedRatePercent=rand
 	end
 	
@@ -20,10 +20,14 @@ class Animal
 		@posY=newY
 	end
 	
+	def eat amount
+		@energy=@energy+amount
+	end
+	
 	#Writers para las variables de clase
 	def self.metabolicCost= val
 		@@metabolicCost=val
 	end
 	
-	attr_reader :feedRatePercent, :energy
+	attr_reader :feedRatePercent, :energy, :posX, :posY
 end

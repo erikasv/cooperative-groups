@@ -4,7 +4,7 @@ class Plant
 	#Posición
 	
 	def initialize posX, posY
-		@energy=rand(@@maxSize) #Solo serán enteros, para flotantes usar un objeto de Random
+		@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
 		@posX=posX
 		@posY=posY
 	end
@@ -13,6 +13,11 @@ class Plant
 	def grow
 		stepGrowth=@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
 		@energy=@energy+stepGrowth
+	end
+	
+	def beEaten percent
+		amountEaten=@energy*percent
+		@energy=@energy-amountEaten
 	end
 	
 	def to_s
@@ -27,5 +32,7 @@ class Plant
 	def self.logisticRate= val
 		@@logisticRate=val
 	end
+	
+	attr_reader :energy, :posX, :posY
 end
 

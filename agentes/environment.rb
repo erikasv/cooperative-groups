@@ -68,11 +68,84 @@ class Environment
 		return plants
 	end
 	
+	#Crear y ubicar a los animales sobre plantas
 	def fillGridSpace amountAnimals
-		animals=Arary.new
+		animals=Array.new
 		amountAnimals.times do
-			animals<< Animal.new
+			again=true
+			while again do
+				x=rand(@gridSize)
+				y=rand(@gridSize)
+				while x==y do
+					y=rand(@gridSize)
+				end
+				
+				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
+					newAnimal=Animal.new x, y
+					animals<< newAnimal
+					@grid[x][y]['animal']==newAnimal
+					again=false
+				end
+			end
 		end
+	end
+	
+	def run generations
+		generations.times do
+			growPlants #Importa el orden?, primero deberían moverse y comer los animales?
+			moveAnimals
+			nextGeneration
+		end
+	end
+	
+	def growPlants
+		@plants.each{
+			|plant|
+			plant.grow
+		}
+	end
+	
+	#Mover y alimentar los animales
+	def moveAnimals
+		deltaX=[0,-1,-1,-1,0,1,1,1]
+		deltaY=[-1,-1,0,1,1,1,0,-1]
+		while not @animals.empty?
+			pos=rand(@animals.size)
+			animal=@animals.delete_at(pos)
+			best=nil
+			
+			#Buscar la mejor planta que satisfaga el costo metabolico
+			deltaX.each_index{
+				|i|
+				newX=animal.posX+deltaX[i]
+				newY=animal.posY+deltaY[i]
+				newCell=@grid[newX][newY]
+				if(newCell['plant']!=nil && newCell['animal']==nil)
+					newEnergy=newCell['plant'].energy
+					if(best==nil || ( newEnergy > best.energy && newEnergy > Animal.metabolicCost))
+						best=@grid[newX][newY]['plant']
+					end
+				end
+			}
+			
+			#Moverse y comer
+			if(best!=nil) #Si hay una planta
+				animal.move best.posX, best.posY
+				amuntOfFood=animal.feedRatePercent*best.energy
+				animal.eat amuntOfFood
+				best.beEaten animal.feedRatePercent
+			else #Sino, moverse a un espacio desocupado cualquiera
+				#Moverse a una celda aleatoria
+			end
+		end
+		#move
+		#eat
+	end
+	
+	def nextGeneration
+		#select
+		#reproduce
+		#mutate
 	end
 	
 	attr_reader :grid
