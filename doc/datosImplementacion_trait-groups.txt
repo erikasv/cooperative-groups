@@ -1,20 +1,3 @@
-
-
-
-			ARREGLAR Y HACER PRUEBAS DE NUEVO, FALTA VERIFICAR QUE NO SE SELECCIONE EL MISMO INDIVIDUO EN LA FUNCIÓN SELECCIÓN
-												AUMENTAR LA CANTIDAD DE MUTADOS!!!!!!!!!!!!!!!
-
-
-
-
-
-
-
-
-
-
-
-
 1. No se usa una función para dar aptitud al cromosoma, se usa una matriz de pago.
 
 	|  cop	 |  traic

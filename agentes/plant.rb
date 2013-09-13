@@ -11,7 +11,7 @@ class Plant
 	
 	#Función de crecimiento dado por la curva logistica del artículo.
 	def grow
-		stepGrowth=@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
+		stepGrowth=@@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
 		@energy=@energy+stepGrowth
 	end
 	

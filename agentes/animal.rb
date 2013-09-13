@@ -28,9 +28,13 @@ class Animal
 		@feedRatePercent=rand
 	end
 	
-	#Writers para las variables de clase
+	#Accessors para las variables de clase
 	def self.metabolicCost= val
 		@@metabolicCost=val
+	end
+	
+	def self.metabolicCost
+		@@metabolicCost
 	end
 	
 	attr_reader :feedRatePercent, :energy, :posX, :posY

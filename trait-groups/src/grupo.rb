@@ -41,8 +41,13 @@ class Grupo
 		tamPool=(0.6*@tamano).to_i
 		
 		tamPool.times do
-			indv1=@arrCromosomas[rand(@tamano)]
-			indv2=@arrCromosomas[rand(@tamano)]
+			pos1=rand(@tamano)
+			pos2=rand(@tamano)
+			while pos1 == pos2 do
+				pos2=rand(@tamano)
+			end
+			indv1=@arrCromosomas[pos1]
+			indv2=@arrCromosomas[pos2]
 			
 			#Asignar a cada uno el puntaje de acuerdo a la matriz de pago
 			indv1.aptitud=@matrizPago[indv1.decision][indv2.decision][0]
@@ -63,7 +68,7 @@ class Grupo
 	
 	#Mutación
 	def mutarSeleccion seleccion
-		cantMutados=(0.01*seleccion.size).ceil.to_i
+		cantMutados=(0.1*seleccion.size).ceil.to_i
 		cantMutados.times do
 			cual=rand(seleccion.size)
 			seleccion[cual].mutar # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???

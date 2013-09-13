@@ -29,6 +29,8 @@ class Environment
 		@gridSize=numPatchesRow*(width+gap)
 		@plants=createGridSpace numPatchesRow, width, gap
 		@animals=fillGridSpace amountAnimals
+		@arrayCooperators=Array.new
+		@arrayCooperators<< count
 	end
 	
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
@@ -88,6 +90,7 @@ class Environment
 				end
 			end
 		end
+		return animals
 	end
 	
 	def run generations
@@ -95,6 +98,7 @@ class Environment
 			growPlants #Importa el orden?, primero deberían moverse y comer los animales?
 			@animals=moveAnimals
 			nextGeneration
+			@arrayCooperators<< count
 		end
 	end
 	
@@ -196,9 +200,9 @@ class Environment
 	
 	#Mutación
 	def mutateAnimals selection
-		amount=(0.01*selection.size).ceil.to_i
+		amount=(0.1*selection.size).ceil.to_i
 		amount.times do
-			which=rand(seleccion.size)
+			which=rand(selection.size)
 			selection[which].mutate # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???
 		end
 		return selection
@@ -230,7 +234,20 @@ class Environment
 		@animals.concat selection
 	end
 	
-	attr_reader :grid
+	def count
+		amount=Hash.new
+		@animals.each{
+			|animal|
+			if amount["#{animal.feedRatePercent}"]==nil
+				amount["#{animal.feedRatePercent}"]=1
+			else
+				amount["#{animal.feedRatePercent}"]=amount["#{animal.feedRatePercent}"]+1
+			end
+		}
+		return amount
+	end
+	
+	attr_reader :grid, :arrayCooperators
 	
 	#~ def grid
 		#~ @grid.each{

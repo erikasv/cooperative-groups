@@ -9,11 +9,30 @@ class Model
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 	end
 	
-	def run generations #Si son generaciones? -> no podŕia ser que una generación sea un conjunto de pasos, es decir cada tantos movimientos (unidades de tiempo)
+	def run generations
 		@environment.run generations
 	end
+	
+	attr_reader :environment
 end
 
-model=Model.new 3, 2, 10, amountAnimals=10
+model=Model.new
+model.run 100
+
+#Análisis
+def countFinalState environment
+	generations=environment.arrayCooperators[-1]
+	generations=generations.to_a
+	generations.sort!{
+		|x,y|
+		x[0]<=>y[0]
+	}
+	generations.each{
+		|v|
+		puts "#{v[0]} - #{v[1]}"
+	}
+end
+
+countFinalState model.environment
 
 
