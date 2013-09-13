@@ -3,12 +3,15 @@ require 'algoritmoGenetico'
 require 'rubyvis'
 
 #Ejecucución del algoritmo con diferentes parametros
+#Por consola entran generaciones, generacionesGrupo y numero del archivo. En ese orden.
 grupos_maximo=10
 individuos_maximo=10
-generaciones=100
-generacionesGrupo=100
+#~ generaciones=100
+#~ generacionesGrupo=100
+generaciones=ARGV[0].to_i
+generacionesGrupo=ARGV[1].to_i
 
-datos_generaciones=File.new("generaciones.txt","w+")
+datos_generaciones=File.new("generaciones#{ARGV[2]}.txt","w+")
 
 resultados=Array.new
 for i in 2..grupos_maximo do
@@ -91,7 +94,7 @@ end
 #Elaboración de los graficos
 
 # Poblaciones iniciales (generación 0)
-archivo="inicio.svg"
+archivo="inicio#{ARGV[2]}.svg"
 ## Datos
 d_iniciales=Array.new #Array con los valores de cada celda que se va a graficar
 for i in 0..grupos_maximo-2
@@ -106,7 +109,7 @@ end
 hacerGrafico d_iniciales, archivo, grupos_maximo, individuos_maximo
 
 # Poblaciones finales (ultima generación)
-archivo="final.svg"
+archivo="final#{ARGV[2]}.svg"
 ## Datos
 d_finales=Array.new #Array con los valores de cada celda que se va a graficar
 for i in 0..grupos_maximo-2
@@ -122,7 +125,7 @@ end
 hacerGrafico d_finales, archivo, grupos_maximo, individuos_maximo
 
 #Comparación entre los datos iniciales y finales
-archivo="comparacion.svg"
+archivo="comparacion#{ARGV[2]}.svg"
 ## Datos
 d_comparativos=Array.new
 for i in 0..grupos_maximo-2
