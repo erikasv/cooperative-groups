@@ -29,8 +29,8 @@ class Environment
 		@gridSize=numPatchesRow*(width+gap)
 		@plants=createGridSpace numPatchesRow, width, gap
 		@animals=fillGridSpace amountAnimals
-		@arrayCooperators=Array.new
-		@arrayCooperators<< count
+		@arrayCount=Array.new
+		@arrayCount<< count
 	end
 	
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
@@ -78,9 +78,6 @@ class Environment
 			while again do
 				x=rand(@gridSize)
 				y=rand(@gridSize)
-				while x==y do
-					y=rand(@gridSize)
-				end
 				
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
 					newAnimal=Animal.new x, y
@@ -98,7 +95,7 @@ class Environment
 			growPlants #Importa el orden?, primero deberían moverse y comer los animales?
 			@animals=moveAnimals
 			nextGeneration
-			@arrayCooperators<< count
+			@arrayCount<< count
 		end
 	end
 	
@@ -110,7 +107,7 @@ class Environment
 	end
 	
 	#Mover y alimentar los animales
-	def moveAnimals
+	def moveAnimals #Primero se mueve y luego come, porque así lo explican en el artículo
 		newAnimals=Array.new
 		while not @animals.empty? do
 			deltaX=[0,-1,-1,-1,0,1,1,1]
@@ -118,7 +115,6 @@ class Environment
 			pos=rand(@animals.size)
 			animal=@animals.delete_at(pos)
 			best=nil
-			
 			#Buscar la mejor planta que satisfaga el costo metabolico
 			deltaX.each_index{
 				|i|
@@ -127,35 +123,38 @@ class Environment
 				newCell=@grid[newX][newY]
 				if newCell['plant']!=nil && newCell['animal']==nil
 					newEnergy=newCell['plant'].energy
-					if best==nil || ( newEnergy > best.energy && newEnergy > Animal.metabolicCost)
-						best=@grid[newX][newY]['plant']
+					if best==nil && ( newEnergy > Animal.metabolicCost )
+						best=newCell['plant']
+					elsif best!=nil && (newEnergy > best.energy)
+						best=newCell['plant']
 					end
 				end
 			}
 			
 			#Moverse y comer
 			if best!=nil #Si hay una planta
+				@grid[animal.posX][animal.posX]['animal']=nil
 				animal.move best.posX, best.posY
 				amuntOfFood=animal.feedRatePercent*best.energy
 				animal.eat amuntOfFood
-				best.beEaten animal.feedRatePercent
+				best.beEaten amuntOfFood
+				@grid[animal.posX][animal.posX]['animal']=animal
 			else #Sino, moverse a un espacio desocupado cualquiera
 				newCell=nil
 				while newCell==nil do
 					pos=rand(deltaX.size)
-					newX=animal.posX+deltaX[pos]
-					newY=animal.posY+deltaY[pos]
+					newX=animal.posX+deltaX.delete_at(pos)
+					newY=animal.posY+deltaY.delete_at(pos)
 					if @grid[newX][newY]['animal']==nil
+						@grid[animal.posX][animal.posX]['animal']=nil
 						animal.move newX, newY
+						@grid[animal.posX][animal.posX]['animal']=animal
 						newCell=@grid[newX][newY]
-						if(newCell['plant']!=nil) #Si hay una planta en ese espacio comer
+						if(newCell['plant']!=nil) #Si hay una planta en ese espacio, comer
 							amuntOfFood=animal.feedRatePercent*newCell['plant'].energy
 							animal.eat amuntOfFood
-							newCell['plant'].beEaten animal.feedRatePercent
+							newCell['plant'].beEaten amuntOfFood
 						end
-					else
-						deltaX.delete_at(pos)
-						deltaY.delete_at(pos)
 					end
 				end
 			end
@@ -235,19 +234,15 @@ class Environment
 	end
 	
 	def count
-		amount=Hash.new
+		amount=Hash.new(0)
 		@animals.each{
 			|animal|
-			if amount["#{animal.feedRatePercent}"]==nil
-				amount["#{animal.feedRatePercent}"]=1
-			else
-				amount["#{animal.feedRatePercent}"]=amount["#{animal.feedRatePercent}"]+1
-			end
+			amount["#{animal.feedRatePercent}"]=amount["#{animal.feedRatePercent}"]+1
 		}
 		return amount
 	end
 	
-	attr_reader :grid, :arrayCooperators
+	attr_reader :grid, :arrayCount
 	
 	#~ def grid
 		#~ @grid.each{

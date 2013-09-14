@@ -1,7 +1,6 @@
 class Plant
 	@@maxSize #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 	@@logisticRate #Valor por defecto= al expuesto en el artículo puesto en modelo.rb
-	#Posición
 	
 	def initialize posX, posY
 		@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
@@ -11,17 +10,18 @@ class Plant
 	
 	#Función de crecimiento dado por la curva logistica del artículo.
 	def grow
-		stepGrowth=@@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
-		@energy=@energy+stepGrowth
+		if @energy<@@maxSize
+			stepGrowth=@@logisticRate*@energy*( (@@maxSize-@energy)/@energy )
+			if @energy+stepGrowth <= @@maxSize
+				@energy=@energy+stepGrowth
+			else
+				@energy=@@maxSize
+			end
+		end
 	end
 	
-	def beEaten percent
-		amountEaten=@energy*percent
-		@energy=@energy-amountEaten
-	end
-	
-	def to_s
-		"#{@energy}: #{@posX}-#{@posY}"
+	def beEaten amount
+		@energy=@energy-amount
 	end
 	
 	#Writers para las variables de clase
@@ -34,5 +34,9 @@ class Plant
 	end
 	
 	attr_reader :energy, :posX, :posY
+	
+	#~ def to_s
+		#~ "#{@energy}: #{@posX}-#{@posY}"
+	#~ end
 end
 

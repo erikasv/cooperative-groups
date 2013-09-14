@@ -20,10 +20,6 @@ class Animal
 		@posY=newY
 	end
 	
-	def eat amount
-		@energy=@energy+amount
-	end
-	
 	def mutate
 		@feedRatePercent=rand
 	end
