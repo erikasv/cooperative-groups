@@ -1,0 +1,50 @@
+#\DeclareLyXModule{BeamerIncrementalLists}
+#DescriptionBegin
+#Provides new bullet/enumeration lists, with and without alerting,
+#that contain incremental overlay specifications (each item appearing
+#on a new overlay).
+#DescriptionEnd
+
+Style EnumerateIncremental
+  CopyStyle Enumerate
+  LatexName stepenumerate
+  Preamble
+    \makeatother
+     
+\newenvironment{stepenumerate}{\begin{enumerate}[<+->]}{\end{enumerate}}
+    \makeatletter
+  EndPreamble
+End
+
+Style ItemizeIncremental
+  CopyStyle Itemize
+  LatexName stepitemize
+  Preamble
+    \makeatother
+       
+\newenvironment{stepitemize}{\begin{itemize}[<+->]}{\end{itemize}}
+    \makeatletter
+  EndPreamble
+End
+
+Style EnumerateIncrementalAlerted
+  CopyStyle Enumerate
+  LatexName stepenumeratewithalert
+  Preamble
+    \makeatother
+       
+\newenvironment{stepenumeratewithalert}{\begin{enumerate}[<+-|alert@+>]}{\end{enumerate}}
+    \makeatletter
+  EndPreamble
+End
+
+Style ItemizeIncrementalAlerted
+  CopyStyle Itemize
+  LatexName stepitemizewithalert
+  Preamble
+    \makeatother
+     
+\newenvironment{stepitemizewithalert}{\begin{itemize}[<+-|alert@+>]}{\end{itemize}}
+    \makeatletter
+  EndPreamble
+End
