@@ -273,35 +273,6 @@ tableofcontents[currentsection,currentsubsection]
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Si quieres descubrir todo en modo paso a paso, descomenta el siguiente comando:
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-beamerdefaultoverlayspecification{<+->}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout BeginFrame
 Índice
 \end_layout
@@ -325,6 +296,27 @@ Introducción
 
 \begin_layout Standard
 Texto introductorio
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Problema-Discusión, 
+\begin_inset Quotes eld
+\end_inset
+
+Justificación
+\begin_inset Quotes erd
+\end_inset
+
+?, Trabajo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -528,12 +520,99 @@ Trait-Groups
 \end_layout
 
 \begin_layout BeginFrame
-Descripción del modelo
+Selección individual vs Selección de grupo
 \end_layout
 
 \begin_layout Standard
-Explicación del modelo, imagen aclaratoria del objetivo del mismo e imagenes
- del funcionamiento teórico
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/documento/img/EstadoDelArte/ATheoryOfGroupSelection.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Aptitud del donante (fd) vs aptitud del receptor (fr).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Fundamentos
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+El modelo es basado en dos etapas por las que pasan los individuos en su
+ ciclo de vida.
+ Estas estapas son claramente distingibles en algunos insectos.
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+El objetivo principal es forzar el sistema para que la selección individual
+ lleve a la selección de grupo.
+\end_layout
+
+\begin_layout BeginFrame
+El modelo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/documento/img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_1.png
+	scale 55
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/erikasv/tg/documento/img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_2.png
+	scale 55
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ilustración del funcionamiento del modelo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
@@ -542,16 +621,334 @@ Variante S.
  Powers et al.
 \end_layout
 
-\begin_layout Standard
-Explicación del objetivo de ellos, modificaciones que hicieron y resultados.
+\begin_layout ItemizeIncrementalAlerted
+El objetivo es alcanzar de forma evolutiva algunas de las características
+ que favorecen la selección de grupo.
+ Tal como una población espacialmente estructurada.
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Variables a calcular:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Egoísta o cooperador
+\end_layout
+
+\begin_layout Itemize
+Grupo grande o pequeño
+\end_layout
+
+\end_deeper
+\begin_layout ItemizeIncrementalAlerted
+Grupos pequeños de cooperadores son favorecido después de varias generaciones
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Grupos grandes de egoístas son favorecidos al principio y decae rápidamente
 \end_layout
 
 \begin_layout BeginFrame
 Implementación
 \end_layout
 
+\begin_layout Itemize
+Matriz de pago:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-Explicación de la matriz de pago, ejecuciones realizadas, alguna gráfica?
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Parámetros y ejecuciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="0pt">
+<column alignment="center" valignment="middle" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cantidad de grupos: 2-10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Individuos por grupo: 2-10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generaciones dentro del grupo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mezclas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Resultados
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/inicio2.svg
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/final2.svg
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proporción de individuos al inicio y al final de cada ejecución
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -566,9 +963,121 @@ Modelo J.
  Smuts
 \end_layout
 
+\begin_layout FrameSubtitle
+Objetivos
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Possitive Assortment: Agrupación espacial con sus similares.
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Las acciones de los individuos disminuyen la calidad del ambiente en el
+ que se encuentran
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Los individuos cooperadores se difunden en la población debido a que causan
+ menos daño al ambiente en el que se encuentran
+\end_layout
+
+\begin_layout BeginFrame
+Modelo J.
+ W.
+ Pepper and B.
+ B.
+ Smuts
+\end_layout
+
+\begin_layout FrameSubtitle
+Los agentes
+\end_layout
+
+\begin_layout Itemize
+Plantas: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Crecimiento: 
+\begin_inset Formula $\bigtriangleup S=RS\frac{K-S}{K}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Energía inicial aleatoria entre 0 y K
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Animales:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Costo metabólico por unidad de tiempo
+\end_layout
+
+\begin_layout Itemize
+Desplazamiento entre las 8 celdas adyacentes
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Moverse a la que tenga la planta con mayor energía, si satisface el costo
+ metábolico y no hay otro animal.
+\end_layout
+
+\begin_layout Itemize
+Sino moverse a una celda aleatoria, que no tenga otro animal en ella.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Porcentaje de alimentación:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cooperadores: 50% de la planta
+\end_layout
+
+\begin_layout Itemize
+Egoístas: 99% de la planta
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout BeginFrame
+Modelo J.
+ W.
+ Pepper and B.
+ B.
+ Smuts
+\end_layout
+
+\begin_layout FrameSubtitle
+El ambiente
+\end_layout
+
+\begin_layout ItemizeIncrementalAlerted
+Ambiente:
+\end_layout
+
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Descripción del objetivo de ellos, descripción del modelo, mediciones, análisis,
  crítica.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
@@ -587,658 +1096,6 @@ Conclusiones
 \begin_layout Standard
 Aún no tengo conclusiones...
  esto sí debería ir aquí?
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout BeginFrame
-Poner títulos informativos
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-N.
- del T.
-\emph default
-: En el título original pone además 
-\begin_inset Quotes eld
-\end_inset
-
-Usar Letras Capitales
-\begin_inset Quotes erd
-\end_inset
-
-.
- Esto es habitual en inglés pero no en español.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout FrameSubtitle
-Los subtítulos de los fotogramas son opcionales.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- Un título debería resumir el contenido de la transparencia de modo comprensibl
-e para cualquiera que no conoce lo que ésta contiene.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Usar Enumeración* a discreción.
-\end_layout
-
-\begin_deeper
-\begin_layout Pause
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Usar oraciones muy cortas o frases cortas.
-\end_layout
-
-\begin_deeper
-\begin_layout Pause
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Estos solapados se crean usando el estilo Pausa.
-\end_layout
-
-\begin_layout BeginFrame
-Poner títulos informativos 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-También se pueden usar estas especificaciones para crear solapados 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<3->
-\end_layout
-
-\end_inset
-
-Esto permite presentar cosas en cualquier orden
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-Ésta se muestra en segundo lugar
-\end_layout
-
-\begin_layout BeginFrame
-Poner títulos informativos
-\end_layout
-
-\begin_layout Block
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Bloque sin título.
-\end_layout
-
-\begin_layout Itemize
-Mostrado en todas las diapositivas.
-\end_layout
-
-\end_deeper
-\begin_layout ExampleBlock
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Título de algún Bloque de ejemplo
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi}=-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi/2}=i$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Trabajo previo
-\end_layout
-
-\begin_layout BeginFrame
-Poner títulos informativos
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-N.
- del T.: Para traducir en la salida las etiquetas AMS: ejemplo, teorema,
- etc, se puede usar uno de estos métodos:
-\end_layout
-
-\begin_layout Itemize
-Preparar un archivo '.dict' en español para que lo use el paquete 'translator',
- que es cargado automáticamente por beamer.
-\end_layout
-
-\begin_layout Itemize
-Añadir en el preámbulo LaTeX comandos como los descritos en 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://wiki.lyx.org/LyX/I18nLabels
-\end_layout
-
-\end_inset
-
-, por ej.:
-\begin_inset Newline newline
-\end_inset
-
-
-\family typewriter
-
-\backslash
-newtheorem{eje}{Ejemplo}
-\begin_inset Newline newline
-\end_inset
-
-
-\backslash
-renewenvironment{example}{
-\backslash
-begin{eje}}{
-\backslash
-end{eje}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-En la primera diapositiva.
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-En la segunda diapositiva.
-\end_layout
-
-\begin_layout Section
-Nuestros resultados/Contribución
-\end_layout
-
-\begin_layout Subsection
-Resultados principales
-\end_layout
-
-\begin_layout BeginFrame
-Poner títulos informativos
-\end_layout
-
-\begin_layout Theorem
-En la primera diapositiva.
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Corollary
-En la segunda diapositiva.
-\end_layout
-
-\begin_layout BeginFrame
-Poner títulos informativos 
-\end_layout
-
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-En la columna de la izquierda.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-En la columna de la derecha.
-\begin_inset Newline newline
-\end_inset
-
-Nueva línea
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Ideas básicas para demostraciones/implementaciones
-\end_layout
-
-\begin_layout Section*
-Sumario
-\end_layout
-
-\begin_layout BeginFrame
-Sumario
-\end_layout
-
-\begin_layout Itemize
-El
-\color none
- 
-\color red
-primer mensaje principal
-\color none
- de la exposición en una o dos líneas.
-\end_layout
-
-\begin_layout Itemize
-El
-\color none
- 
-\color red
-segundo mensaje principal
-\color none
- de la exposición en una o dos líneas.
-\end_layout
-
-\begin_layout Itemize
-Quizás un
-\color none
- 
-\color red
-tercer mensaje
-\color none
-, pero no más.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-La perspectiva siempre es opcional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vskip0pt plus.5fill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Perspectiva
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Lo que no hemos hecho todavía.
-\end_layout
-
-\begin_layout Itemize
-Otras cosas pendientes.
-\end_layout
-
-\end_deeper
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo lo siguiente es opcional y generalmente no es necesario.
-\end_layout
-
-\end_inset
-
-Apéndice
-\end_layout
-
-\begin_layout Subsection*
-Lecturas complementarias
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-Lecturas complementarias
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Empezar con libros generales.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Autor1990"
-
-\end_inset
-
-A.
- Autor.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Manual de Lo que sea
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Editorial, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Y seguir con artículos, una lista breve.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Alguien2002"
-
-\end_inset
-
-S.
- Alguien.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Sobre esto y aquello
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Revista Esto y Aquello
-\emph default
-.
- 2(1):50--100, 2000.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout EndFrame

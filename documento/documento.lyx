@@ -493,6 +493,16 @@ En la literatura existen trabajos que abordan la selección de grupo bajo
 
 \begin_layout Subsection
 A Theory of Group Selection
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falta complementarlo con mas explicación del funcionamiento del modelo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -689,7 +699,18 @@ Los autores mencionan como trabajos futuros la posibilidad de incluir nuevas
 
 \begin_layout Subsection
 A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
- through Environmental Feedback
+ through Environmental Feedback 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hablar un poco mas sobre las desventajas del modelo y luego mencionar las
+ mejoras a realizar
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -746,20 +767,13 @@ possitive assortment
 \end_inset
 
 .
- Sin embargo, hay una característica que es completamente contraria a la
- realidad de cualquier sistema y es que los individuos son 
-\begin_inset Quotes eld
-\end_inset
-
-amables
-\begin_inset Quotes erd
-\end_inset
-
- por definición: el comportamiento de los forrajeadores es seleccionar una
- ubicación entre las celdas aledañas que no tengan ningún otro forrajeador.
- Además, como los individuos no se reproducen no se se puede afirmar que
- el rasgo cooperativo se difunda en la población, los resultados son dependiente
-s de la cantidad de individuos por cada tipo.
+ Sin embargo, hay una característica que es completamente contraria al objetivo
+ que plantean y la forma en la que analizan sus resultados: Los individuos
+ no se reproducen, mutan o mueren.
+ Debido a esto no se se puede afirmar que el rasgo cooperativo se difunda
+ en la población y menos por medio del análisis de la desviación genética,
+ además los resultados son dependientes de la cantidad de individuos por
+ cada tipo.
 \end_layout
 
 \begin_layout Section

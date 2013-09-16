@@ -157,6 +157,9 @@ class Environment
 						end
 					end
 				end
+				if newCell==nil #Si no hay espacio disponible para moverse
+					animal.move animal.posX, animal.posY
+				end
 			end
 			newAnimals<< animal
 		end
