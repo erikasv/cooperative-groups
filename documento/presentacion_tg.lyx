@@ -532,12 +532,12 @@ Selección individual vs Selección de grupo
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/documento/img/EstadoDelArte/ATheoryOfGroupSelection.png
+	filename img/EstadoDelArte/ATheoryOfGroupSelection.png
 	scale 40
 
 \end_inset
@@ -582,12 +582,12 @@ El modelo
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/documento/img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_1.png
+	filename img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_1.png
 	scale 55
 
 \end_inset
@@ -598,7 +598,7 @@ status collapsed
 
 
 \begin_inset Graphics
-	filename /home/erikasv/tg/documento/img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_2.png
+	filename img/Presentacion/ilustracion_A_Theory_Of_Group_Selection_2.png
 	scale 55
 
 \end_inset
@@ -689,7 +689,7 @@ status open
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -853,7 +853,7 @@ status open
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1004,12 +1004,12 @@ Resultados
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/inicio2.svg
+	filename ../trait-groups/nuevas_1000_1000/inicio2.svg
 	lyxscale 50
 	scale 22
 
@@ -1021,7 +1021,7 @@ status collapsed
 
 
 \begin_inset Graphics
-	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/final2.svg
+	filename ../trait-groups/nuevas_1000_1000/final2.svg
 	lyxscale 50
 	scale 22
 
@@ -1054,12 +1054,12 @@ Resultados
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/comparacion2.svg
+	filename ../trait-groups/nuevas_1000_1000/comparacion2.svg
 	lyxscale 50
 	scale 22
 
@@ -1298,7 +1298,7 @@ status open
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align left
@@ -1652,7 +1652,7 @@ Parámetros estándar
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align right
