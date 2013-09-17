@@ -20,6 +20,9 @@
 
 %Color del bloque
 \setbeamercolor{block title}{fg=white,bg=red!50!black}
+
+%Varias columnas
+\usepackage{multicol} 
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -294,24 +297,44 @@ Introducción
 Introducción
 \end_layout
 
-\begin_layout Standard
-Texto introductorio
+\begin_layout Itemize
+La teoría de Richard Dawkins plantea que la presión selectiva en el proceso
+ evolutivo se ejerce únicamente sobre los genes.
+ Esto explica el altruismo que ocurre solo entre individuos emparentados,
+ ya que los genes son lo suficientemente longevos para ser beneficiarios
+ de la selección de un individuo.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+Por otra parte, otros cientificos argumentan que hay características tales
+ como una problación espacialmente estructurada que favorecen la selección
+ de los individuos cooperadores.
+\end_layout
+
+\begin_layout Itemize
+En este trabajo se buscará un modelo en el que las características del ambiente
+ 
+\begin_inset Quotes eld
+\end_inset
+
+forcen a los individuos a cooperar
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Introducción
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Problema-Discusión, 
-\begin_inset Quotes eld
-\end_inset
-
-Justificación
-\begin_inset Quotes erd
-\end_inset
-
-?, Trabajo
+Continuar con la justificación?, hablar algo mas del trabajo realizado?
+ (es que yo no creo :P)
 \end_layout
 
 \end_inset
@@ -653,12 +676,34 @@ Grupos grandes de egoístas son favorecidos al principio y decae rápidamente
 Implementación
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->{
+\end_layout
+
+\end_inset
+
 Matriz de pago:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
+\align center
 \begin_inset Float table
 wide false
 sideways false
@@ -673,7 +718,7 @@ status collapsed
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -686,6 +731,8 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Coopera
 \end_layout
 
@@ -695,6 +742,8 @@ Coopera
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Traiciona
 \end_layout
 
@@ -706,6 +755,8 @@ Traiciona
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Coopera
 \end_layout
 
@@ -715,6 +766,8 @@ Coopera
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 3,3
 \end_layout
 
@@ -724,6 +777,8 @@ Coopera
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 0,5
 \end_layout
 
@@ -735,6 +790,8 @@ Coopera
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Traiciona
 \end_layout
 
@@ -744,6 +801,8 @@ Traiciona
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 5,0
 \end_layout
 
@@ -753,6 +812,8 @@ Traiciona
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 1,1
 \end_layout
 
@@ -772,37 +833,71 @@ Traiciona
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
+\begin_layout Standard
+\begin_inset VSpace 0.01cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->{
+\end_layout
+
+\end_inset
+
 Parámetros y ejecuciones:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
+\align center
 \begin_inset Float table
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="0pt">
 <column alignment="center" valignment="middle" width="0pt">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Cantidad de grupos: 2-10
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Individuos por grupo: 2-10
 \end_layout
 
@@ -814,6 +909,8 @@ Individuos por grupo: 2-10
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Generaciones dentro del grupo
 \end_layout
 
@@ -823,6 +920,8 @@ Generaciones dentro del grupo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 Mezclas
 \end_layout
 
@@ -834,6 +933,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 100
 \end_layout
 
@@ -843,6 +944,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 100
 \end_layout
 
@@ -854,6 +957,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 1000
 \end_layout
 
@@ -863,6 +968,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 100
 \end_layout
 
@@ -874,6 +981,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 1000
 \end_layout
 
@@ -883,6 +992,8 @@ Mezclas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size scriptsize
 1000
 \end_layout
 
@@ -938,7 +1049,45 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Proporción de individuos al inicio y al final de cada ejecución
+Proporción de individuos cooperadores en la primera y ultima generación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Resultados
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/trait-groups/nuevas_1000_1000/comparacion2.svg
+	lyxscale 50
+	scale 22
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparación de las proporciones de cooperadores al inicio y al final
 \end_layout
 
 \end_inset
@@ -958,7 +1107,7 @@ Simulación de Agentes
 \begin_layout BeginFrame
 Modelo J.
  W.
- Pepper and B.
+ Pepper y B.
  B.
  Smuts
 \end_layout
@@ -968,7 +1117,7 @@ Objetivos
 \end_layout
 
 \begin_layout ItemizeIncrementalAlerted
-Possitive Assortment: Agrupación espacial con sus similares.
+Positive Assortment: Agrupación espacial con sus similares.
 \end_layout
 
 \begin_layout ItemizeIncrementalAlerted
@@ -977,14 +1126,23 @@ Las acciones de los individuos disminuyen la calidad del ambiente en el
 \end_layout
 
 \begin_layout ItemizeIncrementalAlerted
-Los individuos cooperadores se difunden en la población debido a que causan
- menos daño al ambiente en el que se encuentran
+Alternativa a la expansión de los cooperadores por 
+\shape italic
+
+\begin_inset Quotes eld
+\end_inset
+
+inclusive fitness
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
 Modelo J.
  W.
- Pepper and B.
+ Pepper y B.
  B.
  Smuts
 \end_layout
@@ -993,8 +1151,40 @@ Modelo J.
 Los agentes
 \end_layout
 
-\begin_layout Itemize
-Plantas: 
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Plantas
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1007,53 +1197,71 @@ Crecimiento:
 \end_layout
 
 \begin_layout Itemize
-Energía inicial aleatoria entre 0 y K
+Energía inicial aleatoria entre 0 y K.
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Animales:
+\begin_layout Standard
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Animales
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Costo metabólico por unidad de tiempo
+Costo metabólico por unidad de tiempo.
 \end_layout
 
 \begin_layout Itemize
-Desplazamiento entre las 8 celdas adyacentes
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Moverse a la que tenga la planta con mayor energía, si satisface el costo
- metábolico y no hay otro animal.
+Desplazamiento entre las 8 celdas adyacentes.
 \end_layout
 
 \begin_layout Itemize
-Sino moverse a una celda aleatoria, que no tenga otro animal en ella.
+Porcentaje de alimentación 50% o 99%.
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Porcentaje de alimentación:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Cooperadores: 50% de la planta
-\end_layout
-
-\begin_layout Itemize
-Egoístas: 99% de la planta
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout BeginFrame
 Modelo J.
  W.
- Pepper and B.
+ Pepper y B.
  B.
  Smuts
 \end_layout
@@ -1062,17 +1270,698 @@ Modelo J.
 El ambiente
 \end_layout
 
-\begin_layout ItemizeIncrementalAlerted
-Ambiente:
+\begin_layout ColumnsTopAligned
+
 \end_layout
 
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+arraystretch{0.6}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="4.5cm">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Time steps per run
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Plants:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Patch width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Gap width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Minimum number of plants
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Logistic growth rate R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Maximum size (energy)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Foragers:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Total population size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Frequiency of restrained foragers (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Metabolic rate (energy units per time step)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Feeding restraint (% uneaten)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 or 50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Parámetros estándar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+5 cm
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename img/Presentacion/ilustracion_A_mechanism_for_the_evolution_of_altruism_among_nonkin.png
+	lyxscale 50
+	scale 53
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Modelo J.
+ W.
+ Pepper y B.
+ B.
+ Smuts
+\end_layout
+
+\begin_layout FrameSubtitle
+Análisis
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Medición de grupos similares a los trait-groups:
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+El conjunto mas pequeño de individuos cuya aptitud depende de los rasgos
+ de los demás miembros del grupo
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Para esto se un animal hace parte del ultimo parche donde estuvo, esto es
+ equivalente cuando los parches son pequeños y bien separados.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.01cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->{}
+\end_layout
+
+\end_inset
+
+Assortment: Desviación de la similitud genética entre parches observada
+ con respecto la esperada bajo aleatoriedad
+\end_layout
+
+\begin_layout Block
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing single
+\align center
+\begin_inset Formula $r_{a}=r-r_{s}=\beta(G_{W,}G_{A})-\frac{g-1}{N-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula $\beta$
+\end_inset
+
+= Coeficiente de regresión de similitud de Hamilton
+\end_layout
+
+\begin_layout BeginFrame
+Modelo J.
+ W.
+ Pepper y B.
+ B.
+ Smuts
+\end_layout
+
+\begin_layout FrameSubtitle
+Resultados
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->{
+\end_layout
+
+\end_inset
+
+Resultados bajo los parámetros estándar
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Ejecuciones:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Media:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.045
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Desviación:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.008
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Equilibrio (U.
+ de tiempo):
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Descripción del objetivo de ellos, descripción del modelo, mediciones, análisis,
- crítica.
+Será necesario poner la crítica explícita en las diapositivas?.
 \end_layout
 
 \end_inset
@@ -1084,9 +1973,95 @@ Descripción del objetivo de ellos, descripción del modelo, mediciones, anális
 Implementación
 \end_layout
 
+\begin_layout FrameSubtitle
+Características
+\end_layout
+
 \begin_layout Standard
+Las modificaciones realizadas al modelo de J.
+ W.
+ Pepper y B.
+ B.
+ Smuts fueron basadas en trabajo de J.M.
+ Epstein, expuestas en el libro
+\shape italic
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Growing artificial societies
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Animales
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Porcentaje de alimentación [0% - 100%)
+\end_layout
+
+\begin_layout Itemize
+Reserva de energía (ilimitada)
+\end_layout
+
+\begin_layout Itemize
+Muerte (cuando no hay energía suficiente para el costo metabólico)
+\end_layout
+
+\begin_layout Itemize
+Reproducción (aptitud: reserva de energía)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Datos sacados del libro.
  Otras descripciones, medidas?, resultados? (los 2 ultimos a futuro)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1094,8 +2069,16 @@ Conclusiones
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Aún no tengo conclusiones...
- esto sí debería ir aquí?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame

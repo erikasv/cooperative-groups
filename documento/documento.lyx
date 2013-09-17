@@ -438,13 +438,13 @@ MARCO TEÓRICO
 \end_layout
 
 \begin_layout Subsection
-Possitive Assortment / Negative Assortment
+Positive Assortment / Negative Assortment
 \end_layout
 
 \begin_layout Standard
 En cuanto a la distribución de una población de individuos en grupos.
  Cuando los individuos del mismo tipo son organizados de forma no aleatoria
- en los mismos grupos, se dice que la clasificación es positiva (Possitive
+ en los mismos grupos, se dice que la clasificación es positiva (Positive
  Assortment), pues los individuos son en promedio mas parecidos a los miembros
  de su grupo que a la población en general
 \begin_inset CommandInset citation
@@ -762,7 +762,7 @@ La conclusión mas importante es que el daño causado por los individuos al
 \begin_inset Quotes eld
 \end_inset
 
-possitive assortment
+positive assortment
 \begin_inset Quotes erd
 \end_inset
 
@@ -795,8 +795,8 @@ ANEXOS
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback"
-options "bibtotoc,IEEEtran"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation"
+options "ieeetr"
 
 \end_inset
 
