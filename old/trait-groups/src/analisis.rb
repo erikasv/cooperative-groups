@@ -11,8 +11,6 @@ individuos_maximo=10
 generaciones=ARGV[0].to_i
 generacionesGrupo=ARGV[1].to_i
 
-datos_generaciones=File.new("generaciones#{ARGV[2]}.txt","w+")
-
 resultados=Array.new
 for i in 2..grupos_maximo do
 	fila=Array.new
@@ -26,12 +24,9 @@ for i in 2..grupos_maximo do
 
 		columna << coop << trai
 		fila << columna
-		#Se escriben los datos de todas las generaciones por si las moscas
-		datos_generaciones.write("10:#{i}:#{j}:10 => #{coop}-#{trai}\n")
 	end
 	resultados << fila
 end
-datos_generaciones.close
 
 
 def hacerGrafico datos, nombreArchivo, limEjex, limEjey
@@ -126,6 +121,10 @@ hacerGrafico d_finales, archivo, grupos_maximo, individuos_maximo
 
 #Comparación entre los datos iniciales y finales
 archivo="comparacion#{ARGV[2]}.svg"
+
+#Archivo de texto para comparar después entre ejecuciones
+datos_generaciones=File.new("generaciones#{ARGV[2]}.txt","w+")
+
 ## Datos
 d_comparativos=Array.new
 for i in 0..grupos_maximo-2
@@ -137,6 +136,7 @@ for i in 0..grupos_maximo-2
 		
 		if(generacion0>generacionFinal)
 			valorZ=0.1
+			datos_generaciones.write("#{i+2} - #{j+2}\n")
 		elsif (generacion0< generacionFinal)
 			valorZ=1.0
 		else
@@ -146,5 +146,6 @@ for i in 0..grupos_maximo-2
 		d_comparativos << OpenStruct.new(x: i+2, y: j+2, z:valorZ)
 	end
 end
+datos_generaciones.close
 
 hacerGrafico d_comparativos, archivo, grupos_maximo, individuos_maximo

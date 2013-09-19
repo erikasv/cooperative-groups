@@ -46,8 +46,8 @@ class Grupo
 			while pos1 == pos2 do
 				pos2=rand(@tamano)
 			end
-			indv1=@arrCromosomas[pos1]
-			indv2=@arrCromosomas[pos2]
+			indv1=@arrCromosomas[pos1].clone
+			indv2=@arrCromosomas[pos2].clone
 			
 			#Asignar a cada uno el puntaje de acuerdo a la matriz de pago
 			indv1.aptitud=@matrizPago[indv1.decision][indv2.decision][0]

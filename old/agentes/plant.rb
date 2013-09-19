@@ -34,9 +34,5 @@ class Plant
 	end
 	
 	attr_reader :energy, :posX, :posY
-	
-	#~ def to_s
-		#~ "#{@energy}: #{@posX}-#{@posY}"
-	#~ end
 end
 

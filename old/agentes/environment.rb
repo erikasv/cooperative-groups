@@ -82,7 +82,7 @@ class Environment
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
 					newAnimal=Animal.new x, y
 					animals<< newAnimal
-					@grid[x][y]['animal']==newAnimal
+					@grid[x][y]['animal']=newAnimal
 					again=false
 				end
 			end
@@ -118,8 +118,8 @@ class Environment
 			#Buscar la mejor planta que satisfaga el costo metabolico
 			deltaX.each_index{
 				|i|
-				newX=animal.posX+deltaX[i]
-				newY=animal.posY+deltaY[i]
+				newX=validate animal.posX+deltaX[i]
+				newY=validate animal.posY+deltaY[i]
 				newCell=@grid[newX][newY]
 				if newCell['plant']!=nil && newCell['animal']==nil
 					newEnergy=newCell['plant'].energy
@@ -143,8 +143,8 @@ class Environment
 				newCell=nil
 				while newCell==nil do
 					pos=rand(deltaX.size)
-					newX=animal.posX+deltaX.delete_at(pos)
-					newY=animal.posY+deltaY.delete_at(pos)
+					newX=validate animal.posX+deltaX.delete_at(pos)
+					newY=validate animal.posY+deltaY.delete_at(pos)
 					if @grid[newX][newY]['animal']==nil
 						@grid[animal.posX][animal.posX]['animal']=nil
 						animal.move newX, newY
@@ -161,14 +161,21 @@ class Environment
 					animal.move animal.posX, animal.posY
 				end
 			end
-			newAnimals<< animal
+			#Por el momento se puede mover con energía=0 si después come algo :-/
+			if animal.energy>=0
+				newAnimals<< animal
+			end
 		end
 		return newAnimals
 	end
 	
+	def validate pos
+		return pos % @gridSize
+	end
+	
 	def nextGeneration
 		newAnimals=selectAnimals
-		newAnimals=mutateAnimals newAnimals
+		mutateAnimals! newAnimals
 		replaceAnimals newAnimals
 	end
 	
@@ -184,8 +191,8 @@ class Environment
 			while pos1 == pos2 do
 				pos2=rand(populationSize)
 			end
-			agent1=@animals[pos1]
-			agent2=@animals[pos2]
+			agent1=@animals[pos1].clone
+			agent2=@animals[pos2].clone
 			
 			#Debería considerarse algún costo por reproducción??
 			if agent1.energy>agent2.energy
@@ -201,13 +208,12 @@ class Environment
 	end
 	
 	#Mutación
-	def mutateAnimals selection
+	def mutateAnimals! selection
 		amount=(0.1*selection.size).ceil.to_i
 		amount.times do
 			which=rand(selection.size)
 			selection[which].mutate # SE DEBERÍA EXCLUIR EL CROMOSOMA QUE RECIÉN SE MUTÓ???
 		end
-		return selection
 	end
 	
 	#Reemplazo
@@ -237,7 +243,7 @@ class Environment
 	end
 	
 	def count
-		amount=Hash.new(0)
+		amount=Hash.new{|hash,key| hash[key]=0}
 		@animals.each{
 			|animal|
 			amount["#{animal.feedRatePercent}"]=amount["#{animal.feedRatePercent}"]+1
@@ -245,13 +251,6 @@ class Environment
 		return amount
 	end
 	
-	attr_reader :grid, :arrayCount
-	
-	#~ def grid
-		#~ @grid.each{
-			#~ |row|
-			#~ p row
-		#~ }
-	#~ end
+	attr_reader :arrayCount, :grid
 	
 end
