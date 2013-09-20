@@ -13,16 +13,16 @@ class GeneticAlgorithm
 			while pos1 == pos2 do
 				pos2=rand(populationSize)
 			end
-			chromosome1=totalPopulation[pos1].clone
-			chromosome2=totalPopulation[pos2].clone
+			chromosome1=totalPopulation[pos1]
+			chromosome2=totalPopulation[pos2]
 			
 			if chromosome1.fitness > chromosome2.fitness
-				selected << chromosome1
+				selected << chromosome1.clone
 			elsif chromosome1.fitness < chromosome2.fitness
-				selected << chromosome2
+				selected << chromosome2.clone
 			else
 				which=rand(2)
-				selected << ((which.eql? 0)? chromosome1 : chromosome2)
+				selected << ((which.eql? 0)? chromosome1.clone : chromosome2.clone)
 			end
 		end
 		
