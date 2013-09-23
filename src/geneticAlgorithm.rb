@@ -2,7 +2,7 @@ class GeneticAlgorithm
 	#The chromosome must implement:
 	#fitness, mutate
 
-	def select totalPopulation, poolSizePercent #Porcentaje
+	def self.select totalPopulation, poolSizePercent #Porcentaje
 		selected=Array.new
 		populationSize=totalPopulation.size
 		poolSize=(populationSize * poolSizePercent).ceil.to_i
@@ -29,7 +29,7 @@ class GeneticAlgorithm
 		return selected
 	end
 	
-	def mutate! population, mutationRate
+	def self.mutate population, mutationRate
 		amount=(mutationRate * population.size).ceil.to_i
 		amount.times do
 			which=rand(population.size)
@@ -37,7 +37,7 @@ class GeneticAlgorithm
 		end
 	end
 	
-	def replace population, pool
+	def self.replace population, pool
 		newPopulation=Array.new
 		poolSize=pool.size
 		populationSize=population.size

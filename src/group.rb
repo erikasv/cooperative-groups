@@ -5,23 +5,23 @@
 # 2. Traiciona vs Traiciona = Cualquiera de los dos
 # 3. Coopera vs Coopera = Sobreviven los 2
 
+require 'chromosome'
 class Group
 
 	#Matriz de pago cambiada de acuerdo a la descripción de la depredación
-	@@depredationMatrix=Array[ [[3,3],[0,5]] , [[5,0],[1,1]] ]
+	@@predationMatrix=Array[ [[3,3],[0,5]] , [[5,0],[1,1]] ]
 
 	def initialize groupSize
 		@groupSize=groupSize
+		@arrayChromosomes=Array.new
 	end
 	
 	def add chromosome
 		@arrayChromosomes << chromosome
 	end
 
-	def depredation matchProportion=0.5 #Cuantos encuentros realizar en proporción a la población
-		howManyTimes= (@arrayChromosomes * matchProportion).ceil.to_i
-		
-		howManyTimes.times do
+	def predation matchTimes #Cuantos encuentros realizar
+		matchTimes.times do
 			pos1=rand(@arrayChromosomes.size)
 			pos2=rand(@arrayChromosomes.size)
 			while pos1 == pos2 do
@@ -30,8 +30,8 @@ class Group
 			
 			chromosome1=@arrayChromosomes[pos1]
 			chromosome2=@arrayChromosomes[pos2]
-			chromosome1.aptitud=@@depredationMatrix[chromosome1.decision][chromosome2.decision][0]
-			chromosome2.aptitud=@@depredationMatrix[chromosome1.decision][chromosome2.decision][1]
+			chromosome1.fitness=@@predationMatrix[chromosome1.decision][chromosome2.decision][0]
+			chromosome2.fitness=@@predationMatrix[chromosome1.decision][chromosome2.decision][1]
 			
 			if chromosome1.fitness > chromosome2.fitness
 				@arrayChromosomes.delete_at pos2
@@ -42,6 +42,12 @@ class Group
 			end
 			
 		end
+	end
+	
+	# Vaciar los grupos
+	def delete
+		@arrayChromosomes=nil
+		@arrayChromosomes=Array.new
 	end
 	
 	attr_reader :arrayChromosomes

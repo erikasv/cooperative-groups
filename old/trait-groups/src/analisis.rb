@@ -66,8 +66,8 @@ def hacerGrafico datos, nombreArchivo, limEjex, limEjey
 		.text(x.tick_format)
 
 	### Etiquetas de los ejes
-	panel.add(pv.Label).left(-15).bottom(100).text('Cantidad de individuos por grupo').font("20px sans-serif").text_angle(-Math::PI / 2 ) 
-	panel.add(pv.Label).bottom(-35).left(200).text('Cantidad de grupos').font("20px sans-serif")
+	panel.add(pv.Label).left(-15).bottom(150).text('Cantidad de individuos por grupo').font("20px sans-serif").text_angle(-Math::PI / 2 ) 
+	panel.add(pv.Label).bottom(-35).left(250).text('Cantidad de grupos').font("20px sans-serif")
 
 	### Los datos iniciales
 	panel.add(pv.Panel)

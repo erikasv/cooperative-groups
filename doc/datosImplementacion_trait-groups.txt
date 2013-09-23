@@ -23,3 +23,10 @@ ALGORITMO:
 
 1. Entrada del algoritmo: Cantidad de generaciones, cantidad de grupos, cantidad de individuos por grupo y cantidad de generaciones en el grupo
 2. Selección por torneo. Reemplazo por inserción (nuevamente toca hacer torneo)
+
+************************************************************************************************************************************************************
+************************************************************************************************************************************************************
+
+1. Cuantos encuentros deberían ocurrir por cada "ciclo" de depredación? <50% del grupo>
+2. Cuantos "ciclos" de depredación deberían ocurrir? <1>
+3. Que pasa con los que no quepan en los grupos después de la mezcla? <Se pierden>
