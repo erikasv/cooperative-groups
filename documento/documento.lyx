@@ -29,7 +29,16 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letterpaper
 \use_geometry false
 \use_amsmath 1
@@ -493,16 +502,6 @@ En la literatura existen trabajos que abordan la selección de grupo bajo
 
 \begin_layout Subsection
 A Theory of Group Selection
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta complementarlo con mas explicación del funcionamiento del modelo
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -510,11 +509,11 @@ El autor presenta un modelo teórico que se basa en los diferentes tipos
  de etapas por las que pasan los organismos en su ciclo de vida.
  En general, el modelo consiste en 2 estados claramente distinguidos, el
  primero consiste en que los individuos son separados en grupos donde se
- lleva a cabo el proceso evolutivo.
- Y en el segundo estado los individuos salen de los grupos, son mezclados
- y posteriormente redistribuidos en la misma cantidad de grupos, éste último
- corresponde a la etapa de dispersión que es la unidad de población mayormente
- concebida.
+ lleva a cabo el proceso de depredación.
+ Y en el segundo estado los individuos salen de los grupos, son mezclados,
+ se reproducen y posteriormente redistribuidos en la misma cantidad de grupos,
+ éste último estado corresponde a la etapa de dispersión que es la unidad
+ de población mayormente concebida.
  El autor destaca que la mayoría de las interacciones ecológicas, como alimentac
 ión y depredación entre otras, ocurren en la primera etapa, por lo tanto
  llama al modelo: 
@@ -559,27 +558,15 @@ reference "fig:FdvsFr"
 \begin_inset Formula $f_{d}>-(N-1)f_{r}$
 \end_inset
 
-) y los puntos por encima de la línea son seleccionados para éste caso.
- Rotar la línea continua en sentido contrario a las manecillas del reloj
- hasta coincidir con la línea punteada es equivalente a forzar al sistema
- a la selección de grupo y esto se logra incrementando la diversidad de
- rasgos dentro de cada uno de los grupos.
-\end_layout
-
-\begin_layout Standard
-Finalmente, se concluye que determinando la composición de los grupos de
- forma aleatoria se obtiene que 
-\begin_inset Formula $f_{d}>0$
-\end_inset
-
-, por lo tanto el modelo funciona.
+) y los puntos por encima de ésta son seleccionados en éste caso.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -601,7 +588,8 @@ name "fig:FdvsFr"
 
 \end_inset
 
-Puntos posibles de acuerdo al cambio en la aptitud del donante (
+Puntos posibles de acuerdo al efecto de los rasgos en la aptitud del donante
+ (
 \begin_inset Formula $f_{d}$
 \end_inset
 
@@ -614,11 +602,11 @@ Puntos posibles de acuerdo al cambio en la aptitud del donante (
 \shape italic
 x
 \shape default
- representa el cambio en la aptitud del donante, el eje 
+ representa la aptitud del donante, el eje 
 \shape italic
 y
 \shape default
- el cambio en la aptitud del receptor.
+ la aptitud del receptor.
 \end_layout
 
 \end_inset
@@ -629,6 +617,39 @@ y
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Rotar la línea continua en sentido contrario a las manecillas del reloj
+ hasta coincidir con la línea punteada es equivalente a forzar al sistema
+ a la selección de grupo.
+ La propuesta del autor es que si se determina la composición de los grupos,
+ en términos de proporción de individuos de cada rasgo, de forma aleatoria
+ cualquier rasgo que incremente la aptitud absoluta del donante será seleccionad
+o, independientemente de su aptitud relativa, es decir que 
+\begin_inset Formula $f_{d}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El éxito de este modelo depende de (1) la validez del concepto de 
+\begin_inset Quotes eld
+\end_inset
+
+grupo de rasgos
+\begin_inset Quotes erd
+\end_inset
+
+ y (2) la variación en la composición de los grupos.
+ La heterogeneidad espacial es considerada una forma de grupos de rasgos
+ ya que pueden partir la población espacialmente, mientras que los ambientes
+ insulares pequeños constituyen un solo grupo de rasgo y clasifican en la
+ selección individual.
+ Además, en el modelo propuesto no se tiene en cuenta la mutación de los
+ rasgos, y la reproducción es solo con 1 descendencia.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -636,8 +657,8 @@ Individual Selection for Cooperative Group Formation
 \end_layout
 
 \begin_layout Standard
-Este trabajo se basa principalmente en el modelo de los grupos de rasgos
- propuesto por D.S.
+Este trabajo tiene como base teórica el modelo de los grupos de rasgos propuesto
+ por D.S.
  Wilson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -660,9 +681,9 @@ key "eps264277"
 \end_layout
 
 \begin_layout Standard
-Este trabajo es realizado con algoritmos genéticos, donde el genotipo de
- los individuos expresa dos parámetros, si éste es cooperador o egoísta
- y si 
+Los autores presentan un trabajo realizado con algoritmos genéticos, donde
+ el genotipo de los individuos expresa dos parámetros, si éste es cooperador
+ o egoísta y si 
 \begin_inset Quotes eld
 \end_inset
 
@@ -671,8 +692,20 @@ pertenece
 \end_inset
 
  a un grupo pequeño o grande.
- Se realizaron trabajos previos para determinar las dos variantes de valores
- de ambos parámetros.
+ Se modela el crecimiento de cada tipo de individuo dentro de los grupos
+ por medio de una ecuación simplificada de otros modelos de crecimiento
+ de colonias de bacterias.
+ Y al igual que en el modelo de los trait-groups no se tiene en cuenta la
+ mutación de los individuos.
+\end_layout
+
+\begin_layout Standard
+Con los demás parámetros constantes se realizaron trabajos previos para
+ determinar los valores para los grupos grandes y pequeños y cuantas generacione
+s debían pasar los individuos dentro de los grupos antes de ser mezcaldos,
+ de forma que los individuos altruistas sobrevivieran.
+ Los valores tomados fueron: 4 individuos para los grupos pequeños, 40 para
+ los grupos grandes y 4 generaciones dentro de los grupos.
 \end_layout
 
 \begin_layout Standard
@@ -682,19 +715,21 @@ Los resultados muestran que la formación de grupos pequeños compuestos por
  Los grupos grandes de individuos egoístas son favorecidos en un principio
  bajo el hecho de que hay suficientes cooperadores a los que explotar, por
  esta razón alcanza su máximo en pocas generaciones y luego decae.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Los autores mencionan como trabajos futuros la posibilidad de incluir nuevas
- estrategias mediante la mutación, lo cual deja la duda de que no se hay
- implementado un trabajo completamente evolutivo.
+ Como trabajo futuro se propone la exploración de estrategias incluyendo
+ la mutación.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+A pesar de basarse teóricamente en el modelo de los trait-groups, este trabajo
+ tiene los estados invertidos.
+ En el modelo de los trait-groups en la etapa de dispersión los individuos
+ se reproducen, en este modelo los individuos se reproducen dentro de los
+ grupos.
+ Y en el modelo original dentro de los grupos ocurre la depredación, en
+ este modelo la depredación está implícita en (1) una constante de muerte
+ para individuos de cada tipo y en (2) al reubicar los individuos en grupos
+ son descartados aquellos que quedaron de últimos y no son suficientes para
+ formar un nuevo grupo.
 \end_layout
 
 \begin_layout Subsection
