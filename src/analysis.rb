@@ -32,6 +32,7 @@ executions.times do |e|
 	configurationsFile=File.new("comparation#{e}.txt","w+") #Archivo de texto con los casos satisfactorios
 	graphicsFile="comparation#{e}.svg" #Nombre para el archivo del grafico
 	
+	successful=0
 	for i in 0..maxGroups-2 do
 		for j in 0..maxGroupSize-2 do
 			valueZ=0
@@ -43,6 +44,7 @@ executions.times do |e|
 				valueZ=0.1
 			elsif firstGeneration < lastGeneration
 				valueZ=1.0
+				successful=successful+1
 				configurationsFile.write("#{i+2} - #{j+2}\n")
 			else
 				valueZ=0
@@ -52,6 +54,7 @@ executions.times do |e|
 		end
 	end
 	
+	configurationsFile.write("#{successful} de #{(maxGroups-2)*(maxGroupSize-2)}")
 	configurationsFile.close
 	Graphic.makeGraphic data, graphicsFile, maxGroups, maxGroupSize, 'Cantidad de grupos', 'Cantidad de individuos por grupo'
 	results=nil
