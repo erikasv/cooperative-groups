@@ -1,11 +1,11 @@
 require 'group'
 class TraitGroups
 	
-	def initialize amountGroups, groupSize, generations, predationTimes=1
+	def initialize amountGroups, groupSize, generations, predationTimes=0.5
 		@amountGroups=amountGroups
 		@groupSize=groupSize
 		@generations=generations
-		@predationTimes=predationTimes
+		@predationTimes=(predationTimes * @groupSize).ceil.to_i
 		@composition=Array.new
 		
 		@arrayGroups=Array.new
@@ -31,10 +31,8 @@ class TraitGroups
 	def run
 		@generations.times do
 			# 1. Depredación por @predationTimes generaciones
-			@predationTimes.times do
-				@arrayGroups.each do |group|
-					group.predation (groupSize*0.5).ceil.to_i #cantidad de encuentros = 50% de la poblacion
-				end
+			@arrayGroups.each do |group|
+				group.predation @predationTimes
 			end
 			
 			# 2. Mezcla = Sacar todos los cromosomas de los grupos
