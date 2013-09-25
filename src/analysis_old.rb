@@ -56,6 +56,6 @@ executions.times do |e|
 	
 	configurationsFile.write("#{successful} de #{(maxGroups-1)*(maxGroupSize-1)}")
 	configurationsFile.close
-	Graphic.makeGraphic data, graphicsFile, maxGroups, maxGroupSize, 'Cantidad de grupos', 'Cantidad de individuos por grupo'
+	Graphic.makeScatterplot data, graphicsFile, maxGroups, maxGroupSize, 'Cantidad de grupos', 'Cantidad de individuos por grupo'
 	results=nil
 end

@@ -1,15 +1,15 @@
-ruby analysis.rb 100 10
-mv casosRepeticiones.svg ../trait-groups/100_10
-ruby analysis.rb 100 100
-mv casosRepeticiones.svg ../trait-groups/100_100
-ruby analysis.rb 1000 10
-mv casosRepeticiones.svg ../trait-groups/1000_10
-ruby analysis.rb 1000 100
-mv casosRepeticiones.svg ../trait-groups/1000_100
-ruby analysis.rb 10000_10
-mv casosRepeticiones.svg ../trait-groups/10000_10
-ruby analysis.rb 10000_100
-mv casosRepeticiones.svg ../trait-groups/10000_100
+ruby analysis_start_end.rb 100 10 10
+mv casosRepeticiones_10.svg ../trait-groups/100_10
+ruby analysis_start_end.rb 100 100 100
+mv casosRepeticiones_100.svg ../trait-groups/100_100
+ruby analysis_start_end.rb 1000 10 10
+mv casosRepeticiones_10.svg ../trait-groups/1000_10
+ruby analysis_start_end.rb 1000 100 100
+mv casosRepeticiones_100.svg ../trait-groups/1000_100
+ruby analysis_start_end.rb 10000 10 10
+mv casosRepeticiones_10.svg ../trait-groups/10000_10
+ruby analysis_start_end.rb 10000 100 100
+mv casosRepeticiones_100.svg ../trait-groups/10000_100
 
 cd ..
 git add trait-groups

@@ -3,12 +3,12 @@ require 'traitGroups'
 require 'graphic'
 require 'rubyvis'
 
-#Entrada por consola: generaciones, ejecuciones, veces de depredación (por defecto esta es 50% de la población de los grupos)
+#Entrada por consola (en ese orden): generaciones, ejecuciones, numero del archivo, veces de depredación (por defecto esta es 50% de la población de los grupos)
 
 maxGroups=10
 maxGroupSize=10
 generations=ARGV[0].to_i
-predationTimes=(ARGV[2].to_i == nil)? 1 : ARGV[2].to_i
+predationTimes=(ARGV[3].to_i == nil)? 1 : ARGV[3].to_i
 
 #Por el momento se harán 3 ejecuciones por cada conficuración
 cases=Hash.new{|hash,key| hash[key]=0}
@@ -45,12 +45,12 @@ end
 
 #Graficar los resultados
 data=Array.new
-graphicsFile="casosRepeticiones.svg"
+graphicsFile="casosRepeticiones_#{ARGV[2].to_i}.svg"
 for i in 0..maxGroups-2 do
 	for j in 0..maxGroupSize-2 do
 		valueZ=cases["#{i+2},#{j+2}"].to_f
-		data << OpenStruct.new(x: i+2, y: j+2, z: valueZ/ARGV[1].to_i)
+		data << OpenStruct.new(x: i+2, y: j+2, z: valueZ/executions)
 	end
 end
 
-Graphic.makeGraphic data, graphicsFile, maxGroups, maxGroupSize, 'Cantidad de grupos', 'Cantidad de individuos por grupo'
+Graphic.makeScatterplot data, graphicsFile, maxGroups, maxGroupSize, 'Cantidad de grupos', 'Cantidad de individuos por grupo'
