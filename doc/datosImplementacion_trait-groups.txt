@@ -1,6 +1,6 @@
 1. No se usa una función para dar aptitud al cromosoma, se usa una matriz de pago.
 
-	|  cop	 |  traic
+		|  cop	 |  traic
   ------|--------|-------
   cop	|  3,3	 |  0,5
   ------|--------|-------
@@ -15,18 +15,29 @@
 CROMOSOMA:
 
 *Solo 1 gen, coopera o traiciona.
-*DEBERÍA SUMARSE LA APTITUD DE LOS DIFERENTES ENCUENTROS CON LOS INDIVIDUOS????, creo que no, porque entonces daría problemas para asignar una aptitud a los cromosomas nuevos.
+*DEBERÍA SUMARSE LA APTITUD DE LOS DIFERENTES ENCUENTROS CON LOS INDIVIDUOS???? => NOO, ESTO ES ESTÚPIDO
 
 ---------------------------------------------------------------------------------------------------------------
 
 ALGORITMO:
 
-1. Entrada del algoritmo: Cantidad de generaciones, cantidad de grupos, cantidad de individuos por grupo y cantidad de generaciones en el grupo
-2. Selección por torneo. Reemplazo por inserción (nuevamente toca hacer torneo)
+1. Entrada del algoritmo: Cantidad de grupos, Tamaño del grupo, Generaciones y Encuentros de depredación
+2. Ciclo del algoritmo (estándar):
+	1. Depredación
+	2. Mezcla
+	3. Reproducción - SIN MUTACIÓN
+	4. Distribución en la misma cnatidad de grupos -> Importa si se arman más grupos?, creo que da igual.
+3. Ciclo del algoritmo (estándar):
+	1. Depredación
+	2. Mezcla
+	3. Reproducción
+	4. Mutación del 1%
+	5. Distribución en la misma cnatidad de grupos -> Importa si se arman más grupos?, creo que da igual.	
 
 ************************************************************************************************************************************************************
 ************************************************************************************************************************************************************
 
-1. Cuantos encuentros deberían ocurrir por cada "ciclo" de depredación? <50% del grupo>
-2. Cuantos "ciclos" de depredación deberían ocurrir? <1>
+1. Cuantos encuentros deberían ocurrir en el "ciclo" de depredación? <50% del grupo>
 3. Que pasa con los que no quepan en los grupos después de la mezcla? <Se pierden>
+
+NOTA: El porcentaje de mutación está quemado en el código cuando se llama a la función "mutate".

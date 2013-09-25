@@ -1,11 +1,13 @@
+require 'geneticAlgorithm'
 require 'group'
 class TraitGroups
 	
-	def initialize amountGroups, groupSize, generations, predationTimes=0.5
+	def initialize amountGroups, groupSize, generations, predationTimes, mutationRate
 		@amountGroups=amountGroups
 		@groupSize=groupSize
 		@generations=generations
 		@predationTimes=(predationTimes * @groupSize).ceil.to_i
+		@mutationRate=mutationRate
 		@composition=Array.new
 		
 		@arrayGroups=Array.new
@@ -50,10 +52,13 @@ class TraitGroups
 			end
 			totalPopulation=nil
 			
-			# 3.5 Contar la cantidad de altruistas y de egoistas
+			# 4. Mutarlos
+			GeneticAlgorithm.mutate newPopulation, @mutationRate
+			
+			# 4.5 Contar la cantidad de altruistas y de egoistas
 			count newPopulation
 			
-			# 4. Volver a repartirlos en los grupos
+			# 5. Volver a repartirlos en los grupos -> Deberían armarse grupos adicionales al momento de distribuirlos?
 			distribute newPopulation
 			
 			newPopulation=nil

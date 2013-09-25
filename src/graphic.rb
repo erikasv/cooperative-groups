@@ -8,7 +8,7 @@ class Graphic
 		x = pv.Scale.linear(2, limX+1).range(0, w) #largo del eje x
 		y = pv.Scale.linear(2, limY+1).range(0, h) #largo del eje y
 		nueva = pv.Scale.linear(0,1).range(0, w/20)#Equivalente a medio cuadrito
-		c = pv.Scale.linear(0, 1).range( "red","blue")
+		c = pv.Scale.linear(0, 1).range("red","blue")
 
 		## Panel
 		panel = pv.Panel.new()
@@ -58,7 +58,7 @@ class Graphic
 		svg.close
 	end
 	
-	def self.makeLineChart data, fileName
+	def self.makeLineChart data, fileName #  Probando, aún no está listo, falta modificar entradas y eso :P
 		w = 400
 		h = 200
 		x = pv.Scale.linear(data, lambda {|d| d.x}).range(0, w)
