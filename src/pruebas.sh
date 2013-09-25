@@ -42,5 +42,5 @@ mv casosRepeticiones_10000_0.01.svg ../trait-groups/10000_10000
 
 cd ..
 git add trait-groups
-git commit -am "Pruebas sin mutación, con el 1 porciento y con el 10 porciento"
+git commit -am "Pruebas sin mutación, con el 1% y con el 10%"
 git push

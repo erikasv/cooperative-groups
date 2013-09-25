@@ -10,7 +10,7 @@ maxGroupSize=10
 generations=ARGV[0].to_i
 predationTimes=(ARGV[3].to_i == nil)? 0.5 : ARGV[3].to_i
 mutationRate=(ARGV[2].to_f == nil)? 0.0 : ARGV[3].to_f
-fileNumber="#{ARGV[0]}_#{mutationRate}"
+fileNumber="#{ARGV[1]}_#{mutationRate}"
 
 #Por el momento se harán 3 ejecuciones por cada conficuración
 cases=Hash.new{|hash,key| hash[key]=0}
