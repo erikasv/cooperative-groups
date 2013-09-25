@@ -12,7 +12,6 @@ predationTimes=(ARGV[2].to_i == nil)? 1 : ARGV[2].to_i
 
 #Por el momento se harán 3 ejecuciones por cada conficuración
 cases=Hash.new{|hash,key| hash[key]=0}
-maxValue=0
 
 executions=ARGV[1].to_i
 executions.times do
@@ -38,7 +37,6 @@ executions.times do
 			
 			if firstGeneration < lastGeneration
 				cases["#{i+2},#{j+2}"] = cases["#{i+2},#{j+2}"]+1
-				maxValue=(maxValue < cases["#{i+2},#{j+2}"])? cases["#{i+2},#{j+2}"] : maxValue
 			end
 		end
 	end
@@ -51,7 +49,7 @@ graphicsFile="casosRepeticiones.svg"
 for i in 0..maxGroups-2 do
 	for j in 0..maxGroupSize-2 do
 		valueZ=cases["#{i+2},#{j+2}"].to_f
-		data << OpenStruct.new(x: i+2, y: j+2, z: valueZ/maxValue)
+		data << OpenStruct.new(x: i+2, y: j+2, z: valueZ/ARGV[1].to_i)
 	end
 end
 
