@@ -1,0 +1,1 @@
+pag 5:  "Using evolutionary game theory, it is easy to show that evolution in a population (without structure) does not select for cooperative behaviour in social dilemas" <= WITHOUT STRUCTURE
