@@ -7,7 +7,14 @@ class Chromosome
 	end
 	
 	def mutate
-		@gen=rand
+		#Sumar o restar ruido para que el gen no sea tan diferente al anterior?
+		@gen+=(rand/5)-0.1
+		if @gen <= 0.0
+			@gen=0.0
+		elsif @gen >= 1.0
+			@gen=1.0
+		end
+		#~ @gen=rand
 		@decision=(@gen>0.5)? 0 : 1 #0 coopera, 1 Traiciona
 	end
 	
