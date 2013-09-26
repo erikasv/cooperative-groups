@@ -1,3 +1,10 @@
+mkdir -p ../trait-groups/100_10
+mkdir -p ../trait-groups/100_100
+mkdir -p ../trait-groups/1000_100
+mkdir -p ../trait-groups/1000_1000
+mkdir -p ../trait-groups/10000_1000
+mkdir -p ../trait-groups/10000_10000
+
 #Mutación del 0%
 ruby analysis_start_end.rb 100 10
 mv casosRepeticiones_10_0.0.svg ../trait-groups/100_10
@@ -40,7 +47,7 @@ mv casosRepeticiones_1000_0.01.svg ../trait-groups/10000_1000
 ruby analysis_start_end.rb 10000 10000 0.01
 mv casosRepeticiones_10000_0.01.svg ../trait-groups/10000_10000
 
-cd ..
-git add trait-groups
-git commit -am "Pruebas sin mutación, con el 1 porciento y con el 10 porciento"
-git push
+#cd ..
+#git add trait-groups
+#git commit -am "Pruebas sin mutación, con el 1 porciento y con el 10 porciento"
+#git push
