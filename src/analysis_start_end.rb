@@ -18,14 +18,15 @@ class Analysis_start_end
 	def run
 		cases=Hash.new{|hash,key| hash[key]=0}
 
-		@executions.times do
+		@executions.times do |executionNumber|
+			p "executionNumber: #{executionNumber}"
 			results=Array.new
 			# Ejecutar el algoritmo una vez para cada configuracion grupos / tamaño de grupos
 			for i in 2..@maxGroups do
 				row=Array.new
 				for j in 2..@maxGroupSize do
 					model=TraitGroups.new i, j, @generations, @predationTimes, @mutationRate
-					#~ model.run
+					model.run
 
 					row << model.composition
 				end

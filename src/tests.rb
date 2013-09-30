@@ -4,6 +4,10 @@ arrGeneraions=[100,1000,10000]
 arrMutations=[0.0,0.1,0.01]
 arrExecutions=[10,100,1000]
 
+#~ arrGeneraions=[1000]
+#~ arrMutations=[0.0]
+#~ arrExecutions=[10]
+
 directory_tests = "../trait-groups/"
 Dir.mkdir(directory_tests) unless File.exists?(directory_tests)
 arrGeneraions.each{ |generation|
@@ -12,6 +16,7 @@ arrGeneraions.each{ |generation|
 	arrExecutions.each { |execution|
 		arrMutations.each{ |mutationRate|
 			analysis=Analysis_start_end.new generation, execution, mutationRate
+			p "#{generation}, #{execution}, #{mutationRate}"
 			analysis.run
 		}
 	}

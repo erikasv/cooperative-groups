@@ -21,12 +21,23 @@ class Group
 	end
 
 	def predation matchTimes #Cuantos encuentros realizar
-		matchTimes.times do
+		matchTimes.times do |t| 
+			if @arrayChromosomes.size < 2
+				break
+			end
 			pos1=rand(@arrayChromosomes.size)
 			pos2=rand(@arrayChromosomes.size)
+			
+			#~ p "t #{t} "
+			#~ print "pos1 #{pos1} "
+			#~ print "pos2 #{pos2} "
+			
 			while pos1 == pos2 do
 				pos2=rand(@arrayChromosomes.size)
 			end
+			
+			#~ print "pos1 #{pos1} "
+			#~ print "pos2 #{pos2} "
 			
 			chromosome1=@arrayChromosomes[pos1]
 			chromosome2=@arrayChromosomes[pos2]
@@ -38,7 +49,15 @@ class Group
 			elsif chromosome1.fitness < chromosome2.fitness
 				@arrayChromosomes.delete_at pos1
 			elsif chromosome1.fitness == @@predationMatrix[1][1][1]
+				###MATAR UNO ALEATORIO
 				@arrayChromosomes.delete_at (rand(2)==0)? pos1 : pos2
+				###MATAR LOS DOS
+				#~ @arrayChromosomes.delete_at pos1
+				#~ if pos1 < pos2
+					#~ pos2-=1
+				#~ end
+				#~ @arrayChromosomes.delete_at pos2
+					
 			end
 			
 		end
@@ -47,7 +66,12 @@ class Group
 	# Vaciar los grupos
 	def delete
 		@arrayChromosomes=nil
-		@arrayChromosomes=Array.new
+		#~ @arrayChromosomes=Array.new
+	end
+	
+	#Depuración
+	def count
+		@arrayChromosomes.size
 	end
 	
 	attr_reader :arrayChromosomes

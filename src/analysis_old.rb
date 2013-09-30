@@ -8,18 +8,20 @@ require 'rubyvis'
 maxGroups=10
 maxGroupSize=10
 generations=ARGV[0].to_i
-predationTimes=(ARGV[1].to_i == nil)? 1 : ARGV[1].to_i
+predationTimes=(ARGV[1] == nil)? 0.5 : ARGV[1].to_i
 
+p generations, predationTimes
 #Por el momento se harán 3 ejecuciones por cada conficuración
-executions=3
+executions=1
 
 executions.times do |e|
+p e
 	results=Array.new
 	# Ejecutar el algoritmo para cada configuracion grupos / tamaño de grupos
 	for i in 2..maxGroups do
 		row=Array.new
 		for j in 2..maxGroupSize do
-			model=TraitGroups.new i, j, generations, predationTimes
+			model=TraitGroups.new i, j, generations, predationTimes, 0
 			model.run
 
 			row << model.composition
