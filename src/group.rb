@@ -37,7 +37,7 @@ class Group
 				@arrayChromosomes.delete_at pos2
 			elsif chromosome1.fitness < chromosome2.fitness
 				@arrayChromosomes.delete_at pos1
-			elsif chromosome1.fitness == @@depredationMatrix[1][1][1]
+			elsif chromosome1.fitness == @@predationMatrix[1][1][1]
 				@arrayChromosomes.delete_at (rand(2)==0)? pos1 : pos2
 			end
 			
