@@ -391,43 +391,49 @@ INTRODUCCIÓN
 La evolución es el proceso resultante de los cambios heredados en una población
  durante muchas generaciones.
  De una forma mas general se puede ver un sistema evolutivo como una población
- variable de individuos que se reproducen, generando variabilidad durante
- el procesdo debido a las replicas imperfectas o a la combinación de dos
- o mas individuos, y que está sometida a una presión selectiva.
- Darwin llamo selección natural a la conservación de características que
- favorecen a un individuo, tales como reproducirse a una tasa mayor que
- otros o sobrevivir en un medio determinado y la destrucción de las que
- son perjudiciales
-\begin_inset space ~
-\end_inset
-
-
+ de individuos que está sometida a una presión selectiva y que se reproduce
+ generando variabilidad durante el proceso debido a las replicas imperfectas
+ o a la combinación de dos o mas individuos.
+ La presión selectiva fue introducida por Darwin 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bhl65514"
 
 \end_inset
 
-.
+ como selección natural y se refiere a la conservación de características
+ que favorecen a un individuo, tales como reproducirse a una tasa mayor
+ que otros o sobrevivir en un medio determinado y a la destrucción de las
+ características que son perjudiciales.
 \end_layout
 
 \begin_layout Standard
-Existen muchas teorías acerca del nivel sobre el que actúa la selección.
+Existen muchas teorías acerca del nivel 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Carlos: (nivel a que se refiere?) -> No se que mas poner
+\end_layout
+
+\end_inset
+
+ sobre el que actúa la selección.
  Por el lado de la selección individual la mayor fuerza está dada por la
- propuesta de Richard Dawkins, en la que afirma que la selección ocurre
- solo al nivel de los genes, ya que éstos son los que especifican el fenotipo
- de los organismos y han permanecido el tiempo suficiente como para ser
- los últimos beneficiarios de que un organismo sea seleccionado o no 
+ propuesta de Richard Dawkins 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dawkins2000gen"
 
 \end_inset
 
-.
+, en la que afirma que la selección ocurre solo al nivel de los genes, pues
+ son los que especifican el fenotipo de los organismos y son lo suficientemente
+ longevos para ser los últimos beneficiarios de que un organismo sea seleccionad
+o o no.
  Esto a su vez explica el comportamiento altruista planteando que solo ocurre
  entre individuos emparentados, por ejemplo en el caso de los insectos sociales
- y es comunmente llamado kin selection 
+ y es comúnmente llamado kin selection 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Foster2006"
@@ -443,19 +449,48 @@ En cuanto a la selección de grupo o selección multinivel se tienen varías
  cooperativos pueden ser objeto de selección.
  Por una parte se tiene la reciprocidad, que está dada de dos formas: directa
  e indirecta.
- La recirpocidad directa es cuando dos individuos reciben un beneficio por
+ La reciprocidad directa es cuando dos individuos reciben un beneficio por
  ayudarse entre sí, requiere que tengan mas de un encuentro entre ellos
  y que lleven un registro de las acciones que los otros individuos han realizado
 , para así mismo reaccionar.
- La forma más común en la que se estudia este tipo de comportamientos es
- con juegos de un solo intento pero con varias repeticiones, por ejemplo
- con el dilema del prisionero.
+ La forma más común en la que se estudia este tipo de comportamientos 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+<<
+\end_layout
+
+\end_inset
+
+es con juegos de un solo intento pero con varias repeticiones, por ejemplo
+ con el dilema del prisionero
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+>>
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+<= Ese si no se como cambiarlo
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 La reciprocidad indirecta no requiere que cada individuo lleve registro
  de lo que hacen los demás, pero sí de una reputación publica que cada uno
- construye, por ejemplo los rumores de la cultura humana.
+ construye, por ejemplo los rumores en la cultura humana.
  Estos dos mecanismos que incluyen reciprocidad requieren habilidades cognitivas
  específicas para su funcionamiento, por lo tanto no logran explicar la
  cooperación en interacciones anónimas 
@@ -479,25 +514,36 @@ key "wilson1975"
 \end_inset
 
 .
- Esta teoría no requiere trabajo extra por parte de los individuos para
- recibir los beneficios de cooperar.
- La mayoría de los trabajos estudiados en la literatura, los cuales exponen
- modelos de poblaciones, se basan en esta teoría y/o presentan modificaciones
- en la misma para estudiar características puntuales.
+ Según esta teoría no se requiere trabajo extra por parte de los individuos
+ para recibir los beneficios de cooperar.
+ La mayoría de los trabajos que fueron estudiados en la literatura, los
+ cuales exponen modelos de poblaciones, se basan en esta teoría y/o presentan
+ modificaciones en la misma para estudiar características puntuales.
 \end_layout
 
 \begin_layout Standard
 Es importante resaltar que en el momento que algunas de las teorías nacieron
- no se tenía la capacidad de cómputo con la que contamos ahora y por lo
- tanto no había la forma de probar con una simulación de los modelos si
- éstos funcionaban o eran realmente útiles.
- Este es el caso del modelo de los trait-groups, el cuál ha sido utilizado
- ampliamente como base, tanto teórica como práctica en otros trabajos.
+ no se tenía la capacidad de cómputo con la que se cuenta ahora.
+ Por lo tanto no había la forma de probar con una simulación de los modelos
+ si éstos funcionaban o eran realmente útiles.
+ Este es el caso del modelo de los trait-groups 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+, el cuál ha sido utilizado ampliamente como base, tanto teórica como práctica
+ en otros trabajos.
  Es por ello que el trabajo presentado en este documento explorará el funcionami
 ento del modelo de los trait-groups a través de dos mecanismos.
- (Decir que es importante porque así ayuda a estar seguros de usar un modelo
+ 
+\color red
+(Decir que es importante porque así ayuda a estar seguros de usar un modelo
  que funciona y deja un ¿software? que se puede usar para modelar otros
- sistemas poblacionales).
+ sistemas poblacionales)
+\color inherit
+.
 \end_layout
 
 \begin_layout Standard
@@ -506,7 +552,7 @@ El trabajo realizado está compuesto de dos partes: primero se realiza una
  de acuerdo a la cantidad de generaciones que transcurren y la configuración
  de cantidad de grupos y el tamaño de cada grupo.
  Posteriormente se realiza una simulación de agentes basado en el modelo
- de Peeper y Smuts 
+ de Pepper y Smuts 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -517,15 +563,51 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Section
-Objetivos
+Objetivos 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Los objetivos deberían estar dentro de la introducción.
+ Pero entonces donde pongo lo que ahora es la introducción??? <- Creo que
+ debe ir en el marco teórico
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Objetivo General
 \end_layout
 
+\begin_layout Standard
+Verificar o rechazar la hipótesis de Richard Dawkins en la que afirma que
+ la presión selectiva no puede darse a nivel de grupo.
+\end_layout
+
 \begin_layout Subsection
 Objetivos Específicos
+\end_layout
+
+\begin_layout Itemize
+Recopilar información sobre las características propias de un ambiente que
+ favorezca la cooperación de individuos.
+\end_layout
+
+\begin_layout Itemize
+Plantear un modelo que incluya estas características y permita el análisis
+ de las mismas.
+\end_layout
+
+\begin_layout Itemize
+Implementar un algoritmo evolutivo acorde al modelo realizado.
+\end_layout
+
+\begin_layout Itemize
+Analizar resultados del comportamiento del algoritmo ante diferentes entradas
+ y diferentes configuraciones de las características.
 \end_layout
 
 \begin_layout Section
@@ -533,7 +615,37 @@ MARCO TEÓRICO
 \end_layout
 
 \begin_layout Subsection
-Positive Assortment / Negative Assortment
+Computación Evolutiva
+\end_layout
+
+\begin_layout Standard
+Rama de la inteligencia artificial que reúne las diferentes estrategias
+ de resolución de problemas inspiradas en el proceso de evolución biológica,
+ tales como los algoritmos genéticos, la programación genética y las estrategias
+ genéticas, entre otros.
+ 
+\end_layout
+
+\begin_layout Subsection
+Kin Selection?
+\end_layout
+
+\begin_layout Subsection
+Selección de Grupo o multinivel?
+\end_layout
+
+\begin_layout Subsection
+Positive Assortment / Negative Assortment 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Creo que esto debería ir en el glosario
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -570,8 +682,25 @@ Glosario
 \end_layout
 
 \begin_layout Itemize
+Emergencia: Propiedades o procesos de un sistema que surgen a partir de
+ la interacción de sus partes y que no está definido por ninguna regla o
+ control centralizado.
+ 
+\end_layout
+
+\begin_layout Itemize
 Forrajeador: Persona que sale a recoger el pasto, tanto verde como seco
  para los caballos y/o el ganado.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No creo querer dejar esto aquí
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -593,24 +722,24 @@ A Theory of Group Selection
 \begin_layout Standard
 El autor presenta un modelo teórico que se basa en los diferentes tipos
  de etapas por las que pasan los organismos en su ciclo de vida.
- En general, el modelo consiste en 2 estados claramente distinguidos, el
- primero consiste en que los individuos son separados en grupos donde se
- lleva a cabo el proceso de depredación.
+ El modelo se compone de dos estados claramente distinguidos, el primero
+ consiste en que los individuos son separados en grupos donde se lleva a
+ cabo el proceso de depredación.
  Y en el segundo estado los individuos salen de los grupos, son mezclados,
  se reproducen y posteriormente redistribuidos en la misma cantidad de grupos,
  éste último estado corresponde a la etapa de dispersión que es la unidad
  de población mayormente concebida.
  El autor destaca que la mayoría de las interacciones ecológicas, como alimentac
-ión y depredación entre otras, ocurren en la primera etapa, por lo tanto
+ión y depredación, entre otras, ocurren en la primera etapa, por lo tanto
  llama al modelo: 
 \begin_inset Quotes eld
 \end_inset
 
-grupos de rasgos
+trait-groups
 \begin_inset Quotes erd
 \end_inset
 
- (trait-groups) 
+ (grupos de rasgos) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wilson1975"
@@ -743,7 +872,7 @@ Individual Selection for Cooperative Group Formation
 \end_layout
 
 \begin_layout Standard
-Este trabajo tiene como base teórica el modelo de los grupos de rasgos propuesto
+Este trabajo tiene como base teórica el modelo de los trait-groups propuesto
  por D.S.
  Wilson 
 \begin_inset CommandInset citation
@@ -788,7 +917,7 @@ pertenece
 \begin_layout Standard
 Con los demás parámetros constantes se realizaron trabajos previos para
  determinar los valores para los grupos grandes y pequeños y cuantas generacione
-s debían pasar los individuos dentro de los grupos antes de ser mezcaldos,
+s debían pasar los individuos dentro de los grupos antes de ser mezclados,
  de forma que los individuos altruistas sobrevivieran.
  Los valores tomados fueron: 4 individuos para los grupos pequeños, 40 para
  los grupos grandes y 4 generaciones dentro de los grupos.
@@ -895,6 +1024,54 @@ positive assortment
  en la población y menos por medio del análisis de la desviación genética,
  además los resultados son dependientes de la cantidad de individuos por
  cada tipo.
+\end_layout
+
+\begin_layout Section
+TRABAJO REALIZADO 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Los demás tienen: Descripción de la solución propuesta*
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Debería poner conclusiones para cada trabajo aparte de las de todo el proyecto?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo de los trait-groups
+\end_layout
+
+\begin_layout Subsubsection
+Detalles de implementación
+\end_layout
+
+\begin_layout Subsubsection
+Pruebas y Resultados
+\end_layout
+
+\begin_layout Subsection
+Modelo de agentes
+\end_layout
+
+\begin_layout Subsubsection
+Detalles de implementación
+\end_layout
+
+\begin_layout Subsubsection
+Pruebas y Resultados
 \end_layout
 
 \begin_layout Section
