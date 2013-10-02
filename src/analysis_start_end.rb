@@ -5,7 +5,7 @@ require 'rubyvis'
 
 class Analysis_start_end
 	
-	def initialize generations, executions, mutationRate=0.0, predationTimes=0.5
+	def initialize generations, executions, mutationRate=0.0, killTwoSelfish=false, predationTimes=0.5
 		@maxGroups=10
 		@maxGroupSize=10
 		@generations=generations
@@ -13,6 +13,7 @@ class Analysis_start_end
 		@mutationRate=mutationRate
 		@executions=executions
 		@fileNumber="#{@executions}_#{mutationRate}"
+		@killTwoSelfish=killTwoSelfish
 	end
 	
 	def run
@@ -25,7 +26,7 @@ class Analysis_start_end
 			for i in 2..@maxGroups do
 				row=Array.new
 				for j in 2..@maxGroupSize do
-					model=TraitGroups.new i, j, @generations, @predationTimes, @mutationRate
+					model=TraitGroups.new i, j, @generations, @predationTimes, @mutationRate, @killTwoSelfish
 					model.run
 
 					row << model.composition
@@ -50,7 +51,11 @@ class Analysis_start_end
 		
 		#Graficar los resultados
 		data=Array.new
-		graphicsFile="../trait-groups/#{@generations}/casosRepeticiones_#{@fileNumber}.svg"
+		if not killTwoSelfish
+			graphicsFile="../trait-groups/#{@generations}/casosRepeticiones_#{@fileNumber}.svg"
+		else
+			graphicsFile="../trait-groups_matar2/#{@generations}/casosRepeticiones_#{@fileNumber}.svg"
+		end
 		for i in 0..@maxGroups-2 do
 			for j in 0..@maxGroupSize-2 do
 				valueZ=cases["#{i+2},#{j+2}"].to_f

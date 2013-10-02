@@ -58,7 +58,7 @@ class Graphic
 		svg.close
 	end
 	
-	def self.makeLineChart data, fileName #  Probando, aún no está listo, falta modificar entradas y eso :P
+	def self.makeLineChart data, fileName, labelX, labelY#  Probando, aún no está listo, falta modificar entradas y eso :P
 		w = 400
 		h = 200
 		x = pv.Scale.linear(data, lambda {|d| d.x}).range(0, w)
@@ -68,21 +68,17 @@ class Graphic
 		vis = pv.Panel.new()
 			.width(w)
 			.height(h)
-			.bottom(20)
-			.left(20)
+			.bottom(50)
+			.left(50)
 			.right(10)
 			.top(5);
-
+			
 		#/* X-axis ticks. */
 		vis.add(pv.Rule)
 			.data(x.ticks())
 			.visible(lambda {|d|  d > 0})
 			.left(x)
 			.strokeStyle("#eee")
-		  .add(pv.Rule)
-			.bottom(-5)
-			.height(5)
-			.strokeStyle("#000")
 		  .anchor("bottom").add(pv.Label)
 		  .text(x.tick_format)
 
@@ -100,6 +96,10 @@ class Graphic
 			.left(lambda {|d| x.scale(d.x)})
 			.bottom(lambda {|d| y.scale(d.y)})
 			.lineWidth(3);
+			
+		### Etiquetas de los ejes
+		vis.add(pv.Label).left(-15).bottom(150).text(labelY).font("20px sans-serif").text_angle(-Math::PI / 2 ) 
+		vis.add(pv.Label).bottom(-35).left(250).text(labelX).font("20px sans-serif")
 
 		svg=File.new(fileName,"w")
 		vis.render()

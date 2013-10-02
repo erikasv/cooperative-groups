@@ -2,13 +2,14 @@ require 'geneticAlgorithm'
 require 'group'
 class TraitGroups
 	
-	def initialize amountGroups, groupSize, generations, predationTimes, mutationRate
+	def initialize amountGroups, groupSize, generations, predationTimes, mutationRate, killTwoSelfish=false
 		@amountGroups=amountGroups
 		@groupSize=groupSize
 		@generations=generations
 		@predationTimes=(predationTimes * @groupSize).ceil.to_i
 		@mutationRate=mutationRate
 		@composition=Array.new
+		Group.killTwoSelfish=killTwoSelfish
 		
 		#~ @arrayGroups=Array.new
 		#~ @amountGroups.times do

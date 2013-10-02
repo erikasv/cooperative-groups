@@ -10,6 +10,7 @@ class Group
 
 	#Matriz de pago cambiada de acuerdo a la descripción de la depredación
 	@@predationMatrix=Array[ [[3,3],[0,5]] , [[5,0],[1,1]] ]
+	@@killTwoSelfish=false
 
 	def initialize groupSize
 		@groupSize=groupSize
@@ -49,18 +50,22 @@ class Group
 			elsif chromosome1.fitness < chromosome2.fitness
 				@arrayChromosomes.delete_at pos1
 			elsif chromosome1.fitness == @@predationMatrix[1][1][1]
-				###MATAR UNO ALEATORIO
-				@arrayChromosomes.delete_at (rand(2)==0)? pos1 : pos2
-				###MATAR LOS DOS
-				#~ @arrayChromosomes.delete_at pos1
-				#~ if pos1 < pos2
-					#~ pos2-=1
-				#~ end
-				#~ @arrayChromosomes.delete_at pos2
-					
+				if not @@killTwoSelfish ###MATAR UNO ALEATORIO
+					@arrayChromosomes.delete_at (rand(2)==0)? pos1 : pos2
+				else ###MATAR LOS DOS
+					@arrayChromosomes.delete_at pos1
+					if pos1 < pos2
+						pos2-=1
+					end
+					@arrayChromosomes.delete_at pos2
+				end
 			end
 			
 		end
+	end
+	
+	def self.killTwoSelfish= val
+		@@killTwoSelfish=val
 	end
 	
 	# Vaciar los grupos
