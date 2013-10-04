@@ -4,7 +4,7 @@ require 'graphic'
 require 'rubyvis'
 
 class Analysis_details
-	def initialize groups, groupSize, generations, mutationRate=0.0, killTwoSelfish=false, predationTimes=0.5
+	def initialize groups, groupSize, generations, executions, mutationRate=0.0, killTwoSelfish=false, predationTimes=0.5
 		@groups=groups
 		@groupSize=groupSize
 		@generations=generations
@@ -12,9 +12,11 @@ class Analysis_details
 		@mutationRate=mutationRate
 		@predationTimes=predationTimes
 		@fileNumber="#{@groups}-#{@groupSize}_#{mutationRate}"
+		@executions=executions
 	end
 	
 	def run
+	#Promediar los resultados de executions, para un grafico mas "interesante"
 		model=TraitGroups.new @groups, @groupSize, @generations, @predationTimes, @mutationRate, @killTwoSelfish
 		model.run
 		
@@ -29,5 +31,5 @@ class Analysis_details
 	end
 end
 
-prueba=Analysis_details.new 2, 3, 1000
+prueba=Analysis_details.new 2, 3, 10, 10
 prueba.run
