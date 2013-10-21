@@ -3,9 +3,6 @@
 \begin_document
 \begin_header
 \textclass article
-\begin_preamble
-
-\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -93,6 +90,10 @@ figref}[1]{
 figurename~
 \backslash
 ref{fig:#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1057,16 +1058,6 @@ TRABAJO REALIZADO
 status open
 
 \begin_layout Plain Layout
-Los demás tienen: Descripción de la solución propuesta*
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 Debería poner conclusiones para cada trabajo aparte de las de todo el proyecto?
 \end_layout
 
@@ -1089,9 +1080,8 @@ key "wilson1975"
 \end_inset
 
  dan por sentado su funcionamiento, a pesar de que el autor no especificó
- detalles de implementación como: la cantidad de individuos por grupo, la
- cantidad de grupos en la población, ni la cantidad de generaciones (encuentros
- de depredación) en los grupos.
+ ciertos detalles de implementación, como la cantidad de individuos por
+ grupo y la cantidad de grupos en la población por ejemplo.
  Estos detalles pueden ser importantes cuando se trata de modelos para predecir
  comportamientos de poblaciones y similares.
 \end_layout
@@ -1136,6 +1126,8 @@ Poner otro aparte de éste
 \end_inset
 
 .
+ De manera que existe la posibilidad de que las modificaciones realizadas
+ sean las que favorezcan la cooperación.
 \end_layout
 
 \begin_layout Standard
@@ -1154,16 +1146,13 @@ key "wilson1975"
 .
 \end_layout
 
-\begin_layout Subsubsection
-Detalles de implementación
-\end_layout
-
 \begin_layout Standard
-El siguiente algoritmo presenta el modelo original de los trait-groups:
+El modelo original de los trait-groups está conformado por los siguientes
+ pasos:
 \end_layout
 
 \begin_layout Enumerate
-La población se divide en grupos.
+La población inicia dividida en grupos.
 \end_layout
 
 \begin_layout Enumerate
@@ -1179,21 +1168,259 @@ Todos los individuos salen de los grupos y se reproducen con una copia exacta
 Los individuos vuelven a dividirse en grupos.
 \end_layout
 
-\begin_layout Standard
-Acorde con los detalles mencionados anteriormente el modelo implementado
- permite ingresar: la cantidad de grupos, la cantidad de individuos dentro
- de cada grupo, la cantidad de generaciones a ejecutar (una generación correspon
-de a la ejecución de los cuatro pasos del modelo original) y las ocurrencias
- de depredación dentro de cada grupo (en cada generación).
+\begin_layout Enumerate
+Se repite desde el paso 2.
+\end_layout
+
+\begin_layout Subsubsection
+Detalles de implementación
 \end_layout
 
 \begin_layout Standard
-Teniendo en cuenta los detalles expuestos anteriormente, el modelo implementado
- cuenta con las siguientes entradas: tasa de mutación
+El modelo implementado cumple con los mismos pasos, pero permite agregar
+ un paso entre el 3 y el 4: mutar la población.
+ Éste paso es opcional y se ingresa al modelo como un parámetro de entrada,
+ indicando la tasa de mutación que se desea.
+\end_layout
+
+\begin_layout Standard
+Las características del modelo implementado son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+Los cromosomas tienen solo un gen, un número aleatorio que determina si
+ el individuo es altruista o egoísta.
+\end_layout
+
+\begin_layout Itemize
+La aptitud de los cromosomas es determinada en un encuentro de depredación,
+ por medio de la matriz de pago mostrada en la Tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Matriz-de-pago"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+En caso de que la tasa de mutación sea mayor a 0, ésta se realiza sumando
+ un número aleatorio entre -0.1 y 0.1 al gen del cromosoma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+3,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Matriz-de-pago"
+
+\end_inset
+
+Matriz de pago para la evaluación de los individuos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la etapa de depredación, dentro de cada grupo, se enfrentan dos individuos
+ seleccionados aleatoriamente y se prosigue de acuerdo a la situación:
+\end_layout
+
+\begin_layout Itemize
+Si los dos individuos cooperan, ambos sobreviven.
+\end_layout
+
+\begin_layout Itemize
+Si uno coopera y uno traiciona, muere el que coopera.
+\end_layout
+
+\begin_layout Itemize
+Si ambos traicionan puede (1) morir uno de los dos aleatoriamente o (2)
+ morir los dos individuos.
+ Esta condición se ajusta por medio de un parámetro del modelo.
+\end_layout
+
+\begin_layout Standard
+La cantidad de encuentros de depredación que ocurren en cada paso es ajustable
+ como una entrada al modelo, por defecto este valor corresponde a la mitad
+ de los individuos que hay dentro de un grupo, es decir, por ejemplo, si
+ hay 10 individuos dentro de cada grupo, ocurren 5 encuentros.
+\end_layout
+
+\begin_layout Standard
+Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
+ de individuos dentro de cada grupo y la cantidad de generaciones a ejecutar
+ (una generación corresponde a la ejecución de los pasos 2 a 4 en el caso
+ del modelo original).
+ Esto con el fin de analizar que configuraciones de cantidad de grupos -
+ individuos por grupo favorecen la propagación de los individuos cooperadores
+ y si es un evento temporal o estable.
 \end_layout
 
 \begin_layout Subsubsection
 Pruebas y Resultados
+\end_layout
+
+\begin_layout Standard
+Se realizaron pruebas con las siguientes configuraciones:
+\end_layout
+
+\begin_layout Standard
+generaciones: 100, 1000, 10000
+\end_layout
+
+\begin_layout Standard
+cantidad de grupos: de 2 a 10
+\end_layout
+
+\begin_layout Standard
+cantidad de individuos por grupo: de 2 a 10
+\end_layout
+
+\begin_layout Standard
+tasa de mutación: 0%, 1%, 10%
+\end_layout
+
+\begin_layout Standard
+encuentro de dos desertores: muere 1, mueren los 2
+\end_layout
+
+\begin_layout Standard
+La figura 1 muestra los resultados de ejecutar (a) 10, (b) 100 y (c) 1000
 \end_layout
 
 \begin_layout Subsubsection
