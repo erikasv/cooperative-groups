@@ -3,9 +3,6 @@
 \begin_document
 \begin_header
 \textclass article
-\begin_preamble
-
-\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -93,6 +90,10 @@ figref}[1]{
 figurename~
 \backslash
 ref{fig:#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -383,8 +384,29 @@ Con su debida traducción a inglés
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 INTRODUCCIÓN
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CAMBIAR ESTO, MOVER LO CORRESPONDIENTE AL MARCO TEÓRICO Y ACOMODAR LA INTRODUCCI
+ÓN COMO EL PLANTEAMIENTO Y JUSTIFICACIÓN DEL PROBLEMA
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -413,7 +435,11 @@ Existen muchas teorías acerca del nivel
 status open
 
 \begin_layout Plain Layout
-Carlos: (nivel a que se refiere?) -> No se que mas poner
+Carlos: (nivel a que se refiere?) -> No se que mas poner -> Ricardo: aca
+ en vez de nivel puedes usar forma o punto de vista, por que es la forma
+ (o punto de vista) como la teoria trata de explicar la evolucion, tambien
+ para hace introduccion a que vas a hablar de las dos formas ( nivel de
+ genes, nivel de grupo), por que no queda claro.
 \end_layout
 
 \end_inset
@@ -631,21 +657,15 @@ Kin Selection?
 \end_layout
 
 \begin_layout Subsection
+Inclusive fitness
+\end_layout
+
+\begin_layout Subsection
 Selección de Grupo o multinivel?
 \end_layout
 
 \begin_layout Subsection
-Positive Assortment / Negative Assortment 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Creo que esto debería ir en el glosario
-\end_layout
-
-\end_inset
-
-
+Positive Assortment / Negative Assortment
 \end_layout
 
 \begin_layout Standard
@@ -686,21 +706,24 @@ Emergencia: Propiedades o procesos de un sistema que surgen a partir de
  la interacción de sus partes y que no está definido por ninguna regla o
  control centralizado.
  
-\end_layout
-
-\begin_layout Itemize
-Forrajeador: Persona que sale a recoger el pasto, tanto verde como seco
- para los caballos y/o el ganado.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-No creo querer dejar esto aquí
+No se si moverlo como subsección
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Egoísta/traicionero/desertor?
+\end_layout
+
+\begin_layout Itemize
+Similitud genética
 \end_layout
 
 \begin_layout Section
@@ -712,7 +735,8 @@ En la literatura existen trabajos que abordan la selección de grupo bajo
  diferentes enfoques, la mayoría de ellos hacen uso de este tipo de selección
  para simular comportamientos de sistemas, como los económicos.
  Por otra parte hay trabajos que por diferentes medios tratan de explicar
- la evolución de la cooperación y de forma directa o indirecta de los grupos.
+ la evolución de la cooperación y, de forma directa o indirecta, de los
+ grupos.
 \end_layout
 
 \begin_layout Subsection
@@ -858,13 +882,18 @@ grupo de rasgos
 \end_inset
 
  y (2) la variación en la composición de los grupos.
- La heterogeneidad espacial es considerada una forma de grupos de rasgos
- ya que pueden partir la población espacialmente, mientras que los ambientes
- insulares pequeños constituyen un solo grupo de rasgo y clasifican en la
- selección individual.
- Además, en el modelo propuesto no se tiene en cuenta la mutación de los
- rasgos, y la reproducción es solo con 1 descendencia.
- 
+ En la práctica la heterogeneidad espacial es considerada una forma de grupos
+ de rasgos ya que al partir la población espacialmente, pero permitiendo
+ migración de individuos, es un mecanismo equivalente al modelo propuesto.
+ Mientras que los ambientes insulares pequeños constituyen un solo grupo
+ de rasgo y clasifican en la selección individual.
+\end_layout
+
+\begin_layout Standard
+Cabe resaltar que el modelo propuesto no tiene en cuenta la mutación de
+ los rasgos y la reproducción genera una copia exactamente igual a cada
+ individuo por toda la población, de manera que la presión selectiva se
+ ve manifestada en el momento de la depredación.
 \end_layout
 
 \begin_layout Subsection
@@ -925,7 +954,7 @@ s debían pasar los individuos dentro de los grupos antes de ser mezclados,
 
 \begin_layout Standard
 Los resultados muestran que la formación de grupos pequeños compuestos por
- individuos cooperativos es favorecido después de un número determinado
+ individuos cooperadores es favorecido después de un número determinado
  de generaciones.
  Los grupos grandes de individuos egoístas son favorecidos en un principio
  bajo el hecho de que hay suficientes cooperadores a los que explotar, por
@@ -938,7 +967,7 @@ Los resultados muestran que la formación de grupos pequeños compuestos por
 A pesar de basarse teóricamente en el modelo de los trait-groups, este trabajo
  tiene los estados invertidos.
  En el modelo de los trait-groups en la etapa de dispersión los individuos
- se reproducen, en este modelo los individuos se reproducen dentro de los
+ se reproducen, en este trabajo los individuos se reproducen dentro de los
  grupos.
  Y en el modelo original dentro de los grupos ocurre la depredación, en
  este modelo la depredación está implícita en (1) una constante de muerte
@@ -954,8 +983,8 @@ A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
 status open
 
 \begin_layout Plain Layout
-Hablar un poco mas sobre las desventajas del modelo y luego mencionar las
- mejoras a realizar
+PARA UN ARTÍCULO: Hablar un poco mas sobre las desventajas del modelo y
+ luego mencionar las mejoras a realizar
 \end_layout
 
 \end_inset
@@ -967,17 +996,7 @@ Hablar un poco mas sobre las desventajas del modelo y luego mencionar las
 En este trabajo se busca demostrar que los individuos con características
  diferentes son separados en grupos diferentes, con sus similares, gracias
  a que cambian el ambiente en el que se encuentran.
- Como alternativa a la teoría tradicional de la similitud genética
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Inclusive fitness
-\end_layout
-
-\end_inset
-
-.
+ Esto como alternativa a la teoría tradicional de la similitud genética.
  El objetivo principal es mostrar que los individuos altruistas tienden
  a permanecer agrupados espacialmente debido a que su efecto en el ambiente
  es menos dañino que el que causa un individuo egoísta.
@@ -995,20 +1014,26 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Standard
-El trabajo consiste en una simulación con dos tipos de agentes: plantas
- y forrajeadores.
+El trabajo consiste en una simulación, en un espacio de dos dimensiones
+ cuadrado, con dos tipos de agentes: plantas y animales.
  Donde las plantas están distribuidas uniformemente en forma de parches
- cuadrados, su única característica es la energía que tienen la cual crece
+ cuadrados y su única característica es la energía que tienen la cual crece
  de acuerdo a una curva logística.
- Existen dos tipos de forrajeadores: moderado (cooperador) y abusivo (egoísta),
- solo difieren en la cantidad de energía que consumen de una planta, los
- moderados consumen el 50% y los abusivos el 99%, ambos tienen el mismo
- comportamiento de desplazamiento.
+ Para el otro tipo de agentes existen dos tipos de animales: moderado (altruista
+) y abusivo (egoísta), solo difieren en la cantidad de energía que consumen
+ de una planta, los moderados consumen el 50% y los abusivos el 99%.
+ Ambos tipos de animales tienen el mismo comportamiento de desplazamiento
+ y costo metabólico por unidad de tiempo, y ninguno de ellos guarda una
+ reserva de la energía consumida.
 \end_layout
 
 \begin_layout Standard
-La conclusión mas importante es que el daño causado por los individuos al
- ambiente genera 
+Se realizaron 10 ejecuciones del modelo, cada una con 10000 unidades de
+ tiempo y se midió la agrupación de los individuos (assortment) en los parches
+ de plantas, haciendo similitud a los trait-groups, a través de un coeficiente
+ de regresión.
+ La conclusión mas importante es que el daño causado por los individuos
+ al ambiente genera 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1016,28 +1041,23 @@ positive assortment
 \begin_inset Quotes erd
 \end_inset
 
-.
- Sin embargo, hay una característica que es completamente contraria al objetivo
- que plantean y la forma en la que analizan sus resultados: Los individuos
- no se reproducen, mutan o mueren.
- Debido a esto no se se puede afirmar que el rasgo cooperativo se difunda
- en la población y menos por medio del análisis de la desviación genética,
- además los resultados son dependientes de la cantidad de individuos por
- cada tipo.
+, pues los individuos cooperadores tienden a agruparse.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, hay algunas características que son completamente necesarias
+ para la veracidad de los resultados y están ausentes: Los individuos no
+ se reproducen, mutan o mueren.
+ Bajo estas condiciones es fácil deducir el resultado de las simulaciones,
+ pues los animales moderados permanecerán mas tiempo en un a planta.
+ Finalmente, debido a todo esto no se se puede afirmar que el rasgo cooperativo
+ se difunda en la población y menos definiendo assortment como la desviación
+ de la similitud genética, además los resultados son dependientes de la
+ cantidad de individuos por cada tipo.
 \end_layout
 
 \begin_layout Section
 TRABAJO REALIZADO 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Los demás tienen: Descripción de la solución propuesta*
-\end_layout
-
-\end_inset
-
-
 \begin_inset Note Note
 status open
 
@@ -1054,12 +1074,426 @@ Debería poner conclusiones para cada trabajo aparte de las de todo el proyecto?
 Modelo de los trait-groups
 \end_layout
 
+\begin_layout Standard
+Los trabajos encontrados en la literatura basados en el modelo de los trait-grou
+ps 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+ dan por sentado su funcionamiento, a pesar de que el autor no especificó
+ ciertos detalles de implementación, como la cantidad de individuos por
+ grupo y la cantidad de grupos en la población por ejemplo.
+ Estos detalles pueden ser importantes cuando se trata de modelos para predecir
+ comportamientos de poblaciones y similares.
+\end_layout
+
+\begin_layout Standard
+Algunos trabajos solo toman la idea de una estructura de población y sus
+ manifestaciones, tal como la división espacial 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Poner otro aparte de éste
+\end_layout
+
+\end_inset
+
+.
+ Otros tomaron el modelo total, pero realizaron modificaciones al mismo
+ para buscar la emergencia de algunas características o validar otros modelos
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eps264277"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Poner otro aparte de éste
+\end_layout
+
+\end_inset
+
+.
+ De manera que existe la posibilidad de que las modificaciones realizadas
+ sean las que favorezcan la cooperación.
+\end_layout
+
+\begin_layout Standard
+Al no encontrar una implementación del modelo original y para verificar
+ su funcionamiento, el primer trabajo que se realizará es implementar el
+ modelo de los trait-groups de la manera mas exacta posible al modelo expuesto
+ por D.
+ S.
+ Wilson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El modelo original de los trait-groups está conformado por los siguientes
+ pasos:
+\end_layout
+
+\begin_layout Enumerate
+La población inicia dividida en grupos.
+\end_layout
+
+\begin_layout Enumerate
+Ocurre depredación dentro de los grupos.
+\end_layout
+
+\begin_layout Enumerate
+Todos los individuos salen de los grupos y se reproducen con una copia exacta
+ de ellos mismos.
+\end_layout
+
+\begin_layout Enumerate
+Los individuos vuelven a dividirse en grupos.
+\end_layout
+
+\begin_layout Enumerate
+Se repite desde el paso 2.
+\end_layout
+
 \begin_layout Subsubsection
 Detalles de implementación
 \end_layout
 
+\begin_layout Standard
+El modelo implementado cumple con los mismos pasos, pero permite agregar
+ un paso entre el 3 y el 4: mutar la población.
+ Éste paso es opcional y se ingresa al modelo como un parámetro de entrada,
+ indicando la tasa de mutación que se desea.
+\end_layout
+
+\begin_layout Standard
+Las características del modelo implementado son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+Los cromosomas tienen sólo un gen, un número aleatorio que determina si
+ el individuo es altruista o egoísta.
+\end_layout
+
+\begin_layout Itemize
+La aptitud de los cromosomas es determinada en un encuentro de depredación,
+ por medio de la matriz de pago mostrada en la Tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Matriz-de-pago"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+En caso de que la tasa de mutación sea mayor a 0, ésta se realiza sumando
+ un número aleatorio entre -0.1 y 0.1 al gen del cromosoma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Coopera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+3,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Traiciona
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Matriz-de-pago"
+
+\end_inset
+
+Matriz de pago para la evaluación de los individuos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la etapa de depredación, dentro de cada grupo, se enfrentan dos individuos
+ seleccionados aleatoriamente y se prosigue de acuerdo a la situación:
+\end_layout
+
+\begin_layout Itemize
+Si los dos individuos cooperan, ambos sobreviven.
+\end_layout
+
+\begin_layout Itemize
+Si uno coopera y uno traiciona, muere el que coopera.
+\end_layout
+
+\begin_layout Itemize
+Si ambos traicionan puede (1) morir uno de los dos aleatoriamente o (2)
+ morir los dos individuos.
+ Esta condición se ajusta por medio de un parámetro del modelo.
+\end_layout
+
+\begin_layout Standard
+La cantidad de encuentros de depredación que ocurren en cada paso es ajustable
+ como una entrada al modelo, por defecto este valor corresponde a la mitad
+ de los individuos que hay dentro de un grupo, es decir, por ejemplo, si
+ hay 10 individuos dentro de cada grupo, ocurren 5 encuentros.
+\end_layout
+
+\begin_layout Standard
+Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
+ de individuos dentro de cada grupo y la cantidad de generaciones a ejecutar
+ (una generación corresponde a la ejecución de los pasos 2 a 4 en el caso
+ del modelo original).
+ Esto con el fin de analizar que configuraciones de 
+\shape italic
+cantidad de grupos - individuos por grupo
+\shape default
+ favorecen la propagación de los individuos cooperadores y si es un evento
+ temporal o estable.
+\end_layout
+
 \begin_layout Subsubsection
 Pruebas y Resultados
+\end_layout
+
+\begin_layout Standard
+Se realizaron diferentes pruebas, con las siguientes configuraciones:
+\end_layout
+
+\begin_layout Description
+Cantidad
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+generaciones: 100, 1000 y 1000
+\end_layout
+
+\begin_layout Description
+Tasa
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+mutación: 0%, 1% y 10%
+\end_layout
+
+\begin_layout Description
+Al
+\begin_inset space ~
+\end_inset
+
+encuentro
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+dos
+\begin_inset space ~
+\end_inset
+
+desertores: muere uno, mueren los dos
+\end_layout
+
+\begin_layout Standard
+En todas las pruebas se vario la cantidad de grupos y la cantidad de individuos
+ por grupos entre 2 y 10.
+ Y se realizaron 10, 100 y 1000 ejecuciones del algoritmo, para contar cuantas
+ veces en cada configuración 
+\shape italic
+cantidad de grupos - individuos por grupo
+\shape default
+ aumentaba la cantidad de individuos cooperadores en la población.
+\end_layout
+
+\begin_layout Standard
+A continuación se muestran algunas pruebas realizadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
 \end_layout
 
 \begin_layout Subsection
@@ -1072,6 +1506,10 @@ Detalles de implementación
 
 \begin_layout Subsubsection
 Pruebas y Resultados
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
 \end_layout
 
 \begin_layout Section
