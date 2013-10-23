@@ -1058,16 +1058,6 @@ Sin embargo, hay algunas características que son completamente necesarias
 
 \begin_layout Section
 TRABAJO REALIZADO 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Debería poner conclusiones para cada trabajo aparte de las de todo el proyecto?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1083,15 +1073,15 @@ key "wilson1975"
 
 \end_inset
 
- dan por sentado su funcionamiento, a pesar de que el autor no especificó
- ciertos detalles de implementación, como la cantidad de individuos por
- grupo y la cantidad de grupos en la población por ejemplo.
- Estos detalles pueden ser importantes cuando se trata de modelos para predecir
- comportamientos de poblaciones y similares.
+ dan por sentado su funcionamiento, a pesar de que el autor no expone detalles
+ de funcionamiento ni hay evidencia de haber utilizado el modelo para algún
+ trabajo práctico.
+ Puede ser importante tener en cuenta detalles como éstos cuando se relizan
+ modelos para predecir comportamientos de poblaciones y similares.
 \end_layout
 
 \begin_layout Standard
-Algunos trabajos solo toman la idea de una estructura de población y sus
+Algunos trabajos solo tomaron la idea de una estructura de población y sus
  manifestaciones, tal como la división espacial 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1454,28 +1444,352 @@ desertores: muere uno, mueren los dos
 En todas las pruebas se vario la cantidad de grupos y la cantidad de individuos
  por grupos entre 2 y 10.
  Y se realizaron 10, 100 y 1000 ejecuciones del algoritmo, para contar cuantas
- veces en cada configuración 
+ veces cada configuración 
 \shape italic
 cantidad de grupos - individuos por grupo
 \shape default
- aumentaba la cantidad de individuos cooperadores en la población.
+ es exitosa, es decir, que la cantidad de individuos cooperadores en la
+ población aumenta tras finalizar la ejecución del modelo.
 \end_layout
 
 \begin_layout Standard
-A continuación se muestran algunas pruebas realizadas.
+A continuación se muestran los resultados de algunas pruebas realizadas,
+ para todas las gráficas el eje x es la cantidad de grupos, el eje y es
+ la cantidad de individuos dentro de cada grupo y el tamaño del circulo
+ indica el porcentaje de veces en las que la configuración 
+\shape italic
+cantidad de grupos - individuos por grupo
+\shape default
+ fue exitosa.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+La tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Configuraciones-pruebas"
+
+\end_inset
+
+ muestra las configuraciones usadas para las siguientes gráficas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generaciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tasa de mutación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Encuentro de dos desertores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Figura No.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+muere uno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:10-ejecuciones."
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+muere uno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:100-ejecuciones"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+muere uno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:1000-ejecuciones"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Configuraciones-pruebas"
 
+\end_inset
+
+Configuraciones usadas en algunas pruebas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:10-ejecuciones."
+
+\end_inset
+
+10 ejecuciones.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_100_0.0.svg
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:100-ejecuciones"
+
+\end_inset
+
+100 ejecuciones.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/trait-groups/100/casosRepeticiones_1000_0.0.svg
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1000-ejecuciones"
+
+\end_inset
+
+1000 ejecuciones.
+ 
 \end_layout
 
 \end_inset
