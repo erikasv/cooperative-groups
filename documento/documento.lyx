@@ -1700,7 +1700,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
-	scale 60
+	lyxscale 10
+	scale 30
 
 \end_inset
 
@@ -1737,7 +1738,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename ../trait-groups/100/casosRepeticiones_100_0.0.svg
-	scale 60
+	lyxscale 10
+	scale 30
 
 \end_inset
 
@@ -1774,7 +1776,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename /home/erikasv/tg/trait-groups/100/casosRepeticiones_1000_0.0.svg
-	scale 60
+	lyxscale 10
+	scale 30
 
 \end_inset
 
@@ -1808,6 +1811,26 @@ name "fig:1000-ejecuciones"
 
 \begin_layout Subsubsection
 Conclusiones
+\end_layout
+
+\begin_layout Itemize
+El modelo no es completamente robusto, pues al modificar cuantos desertores
+ mueren cuando hay un encuentro entre dos de ellos, lo cuál es un detalle
+ muy pequeño de implementación, los resultados cambian bruscamente.
+\end_layout
+
+\begin_layout Itemize
+Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
+ el modelo funciona bien ya que al variar los otros parámetros, los resultados
+ muestran el mismo patrón, mostrando en ellos que los casos exitosos ocurren
+ más cuando la población es pequeña y principalmente hacia los grupos pequeños.
+\end_layout
+
+\begin_layout Itemize
+Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
+ los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
+ donde se muestra que los individuos altruistas son favorecidos en grupos
+ pequeños.
 \end_layout
 
 \begin_layout Subsection
