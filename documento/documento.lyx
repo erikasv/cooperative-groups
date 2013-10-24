@@ -458,15 +458,7 @@ key "dawkins2000gen"
  longevos para ser los últimos beneficiarios de que un organismo sea seleccionad
 o o no.
  Esto a su vez explica el comportamiento altruista planteando que solo ocurre
- entre individuos emparentados, por ejemplo en el caso de los insectos sociales
- y es comúnmente llamado kin selection 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Foster2006"
-
-\end_inset
-
-.
+ entre individuos emparentados.
 \end_layout
 
 \begin_layout Standard
@@ -653,15 +645,77 @@ Rama de la inteligencia artificial que reúne las diferentes estrategias
 \end_layout
 
 \begin_layout Subsection
-Kin Selection?
+Los genes como unidad de selección
+\end_layout
+
+\begin_layout Standard
+Entre los pioneros de la teoría de la evolución con los genes como unidad
+ sometida a la selección natural está el biólogo George Williams, esta teoría
+ fue popularizada mas adelante por Richard Dawkins.
+ La razón principal de Williams es que los fenotipos son el resultado de
+ la interacción del genotipo con el ambiente, por lo tanto sus manifestaciones
+ son extremadamente temporales, y en consecuencia no pueden producir por
+ si mismas un cambio acumulativo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nla.cat-vn518082"
+
+\end_inset
+
+.
+ Además el gen es la entidad informacional capaz de persistir un lapso de
+ tiempo evolutivamente significante.
+ 
+\end_layout
+
+\begin_layout Subsection
+Kin Selection
+\end_layout
+
+\begin_layout Standard
+Teoría que parte de la justificación Teoría que modela los rasgos sociales
+ con un enfoque en el individuo y usa coeficientes de relación para capturar
+ los efectos de la correlación genética entre individuos.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2006"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+theory that models social traits with a focus on the individual (group effects
+ are often implicit) and uses relatedness coefficients to capture effects
+ of genetic correlations among individuals.
+\end_layout
+
+\begin_layout Plain Layout
+In his early publications, Hamilton (1964) focused solely on genetic similarity
+ through common descent.
+ For this reason, Maynard Smith (1964) renamed inclusive fitness as “kin
+ selection.” But according to Hamilton (1975, pp.
+ 140–141), “Kinship should be considered just one way of getting positive
+ re- gression of genotype.
+ ...
+ Thus, the inclusive fitness concept is more general than ‘kin selection’.”
+ Hamilton (1975) did not discuss in detail what mechanisms other than common
+ descent could produce “positive regression of genotype,” or positive assortment
+, but he suggested two possibilities: that a gene for cooperation could
+ have pleiotropic effects on habitat preference so that cooperators tend
+ to share the same habitat and that altruists could recognize and choose
+ to associate with one another.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Inclusive fitness
-\end_layout
-
-\begin_layout Subsection
-Selección de Grupo o multinivel?
 \end_layout
 
 \begin_layout Subsection
@@ -719,7 +773,9 @@ No se si moverlo como subsección
 \end_layout
 
 \begin_layout Itemize
-Egoísta/traicionero/desertor?
+Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
+ para hacer referencia a los individuos y agentes que tienen un comportamiento
+ egoísta.
 \end_layout
 
 \begin_layout Itemize
@@ -1814,9 +1870,10 @@ Conclusiones
 \end_layout
 
 \begin_layout Itemize
-El modelo no es completamente robusto, pues al modificar cuantos desertores
- mueren cuando hay un encuentro entre dos de ellos, lo cuál es un detalle
- muy pequeño de implementación, los resultados cambian bruscamente.
+El modelo no es completamente robusto, dado que al modificar detalles pequeños
+ los resultados cambian bruscamente.
+ Esto se ve reflejado en el cambio de la cantidad de desertores que mueren
+ en un encuentro.
 \end_layout
 
 \begin_layout Itemize
@@ -1868,7 +1925,7 @@ ANEXOS
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/The_origin_of_species,bib/El_gen_egoista,bib/kin_selection_is_the_key_to_altruism,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/The_origin_of_species,bib/El_gen_egoista,bib/kin_selection_is_the_key_to_altruism,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Adaptation_and_natural_selection"
 options "ieeetr"
 
 \end_inset
