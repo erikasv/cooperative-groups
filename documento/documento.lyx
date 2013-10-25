@@ -673,9 +673,34 @@ Kin Selection
 \end_layout
 
 \begin_layout Standard
-Teoría que parte de la justificación Teoría que modela los rasgos sociales
- con un enfoque en el individuo y usa coeficientes de relación para capturar
- los efectos de la correlación genética entre individuos.
+A menudo se considera que Kin Selection e Inclusive Fitness son términos
+ sinónimos.
+ Pero Hamilton 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citación?
+\end_layout
+
+\end_inset
+
+ expuso que el concepto de Inclusive Fitness es mas general que el de Kin
+ Selection.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Foster2006"
@@ -715,7 +740,7 @@ In his early publications, Hamilton (1964) focused solely on genetic similarity
 \end_layout
 
 \begin_layout Subsection
-Inclusive fitness
+Inclusive Fitness
 \end_layout
 
 \begin_layout Subsection
