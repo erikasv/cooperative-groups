@@ -1545,228 +1545,7 @@ cantidad de grupos - individuos por grupo
 \end_layout
 
 \begin_layout Standard
-La tabla 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Configuraciones-pruebas"
-
-\end_inset
-
- muestra las configuraciones usadas para las siguientes gráficas.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Generaciones
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Tasa de mutación
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Encuentro de dos desertores
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Figura No.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-100
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-muere uno
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:10-ejecuciones."
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-100
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-muere uno
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:100-ejecuciones"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-100
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-muere uno
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:1000-ejecuciones"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Configuraciones-pruebas"
-
-\end_inset
-
-Configuraciones usadas en algunas pruebas
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+Las graficas se muestran en grupos de tres para facilitar su comparación.
 \end_layout
 
 \begin_layout Standard
@@ -1777,12 +1556,19 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
-	scale 30
+	scale 35
 
 \end_inset
 
@@ -1790,12 +1576,6 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:10-ejecuciones."
-
-\end_inset
-
 10 ejecuciones.
  
 \end_layout
@@ -1812,7 +1592,7 @@ name "fig:10-ejecuciones."
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -1820,7 +1600,7 @@ status collapsed
 \begin_inset Graphics
 	filename ../trait-groups/100/casosRepeticiones_100_0.0.svg
 	lyxscale 10
-	scale 30
+	scale 35
 
 \end_inset
 
@@ -1828,13 +1608,347 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:100-ejecuciones"
+100 ejecuciones.
+ 
+\end_layout
 
 \end_inset
 
-100 ejecuciones.
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_1000_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+1000 ejecuciones.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pruebas con 100 generaciones, 0% tasa de mutación y matando un desertor
+ al encuentro de dos de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+0% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_10_0.01.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+1% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_10_0.1.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+10% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pruebas con 100 generaciones, 10 ejecuciones y matando un desertor al encuentro
+ de dos de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+100 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/1000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+1000 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups/10000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+10000 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pruebas con 10 ejecuciones, 0% tasa de mutación y matando un desertor al
+ encuentro de dos de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+10 ejecuciones.
  
 \end_layout
 
@@ -1850,15 +1964,15 @@ name "fig:100-ejecuciones"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/trait-groups/100/casosRepeticiones_1000_0.0.svg
+	filename ../trait-groups_matar2/100/casosRepeticiones_100_0.0.svg
 	lyxscale 10
-	scale 30
+	scale 35
 
 \end_inset
 
@@ -1866,12 +1980,43 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:1000-ejecuciones"
+100 ejecuciones.
+ 
+\end_layout
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_1000_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
 1000 ejecuciones.
  
 \end_layout
@@ -1881,7 +2026,264 @@ name "fig:1000-ejecuciones"
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset Caption
+
 \begin_layout Plain Layout
+Pruebas con 100 generaciones, 0% tasa de mutación y matando los dos desertores
+ al encuentro de dos de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+0% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.01.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+1% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.1.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+10% tasa de mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pruebas con 100 generaciones, 10 ejecuciones y matando los dos desertores
+ al encuentro de dos de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+100 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/1000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+1000 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../trait-groups_matar2/10000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+10000 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pruebas con 10 ejecuciones, 0% tasa de mutación y matando los dos desertores
+ al encuentro de dos de ellos.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1891,7 +2293,7 @@ name "fig:1000-ejecuciones"
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones
+Conclusiones del modelo
 \end_layout
 
 \begin_layout Itemize
@@ -1903,9 +2305,17 @@ El modelo no es completamente robusto, dado que al modificar detalles pequeños
 
 \begin_layout Itemize
 Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
- el modelo funciona bien ya que al variar los otros parámetros, los resultados
- muestran el mismo patrón, mostrando en ellos que los casos exitosos ocurren
- más cuando la población es pequeña y principalmente hacia los grupos pequeños.
+ el modelo se comporta de acuerdo a lo descrito por D.
+ S.
+ Wilson, ya que al variar los otros parámetros, los resultados muestran
+ el mismo patrón, mostrando en ellos que los casos exitosos ocurren más
+ cuando la población es pequeña y principalmente hacia los grupos pequeños.
+\end_layout
+
+\begin_layout Itemize
+Al variar la mutación de la población los resultados se ven ligeramente
+ afectados con respecto a la cantidad de casos exitosos.
+ Sin embargo el patrón de los resultados se conservan.
 \end_layout
 
 \begin_layout Itemize
@@ -1913,6 +2323,12 @@ Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
  los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
  donde se muestra que los individuos altruistas son favorecidos en grupos
  pequeños.
+\end_layout
+
+\begin_layout Itemize
+Bajo la condición de matar los dos desertores al encuentro de dos de ellos,
+ el modelo arroja resultados de forma mucho más similar en todos los casos,
+ independientemente de la variación de los otros parámetros.
 \end_layout
 
 \begin_layout Subsection
