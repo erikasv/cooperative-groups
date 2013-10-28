@@ -673,23 +673,18 @@ Kin Selection
 \end_layout
 
 \begin_layout Standard
-A menudo se considera que Kin Selection e Inclusive Fitness son términos
- sinónimos.
- Pero Hamilton 
+Se refiere a la selección de los rasgos cuyos efectos favorecen también
+ la sobrevivencia de los individuos relacionados, incluyendo tanto a la
+ descendencia del individuo (en relación a la aptitud directa -direct fitness-)
+ como a los que no son descendencia del mismo (en relación a la aptitud
+ indirecta -indirect fitness-).
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Citación?
+Kin selection: fact and fiction, Kin selection is the key to altruism 
 \end_layout
-
-\end_inset
-
- expuso que el concepto de Inclusive Fitness es mas general que el de Kin
- Selection.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "PepperSmuts2000"
 
 \end_inset
 
@@ -697,19 +692,8 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Foster2006"
-
-\end_inset
-
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 theory that models social traits with a focus on the individual (group effects
@@ -739,8 +723,76 @@ In his early publications, Hamilton (1964) focused solely on genetic similarity
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falta colocar en algún lado el coeficiente de relación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Inclusive Fitness
+\end_layout
+
+\begin_layout Standard
+Representa los efectos acumulativos de los genes que ocasionan comportamientos
+ específicos relacionados no solo con la aptitud del individuo mismo, medida
+ a través de la cantidad de copias de si mismo que produce, sino también
+ con sus relativos, es decir aquellos que comparten uno o más genes y por
+ lo tanto un ancestro
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+http://www.epjournal.net/wp-content/uploads/EP05860873.pdf, http://www.muskingum.edu/
+~psych/psycweb/history/hamilton.htm
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es un concepto mayor al de Kin Selection, pero muy a menudo se usan como
+ sinónimos, ya que cuando W.
+ D.
+ Hamilton expuso ambos terminos, no mencionó otros mecanismos por los cuales
+ se se produciera 
+\begin_inset Quotes eld
+\end_inset
+
+regresión positiva del genotipo
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dejo eso así?
+\end_layout
+
+\end_inset
+
+ además de Kin Selection.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citar otra vez a PepperSmuts?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
