@@ -60,7 +60,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip bigskip
-\quotes_language english
+\quotes_language swedish
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -674,66 +674,17 @@ Kin Selection
 
 \begin_layout Standard
 Se refiere a la selección de los rasgos cuyos efectos favorecen también
- la sobrevivencia de los individuos relacionados, incluyendo tanto a la
+ la supervivencia de los individuos relacionados, incluyendo tanto a la
  descendencia del individuo (en relación a la aptitud directa -direct fitness-)
  como a los que no son descendencia del mismo (en relación a la aptitud
- indirecta -indirect fitness-).
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Kin selection: fact and fiction, Kin selection is the key to altruism 
-\end_layout
+ indirecta -indirect fitness-) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2006,Griffin:2002"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-theory that models social traits with a focus on the individual (group effects
- are often implicit) and uses relatedness coefficients to capture effects
- of genetic correlations among individuals.
-\end_layout
-
-\begin_layout Plain Layout
-In his early publications, Hamilton (1964) focused solely on genetic similarity
- through common descent.
- For this reason, Maynard Smith (1964) renamed inclusive fitness as “kin
- selection.” But according to Hamilton (1975, pp.
- 140–141), “Kinship should be considered just one way of getting positive
- re- gression of genotype.
- ...
- Thus, the inclusive fitness concept is more general than ‘kin selection’.”
- Hamilton (1975) did not discuss in detail what mechanisms other than common
- descent could produce “positive regression of genotype,” or positive assortment
-, but he suggested two possibilities: that a gene for cooperation could
- have pleiotropic effects on habitat preference so that cooperators tend
- to share the same habitat and that altruists could recognize and choose
- to associate with one another.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta colocar en algún lado el coeficiente de relación
-\end_layout
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Subsection
@@ -741,18 +692,16 @@ Inclusive Fitness
 \end_layout
 
 \begin_layout Standard
-Representa los efectos acumulativos de los genes que ocasionan comportamientos
+Es un concepto mayor al de Kin Selection, pero muy a menudo se usan como
+ sinónimos.
+ Representa los efectos acumulativos de los genes que ocasionan comportamientos
  específicos relacionados no solo con la aptitud del individuo mismo, medida
  a través de la cantidad de copias de si mismo que produce, sino también
  con sus relativos, es decir aquellos que comparten uno o más genes y por
- lo tanto un ancestro
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-http://www.epjournal.net/wp-content/uploads/EP05860873.pdf, http://www.muskingum.edu/
-~psych/psycweb/history/hamilton.htm
-\end_layout
+ lo tanto un ancestro 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "park2007persistent,WDH_InclusiveFitness"
 
 \end_inset
 
@@ -760,39 +709,51 @@ http://www.epjournal.net/wp-content/uploads/EP05860873.pdf, http://www.muskingum
 \end_layout
 
 \begin_layout Standard
-Es un concepto mayor al de Kin Selection, pero muy a menudo se usan como
- sinónimos, ya que cuando W.
- D.
- Hamilton expuso ambos terminos, no mencionó otros mecanismos por los cuales
- se se produciera 
-\begin_inset Quotes eld
+Hamilton propuso la 
+\begin_inset Quotes sld
 \end_inset
 
-regresión positiva del genotipo
-\begin_inset Quotes erd
+Aptitud Inclusiva
+\begin_inset Quotes srd
 \end_inset
 
- 
-\begin_inset Note Note
-status open
+ como un mecanismo para la evolución del altruismo y describió cuando un
+ gen que ocasiona un comportamiento altruista se difundiría en la población
+ o no de acuerdo a la siguiente regla 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "smith2002ocho,Foster2006"
 
-\begin_layout Plain Layout
-Dejo eso así?
+\end_inset
+
+:
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+br>c
+\]
+
 \end_inset
 
- además de Kin Selection.
-\begin_inset Note Note
-status open
 
-\begin_layout Plain Layout
-Citar otra vez a PepperSmuts?
 \end_layout
 
+\begin_layout Standard
+Donde 
+\begin_inset Formula $b$
 \end_inset
 
+ es el beneficio del receptor, 
+\begin_inset Formula $c$
+\end_inset
 
+ el costo del actor y 
+\begin_inset Formula $r$
+\end_inset
+
+ la relación entre ellos.
 \end_layout
 
 \begin_layout Subsection
@@ -804,7 +765,7 @@ En cuanto a la distribución de una población de individuos en grupos.
  Cuando los individuos del mismo tipo son organizados de forma no aleatoria
  en los mismos grupos, se dice que la clasificación es positiva (Positive
  Assortment), pues los individuos son en promedio mas parecidos a los miembros
- de su grupo que a la población en general
+ de su grupo que a la población en general 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -818,7 +779,7 @@ key "PepperSmuts2000"
 Cuando los individuos del mismo tipo son organizados en diferentes grupos,
  de forma no aleatoria, se dice que la clasificación es negativa (Negative
  Assortment), pues los individuos son en promedio más parecidos a la población
- en general que a los miembros de su grupo
+ en general que a los miembros de su grupo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -836,27 +797,17 @@ Glosario
 Emergencia: Propiedades o procesos de un sistema que surgen a partir de
  la interacción de sus partes y que no está definido por ninguna regla o
  control centralizado.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-No se si moverlo como subsección
 \end_layout
 
-\end_inset
-
-
+\begin_layout Itemize
+Gen: Segmento de ADN que codifica una molécula mayor, como una proteína.
+ 
 \end_layout
 
 \begin_layout Itemize
 Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
  para hacer referencia a los individuos y agentes que tienen un comportamiento
  egoísta.
-\end_layout
-
-\begin_layout Itemize
-Similitud genética
 \end_layout
 
 \begin_layout Section
@@ -2396,11 +2347,17 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones
+Conclusiones del modelo
 \end_layout
 
 \begin_layout Section
 CONCLUSIONES
+\end_layout
+
+\begin_layout Itemize
+La característica más importante para que un ambiente favorezca la evolución
+ de los individuos altruistas y por tanto de los grupos, es una población
+ espacialmente estructurada.
 \end_layout
 
 \begin_layout Section
@@ -2418,7 +2375,7 @@ ANEXOS
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/The_origin_of_species,bib/El_gen_egoista,bib/kin_selection_is_the_key_to_altruism,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Adaptation_and_natural_selection"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/The_origin_of_species,bib/El_gen_egoista,bib/kin_selection_is_the_key_to_altruism,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Adaptation_and_natural_selection,bib/Ocho_Hitos_de_la_Evolución,bib/Kin_Selection_fact_and_fiction,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/Willia_D_Hamilton_by_Alicia_Parks"
 options "ieeetr"
 
 \end_inset
