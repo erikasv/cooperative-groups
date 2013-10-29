@@ -268,7 +268,7 @@ par}
 \backslash
 large
 \backslash
-bf Ssntiago de Cali, Junio 11 de 2013 
+bf Ssntiago de Cali, Octubre 29 de 2013 
 \backslash
 par} 
 \end_layout
@@ -425,28 +425,25 @@ key "bhl65514"
 
  como selección natural y se refiere a la conservación de características
  que favorecen a un individuo, tales como reproducirse a una tasa mayor
- que otros o sobrevivir en un medio determinado y a la destrucción de las
+ que otros o sobrevivir en un medio determinado, y a la destrucción de las
  características que son perjudiciales.
 \end_layout
 
 \begin_layout Standard
-Existen muchas teorías acerca del nivel 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Carlos: (nivel a que se refiere?) -> No se que mas poner -> Ricardo: aca
- en vez de nivel puedes usar forma o punto de vista, por que es la forma
- (o punto de vista) como la teoria trata de explicar la evolucion, tambien
- para hace introduccion a que vas a hablar de las dos formas ( nivel de
- genes, nivel de grupo), por que no queda claro.
+Existen muchos puntos de vista acerca del funcionamiento de la evolución,
+ el punto clave de discusión es el de la presión selectiva y esto lleva
+ a la generación de discusiones sobre el nivel al que actúa esta presión,
+ la discusión se divide principalmente en dos: la selección individual y
+ la selección de grupo.
 \end_layout
 
+\begin_layout Standard
+Por el lado de la selección individual la mayor fuerza está dada por la
+ propuesta de Richard Dawkins
+\begin_inset space ~
 \end_inset
 
- sobre el que actúa la selección.
- Por el lado de la selección individual la mayor fuerza está dada por la
- propuesta de Richard Dawkins 
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dawkins2000gen"
@@ -454,108 +451,46 @@ key "dawkins2000gen"
 \end_inset
 
 , en la que afirma que la selección ocurre solo al nivel de los genes, pues
- son los que especifican el fenotipo de los organismos y son lo suficientemente
- longevos para ser los últimos beneficiarios de que un organismo sea seleccionad
-o o no.
- Esto a su vez explica el comportamiento altruista planteando que solo ocurre
- entre individuos emparentados.
+ son los que especifican el fenotipo de los organismos, y que el comportamiento
+ altruista solo es aparente ya que ocurre entre individuos relacionados,
+ es decir, que tienen genes idénticos.
+ Esta teoría es respaldada por las teorías de Kin Selection e Inclusive
+ Fitness.
 \end_layout
 
 \begin_layout Standard
-En cuanto a la selección de grupo o selección multinivel se tienen varías
- teorías que muestran de que otra forma los comportamientos altruistas o
- cooperativos pueden ser objeto de selección.
- Por una parte se tiene la reciprocidad, que está dada de dos formas: directa
- e indirecta.
- La reciprocidad directa es cuando dos individuos reciben un beneficio por
- ayudarse entre sí, requiere que tengan mas de un encuentro entre ellos
- y que lleven un registro de las acciones que los otros individuos han realizado
-, para así mismo reaccionar.
- La forma más común en la que se estudia este tipo de comportamientos 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-<<
-\end_layout
-
-\end_inset
-
-es con juegos de un solo intento pero con varias repeticiones, por ejemplo
- con el dilema del prisionero
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
->>
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-<= Ese si no se como cambiarlo
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-La reciprocidad indirecta no requiere que cada individuo lleve registro
- de lo que hacen los demás, pero sí de una reputación publica que cada uno
- construye, por ejemplo los rumores en la cultura humana.
- Estos dos mecanismos que incluyen reciprocidad requieren habilidades cognitivas
- específicas para su funcionamiento, por lo tanto no logran explicar la
- cooperación en interacciones anónimas 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "garcia2011moral"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Otra alternativa a la selección de los comportamientos altruistas son las
- poblaciones espacialmente estructuradas expuestas principalmente en la
- teoría propuesta por D.S Wilson de los trait-groups 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "wilson1975"
-
-\end_inset
-
-.
- Según esta teoría no se requiere trabajo extra por parte de los individuos
- para recibir los beneficios de cooperar.
- La mayoría de los trabajos que fueron estudiados en la literatura, los
- cuales exponen modelos de poblaciones, se basan en esta teoría y/o presentan
- modificaciones en la misma para estudiar características puntuales.
+En cuanto a la selección de grupo existen viarias teorías que explican otros
+ medios por los que el comportamiento altruista puede ser objeto de selección,
+ algunas teorías estudian situaciones directamente relacionadas con el comportam
+iento entre los individuos y otras lo hacen por medio de las condiciones
+ ambientales en el que se encuentra la población.
+ En este trabajo se abordaran aquellas teorías a favor de las condiciones
+ ambientales.
 \end_layout
 
 \begin_layout Standard
 Es importante resaltar que en el momento que algunas de las teorías nacieron
- no se tenía la capacidad de cómputo con la que se cuenta ahora.
- Por lo tanto no había la forma de probar con una simulación de los modelos
- si éstos funcionaban o eran realmente útiles.
- Este es el caso del modelo de los trait-groups 
+ no se tenía la capacidad de cómputo con la que se cuenta ahora, por lo
+ tanto no había la forma de probar con una simulación de los modelos si
+ éstos funcionaban o eran realmente útiles, éste es el caso del modelo de
+ los trait-groups
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wilson1975"
 
 \end_inset
 
-, el cuál ha sido utilizado ampliamente como base, tanto teórica como práctica
+ que ha sido utilizado ampliamente como base, tanto teórica como práctica
  en otros trabajos.
- Es por ello que el trabajo presentado en este documento explorará el funcionami
-ento del modelo de los trait-groups a través de dos mecanismos.
- 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
 \color red
 (Decir que es importante porque así ayuda a estar seguros de usar un modelo
  que funciona y deja un ¿software? que se puede usar para modelar otros
@@ -564,11 +499,22 @@ ento del modelo de los trait-groups a través de dos mecanismos.
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-El trabajo realizado está compuesto de dos partes: primero se realiza una
- implementación del modelo de los trait-groups y se analiza su funcionamiento
- de acuerdo a la cantidad de generaciones que transcurren y la configuración
- de cantidad de grupos y el tamaño de cada grupo.
+El trabajo presentado en este documento tiene como finalidad comprobar las
+ condiciones ambientales que favorecen la formación de grupos y la realización
+ de un modelo que permita comprobarlo.
+ El trabajo está compuesto de dos partes: primero se realiza una implementación
+ del modelo de los trait-groups y se analiza su funcionamiento de acuerdo
+ a la cantidad de generaciones que transcurren y la configuración 
+\shape italic
+cantidad de grupos - individuos por grupo
+\shape default
+.
  Posteriormente se realiza una simulación de agentes basado en el modelo
  de Pepper y Smuts 
 \begin_inset CommandInset citation
@@ -581,7 +527,7 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Section
-Objetivos 
+OBJETIVOS 
 \begin_inset Note Note
 status open
 
@@ -757,6 +703,60 @@ Donde
 \end_layout
 
 \begin_layout Subsection
+Selección de grupo o multinivel
+\end_layout
+
+\begin_layout Standard
+Existen algunas teorías alternar a la de Kin Selection para explicar la
+ evolución del altruismo, éstas se dividen principalmente en dos alternativas:
+ Las que requieren habilidades cognitivas específicas por parte de los individuo
+s y las que están dadas por el ambiente.
+\end_layout
+
+\begin_layout Standard
+En el primer grupo se encuentra la reciprocidad, que a su vez se divide
+ en dos tipos: directa e indirecta.
+ La reciprocidad directa es cuando dos individuos reciben un beneficio por
+ ayudarse entre sí, requiere que tengan mas de un encuentro entre ellos
+ y que lleven un registro de las acciones que los otros individuos han realizado
+, para así mismo reaccionar.
+ La forma más común en la que se estudia este tipo de comportamientos es
+ con juegos de un solo intento pero con varias repeticiones, por ejemplo
+ con el dilema del prisionero.
+\end_layout
+
+\begin_layout Standard
+La reciprocidad indirecta no requiere que cada individuo lleve registro
+ de lo que hacen los demás, pero sí de una reputación publica que cada uno
+ construye, por ejemplo los rumores en la cultura humana.
+ Los mecanismos del tipo de la reciprocidad requieren mayor información
+ por parte de los individuos y por lo tanto no logran explicar la cooperación
+ en interacciones anónimas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garcia2011moral"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La otra alternativa para explicar la evolución de los comportamientos altruistas
+ son las poblaciones espacialmente estructuradas expuestas principalmente
+ en la teoría propuesta por D.S Wilson de los trait-groups 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+.
+ Según esta teoría no se requiere trabajo extra por parte de los individuos
+ para recibir los beneficios de cooperar.
+\end_layout
+
+\begin_layout Subsection
 Positive Assortment / Negative Assortment
 \end_layout
 
@@ -797,11 +797,6 @@ Glosario
 Emergencia: Propiedades o procesos de un sistema que surgen a partir de
  la interacción de sus partes y que no está definido por ninguna regla o
  control centralizado.
-\end_layout
-
-\begin_layout Itemize
-Gen: Segmento de ADN que codifica una molécula mayor, como una proteína.
- 
 \end_layout
 
 \begin_layout Itemize
@@ -1160,7 +1155,7 @@ key "wilson1975"
  dan por sentado su funcionamiento, a pesar de que el autor no expone detalles
  de funcionamiento ni hay evidencia de haber utilizado el modelo para algún
  trabajo práctico.
- Puede ser importante tener en cuenta detalles como éstos cuando se relizan
+ Puede ser importante tener en cuenta detalles como éstos cuando se realizan
  modelos para predecir comportamientos de poblaciones y similares.
 \end_layout
 
@@ -1464,7 +1459,7 @@ Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
  de individuos dentro de cada grupo y la cantidad de generaciones a ejecutar
  (una generación corresponde a la ejecución de los pasos 2 a 4 en el caso
  del modelo original).
- Esto con el fin de analizar que configuraciones de 
+ Esto con el fin de analizar que configuraciones 
 \shape italic
 cantidad de grupos - individuos por grupo
 \shape default
@@ -1548,7 +1543,7 @@ cantidad de grupos - individuos por grupo
 \end_layout
 
 \begin_layout Standard
-Las graficas se muestran en grupos de tres para facilitar su comparación.
+Las gráficas se muestran en grupos de tres para facilitar su comparación.
 \end_layout
 
 \begin_layout Standard
@@ -2368,19 +2363,19 @@ TRABAJOS FUTUROS
 REFERENCIAS
 \end_layout
 
-\begin_layout Section
-ANEXOS
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Individual_selection_for_cooperative_group_formation,bib/The_origin_of_species,bib/El_gen_egoista,bib/kin_selection_is_the_key_to_altruism,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Adaptation_and_natural_selection,bib/Ocho_Hitos_de_la_Evolución,bib/Kin_Selection_fact_and_fiction,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/Willia_D_Hamilton_by_Alicia_Parks"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks"
 options "ieeetr"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+ANEXOS
 \end_layout
 
 \end_body
