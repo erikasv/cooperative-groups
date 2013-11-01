@@ -398,10 +398,10 @@ INTRODUCCIÓN
 \begin_layout Standard
 La evolución es el proceso resultante de los cambios heredados en una población
  durante muchas generaciones.
- De una forma mas general se puede ver un sistema evolutivo como una población
+ De una forma más general se puede ver un sistema evolutivo como una población
  de individuos que está sometida a una presión selectiva y que se reproduce
  generando variabilidad durante el proceso debido a las replicas imperfectas
- o a la combinación de dos o mas individuos.
+ o a la combinación de dos o más individuos.
  La presión selectiva fue introducida por Darwin 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -413,6 +413,21 @@ key "bhl65514"
  que favorecen a un individuo, tales como reproducirse a una tasa mayor
  que otros o sobrevivir en un medio determinado, y a la destrucción de las
  características que son perjudiciales.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ángel: En la introducción, deberías añadir un segundo párrafo que explique
+ que, aunque la evolución se encontró por primera vez en la biología, realmente
+ es un algoritmo.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -583,7 +598,7 @@ Los genes como unidad de selección
 \begin_layout Standard
 Entre los pioneros de la teoría de la evolución con los genes como unidad
  sometida a la selección natural está el biólogo George Williams, esta teoría
- fue popularizada mas adelante por Richard Dawkins.
+ fue popularizada más adelante por Richard Dawkins.
  La razón principal de Williams es que los fenotipos son el resultado de
  la interacción del genotipo con el ambiente, por lo tanto sus manifestaciones
  son extremadamente temporales, y en consecuencia no pueden producir por
@@ -693,17 +708,17 @@ Selección de grupo o multinivel
 \end_layout
 
 \begin_layout Standard
-Existen algunas teorías alternar a la de Kin Selection para explicar la
- evolución del altruismo, éstas se dividen principalmente en dos alternativas:
- Las que requieren habilidades cognitivas específicas por parte de los individuo
-s y las que están dadas por el ambiente.
+Existen algunas teorías alternativas a la de Kin Selection para explicar
+ la evolución del altruismo, éstas se dividen principalmente en dos alternativas
+: Las que requieren habilidades cognitivas específicas por parte de los
+ individuos y las que están dadas por el ambiente.
 \end_layout
 
 \begin_layout Standard
 En el primer grupo se encuentra la reciprocidad, que a su vez se divide
  en dos tipos: directa e indirecta.
  La reciprocidad directa es cuando dos individuos reciben un beneficio por
- ayudarse entre sí, requiere que tengan mas de un encuentro entre ellos
+ ayudarse entre sí, requiere que tengan más de un encuentro entre ellos
  y que lleven un registro de las acciones que los otros individuos han realizado
 , para así mismo reaccionar.
  La forma más común en la que se estudia este tipo de comportamientos es
@@ -713,7 +728,7 @@ En el primer grupo se encuentra la reciprocidad, que a su vez se divide
 
 \begin_layout Standard
 La reciprocidad indirecta no requiere que cada individuo lleve registro
- de lo que hacen los demás, pero sí de una reputación publica que cada uno
+ de lo que hacen los demás, pero sí de una reputación pública que cada uno
  construye, por ejemplo los rumores en la cultura humana.
  Los mecanismos del tipo de la reciprocidad requieren mayor información
  por parte de los individuos y por lo tanto no logran explicar la cooperación
@@ -747,11 +762,11 @@ Positive Assortment / Negative Assortment
 \end_layout
 
 \begin_layout Standard
-En cuanto a la distribución de una población de individuos en grupos.
- Cuando los individuos del mismo tipo son organizados de forma no aleatoria
- en los mismos grupos, se dice que la clasificación es positiva (Positive
- Assortment), pues los individuos son en promedio mas parecidos a los miembros
- de su grupo que a la población en general 
+En cuanto a la distribución de una población de individuos en grupos, cuando
+ los individuos del mismo tipo son organizados de forma no aleatoria en
+ los mismos grupos, se dice que la clasificación es positiva (Positive Assortmen
+t), pues los individuos son en promedio más parecidos a los miembros de
+ su grupo que a la población en general 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -776,7 +791,17 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Subsection
-Glosario
+Glosario 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ángel: el glosario es muy corto.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -797,8 +822,9 @@ ESTADO DEL ARTE
 
 \begin_layout Standard
 En la literatura existen trabajos que abordan la selección de grupo bajo
- diferentes enfoques, la mayoría de ellos hacen uso de este tipo de selección
- para simular comportamientos de sistemas, como los económicos.
+ diferentes enfoques.
+ La mayoría de ellos hacen uso de este tipo de selección para simular comportami
+entos de sistemas, como los económicos.
  Por otra parte hay trabajos que por diferentes medios tratan de explicar
  la evolución de la cooperación y, de forma directa o indirecta, de los
  grupos.
@@ -840,10 +866,10 @@ key "wilson1975"
 
 \begin_layout Standard
 En el modelo todos los individuos son iguales, solo difieren en un único
- rasgo, que los distingue entre altruistas y egoístas, por esto se definen
- dos tipos de individuos, el donante que es quien manifiesta un rasgo (sin
- importar el tipo del rasgo), y el receptor que son todos aquellos que son
- afectados por la manifestación de dicho rasgo.
+ rasgo, que los distingue entre altruistas y egoístas.
+ Por esto se definen dos tipos de individuos, el donante que es quien manifiesta
+ un rasgo (sin importar el tipo del rasgo), y el receptor que son todos
+ aquellos que son afectados por la manifestación de dicho rasgo.
  La 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -852,8 +878,9 @@ reference "fig:FdvsFr"
 \end_inset
 
  muestra los estados de los efectos resultantes de la manifestación de un
- rasgo, la línea continua representa el concepto tradicional de selección
- individual (
+ rasgo.
+ La línea continua representa el concepto tradicional de selección individual
+ (
 \begin_inset Formula $f_{d}>f_{r}$
 \end_inset
 
@@ -1048,7 +1075,7 @@ A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
 status open
 
 \begin_layout Plain Layout
-PARA UN ARTÍCULO: Hablar un poco mas sobre las desventajas del modelo y
+PARA UN ARTÍCULO: Hablar un poco más sobre las desventajas del modelo y
  luego mencionar las mejoras a realizar
 \end_layout
 
@@ -1097,7 +1124,7 @@ Se realizaron 10 ejecuciones del modelo, cada una con 10000 unidades de
  tiempo y se midió la agrupación de los individuos (assortment) en los parches
  de plantas, haciendo similitud a los trait-groups, a través de un coeficiente
  de regresión.
- La conclusión mas importante es que el daño causado por los individuos
+ La conclusión más importante es que el daño causado por los individuos
  al ambiente genera 
 \begin_inset Quotes eld
 \end_inset
@@ -1114,7 +1141,7 @@ Sin embargo, hay algunas características que son completamente necesarias
  para la veracidad de los resultados y están ausentes: Los individuos no
  se reproducen, mutan o mueren.
  Bajo estas condiciones es fácil deducir el resultado de las simulaciones,
- pues los animales moderados permanecerán mas tiempo en un a planta.
+ pues los animales moderados permanecerán más tiempo en una planta.
  Finalmente, debido a todo esto no se se puede afirmar que el rasgo cooperativo
  se difunda en la población y menos definiendo assortment como la desviación
  de la similitud genética, además los resultados son dependientes de la
@@ -1191,8 +1218,8 @@ Poner otro aparte de éste
 
 \begin_layout Standard
 Al no encontrar una implementación del modelo original y para verificar
- su funcionamiento, el primer trabajo que se realizará es implementar el
- modelo de los trait-groups de la manera mas exacta posible al modelo expuesto
+ su funcionamiento, el primer trabajo que se realizó es implementar el modelo
+ de los trait-groups de la manera más exacta posible al modelo expuesto
  por D.
  S.
  Wilson 
@@ -1435,9 +1462,10 @@ Si ambos traicionan puede (1) morir uno de los dos aleatoriamente o (2)
 
 \begin_layout Standard
 La cantidad de encuentros de depredación que ocurren en cada paso es ajustable
- como una entrada al modelo, por defecto este valor corresponde a la mitad
- de los individuos que hay dentro de un grupo, es decir, por ejemplo, si
- hay 10 individuos dentro de cada grupo, ocurren 5 encuentros.
+ como una entrada al modelo.
+ Por defecto este valor corresponde a la mitad de los individuos que hay
+ dentro de un grupo, es decir, por ejemplo, si hay 10 individuos dentro
+ de cada grupo, ocurren 5 encuentros.
 \end_layout
 
 \begin_layout Standard
