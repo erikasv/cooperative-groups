@@ -8,3 +8,9 @@ Modificaciones con respecto al modelo del artículo:
 	1. Los animales sí mueren (condición?, -> Cuando se quedan sin enegería para una unidad de tiempo) y sí se reproducen (Los que tengan mas energía, por selección por torneo)
 	2. Los animales tienen una reserva de energía
 	3. ¿Debería modificarse la cantidad de planta que se comen?
+
+*******************************************************************+
+
+Es necesario instalar las siguientes gemas:
+	Para las graficas: rubyvis
+	Para mongo: mongo, bson, bson_ext
