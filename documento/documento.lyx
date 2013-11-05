@@ -60,7 +60,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip bigskip
-\quotes_language swedish
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -455,8 +455,15 @@ key "dawkins2000gen"
  son los que especifican el fenotipo de los organismos, y que el comportamiento
  altruista solo es aparente ya que ocurre entre individuos relacionados,
  es decir, que tienen genes idénticos.
- Esta teoría es respaldada por las teorías de Kin Selection e Inclusive
- Fitness.
+ Esta teoría es respaldada por las teorías de 
+\shape italic
+Kin Selection 
+\shape default
+e 
+\shape italic
+Inclusive Fitness
+\shape default
+.
 \end_layout
 
 \begin_layout Standard
@@ -474,7 +481,11 @@ Es importante resaltar que en el momento que algunas de las teorías nacieron
  no se tenía la capacidad de cómputo con la que se cuenta ahora, por lo
  tanto no había la forma de probar con una simulación de los modelos si
  éstos funcionaban o eran realmente útiles, éste es el caso del modelo de
- los trait-groups
+ los 
+\shape italic
+trait-groups
+\shape default
+
 \begin_inset space ~
 \end_inset
 
@@ -510,12 +521,13 @@ El trabajo presentado en este documento tiene como finalidad comprobar las
  condiciones ambientales que favorecen la formación de grupos y la realización
  de un modelo que permita comprobarlo.
  El trabajo está compuesto de dos partes: primero se realiza una implementación
- del modelo de los trait-groups y se analiza su funcionamiento de acuerdo
- a la cantidad de generaciones que transcurren y la configuración 
+ del modelo de los 
 \shape italic
-cantidad de grupos - individuos por grupo
+trait-groups
 \shape default
-.
+ y se analiza su funcionamiento de acuerdo a la cantidad de generaciones
+ que transcurren y la configuración cantidad de grupos - individuos por
+ grupo.
  Posteriormente se realiza una simulación de agentes basado en el modelo
  de Pepper y Smuts 
 \begin_inset CommandInset citation
@@ -616,15 +628,24 @@ key "nla.cat-vn518082"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Kin Selection
 \end_layout
 
 \begin_layout Standard
 Se refiere a la selección de los rasgos cuyos efectos favorecen también
  la supervivencia de los individuos relacionados, incluyendo tanto a la
- descendencia del individuo (en relación a la aptitud directa -direct fitness-)
- como a los que no son descendencia del mismo (en relación a la aptitud
- indirecta -indirect fitness-) 
+ descendencia del individuo (en relación a la aptitud directa -
+\shape italic
+direct fitness
+\shape default
+-) como a los que no son descendencia del mismo (en relación a la aptitud
+ indirecta -
+\shape italic
+indirect fitness
+\shape default
+-) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Foster2006,Griffin:2002"
@@ -635,12 +656,17 @@ key "Foster2006,Griffin:2002"
 \end_layout
 
 \begin_layout Subsection
+
+\shape italic
 Inclusive Fitness
 \end_layout
 
 \begin_layout Standard
-Es un concepto mayor al de Kin Selection, pero muy a menudo se usan como
- sinónimos.
+Es un concepto mayor al de 
+\shape italic
+Kin Selection
+\shape default
+, pero muy a menudo se usan como sinónimos.
  Representa los efectos acumulativos de los genes que ocasionan comportamientos
  específicos relacionados no solo con la aptitud del individuo mismo, medida
  a través de la cantidad de copias de si mismo que produce, sino también
@@ -657,7 +683,7 @@ key "park2007persistent,WDH_InclusiveFitness"
 
 \begin_layout Standard
 Hamilton propuso la 
-\begin_inset Quotes sld
+\begin_inset Quotes eld
 \end_inset
 
 Aptitud Inclusiva
@@ -708,10 +734,13 @@ Selección de grupo o multinivel
 \end_layout
 
 \begin_layout Standard
-Existen algunas teorías alternativas a la de Kin Selection para explicar
- la evolución del altruismo, éstas se dividen principalmente en dos alternativas
-: Las que requieren habilidades cognitivas específicas por parte de los
- individuos y las que están dadas por el ambiente.
+Existen algunas teorías alternativas a la de 
+\shape italic
+Kin Selection
+\shape default
+ para explicar la evolución del altruismo, éstas se dividen principalmente
+ en dos alternativas: Las que requieren habilidades cognitivas específicas
+ por parte de los individuos y las que están dadas por el ambiente.
 \end_layout
 
 \begin_layout Standard
@@ -758,15 +787,32 @@ key "wilson1975"
 \end_layout
 
 \begin_layout Subsection
-Positive Assortment / Negative Assortment
+
+\shape italic
+Positive Assortment
+\shape default
+ / 
+\shape italic
+Negative Assortment
 \end_layout
 
 \begin_layout Standard
 En cuanto a la distribución de una población de individuos en grupos, cuando
  los individuos del mismo tipo son organizados de forma no aleatoria en
- los mismos grupos, se dice que la clasificación es positiva (Positive Assortmen
-t), pues los individuos son en promedio más parecidos a los miembros de
- su grupo que a la población en general 
+ los mismos grupos, se dice que la 
+\begin_inset Quotes eld
+\end_inset
+
+clasificación es positiva
+\begin_inset Quotes srd
+\end_inset
+
+ (
+\shape italic
+Positive Assortment
+\shape default
+), pues los individuos son en promedio más parecidos a los miembros de su
+ grupo que a la población en general 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -778,9 +824,20 @@ key "PepperSmuts2000"
 
 \begin_layout Standard
 Cuando los individuos del mismo tipo son organizados en diferentes grupos,
- de forma no aleatoria, se dice que la clasificación es negativa (Negative
- Assortment), pues los individuos son en promedio más parecidos a la población
- en general que a los miembros de su grupo 
+ de forma no aleatoria, se dice que la 
+\begin_inset Quotes eld
+\end_inset
+
+clasificación es negativa
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\shape italic
+Negative Assortment
+\shape default
+), pues los individuos son en promedio más parecidos a la población en general
+ que a los miembros de su grupo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PepperSmuts2000"
@@ -847,13 +904,9 @@ El autor presenta un modelo teórico que se basa en los diferentes tipos
  El autor destaca que la mayoría de las interacciones ecológicas, como alimentac
 ión y depredación, entre otras, ocurren en la primera etapa, por lo tanto
  llama al modelo: 
-\begin_inset Quotes eld
-\end_inset
-
+\shape italic
 trait-groups
-\begin_inset Quotes erd
-\end_inset
-
+\shape default
  (grupos de rasgos) 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -966,13 +1019,9 @@ o, independientemente de su aptitud relativa, es decir que
 
 \begin_layout Standard
 El éxito de este modelo depende de (1) la validez del concepto de 
-\begin_inset Quotes eld
-\end_inset
-
-grupo de rasgos
-\begin_inset Quotes erd
-\end_inset
-
+\shape italic
+trait-group
+\shape default
  y (2) la variación en la composición de los grupos.
  En la práctica la heterogeneidad espacial es considerada una forma de grupos
  de rasgos ya que al partir la población espacialmente, pero permitiendo
@@ -993,8 +1042,11 @@ Individual Selection for Cooperative Group Formation
 \end_layout
 
 \begin_layout Standard
-Este trabajo tiene como base teórica el modelo de los trait-groups propuesto
- por D.S.
+Este trabajo tiene como base teórica el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ propuesto por D.S.
  Wilson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1031,8 +1083,11 @@ pertenece
  Se modela el crecimiento de cada tipo de individuo dentro de los grupos
  por medio de una ecuación simplificada de otros modelos de crecimiento
  de colonias de bacterias.
- Y al igual que en el modelo de los trait-groups no se tiene en cuenta la
- mutación de los individuos.
+ Y al igual que en el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ no se tiene en cuenta la mutación de los individuos.
 \end_layout
 
 \begin_layout Standard
@@ -1056,11 +1111,17 @@ Los resultados muestran que la formación de grupos pequeños compuestos por
 \end_layout
 
 \begin_layout Standard
-A pesar de basarse teóricamente en el modelo de los trait-groups, este trabajo
- tiene los estados invertidos.
- En el modelo de los trait-groups en la etapa de dispersión los individuos
- se reproducen, en este trabajo los individuos se reproducen dentro de los
- grupos.
+A pesar de basarse teóricamente en el modelo de los 
+\shape italic
+trait-groups
+\shape default
+, este trabajo tiene los estados invertidos.
+ En el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ en la etapa de dispersión los individuos se reproducen, en este trabajo
+ los individuos se reproducen dentro de los grupos.
  Y en el modelo original dentro de los grupos ocurre la depredación, en
  este modelo la depredación está implícita en (1) una constante de muerte
  para individuos de cada tipo y en (2) al reubicar los individuos en grupos
@@ -1070,18 +1131,7 @@ A pesar de basarse teóricamente en el modelo de los trait-groups, este trabajo
 
 \begin_layout Subsection
 A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
- through Environmental Feedback 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-PARA UN ARTÍCULO: Hablar un poco más sobre las desventajas del modelo y
- luego mencionar las mejoras a realizar
-\end_layout
-
-\end_inset
-
-
+ through Environmental Feedback
 \end_layout
 
 \begin_layout Standard
@@ -1121,18 +1171,17 @@ El trabajo consiste en una simulación, en un espacio de dos dimensiones
 
 \begin_layout Standard
 Se realizaron 10 ejecuciones del modelo, cada una con 10000 unidades de
- tiempo y se midió la agrupación de los individuos (assortment) en los parches
- de plantas, haciendo similitud a los trait-groups, a través de un coeficiente
- de regresión.
+ tiempo y se midió la agrupación de los individuos (
+\shape italic
+assortment
+\shape default
+) en los parches de plantas, haciendo similitud a los trait-groups, a través
+ de un coeficiente de regresión.
  La conclusión más importante es que el daño causado por los individuos
  al ambiente genera 
-\begin_inset Quotes eld
-\end_inset
-
+\shape italic
 positive assortment
-\begin_inset Quotes erd
-\end_inset
-
+\shape default
 , pues los individuos cooperadores tienden a agruparse.
 \end_layout
 
@@ -1143,9 +1192,12 @@ Sin embargo, hay algunas características que son completamente necesarias
  Bajo estas condiciones es fácil deducir el resultado de las simulaciones,
  pues los animales moderados permanecerán más tiempo en una planta.
  Finalmente, debido a todo esto no se se puede afirmar que el rasgo cooperativo
- se difunda en la población y menos definiendo assortment como la desviación
- de la similitud genética, además los resultados son dependientes de la
- cantidad de individuos por cada tipo.
+ se difunda en la población y menos definiendo 
+\shape italic
+assortment
+\shape default
+ como la desviación de la similitud genética, además los resultados son
+ dependientes de la cantidad de individuos por cada tipo.
 \end_layout
 
 \begin_layout Section
@@ -1153,12 +1205,17 @@ TRABAJO REALIZADO
 \end_layout
 
 \begin_layout Subsection
-Modelo de los trait-groups
+Modelo de los 
+\shape italic
+trait-groups
 \end_layout
 
 \begin_layout Standard
-Los trabajos encontrados en la literatura basados en el modelo de los trait-grou
-ps 
+Los trabajos encontrados en la literatura basados en el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wilson1975"
@@ -1219,8 +1276,11 @@ Poner otro aparte de éste
 \begin_layout Standard
 Al no encontrar una implementación del modelo original y para verificar
  su funcionamiento, el primer trabajo que se realizó es implementar el modelo
- de los trait-groups de la manera más exacta posible al modelo expuesto
- por D.
+ de los 
+\shape italic
+trait-groups
+\shape default
+ de la manera más exacta posible al modelo expuesto por D.
  S.
  Wilson 
 \begin_inset CommandInset citation
@@ -1233,8 +1293,11 @@ key "wilson1975"
 \end_layout
 
 \begin_layout Standard
-El modelo original de los trait-groups está conformado por los siguientes
- pasos:
+El modelo original de los 
+\shape italic
+trait-groups
+\shape default
+ está conformado por los siguientes pasos:
 \end_layout
 
 \begin_layout Enumerate
@@ -1473,12 +1536,9 @@ Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
  de individuos dentro de cada grupo y la cantidad de generaciones a ejecutar
  (una generación corresponde a la ejecución de los pasos 2 a 4 en el caso
  del modelo original).
- Esto con el fin de analizar que configuraciones 
-\shape italic
-cantidad de grupos - individuos por grupo
-\shape default
- favorecen la propagación de los individuos cooperadores y si es un evento
- temporal o estable.
+ Esto con el fin de analizar que configuraciones cantidad de grupos - individuos
+ por grupo favorecen la propagación de los individuos cooperadores y si
+ es un evento temporal o estable.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1537,23 +1597,17 @@ desertores: muere uno, mueren los dos
 En todas las pruebas se vario la cantidad de grupos y la cantidad de individuos
  por grupos entre 2 y 10.
  Y se realizaron 10, 100 y 1000 ejecuciones del algoritmo, para contar cuantas
- veces cada configuración 
-\shape italic
-cantidad de grupos - individuos por grupo
-\shape default
- es exitosa, es decir, que la cantidad de individuos cooperadores en la
- población aumenta tras finalizar la ejecución del modelo.
+ veces cada configuración cantidad de grupos - individuos por grupo es exitosa,
+ es decir, que la cantidad de individuos cooperadores en la población aumenta
+ tras finalizar la ejecución del modelo.
 \end_layout
 
 \begin_layout Standard
 A continuación se muestran los resultados de algunas pruebas realizadas,
  para todas las gráficas el eje x es la cantidad de grupos, el eje y es
  la cantidad de individuos dentro de cada grupo y el tamaño del circulo
- indica el porcentaje de veces en las que la configuración 
-\shape italic
-cantidad de grupos - individuos por grupo
-\shape default
- fue exitosa.
+ indica el porcentaje de veces en las que la configuración cantidad de grupos
+ - individuos por grupo fue exitosa.
 \end_layout
 
 \begin_layout Standard
@@ -1578,7 +1632,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1610,7 +1664,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_100_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_100_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1647,7 +1701,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_1000_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_1000_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1704,7 +1758,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1735,7 +1789,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_10_0.01.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.01.svg
 	lyxscale 10
 	scale 35
 
@@ -1771,7 +1825,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_10_0.1.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.1.svg
 	lyxscale 10
 	scale 35
 
@@ -1827,7 +1881,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1858,7 +1912,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/1000/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/1000/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1894,7 +1948,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups/10000/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/10000/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1950,7 +2004,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -1982,7 +2036,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_100_0.0.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_100_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -2019,7 +2073,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_1000_0.0.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_1000_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -2076,7 +2130,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -2107,7 +2161,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.01.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.01.svg
 	lyxscale 10
 	scale 35
 
@@ -2143,7 +2197,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.1.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.1.svg
 	lyxscale 10
 	scale 35
 
@@ -2199,7 +2253,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -2230,7 +2284,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/1000/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups_matar2/1000/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
@@ -2266,7 +2320,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../trait-groups_matar2/10000/casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups_matar2/10000/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	scale 35
 
