@@ -2283,36 +2283,34 @@ Conclusiones del modelo
 \begin_layout Itemize
 El modelo no es completamente robusto, dado que al modificar detalles pequeños
  los resultados cambian bruscamente.
- Esto se ve reflejado en el cambio de la cantidad de desertores que mueren
+ Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
  en un encuentro.
 \end_layout
 
 \begin_layout Itemize
-Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
- el modelo se comporta de acuerdo a lo descrito por D.
+Bajo la condición de matar solo un desertor al encuentro de dos de ellos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El modelo se comporta de acuerdo a lo descrito por D.
  S.
- Wilson, ya que al variar los otros parámetros, los resultados muestran
- el mismo patrón, mostrando en ellos que los casos exitosos ocurren más
- cuando la población es pequeña y principalmente hacia los grupos pequeños.
+ Wilson, ya que al variar los otros parámetros, los resultados tienen el
+ mismo patrón, mostrando en ellos que los casos exitosos ocurren más cuando
+ la población es pequeña y principalmente hacia los grupos pequeños.
 \end_layout
 
 \begin_layout Itemize
-Al variar la mutación de la población los resultados se ven ligeramente
- afectados con respecto a la cantidad de casos exitosos.
- Sin embargo el patrón de los resultados se conservan.
-\end_layout
-
-\begin_layout Itemize
-Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
- los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
+Los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
  donde se muestra que los individuos altruistas son favorecidos en grupos
  pequeños.
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Bajo la condición de matar los dos desertores al encuentro de dos de ellos,
- el modelo arroja resultados de forma mucho más similar en todos los casos,
- independientemente de la variación de los otros parámetros.
+Al variar la mutación de la población los resultados se ven ligeramente
+ afectados con respecto a la cantidad de casos exitosos.
+ Sin embargo el patrón de los resultados se conservan.
 \end_layout
 
 \begin_layout Subsection
