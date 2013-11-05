@@ -1,4 +1,4 @@
-require 'geneticAlgorithm'
+require '../geneticAlgorithm'
 require 'group'
 class TraitGroups
 	

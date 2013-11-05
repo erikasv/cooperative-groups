@@ -1,0 +1,10 @@
+
+-La energía inicial de las plantas es un número entero por el uso de rand del modulo Kernel
+-Ya que el programa dispone inicialmente a todos los animales sobre plantas, el número de animales tiene que ser menor a la cantidad total (mínima?) de plantas
+
+*******************************************************************+
+
+Modificaciones con respecto al modelo del artículo:
+	1. Los animales sí mueren (condición?, -> Cuando se quedan sin enegería para una unidad de tiempo) y sí se reproducen (Los que tengan mas energía, por selección por torneo)
+	2. Los animales tienen una reserva de energía
+	3. ¿Debería modificarse la cantidad de planta que se comen?
