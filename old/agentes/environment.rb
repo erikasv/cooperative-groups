@@ -14,13 +14,14 @@ class Environment
 		Plant.logisticRate=plantsRate		#Taza de crecimiento
 		Animal.metabolicCost=metabolicCost	#Costo metabolico por unidad de tiempos
 		
-		if(@amountPlants<width**2)
+		if(@amountPlants<=width**2)
 			#El espacio tiene solo un parche
 			numPatchesRow=1
 		else
 			#Determinar el lado de la grilla
 			numPatches=(@amountPlants.to_f/width**2).ceil
 			numPatchesRow=Math.sqrt(numPatches).ceil
+			numPatches=numPatchesRow**2
 			
 			#Se actualiza la cantidad de plantas
 			@amountPlants=numPatches*width**2
@@ -138,10 +139,12 @@ class Environment
 				amuntOfFood=animal.feedRatePercent*best.energy
 				animal.eat amuntOfFood
 				best.beEaten amuntOfFood
-				@grid[animal.posX][animal.posX]['animal']=animal
+				@grid[animal.posX][animal.posY]['animal']=animal
 			else #Sino, moverse a un espacio desocupado cualquiera
 				newCell=nil
-				while newCell==nil do
+				deltaX=[0,-1,-1,-1,0,1,1,1]
+				deltaY=[-1,-1,0,1,1,1,0,-1]
+				while newCell==nil || not deltaX.empty? do
 					pos=rand(deltaX.size)
 					newX=validate animal.posX+deltaX.delete_at(pos)
 					newY=validate animal.posY+deltaY.delete_at(pos)
@@ -157,13 +160,16 @@ class Environment
 						end
 					end
 				end
-				if newCell==nil #Si no hay espacio disponible para moverse
+				if newCell==nil #Si no hay espacio disponible para moverse -> pues no se mueve!, esto está aquí para comodidad
 					animal.move animal.posX, animal.posY
 				end
 			end
 			#Por el momento se puede mover con energía=0 si después come algo :-/
+			#POR QUÉ? -> Porque el artículo dice que primero se mueve y después come, lo cual significa que no come de la planta donde nace
 			if animal.energy>=0
 				newAnimals<< animal
+			else #Matarlo!
+				@grid[animal.posX][animal.posY]['animal']=nil
 			end
 		end
 		return newAnimals
