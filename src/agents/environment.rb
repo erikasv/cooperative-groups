@@ -88,14 +88,10 @@ class Environment
 		return animals
 	end
 	
-	def run generations
-		#Creo que debería manejar la parte de evolución desde el modelo mismo. 
-		#Y acá solo ejecutar una unidad de tiempo, ya que 1 unidad de tiempo = 1 generación
-		generations.times do
-			growPlants
-			@animals=moveAnimals
-			#Calcular siguiente generación
-		end
+	#Correr una unidad de tiempo en el espacio
+	def run
+		growPlants
+		@animals=moveAnimals
 	end
 	
 	def growPlants
@@ -200,4 +196,15 @@ class Environment
 		return pos % @gridSize
 	end
 	
+	#Sección evolutiva:
+	#Eliminar los animales de toDelete de @grid
+	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas
+	def replace toDelete toAdd
+		toDelete.each{
+			|animal|
+			
+		}
+	end
+	
+	attr_accessor :animals
 end

@@ -20,6 +20,12 @@ class Animal
 		@posY=newY
 	end
 	
+	#Aptitud, será usada por GeneticAlgorithm
+	def fitness
+		@energy
+	end
+	
+	#Mutación, será usada por GeneticAlgorithm
 	def mutate
 		@feedRatePercent+=(rand/5)-0.1
 		if @feedRatePercent <= 0.0

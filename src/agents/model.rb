@@ -1,5 +1,6 @@
 $:.unshift '.' #Necesario desde 1.9
 require 'environment'
+requier '../geneticAlgorithm'
 
 class Model
 	#Los valores por defecto son los del artículo
@@ -8,9 +9,15 @@ class Model
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 	end
 	
-	#Correr el modelo
-	def run generations
-		@environment.run generations
+	#Ejecutar el modelo
+	def run timeUnits
+		@environment.run	#Pasar una unidad de tiempo en el ambiente
+		
+		#Evolucionar la población
+		matingPool=GeneticAlgorithm.select @environment.animals 0.6 #Por ahora dejaré esto así, luego lo pondré variable
+		GeneticAlgorithm.mutate matingPool
+		toDelete=GeneticAlgorithm.replace @environment.animals matingPool
+		@environment replace toDelete matingPool
 	end
 	
 	attr_reader :environment
