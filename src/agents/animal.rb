@@ -3,11 +3,12 @@ class Animal
 	#Reproducción
 	@@metabolicCost #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 
-	def initialize posX, posY
+	def initialize posX, posY, group
 		@posX=posX
 		@posY=posY
 		@energy=rand(10).to_f #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
 		@feedRatePercent=rand
+		@group=group
 	end
 	
 	def eat amount
@@ -44,5 +45,6 @@ class Animal
 		@@metabolicCost
 	end
 	
-	attr_reader :feedRatePercent, :energy, :posX, :posY
+	attr_reader :feedRatePercent, :energy
+	attr_accessor :posX, :posY, :group
 end

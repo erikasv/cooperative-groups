@@ -30,7 +30,7 @@ class Environment
 	
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	#Retorna la lista de plantas en el ambiente
-	def createGridSpace numPatchesRow, widthPatch, gapPatch
+	def createGridSpace numPatchesRow, widthPatch, gapPatch #=>HACE FALTA ASIGNAR EL GRUPO AL QUE PERTENECE LA PLANTA
 		@grid=Array.new
 		i=0
 		j=0
@@ -43,7 +43,7 @@ class Environment
 				numPatchesRow.times do #Columnas de parches
 					widthPatch.times do #Columnas de celdas en cada parche
 						row<< Hash.new
-						newPlant=Plant.new(i, j)
+						newPlant=Plant.new i, j, col+row
 						row[j]['plant']=newPlant
 						plants<< newPlant
 						#Escribirla también en la base de datos
@@ -53,7 +53,7 @@ class Environment
 					row.concat(Array.new(gapPatch){Hash.new})
 					j=j+gapPatch
 				end
-				@grid<<row	###i++
+				@grid<<row
 				i=i+1
 				j=0
 			end
@@ -76,7 +76,7 @@ class Environment
 				y=rand(@gridSize)
 				
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
-					newAnimal=Animal.new x, y
+					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group
 					animals<< newAnimal
 					#Agregar el animal también a la base de datos
 					#Esto requiere tener un identificador para el animal, tanto en la clase como en el registro de la bd
@@ -111,11 +111,11 @@ class Environment
 			
 			if animal.energy >= Animal.metabolicCost	#Si tiene energía para vivir
 				newPlant= findNewCell animal 			#Encontrar la mejor planta y moverse a ella
-				if newPlant								#Si se movió
+				if newPlant								#Si se movió a una planta
 					eatPlant animal						#Comerse la planta
 				else 									#Sino, moverse a cualquier lado
 					moveAnyPlace animal
-					if @grid[animal.posX][animal.posY]['plant']!=nil #Si cayó en planta comerla
+					if @grid[animal.posX][animal.posY]['plant']!=nil #Si cayó en una planta comerla
 						eatPlant animal
 					end
 				end
@@ -186,8 +186,11 @@ class Environment
 	def eatPlant animal
 		plant= @grid[animal.posX][animal.posY]['plant']
 		amuntOfFood=animal.feedRatePercent*plant.energy
+		
 		animal.eat amuntOfFood
+		animal.group=plant.group
 		plant.beEaten amuntOfFood
+		
 		#Cambiar la planta en base de datos
 	end
 	
@@ -198,11 +201,30 @@ class Environment
 	
 	#Sección evolutiva:
 	#Eliminar los animales de toDelete de @grid
-	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas
-	def replace toDelete toAdd
+	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas => EN ESTE CASO ES NECESARIO UBICARLO ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
+	def replace toDelete, toAdd
 		toDelete.each{
 			|animal|
-			
+			@grid[animal.posX][animal.posY]['animal']=nil
+		}
+		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
+			|animal|
+			again=true
+			while again do
+				x=rand(@gridSize)
+				y=rand(@gridSize)
+				
+				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
+					animal.posX=x
+					animal.posY=y
+					animal.group=@grid[x][y]['plant'].group
+					animals<< animal
+					#Agregar el animal también a la base de datos
+					#Esto requiere tener un identificador para el animal, tanto en la clase como en el registro de la bd
+					@grid[x][y]['animal']=animal
+					again=false
+				end
+			end
 		}
 	end
 	

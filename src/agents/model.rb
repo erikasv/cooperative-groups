@@ -11,13 +11,30 @@ class Model
 	
 	#Ejecutar el modelo
 	def run timeUnits
-		@environment.run	#Pasar una unidad de tiempo en el ambiente
-		
-		#Evolucionar la población
-		matingPool=GeneticAlgorithm.select @environment.animals 0.6 #Por ahora dejaré esto así, luego lo pondré variable
-		GeneticAlgorithm.mutate matingPool
-		toDelete=GeneticAlgorithm.replace @environment.animals matingPool
-		@environment replace toDelete matingPool
+		timeUnits.times do
+			@environment.run	#Pasar una unidad de tiempo en el ambiente
+			
+			#Evolucionar la población
+			matingPool=GeneticAlgorithm.select @environment.animals, 0.6 #Por ahora dejaré esto así, luego lo pondré variable
+			GeneticAlgorithm.mutate matingPool
+			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
+			@environment.replace toDelete, matingPool
+			
+			#Medir el assortment
+			measureAssortment
+		end
+	end
+	
+	def measureAssortment
+		@environment.animals.each{
+			|animal|
+			#Verificar a que grupo pertenece el anima
+			#Sumar al valor del grupo
+			#Guardar el valor para poder referenciar como variable independiente
+		}
+		#Por cada grupo, promediar la suma
+		#Construir variables independientes y dependientes
+		#Calcular el assortment
 	end
 	
 	attr_reader :environment
