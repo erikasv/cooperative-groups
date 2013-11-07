@@ -3,12 +3,14 @@ class Animal
 	#Reproducción
 	@@metabolicCost #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 
-	def initialize posX, posY, group
+	#Los individuos de las nuevas generaciones tienen su propia tasa de alimentación y energía 
+	def initialize posX, posY, group, identifier, energy=rand(10).to_f, feedRatePercent=rand
 		@posX=posX
 		@posY=posY
-		@energy=rand(10).to_f #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
-		@feedRatePercent=rand
-		@group=group
+		@energy=energy #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
+		@feedRatePercent=feedRatePercent
+		@group=group				#Para el análisis del assortment
+		@identifier=identifier		#Para la base de datos
 	end
 	
 	def eat amount
@@ -45,6 +47,5 @@ class Animal
 		@@metabolicCost
 	end
 	
-	attr_reader :feedRatePercent, :energy
-	attr_accessor :posX, :posY, :group
+	attr_reader :feedRatePercent, :energy, :posX, :posY, :group, :identifier
 end

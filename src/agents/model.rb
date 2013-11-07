@@ -1,6 +1,6 @@
 $:.unshift '.' #Necesario desde 1.9
 require 'environment'
-requier '../geneticAlgorithm'
+require '../geneticAlgorithm'
 
 class Model
 	#Los valores por defecto son los del artículo
@@ -20,34 +20,32 @@ class Model
 			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
 			@environment.replace toDelete, matingPool
 			
-			#Medir el assortment
-			measureAssortment
+			#Datos para medir el assortment
+			aboutAssortment
 		end
 	end
 	
-	def measureAssortment
+	def aboutAssortment
+		altruists=Hash.new{|hash,key| hash[key]=0}
+		selfish=Hash.new{|hash,key| hash[key]=0}
 		@environment.animals.each{
 			|animal|
-			#Verificar a que grupo pertenece el anima
-			#Sumar al valor del grupo
-			#Guardar el valor para poder referenciar como variable independiente
+			if(animal.feedRatePercent > 0.5)
+				selfish[animal.group]+=1
+			else
+				altruists[animal.group]+=1
+			end
 		}
-		#Por cada grupo, promediar la suma
-		#Construir variables independientes y dependientes
-		#Calcular el assortment
+		#Por cada grupo, promediar -> altruist/altruist+selfish
+		#Escribir tantos pares de variables x, y como sea necesario
+			#-x es 1 o 0 para egoísta y altruista respectivamente
+			#-y es el promedio que se acabó de calcular
+			#-Buscar hacer esto con una función que inserte vários registros iguales
+		altruists=nil
+		selfish=nil
 	end
 	
 	attr_reader :environment
 end
-
-#Análisis
-
-
-#~ srand(1234)
-
-model=Model.new
-model.environment.grid
-model.run 1000
-seeState model.environment
 
 

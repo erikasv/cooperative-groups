@@ -2,11 +2,12 @@ class Plant
 	@@maxSize #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 	@@logisticRate #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 	
-	def initialize posX, posY, group
+	def initialize posX, posY, group, identifier
 		@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
 		@posX=posX
 		@posY=posY
-		@group=group
+		@group=group				#Para el análisis del assortment
+		@identifier=identifier		#Para la base de datos
 	end
 	
 	#Función de crecimiento dado por la curva logistica del artículo.

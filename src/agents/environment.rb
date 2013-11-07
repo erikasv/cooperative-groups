@@ -23,6 +23,7 @@ class Environment
 		#Se actualiza la cantidad de plantas
 		@amountPlants=numPatches*width**2
 		
+		@idAnimals=0					#El id para diferenciarlos en la base de datos
 		@gridSize=numPatchesRow*(width+gap)
 		@plants=createGridSpace numPatchesRow, width, gap
 		@animals=fillGridSpace amountAnimals
@@ -30,12 +31,15 @@ class Environment
 	
 	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
 	#Retorna la lista de plantas en el ambiente
-	def createGridSpace numPatchesRow, widthPatch, gapPatch #=>HACE FALTA ASIGNAR EL GRUPO AL QUE PERTENECE LA PLANTA
+	def createGridSpace numPatchesRow, widthPatch, gapPatch
 		@grid=Array.new
 		i=0
 		j=0
 		plants=Array.new
 		
+		a=0
+		b=0
+		id=0	#Para diferenciar las plantas en la base de datos
 		numPatchesRow.times do #Filas de parches
 			widthPatch.times do #Filas de celdas en cada parche
 				row=Array.new
@@ -43,20 +47,30 @@ class Environment
 				numPatchesRow.times do #Columnas de parches
 					widthPatch.times do #Columnas de celdas en cada parche
 						row<< Hash.new
-						newPlant=Plant.new i, j, col+row
+						newPlant=Plant.new i, j, a+b, id
 						row[j]['plant']=newPlant
 						plants<< newPlant
+						
 						#Escribirla también en la base de datos
+						
 						j=j+1
+						id+=1
 					end
 					
 					row.concat(Array.new(gapPatch){Hash.new})
 					j=j+gapPatch
+					
+					a+=1
+					if a%numPatchesRow==0
+						a=1
+					end
 				end
 				@grid<<row
 				i=i+1
 				j=0
 			end
+			
+			b=b+numPatchesRow
 			
 			gapPatch.times do #Filas de espacio entre parches
 				@grid<<Array.new(@gridSize){Hash.new} #Filas de espacios vacios
@@ -76,12 +90,13 @@ class Environment
 				y=rand(@gridSize)
 				
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
-					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group
+					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group, @idAnimals
 					animals<< newAnimal
 					#Agregar el animal también a la base de datos
 					#Esto requiere tener un identificador para el animal, tanto en la clase como en el registro de la bd
 					@grid[x][y]['animal']=newAnimal
 					again=false
+					@idAnimals +=1
 				end
 			end
 		end
@@ -161,7 +176,7 @@ class Environment
 		deltaX=[0,-1,-1,-1,0,1,1,1]
 		deltaY=[-1,-1,0,1,1,1,0,-1]
 		newCell=false
-		while not newCell && not deltaX.empty? do
+		while (not newCell) && (not deltaX.empty?) do
 			pos=rand(deltaX.size)
 			newX=validate animal.posX+deltaX.delete_at(pos)
 			newY=validate animal.posY+deltaY.delete_at(pos)
@@ -177,7 +192,7 @@ class Environment
 	end
 	
 	#Mover el animal a una nueva posición dada
-	def moveAnimal animal, newX, newX
+	def moveAnimal animal, newX, newY
 		@grid[animal.posX][animal.posX]['animal']=nil
 		@grid[newX][newY]['animal']=animal
 		animal.move newX, newY
@@ -201,11 +216,12 @@ class Environment
 	
 	#Sección evolutiva:
 	#Eliminar los animales de toDelete de @grid
-	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas => EN ESTE CASO ES NECESARIO UBICARLO ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
+	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas => EN ESTE CASO ES NECESARIO UBICARLOS ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
 	def replace toDelete, toAdd
 		toDelete.each{
 			|animal|
 			@grid[animal.posX][animal.posY]['animal']=nil
+			#Crear un registro diciendo que el animal murio? => Creo que no, porque va a tener que tener un indicador de la unidad de tiempo
 		}
 		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
 			|animal|
@@ -215,14 +231,13 @@ class Environment
 				y=rand(@gridSize)
 				
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
-					animal.posX=x
-					animal.posY=y
-					animal.group=@grid[x][y]['plant'].group
-					animals<< animal
+					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group, @idAnimals, animal.energy, animal.feedRatePercent
+					
 					#Agregar el animal también a la base de datos
-					#Esto requiere tener un identificador para el animal, tanto en la clase como en el registro de la bd
-					@grid[x][y]['animal']=animal
+					
+					@grid[x][y]['animal']=newAnimal
 					again=false
+					@idAnimals+=1
 				end
 			end
 		}
