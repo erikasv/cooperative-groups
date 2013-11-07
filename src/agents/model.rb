@@ -9,6 +9,8 @@ class Model
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 	end
 	
+	###Hay que hacer una funcion para la conexión a la base de datos y organizar eso
+	
 	#Ejecutar el modelo
 	def run timeUnits
 		timeUnits.times do
@@ -36,16 +38,23 @@ class Model
 				altruists[animal.group]+=1
 			end
 		}
-		#Por cada grupo, promediar -> altruist/altruist+selfish
-		#Escribir tantos pares de variables x, y como sea necesario
-			#-x es 1 o 0 para egoísta y altruista respectivamente
-			#-y es el promedio que se acabó de calcular
-			#-Buscar hacer esto con una función que inserte vários registros iguales
+		
+		#Construcción de las variables independientes y dependientes
+		#x=genotipo del actor
+		#y=promedio del genotipo del grupo
+		altruists.each_key{
+			|key|
+			totalPopGroup=altruist[key]+selfish[key]
+			average=altruist[key]/totalPopGroup
+			#Escribir tantos pares de variables x, y como sea necesario en la base de datos
+				#-x es 1 o 0 para egoísta y altruista respectivamente
+				#-y es el promedio que se acabó de calcular
+				#-Buscar hacer esto con una función que inserte vários registros iguales
+		}
+		
 		altruists=nil
 		selfish=nil
 	end
-	
-	attr_reader :environment
 end
 
 
