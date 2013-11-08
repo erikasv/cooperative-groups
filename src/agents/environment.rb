@@ -37,8 +37,8 @@ class Environment
 		j=0
 		plants=Array.new
 		
-		a=0
-		b=0
+		a=0		#Para enumerar los grupos de plantas
+		b=0		#Para enumerar los grupos de plantas
 		id=0	#Para diferenciar las plantas en la base de datos
 		numPatchesRow.times do #Filas de parches
 			widthPatch.times do #Filas de celdas en cada parche

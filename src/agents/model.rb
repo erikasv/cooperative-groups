@@ -7,6 +7,8 @@ class Model
 	#Parametros para el escenario:      		  , plantas:                          , Animales:
 	def initialize width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
+		
+		#Escribir en la base de datos la información de plantas y animales
 	end
 	
 	###Hay que hacer una funcion para la conexión a la base de datos y organizar eso
@@ -14,7 +16,7 @@ class Model
 	#Ejecutar el modelo
 	def run timeUnits
 		timeUnits.times do
-			@environment.run	#Pasar una unidad de tiempo en el ambiente
+			@environment.run	#Pasar una unidad de tiempo en el ambiente si se desea escribir en la bd desde el ambiente
 			
 			#Evolucionar la población
 			matingPool=GeneticAlgorithm.select @environment.animals, 0.6 #Por ahora dejaré esto así, luego lo pondré variable
@@ -22,7 +24,8 @@ class Model
 			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
 			@environment.replace toDelete, matingPool
 			
-			#Datos para medir el assortment
+			#Escribir en la base de datos la información de plantas y animales
+			
 			aboutAssortment
 		end
 	end
