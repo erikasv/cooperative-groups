@@ -35,6 +35,6 @@ class Plant
 		@@logisticRate=val
 	end
 	
-	attr_reader :energy, :posX, :posY, :group
+	attr_reader :energy, :posX, :posY, :group, :identifier
 end
 

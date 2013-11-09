@@ -2,15 +2,16 @@ require 'mongo'
 
 include Mongo
 
-class DBConection
+class DBConnection
 
-	def connect dbName
+	def connect
 		mongo_client = MongoClient.new("localhost", 27017)
 		@db = mongo_client.db("agentsModel")
 	end
 	
-	def writeAnimal timeUnit animal
-		db.collection("animals").insert(
+###WRITING METHODS
+	def writeAnimal timeUnit, animal
+		@db.collection("animals").insert(
 			'timeUnit' => timeUnit,
 			'identifier' => animal.identifier,
 			'posX' => animal.posX,
@@ -21,8 +22,8 @@ class DBConection
 		)
 	end
 	
-	def writePlant timeUnit plant
-		db.collection("plants").insert(
+	def writePlant timeUnit, plant
+		@db.collection("plants").insert(
 			'timeUnit' => timeUnit,
 			'identifier' => plant.identifier,
 			'posX' => plant.posX,
@@ -32,12 +33,25 @@ class DBConection
 		)
 	end
 	
-	def writeAssortment timeUnit meassure
-		db.collection("assortment").insert(
+	def writeAssortment timeUnit, meassure
+		@db.collection("assortment").insert(
 			'timeUnit' => timeUnit,
 			'assortment' => meassure
 		)
 	end
 	
-	#Guardar también los componentes de cada grupo?
+	def writeDataGroups timeUnit, altruist, selfish, group
+		@db.collection("dataGroups").insert(
+			'timeUnit' => timeUnit,
+			'altruist' => altruist,
+			'selfish' => selfish,
+			'group' => group
+		)
+	end
+	
+###READING METHODS
+	def findAll collection, query
+		return @db.collection("#{collection}").find(query)
+	end
+
 end

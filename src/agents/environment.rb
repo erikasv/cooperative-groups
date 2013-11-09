@@ -50,9 +50,6 @@ class Environment
 						newPlant=Plant.new i, j, a+b, id
 						row[j]['plant']=newPlant
 						plants<< newPlant
-						
-						#Escribirla también en la base de datos
-						
 						j=j+1
 						id+=1
 					end
@@ -92,8 +89,6 @@ class Environment
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
 					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group, @idAnimals
 					animals<< newAnimal
-					#Agregar el animal también a la base de datos
-					#Esto requiere tener un identificador para el animal, tanto en la clase como en el registro de la bd
 					@grid[x][y]['animal']=newAnimal
 					again=false
 					@idAnimals +=1
@@ -134,10 +129,8 @@ class Environment
 						eatPlant animal
 					end
 				end
-				#Cambiar el animal en la base de datos
 			else #Sino muere
 				@grid[animal.posX][animal.posY]['animal']=nil
-				#Eliminar el animal en la base de datos
 			end
 		end
 	end
@@ -205,8 +198,6 @@ class Environment
 		animal.eat amuntOfFood
 		animal.group=plant.group
 		plant.beEaten amuntOfFood
-		
-		#Cambiar la planta en base de datos
 	end
 	
 	#Validar la posición para que el mundo sea ciclico
@@ -221,7 +212,6 @@ class Environment
 		toDelete.each{
 			|animal|
 			@grid[animal.posX][animal.posY]['animal']=nil
-			#Crear un registro diciendo que el animal murio? => Creo que no, porque va a tener que tener un indicador de la unidad de tiempo
 		}
 		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
 			|animal|
@@ -232,9 +222,6 @@ class Environment
 				
 				if(@grid[x][y]['plant']!=nil && @grid[x][y]['animal']==nil)
 					newAnimal=Animal.new x, y, @grid[x][y]['plant'].group, @idAnimals, animal.energy, animal.feedRatePercent
-					
-					#Agregar el animal también a la base de datos
-					
 					@grid[x][y]['animal']=newAnimal
 					again=false
 					@idAnimals+=1
@@ -243,5 +230,5 @@ class Environment
 		}
 	end
 	
-	attr_accessor :animals
+	attr_reader :animals, :plants
 end

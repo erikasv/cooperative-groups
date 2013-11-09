@@ -1,21 +1,45 @@
 $:.unshift '.' #Necesario desde 1.9
 require 'environment'
 require '../geneticAlgorithm'
+require 'dBConnection'
 
 class Model
 	#Los valores por defecto son los del artículo
 	#Parametros para el escenario:      		  , plantas:                          , Animales:
 	def initialize width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
+		@mongoDB=connectDB
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 		
-		#Escribir en la base de datos la información de plantas y animales
+		#Datos par la base de datos
+		writeAgents 0
 	end
 	
-	###Hay que hacer una funcion para la conexión a la base de datos y organizar eso
+	def connectDB
+		connection=DBConnection.new
+		connection.connect
+		return connection
+	end
+	
+	#Escribir en la base de datos la información de plantas y animales
+	def writeAgents timeUnit
+		@environment.plants.each{
+			|plant|
+			@mongoDB.writePlant timeUnit, plant
+		}
+		@environment.animals.each{
+			|animal|
+			@mongoDB.writeAnimal timeUnit, animal
+		}
+	end
+	
+	#Escribir en la base de datos la composición de los grupos
+	def writeDataGroups altruists, selfish, group
+		@mongoDB.writeDataGroups altruists, selfish, group
+	end
 	
 	#Ejecutar el modelo
 	def run timeUnits
-		timeUnits.times do
+		timeUnits.times do |time|
 			@environment.run	#Pasar una unidad de tiempo en el ambiente si se desea escribir en la bd desde el ambiente
 			
 			#Evolucionar la población
@@ -24,13 +48,13 @@ class Model
 			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
 			@environment.replace toDelete, matingPool
 			
-			#Escribir en la base de datos la información de plantas y animales
-			
-			aboutAssortment
+			#Datos par la base de datos
+			writeAgents time
+			aboutAssortment time
 		end
 	end
 	
-	def aboutAssortment
+	def aboutAssortment timeUnit
 		altruists=Hash.new{|hash,key| hash[key]=0}
 		selfish=Hash.new{|hash,key| hash[key]=0}
 		@environment.animals.each{
@@ -42,22 +66,16 @@ class Model
 			end
 		}
 		
-		#Construcción de las variables independientes y dependientes
-		#x=genotipo del actor
-		#y=promedio del genotipo del grupo
-		altruists.each_key{
-			|key|
-			totalPopGroup=altruist[key]+selfish[key]
-			average=altruist[key]/totalPopGroup
-			#Escribir tantos pares de variables x, y como sea necesario en la base de datos
-				#-x es 1 o 0 para egoísta y altruista respectivamente
-				#-y es el promedio que se acabó de calcular
-				#-Buscar hacer esto con una función que inserte vários registros iguales
+		altruists.each_index{
+			|group|
+			writeDataGroups timeUnit, altruists[group], selfish[group], group
 		}
 		
 		altruists=nil
 		selfish=nil
 	end
 end
+
+test1=Model.new 3, 2, 10, 10, 0.2, 2, 8
 
 

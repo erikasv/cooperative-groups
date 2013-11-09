@@ -1,6 +1,6 @@
 #~ $:.unshift '.' #Necesario desde 1.9, según parece solo es necesario hacerlo una vez en la capa mas superior
 require 'traitGroups'
-require 'graphic'
+require '../graphic'
 require 'rubyvis'
 
 class Analysis_start_end
