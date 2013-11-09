@@ -9,6 +9,7 @@ class Model
 	def initialize width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
 		@mongoDB=connectDB
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
+		@amountAnimals=amountAnimals
 		
 		#Datos par la base de datos
 		writeAgents 0
@@ -43,9 +44,10 @@ class Model
 			@environment.run	#Pasar una unidad de tiempo en el ambiente si se desea escribir en la bd desde el ambiente
 			
 			#Evolucionar la población
-			matingPool=GeneticAlgorithm.select @environment.animals, 0.6 #Por ahora dejaré esto así, luego lo pondré variable
+			matingPool=GeneticAlgorithm.select @environment.animals, 0.5 #Por ahora dejaré esto así, luego lo pondré variable
 			GeneticAlgorithm.mutate matingPool, 0.01
-			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
+			
+			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool, @amountAnimals
 			@environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos

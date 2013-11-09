@@ -42,12 +42,15 @@ class GeneticAlgorithm
 	#Returns an array with the chromosomes to delete from the population -> Just in case
 	#Also deletes them from the original population
 	#The merge between the pool and the resulting population must be done by the other class
-	def self.replace population, pool
+	#sizeRequired = desired size of the population to maintain it stable. Especially when for other reasons the size decreased
+	def self.replace population, pool, sizeRequired
 		toDelete=Array.new
 		poolSize=pool.size
 		populationSize=population.size
 		
-		poolSize.times do |i|
+		toDeleteSize=poolSize-(sizeRequired-populationSize)
+		
+		toDeleteSize.times do |i|
 			pos1=rand(populationSize-i)
 			pos2=rand(populationSize-i)
 			while pos1 == pos2 do

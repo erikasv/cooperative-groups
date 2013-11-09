@@ -9,6 +9,7 @@ class Environment
 	
 	def initialize width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 		@amountPlants=minPlants				#Cantidad de plantas minima
+		@amountAnimals=amountAnimals		#cantidad de animales
 		
 		Plant.maxSize=maxEnergyPlants 		#Tamaño máximo de las plantas
 		Plant.logisticRate=plantsRate		#Taza de crecimiento
@@ -227,6 +228,7 @@ class Environment
 					@grid[x][y]['animal']=newAnimal
 					again=false
 					@idAnimals+=1
+					@animals << newAnimal
 				end
 			end
 		}
