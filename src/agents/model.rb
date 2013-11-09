@@ -18,6 +18,7 @@ class Model
 	def connectDB
 		connection=DBConnection.new
 		connection.connect
+		connection.cleanDB
 		return connection
 	end
 	
@@ -78,7 +79,7 @@ class Model
 	end
 end
 
-test1=Model.new 3, 2, 10, 10, 0.2, 2, 8
-test1.run 3
+modelTest=Model.new 3, 2, 10, 10, 0.2, 2, 8
+modelTest.run 3
 
 

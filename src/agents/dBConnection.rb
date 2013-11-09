@@ -7,8 +7,9 @@ class DBConnection
 	def connect
 		mongo_client = MongoClient.new("localhost", 27017)
 		@db = mongo_client.db("agentsModel")
-		
-		#Limpiar la base de datos
+	end
+	
+	def cleanDB
 		@db.command({ dropDatabase: 1 })
 	end
 	

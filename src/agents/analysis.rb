@@ -1,3 +1,4 @@
+$:.unshift '.' #Necesario desde 1.9
 require 'dBConnection'
 require 'statistics'
 
@@ -15,24 +16,25 @@ class Analysis
 	end
 
 	def meassureAssortment
-		@timeUnits.each{
-			|time|
+		for time in 1..@timeUnits do
+			p time
 			assortment=oneUnitAssortment time
-			
+			p assortment
 			#Escribir el assortment
-			@mongoDB.writeAssortment timeUnit, assortment
-		}
+			@mongoDB.writeAssortment time, assortment
+		end
 	end
 	
 	def oneUnitAssortment timeUnit
 		xVar=Array.new
 		yVar=Array.new
 		documents=@mongoDB.findAll "dataGroups", {'timeUnit' => timeUnit}
+		p documents.count
 		
 		documents.each{					#Armar las variables independiente y dependiente
 			|doc|
-			altruists=doc.altruist
-			selfish=doc.selfish
+			altruists=doc["altruist"]
+			selfish=doc["selfish"]
 			
 			totalPopGroup=altruists+selfish
 			average=altruists/totalPopGroup
@@ -50,3 +52,6 @@ class Analysis
 	def graphicAssortment
 	end
 end
+
+analysisTest=Analysis.new 3
+analysisTest.meassureAssortment
