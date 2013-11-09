@@ -47,5 +47,6 @@ class Animal
 		@@metabolicCost
 	end
 	
-	attr_reader :feedRatePercent, :energy, :posX, :posY, :group, :identifier
+	attr_reader :feedRatePercent, :energy, :posX, :posY, :identifier
+	attr_accessor :group
 end

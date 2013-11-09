@@ -59,7 +59,7 @@ class Environment
 					
 					a+=1
 					if a%numPatchesRow==0
-						a=1
+						a=0
 					end
 				end
 				@grid<<row
@@ -108,7 +108,6 @@ class Environment
 		@plants.each{
 			|plant|
 			plant.grow
-			#Cambiar la planta en la base de datos
 		}
 	end
 	
@@ -120,7 +119,7 @@ class Environment
 			animal=@animals.delete_at(pos)
 			
 			if animal.energy >= Animal.metabolicCost	#Si tiene energía para vivir
-				newPlant= findNewCell animal 			#Encontrar la mejor planta y moverse a ella
+				newPlant= findNewPlant animal 			#Encontrar la mejor planta y moverse a ella
 				if newPlant								#Si se movió a una planta
 					eatPlant animal						#Comerse la planta
 				else 									#Sino, moverse a cualquier lado
@@ -129,10 +128,12 @@ class Environment
 						eatPlant animal
 					end
 				end
+				newAnimals << animal
 			else #Sino muere
 				@grid[animal.posX][animal.posY]['animal']=nil
 			end
 		end
+		return newAnimals
 	end
 	
 	#Buscar la mejor planta que satisfaga el costo metabolico y moverse a ella
@@ -193,11 +194,12 @@ class Environment
 	
 	def eatPlant animal
 		plant= @grid[animal.posX][animal.posY]['plant']
-		amuntOfFood=animal.feedRatePercent*plant.energy
+		amountOfFood=animal.feedRatePercent*plant.energy
 		
-		animal.eat amuntOfFood
+		animal.eat amountOfFood
 		animal.group=plant.group
-		plant.beEaten amuntOfFood
+		plant.beEaten amountOfFood
+		#~ p plant
 	end
 	
 	#Validar la posición para que el mundo sea ciclico
@@ -207,7 +209,7 @@ class Environment
 	
 	#Sección evolutiva:
 	#Eliminar los animales de toDelete de @grid
-	#Ubicar los animales de toAdd en @grid y agregarlos a @animlas => EN ESTE CASO ES NECESARIO UBICARLOS ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
+	#Ubicar los animales de toAdd en @grid y agregarlos a @animals => EN ESTE CASO ES NECESARIO UBICARLOS ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
 	def replace toDelete, toAdd
 		toDelete.each{
 			|animal|

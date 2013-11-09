@@ -7,6 +7,9 @@ class DBConnection
 	def connect
 		mongo_client = MongoClient.new("localhost", 27017)
 		@db = mongo_client.db("agentsModel")
+		
+		#Limpiar la base de datos
+		@db.command({ dropDatabase: 1 })
 	end
 	
 ###WRITING METHODS
@@ -23,14 +26,14 @@ class DBConnection
 	end
 	
 	def writePlant timeUnit, plant
-		@db.collection("plants").insert(
+		@db.collection("plants").insert({
 			'timeUnit' => timeUnit,
 			'identifier' => plant.identifier,
 			'posX' => plant.posX,
 			'posY' => plant.posY,
 			'energy' => plant.energy,
 			'group' => plant.group
-		)
+		})
 	end
 	
 	def writeAssortment timeUnit, meassure

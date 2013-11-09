@@ -33,8 +33,8 @@ class Model
 	end
 	
 	#Escribir en la base de datos la composición de los grupos
-	def writeDataGroups altruists, selfish, group
-		@mongoDB.writeDataGroups altruists, selfish, group
+	def writeDataGroups timeUnit, altruists, selfish, group
+		@mongoDB.writeDataGroups timeUnit, altruists, selfish, group
 	end
 	
 	#Ejecutar el modelo
@@ -44,13 +44,13 @@ class Model
 			
 			#Evolucionar la población
 			matingPool=GeneticAlgorithm.select @environment.animals, 0.6 #Por ahora dejaré esto así, luego lo pondré variable
-			GeneticAlgorithm.mutate matingPool
+			GeneticAlgorithm.mutate matingPool, 0.01
 			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool
 			@environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos
-			writeAgents time
-			aboutAssortment time
+			writeAgents time+1
+			aboutAssortment time+1
 		end
 	end
 	
@@ -66,7 +66,7 @@ class Model
 			end
 		}
 		
-		altruists.each_index{
+		altruists.each_key{
 			|group|
 			writeDataGroups timeUnit, altruists[group], selfish[group], group
 		}
@@ -77,5 +77,6 @@ class Model
 end
 
 test1=Model.new 3, 2, 10, 10, 0.2, 2, 8
+test1.run 3
 
 
