@@ -7,7 +7,12 @@ class Statistics
 		covarianceXY=covariance xValues, yValues
 		varianceX=variance xValues
 		
-		return covarianceXY/varianceX
+		if covarianceXY == 0
+			output=0
+		else
+			output=covarianceXY/varianceX
+		end
+		return output
 	end
 	
 	#Recibe dos arreglos de números

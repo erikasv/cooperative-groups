@@ -69,9 +69,14 @@ class Model
 			end
 		}
 		
-		altruists.each_key{
+		@environment.amountGroups.times{
 			|group|
-			writeDataGroups timeUnit, altruists[group], selfish[group], group
+			amountAltruist=altruists[group]
+			amountSelfish=selfish[group]
+			
+			if (amountAltruist != 0) || (amountSelfish != 0)
+				writeDataGroups timeUnit, amountAltruist, amountSelfish, group
+			end
 		}
 		
 		altruists=nil

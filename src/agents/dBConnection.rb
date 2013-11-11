@@ -13,6 +13,10 @@ class DBConnection
 		@db.command({ dropDatabase: 1 })
 	end
 	
+	def cleanAssortment
+		@db.collection("assortment").drop
+	end
+	
 ###WRITING METHODS
 	def writeAnimal timeUnit, animal
 		@db.collection("animals").insert(

@@ -75,6 +75,7 @@ class Environment
 				i=i+1
 			end
 		end
+		@amountGroups=b
 		return plants
 	end
 	
@@ -234,5 +235,5 @@ class Environment
 		}
 	end
 	
-	attr_reader :animals, :plants
+	attr_reader :animals, :plants, :amountGroups
 end
