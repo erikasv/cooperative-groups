@@ -1,3 +1,4 @@
+$:.unshift '.' #Necesario desde 1.9
 require 'model'
 require 'assortment'
 
