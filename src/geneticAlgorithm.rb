@@ -50,6 +50,10 @@ class GeneticAlgorithm
 		
 		toDeleteSize=poolSize-(sizeRequired-populationSize)
 		
+		if toDeleteSize < 0
+			toDeleteSize=0
+		end
+		
 		toDeleteSize.times do |i|
 			pos1=rand(populationSize-i)
 			pos2=rand(populationSize-i)

@@ -6,37 +6,38 @@ require 'dBConnection'
 class Model
 	#Los valores por defecto son los del artículo
 	#Parametros para el escenario:      		  , plantas:                          , Animales:
-	def initialize width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
+	def initialize executionTime, width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
 		@mongoDB=connectDB
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 		@amountAnimals=amountAnimals
+		@executionTime=executionTime
 		
 		#Datos par la base de datos
-		writeAgents 0
+		writeAgents @executionTime, 0
 	end
 	
 	def connectDB
 		connection=DBConnection.new
 		connection.connect
-		connection.cleanDB
+		#~ connection.cleanDB
 		return connection
 	end
 	
 	#Escribir en la base de datos la información de plantas y animales
-	def writeAgents timeUnit
+	def writeAgents executionTime, timeUnit
 		@environment.plants.each{
 			|plant|
-			@mongoDB.writePlant timeUnit, plant
+			@mongoDB.writePlant executionTime, timeUnit, plant
 		}
 		@environment.animals.each{
 			|animal|
-			@mongoDB.writeAnimal timeUnit, animal
+			@mongoDB.writeAnimal executionTime, timeUnit, animal
 		}
 	end
 	
 	#Escribir en la base de datos la composición de los grupos
-	def writeDataGroups timeUnit, altruists, selfish, group
-		@mongoDB.writeDataGroups timeUnit, altruists, selfish, group
+	def writeDataGroups executionTime, timeUnit, altruists, selfish, group
+		@mongoDB.writeDataGroups executionTime, timeUnit, altruists, selfish, group
 	end
 	
 	#Ejecutar el modelo
@@ -52,12 +53,12 @@ class Model
 			@environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos
-			writeAgents time+1
-			aboutAssortment time+1
+			writeAgents @executionTime, time+1
+			aboutAssortment @executionTime, time+1
 		end
 	end
 	
-	def aboutAssortment timeUnit
+	def aboutAssortment executionTime, timeUnit
 		altruists=Hash.new{|hash,key| hash[key]=0}
 		selfish=Hash.new{|hash,key| hash[key]=0}
 		@environment.animals.each{
@@ -75,7 +76,7 @@ class Model
 			amountSelfish=selfish[group]
 			
 			if (amountAltruist != 0) || (amountSelfish != 0)
-				writeDataGroups timeUnit, amountAltruist, amountSelfish, group
+				writeDataGroups executionTime, timeUnit, amountAltruist, amountSelfish, group
 			end
 		}
 		
@@ -84,7 +85,7 @@ class Model
 	end
 end
 
-modelTest=Model.new 3, 2, 10, 10, 0.2, 2, 8
-modelTest.run 3
+modelTest=Model.new 1, 3, 2, 10, 10, 0.2, 2, 8
+modelTest.run 10
 
 

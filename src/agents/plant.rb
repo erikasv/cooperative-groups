@@ -3,7 +3,10 @@ class Plant
 	@@logisticRate #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 	
 	def initialize posX, posY, group, identifier
-		@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
+		@energy=0
+		while @energy==0
+			@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
+		end
 		@posX=posX
 		@posY=posY
 		@group=group				#Para el análisis del assortment

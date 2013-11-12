@@ -121,7 +121,7 @@ class Environment
 			animal=@animals.delete_at(pos)
 			
 			if animal.energy >= Animal.metabolicCost	#Si tiene energía para vivir
-				newPlant= findNewPlant animal 			#Encontrar la mejor planta y moverse a ella
+				newPlant= moveNewPlant animal 			#Encontrar la mejor planta y moverse a ella
 				if newPlant								#Si se movió a una planta
 					eatPlant animal						#Comerse la planta
 				else 									#Sino, moverse a cualquier lado
@@ -140,7 +140,7 @@ class Environment
 	
 	#Buscar la mejor planta que satisfaga el costo metabolico y moverse a ella
 	#Retorna si encontró la mejor planta
-	def findNewPlant animal
+	def moveNewPlant animal
 		deltaX=[0,-1,-1,-1,0,1,1,1]
 		deltaY=[-1,-1,0,1,1,1,0,-1]
 		
@@ -183,13 +183,13 @@ class Environment
 		end
 		
 		if not newCell #Si no hay espacio para moverse, solo se pierde el costo metabolico
-			animal.move animal.posX animal.posY
+			animal.move animal.posX, animal.posY
 		end
 	end
 	
 	#Mover el animal a una nueva posición dada
 	def moveAnimal animal, newX, newY
-		@grid[animal.posX][animal.posX]['animal']=nil
+		@grid[animal.posX][animal.posY]['animal']=nil
 		@grid[newX][newY]['animal']=animal
 		animal.move newX, newY
 	end
@@ -220,7 +220,13 @@ class Environment
 		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
 			|animal|
 			again=true
+			count=0
 			while again do
+				count+=1
+				if count == 100
+					imprimir
+				end
+				
 				x=rand(@gridSize)
 				y=rand(@gridSize)
 				
@@ -234,6 +240,24 @@ class Environment
 			end
 		}
 	end
+	
+	#~ def imprimir
+		#~ plants=0
+		#~ animals=0
+		#~ @grid.each{
+			#~ |row|
+			#~ row.each{
+				#~ |cell|
+				#~ if cell['plant']!=nil
+					#~ plants+=1
+				#~ end
+				#~ if cell['animal']!=nil
+					#~ animals+=1
+				#~ end
+			#~ }
+		#~ }
+		#~ p "plants: #{plants} - animals: #{animals}"
+	#~ end
 	
 	attr_reader :animals, :plants, :amountGroups
 end

@@ -9,17 +9,18 @@ class DBConnection
 		@db = mongo_client.db("agentsModel")
 	end
 	
-	def cleanDB
-		@db.command({ dropDatabase: 1 })
-	end
+	#~ def cleanDB
+		#~ @db.command({ dropDatabase: 1 })
+	#~ end
 	
 	def cleanAssortment
 		@db.collection("assortment").drop
 	end
 	
 ###WRITING METHODS
-	def writeAnimal timeUnit, animal
+	def writeAnimal executionTime, timeUnit, animal
 		@db.collection("animals").insert(
+			'executionTime' => executionTime,
 			'timeUnit' => timeUnit,
 			'identifier' => animal.identifier,
 			'posX' => animal.posX,
@@ -30,8 +31,9 @@ class DBConnection
 		)
 	end
 	
-	def writePlant timeUnit, plant
+	def writePlant executionTime, timeUnit, plant
 		@db.collection("plants").insert({
+			'executionTime' => executionTime,
 			'timeUnit' => timeUnit,
 			'identifier' => plant.identifier,
 			'posX' => plant.posX,
@@ -41,15 +43,17 @@ class DBConnection
 		})
 	end
 	
-	def writeAssortment timeUnit, meassure
+	def writeAssortment executionTime, timeUnit, meassure
 		@db.collection("assortment").insert(
+			'executionTime' => executionTime,
 			'timeUnit' => timeUnit,
 			'assortment' => meassure
 		)
 	end
 	
-	def writeDataGroups timeUnit, altruist, selfish, group
+	def writeDataGroups executionTime, timeUnit, altruist, selfish, group
 		@db.collection("dataGroups").insert(
+			'executionTime' => executionTime,
 			'timeUnit' => timeUnit,
 			'altruist' => altruist,
 			'selfish' => selfish,
