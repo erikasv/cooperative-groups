@@ -2,7 +2,7 @@ $:.unshift '.' #Necesario desde 1.9
 require 'dBConnection'
 require 'statistics'
 
-class Analysis
+class Assortment
 
 	def initialize timeUnits
 		@timeUnits=timeUnits
@@ -49,6 +49,3 @@ class Analysis
 	def graphicAssortment
 	end
 end
-
-analysisTest=Analysis.new 3
-analysisTest.meassureAssortment

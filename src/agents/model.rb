@@ -85,7 +85,4 @@ class Model
 	end
 end
 
-modelTest=Model.new 1, 3, 2, 10, 10, 0.2, 2, 8
-modelTest.run 10
-
 
