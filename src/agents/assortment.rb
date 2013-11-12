@@ -13,7 +13,7 @@ class Assortment
 	def connectDB
 		connection=DBConnection.new
 		connection.connect
-		connection.cleanAssortment
+		#~ connection.cleanAssortment
 		return connection
 	end
 

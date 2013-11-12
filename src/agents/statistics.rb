@@ -44,6 +44,13 @@ class Statistics
 	end
 	
 	#Recibe un arreglo de números
+	#Retorna la deviación estándar entre ellos
+	def self.standarDeviation values
+		var=variance values
+		return Math.sqrt var
+	end
+	
+	#Recibe un arreglo de números
 	#Retorna el promedio de ellos
 	def self.expectedValue values
 		#E(x)=Sum(xi)/n

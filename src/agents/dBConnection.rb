@@ -13,9 +13,9 @@ class DBConnection
 		#~ @db.command({ dropDatabase: 1 })
 	#~ end
 	
-	def cleanAssortment
-		@db.collection("assortment").drop
-	end
+	#~ def cleanAssortment
+		#~ @db.collection("assortment").drop
+	#~ end
 	
 ###WRITING METHODS
 	def writeAnimal executionTime, timeUnit, animal
