@@ -220,13 +220,7 @@ class Environment
 		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
 			|animal|
 			again=true
-			count=0
 			while again do
-				count+=1
-				if count == 100
-					imprimir
-				end
-				
 				x=rand(@gridSize)
 				y=rand(@gridSize)
 				
