@@ -4,9 +4,10 @@ require 'statistics'
 
 class Assortment
 
-	def initialize timeUnits
+	def initialize executionTime, timeUnits
 		@timeUnits=timeUnits
 		@mongoDB=connectDB
+		@executionTime=executionTime
 	end
 	
 	def connectDB
@@ -27,7 +28,7 @@ class Assortment
 	def oneUnitAssortment timeUnit
 		xVar=Array.new
 		yVar=Array.new
-		documents=@mongoDB.findAll "dataGroups", {'timeUnit' => timeUnit}
+		documents=@mongoDB.findAll "dataGroups", {'timeUnit' => timeUnit, 'executionTime' => @executionTime}
 		
 		documents.each{					#Armar las variables independiente y dependiente
 			|doc|

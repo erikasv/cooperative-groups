@@ -84,5 +84,3 @@ class Model
 		selfish=nil
 	end
 end
-
-
