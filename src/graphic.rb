@@ -58,44 +58,47 @@ class Graphic
 		svg.close
 	end
 	
-	def self.makeLineChart data, fileName, labelX, labelY#  Probando, aún no está listo, falta modificar entradas y eso :P
-		w = 400
-		h = 200
-		x = pv.Scale.linear(data, lambda {|d| d.x}).range(0, w)
-		y = pv.Scale.linear(data, lambda {|d| d.y}).range(0, h);
+	#data es una matriz donde está cada dato del eje x con los valores para el eje y
+	def self.makeLineChart limX, limY, yPossibleValues, data, fileName, labelX, labelY
+		w = 545
+		h = 280
+		
+		x = pv.Scale.linear(0, limX).range(0, w) #largo del eje x
+		y = pv.Scale.linear(limY*-1, limY).range(0, h) #largo del eje y
+		fill = pv.colors("lightpink", "darkgray", "lightblue")
 
-		#/* The root panel. */
+		#/* The lines */
 		vis = pv.Panel.new()
 			.width(w)
 			.height(h)
-			.bottom(50)
-			.left(50)
-			.right(10)
-			.top(5);
-			
+			.margin(19.5)
+			.right(40);
+		vis.add(pv.Panel)
+			.data(yPossibleValues)
+		  .add(pv.Line)
+			.data(data)
+			.left(lambda {|d|  x.scale(d.date)})
+			.bottom(lambda {|d,t|   y.scale(d.send(t))})
+			.stroke_style(fill.by(pv.parent))
+			.line_width(3)
+
 		#/* X-axis ticks. */
-		vis.add(pv.Rule)
+		vis.add(pv.Label)
 			.data(x.ticks())
-			.visible(lambda {|d|  d > 0})
-			.left(x)
-			.strokeStyle("#eee")
-		  .anchor("bottom").add(pv.Label)
-		  .text(x.tick_format)
+			.left(lambda {|d| x.scale(d)})
+			.bottom(0)
+			.text_baseline("top")
+			.text_margin(5)
+			.text(x.tick_format);
 
 		#/* Y-axis ticks. */
 		vis.add(pv.Rule)
-			.data(y.ticks(5))
-			.bottom(y)
-			.strokeStyle(lambda {|d| d!=0 ? "#eee" : "#000"})
-		  .anchor("left").add(pv.Label)
-		  .text(y.tick_format);
-
-		#/* The line. */
-		vis.add(pv.Line)
-			.data(data)
-			.left(lambda {|d| x.scale(d.x)})
-			.bottom(lambda {|d| y.scale(d.y)})
-			.lineWidth(3);
+			.data(y.ticks())
+			.bottom(lambda {|d| y.scale(d)})
+			.stroke_style(lambda {|i|  i!=0 ? pv.color("#ccc") : pv.color("black")})
+		  .anchor("right").add(pv.Label)
+		  .visible(lambda { (self.index & 1)==0})
+			.text_margin(6);
 			
 		### Etiquetas de los ejes
 		vis.add(pv.Label).left(-15).bottom(150).text(labelY).font("20px sans-serif").text_angle(-Math::PI / 2 ) 

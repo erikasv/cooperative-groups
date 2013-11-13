@@ -1,6 +1,7 @@
 $:.unshift '.' #Necesario desde 1.9
 require 'dBConnection'
 require 'statistics'
+require '../graphic'
 
 class Analysis
 	def initialize executionTimes, timeUnits
@@ -41,6 +42,15 @@ class Analysis
 		end
 	end
 	
-	def graphicAssortment 
+	def graphicAssortment fileName
+		yValues=['assortment', 'plusOneSD', 'minusOneSD']
+		data=Array.new
+		
+		@assortment.each_index{
+			|idx|
+			data << OpenStruct.new({ timeUnit: idx+1, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
+		}
+		
+		Graphic.makeLineChart 1, 10000, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 end
