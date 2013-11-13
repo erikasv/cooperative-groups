@@ -46,7 +46,7 @@ class Model
 			@environment.run	#Pasar una unidad de tiempo en el ambiente si se desea escribir en la bd desde el ambiente
 			
 			#Evolucionar la población
-			matingPool=GeneticAlgorithm.select @environment.animals, 0.5 #Por ahora dejaré esto así, luego lo pondré variable
+			matingPool=GeneticAlgorithm.select @environment.animals, 0.6 #Por ahora dejaré esto así, luego lo pondré variable
 			GeneticAlgorithm.mutate matingPool, 0.01
 			
 			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool, @amountAnimals

@@ -31,10 +31,10 @@ class Animal
 	#Mutación, será usada por GeneticAlgorithm
 	def mutate
 		@feedRatePercent+=(rand/5)-0.1
-		if @feedRatePercent <= 0.0
-			@feedRatePercent=0.0
+		if @feedRatePercent <= 0.001
+			@feedRatePercent=0.001			#Cuales son los valores correctos?
 		elsif @feedRatePercent >= 1.0
-			@feedRatePercent=1.0
+			@feedRatePercent=0.99			#Cuales son los valores correctos?
 		end
 	end
 	

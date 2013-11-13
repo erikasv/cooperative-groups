@@ -41,6 +41,6 @@ class Analysis
 		end
 	end
 	
-	def 
+	def graphicAssortment 
 	end
 end

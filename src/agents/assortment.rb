@@ -46,7 +46,4 @@ class Assortment
 		
 		return assortment
 	end
-	
-	def graphicAssortment
-	end
 end
