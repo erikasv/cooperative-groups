@@ -479,9 +479,9 @@ iento entre los individuos y otras lo hacen por medio de las condiciones
 \begin_layout Standard
 Es importante resaltar que en el momento que algunas de las teorías nacieron
  no se tenía la capacidad de cómputo con la que se cuenta ahora, por lo
- tanto no había la forma de probar con una simulación de los modelos si
- éstos funcionaban o eran realmente útiles, éste es el caso del modelo de
- los 
+ tanto no había forma de probar con una simulación de los modelos si éstos
+ funcionaban o eran realmente útiles, éste es el caso del modelo de los
+ 
 \shape italic
 trait-groups
 \shape default
@@ -517,7 +517,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-El trabajo presentado en este documento tiene como finalidad comprobar las
+El trabajo presentado en este documento tiene como finalidad encontrar las
  condiciones ambientales que favorecen la formación de grupos y la realización
  de un modelo que permita comprobarlo.
  El trabajo está compuesto de dos partes: primero se realiza una implementación
@@ -591,8 +591,39 @@ Analizar resultados del comportamiento del algoritmo ante diferentes entradas
 MARCO TEÓRICO
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Carreta.
+\end_layout
+
+\begin_layout Plain Layout
+No le gustó el marco teórico.
+ Que está a mitad del camino entre un glosario y un marco teórico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Computación Evolutiva
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Hablar más de computación evolutiva
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -627,6 +658,19 @@ key "nla.cat-vn518082"
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Sección Selección para el 3.3, 3.4, 3.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 
 \shape italic
@@ -640,8 +684,18 @@ Se refiere a la selección de los rasgos cuyos efectos favorecen también
 \shape italic
 direct fitness
 \shape default
--) como a los que no son descendencia del mismo (en relación a la aptitud
- indirecta -
+-) como a los que no son descendencia del 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: mismo se pierde.
+ Porque hay dos juegos de paréntesis
+\end_layout
+
+\end_inset
+
+ mismo (en relación a la aptitud indirecta -
 \shape italic
 indirect fitness
 \shape default
@@ -658,7 +712,19 @@ key "Foster2006,Griffin:2002"
 \begin_layout Subsection
 
 \shape italic
-Inclusive Fitness
+Inclusive Fitness 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+Victor: Da la idea de que es un tipo de selección
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -672,6 +738,16 @@ Kin Selection
  a través de la cantidad de copias de si mismo que produce, sino también
  con sus relativos, es decir aquellos que comparten uno o más genes y por
  lo tanto un ancestro 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: no necesariamente comparten un ancestro
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "park2007persistent,WDH_InclusiveFitness"
@@ -727,6 +803,27 @@ Donde
 \end_inset
 
  la relación entre ellos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: 
+\begin_inset Quotes eld
+\end_inset
+
+No goza
+\begin_inset Quotes erd
+\end_inset
+
+ terminar con una ecuación
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -870,6 +967,19 @@ la jugada
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Gen, genotipo y fenotipo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 Emergencia: Propiedades o procesos de un sistema que surgen a partir de
  la interacción de sus partes y que no está definido por ninguna regla o
@@ -952,6 +1062,16 @@ reference "fig:FdvsFr"
 \end_inset
 
 ) y los puntos por encima de ésta son seleccionados en éste caso.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Explicar quién es N
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1010,6 +1130,29 @@ y
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Repetir la explicación del gráfico en la leyenda de la imagen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: sentido horario y anti horario en lugar de las manecillas del reloj
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1024,6 +1167,17 @@ o, independientemente de su aptitud relativa, es decir que
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor:Explicar aptitud absoluta y aptitud relativa
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1144,6 +1298,19 @@ A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Hablar de curva logística en el marco teórico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 En este trabajo se busca demostrar que los individuos con características
  diferentes son separados en grupos diferentes, con sus similares, gracias
  a que cambian el ambiente en el que se encuentran.
@@ -1195,6 +1362,19 @@ positive assortment
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Hablar sobre que al individuo no lo afecta comer menos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Sin embargo, hay algunas características que son completamente necesarias
  para la veracidad de los resultados y están ausentes: Los individuos no
  se reproducen, mutan o mueren.
@@ -1231,9 +1411,9 @@ key "wilson1975"
 
 \end_inset
 
- dan por sentado su funcionamiento, a pesar de que el autor no expone detalles
- de funcionamiento ni hay evidencia de haber utilizado el modelo para algún
- trabajo práctico.
+ dan por sentado su funcionamiento, a pesar de que el autor no expone ciertos
+ detalles, como la forma de representar la depredación, ni hay evidencia
+ de haber utilizado el modelo para algún trabajo práctico.
  Puede ser importante tener en cuenta detalles como éstos cuando se realizan
  modelos para predecir comportamientos de poblaciones y similares.
 \end_layout
@@ -1346,8 +1526,16 @@ Las características del modelo implementado son las siguientes:
 \end_layout
 
 \begin_layout Itemize
-Los cromosomas tienen sólo un gen, un número aleatorio que determina si
- el individuo es altruista o egoísta.
+Los cromosomas tienen sólo un gen, un número aleatorio entre 0 y 1 que determina
+ si el individuo es altruista (
+\begin_inset Formula $<0.5$
+\end_inset
+
+) o egoísta (
+\begin_inset Formula $\geq0.5$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -1372,7 +1560,7 @@ En caso de que la tasa de mutación sea mayor a 0, ésta se realiza sumando
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -1515,7 +1703,17 @@ Matriz de pago para la evaluación de los individuos
 
 \begin_layout Standard
 En la etapa de depredación, dentro de cada grupo, se enfrentan dos individuos
- seleccionados aleatoriamente y se prosigue de acuerdo a la situación:
+ seleccionados aleatoriamente 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+comparando los valores de sus aptitudes
+\end_layout
+
+\end_inset
+
+ y se prosigue de acuerdo a la situación:
 \end_layout
 
 \begin_layout Itemize
@@ -1530,6 +1728,29 @@ Si uno coopera y uno traiciona, muere el que coopera.
 Si ambos traicionan puede (1) morir uno de los dos aleatoriamente o (2)
  morir los dos individuos.
  Esta condición se ajusta por medio de un parámetro del modelo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Si tienen aptitudes diferentes, sobrevive el de mayor aptitud.
+\end_layout
+
+\begin_layout Itemize
+Si ambas aptitudes son 3, sobreviven ambos.
+\end_layout
+
+\begin_layout Itemize
+Si ambas aptitudes son 1 puede (1) morir uno de los dos aleatoriamente o
+ (2) morir los dos individuos.
+ Esta condición se ajusta por medio de un parámetro del modelo.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2372,8 +2593,18 @@ Conclusiones del modelo
 \end_layout
 
 \begin_layout Itemize
-El modelo no es completamente robusto, dado que al modificar detalles pequeños
- los resultados cambian bruscamente.
+El modelo no es completamente robusto
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: cambiar robusto por estable o algo así -> definición de robusto?,
+ según lo poco y nada que encontré en este caso si aplica
+\end_layout
+
+\end_inset
+
+, dado que al modificar detalles pequeños los resultados cambian bruscamente.
  Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
  en un encuentro.
 \end_layout
@@ -2434,8 +2665,34 @@ La característica más importante para que un ambiente favorezca la evolución
 TRABAJOS FUTUROS
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: definir un modelo de juego completo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 REFERENCIAS
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: La referencia 11(La del libro de Julián García) está muy cula
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
