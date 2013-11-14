@@ -21,7 +21,7 @@ class Assortment
 		for time in 1..@timeUnits do
 			assortment=oneUnitAssortment time
 			#Escribir el assortment
-			@mongoDB.writeAssortment time, assortment
+			@mongoDB.writeAssortment @executionTime, time, assortment
 		end
 	end
 	
