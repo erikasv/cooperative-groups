@@ -1,6 +1,7 @@
 $:.unshift '.' #Necesario desde 1.9
 require 'dBConnection'
 require 'statistics'
+require 'rubyvis'
 require '../graphic'
 
 class Analysis
