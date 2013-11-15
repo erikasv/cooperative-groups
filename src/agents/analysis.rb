@@ -22,7 +22,6 @@ class Analysis
 		@minusOneSD=Array.new
 		
 		for time in 1..@timeUnits do
-			|time|
 			documents=@mongoDB.findAll "assortment", {'timeUnit' => time}
 			
 			xVar=Array.new
