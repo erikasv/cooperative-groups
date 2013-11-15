@@ -17,4 +17,4 @@ require 'analysis'
 
 analysis=Analysis.new 10, 10000
 analysis.calculateGraphicValues
-graphicAssortment "graphic_assortment.svg"
+analysis.graphicAssortment "graphic_assortment.svg"
