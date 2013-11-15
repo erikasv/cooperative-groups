@@ -61,14 +61,14 @@ class DBConnection
 		)
 	end
 	
-	def writeDataGraphics timeUnit, assortment, plusOneSD, minusOneSD
-		@db.collection("dataGraphics").insert(
-			'timeUnit' => timeUnit,
-			'assortment' => assortment,
-			'plusOneSD' => plusOneSD,
-			'minusOneSD' => minusOneSD
-		)
-	end
+	#~ def writeDataGraphics timeUnit, assortment, plusOneSD, minusOneSD
+		#~ @db.collection("dataGraphics").insert(
+			#~ 'timeUnit' => timeUnit,
+			#~ 'assortment' => assortment,
+			#~ 'plusOneSD' => plusOneSD,
+			#~ 'minusOneSD' => minusOneSD
+		#~ )
+	#~ end
 	
 ###READING METHODS
 	def findAll collection, query
