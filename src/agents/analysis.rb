@@ -51,6 +51,6 @@ class Analysis
 			data << OpenStruct.new({ timeUnit: idx+1, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
 		}
 		
-		Graphic.makeLineChart 1, @executionTimes, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
+		Graphic.makeLineChart 1, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 end

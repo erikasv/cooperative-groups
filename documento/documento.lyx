@@ -684,18 +684,8 @@ Se refiere a la selección de los rasgos cuyos efectos favorecen también
 \shape italic
 direct fitness
 \shape default
--) como a los que no son descendencia del 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: mismo se pierde.
- Porque hay dos juegos de paréntesis
-\end_layout
-
-\end_inset
-
- mismo (en relación a la aptitud indirecta -
+-) como a los que no son descendencia del mismo (en relación a la aptitud
+ indirecta -
 \shape italic
 indirect fitness
 \shape default
@@ -945,6 +935,60 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Subsection
+Assortative mixing 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Debería ir aquí o en el glosario
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Hablar de curva logística en el marco teórico -> Función logística
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Coeficiente de correlación de Pearson debería ir como subsección o en el
+ glosario
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+El coeficiente de regresión debería ir como subsección o en el glosario????
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Glosario 
 \begin_inset Note Note
 status open
@@ -973,6 +1017,20 @@ status open
 
 \begin_layout Plain Layout
 Gen, genotipo y fenotipo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor:Explicar aptitud absoluta y aptitud relativa -> con respecto a A
+ Theory of Group Selection
 \end_layout
 
 \end_inset
@@ -1168,16 +1226,6 @@ o, independientemente de su aptitud relativa, es decir que
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor:Explicar aptitud absoluta y aptitud relativa
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1298,19 +1346,6 @@ A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Hablar de curva logística en el marco teórico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 En este trabajo se busca demostrar que los individuos con características
  diferentes son separados en grupos diferentes, con sus similares, gracias
  a que cambian el ambiente en el que se encuentran.
@@ -1359,19 +1394,6 @@ assortment
 positive assortment
 \shape default
 , pues los individuos cooperadores tienden a agruparse.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Hablar sobre que al individuo no lo afecta comer menos
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
