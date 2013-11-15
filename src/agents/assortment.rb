@@ -28,7 +28,7 @@ class Assortment
 	def oneUnitAssortment timeUnit
 		xVar=Array.new
 		yVar=Array.new
-		documents=@mongoDB.findAll "dataGroups", {'timeUnit' => timeUnit, 'executionTime' => @executionTime}
+		documents=@mongoDB.findAll "dataGroups", {'executionTime' => @executionTime, 'timeUnit' => timeUnit}
 		
 		documents.each{					#Armar las variables independiente y dependiente
 			|doc|
