@@ -8,7 +8,7 @@ class Statistics
 		varianceX=variance xValues
 		
 		if covarianceXY == 0
-			output=0
+			output=1
 		else
 			output=covarianceXY/varianceX
 		end

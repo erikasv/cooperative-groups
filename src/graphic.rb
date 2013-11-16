@@ -60,8 +60,8 @@ class Graphic
 	
 	#data es una matriz donde está cada dato del eje x con los valores para el eje y
 	def self.makeLineChart limX, limY, yPossibleValues, data, fileName, labelX, labelY
-		w = 545
-		h = 280
+		w = 600
+		h = 300
 		
 		x = pv.Scale.linear(0, limX).range(0, w) #largo del eje x
 		y = pv.Scale.linear(limY*-1, limY).range(0, h) #largo del eje y
@@ -71,8 +71,7 @@ class Graphic
 		vis = pv.Panel.new()
 			.width(w)
 			.height(h)
-			.margin(19.5)
-			.right(40);
+			.margin(60);
 		vis.add(pv.Panel)
 			.data(yPossibleValues)
 		  .add(pv.Line)
@@ -96,13 +95,13 @@ class Graphic
 			.data(y.ticks())
 			.bottom(lambda {|d| y.scale(d)})
 			.stroke_style(lambda {|i|  i!=0 ? pv.color("#ccc") : pv.color("black")})
-		  .anchor("right").add(pv.Label)
+		  .anchor("left").add(pv.Label)
 		  .visible(lambda { (self.index & 1)==0})
 			.text_margin(6);
 			
 		### Etiquetas de los ejes
-		vis.add(pv.Label).left(-15).bottom(150).text(labelY).font("20px sans-serif").text_angle(-Math::PI / 2 ) 
-		vis.add(pv.Label).bottom(-35).left(250).text(labelX).font("20px sans-serif")
+		vis.add(pv.Label).left(-30).bottom(100).text(labelY).font("20px sans-serif").text_angle(-Math::PI / 2 ) 
+		vis.add(pv.Label).bottom(-35).left(160).text(labelX).font("20px sans-serif")
 
 		svg=File.new(fileName,"w")
 		vis.render()

@@ -23,12 +23,12 @@ class Analysis
 		@minusOneSD=Array.new
 		
 		for time in 1..@timeUnits do
-			documents=@mongoDB.findAll "assortment", {'timeUnit' => time}
+			documents=@mongoDB.findAll "assortment", {'timeUnit' => time, 'executionTime' => @executionTimes-1}
 			
 			xVar=Array.new
 			documents.each{
 				|doc|
-				xVar << doc["assortment"]
+				xVar << doc["assortment"].to_f
 			}
 			
 			average=Statistics.expectedValue xVar
@@ -46,11 +46,13 @@ class Analysis
 		yValues=['assortment', 'plusOneSD', 'minusOneSD']
 		data=Array.new
 		
+		#~ p @assortment
+		
 		@assortment.each_index{
 			|idx|
 			data << OpenStruct.new({ timeUnit: idx+1, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
 		}
 		
-		Graphic.makeLineChart 1, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
+		Graphic.makeLineChart @timeUnits, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 end

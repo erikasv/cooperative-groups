@@ -3,11 +3,11 @@ require 'model'
 require 'assortment'
 require 'analysis'
 
-#~ 10.times do |execTime|
-	#~ model=Model.new execTime
-	#~ model.run 10000
-	#~ model=nil
-#~ end
+10.times do |execTime|
+	model=Model.new execTime
+	model.run 10000
+	model=nil
+end
 
 #~ 10.times do |execTime|
 	#~ assortment=Assortment.new execTime, 10000
@@ -15,6 +15,6 @@ require 'analysis'
 	#~ assortment=nil
 #~ end
 
-analysis=Analysis.new 10, 10000
-analysis.calculateGraphicValues
-analysis.graphicAssortment "graphic_assortment.svg"
+#~ analysis=Analysis.new 10, 10000
+#~ analysis.calculateGraphicValues
+#~ analysis.graphicAssortment "graphic_assortment.svg"
