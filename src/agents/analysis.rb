@@ -44,15 +44,15 @@ class Analysis
 	
 	def graphicAssortment fileName
 		yValues=['assortment', 'plusOneSD', 'minusOneSD']
+		#yValues=["assortment"]
 		data=Array.new
-		
-		#~ p @assortment
 		
 		@assortment.each_index{
 			|idx|
 			data << OpenStruct.new({ timeUnit: idx+1, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
+			# data << OpenStruct.new({ timeUnit: idx+1, assortment: idx})
 		}
 		
-		Graphic.makeLineChart @timeUnits, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
+		Graphic.makeLineChart @timeUnits, 0.01, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 end

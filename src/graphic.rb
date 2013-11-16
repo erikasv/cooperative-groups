@@ -66,18 +66,18 @@ class Graphic
 		x = pv.Scale.linear(0, limX).range(0, w) #largo del eje x
 		y = pv.Scale.linear(limY*-1, limY).range(0, h) #largo del eje y
 		fill = pv.colors("lightpink", "darkgray", "lightblue")
-
 		#/* The lines */
 		vis = pv.Panel.new()
 			.width(w)
 			.height(h)
-			.margin(60);
+			.margin(60)
+			.right(40);
 		vis.add(pv.Panel)
 			.data(yPossibleValues)
 		  .add(pv.Line)
 			.data(data)
-			.left(lambda {|d|  x.scale(d.date)})
-			.bottom(lambda {|d,t|   y.scale(d.send(t))})
+			.left(lambda {|d| x.scale(d.timeUnit)})
+			.bottom(lambda {|d,t| y.scale(d.send(t))})
 			.stroke_style(fill.by(pv.parent))
 			.line_width(3)
 

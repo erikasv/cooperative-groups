@@ -14,6 +14,7 @@ class Model
 		
 		#Datos par la base de datos
 		writeAgents @executionTime, 0
+		aboutAssortment @executionTime, 0
 	end
 	
 	def connectDB
@@ -42,7 +43,7 @@ class Model
 	
 	#Ejecutar el modelo
 	def run timeUnits
-		timeUnits.times do |time|
+		for time in 1..timeUnits do
 			@environment.run	#Pasar una unidad de tiempo en el ambiente si se desea escribir en la bd desde el ambiente
 			
 			#Evolucionar la población
@@ -53,8 +54,8 @@ class Model
 			@environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos
-			writeAgents @executionTime, time+1
-			aboutAssortment @executionTime, time+1
+			writeAgents @executionTime, time
+			aboutAssortment @executionTime, time
 		end
 	end
 	
