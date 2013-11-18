@@ -614,24 +614,15 @@ Computación Evolutiva
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Hablar más de computación evolutiva
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Rama de la inteligencia artificial que reúne las diferentes estrategias
  de resolución de problemas inspiradas en el proceso de evolución biológica,
  tales como los algoritmos genéticos, la programación genética y las estrategias
  genéticas, entre otros.
  
+\end_layout
+
+\begin_layout Subsubsection
+Algoritmos genéticos
 \end_layout
 
 \begin_layout Subsection
@@ -656,19 +647,6 @@ key "nla.cat-vn518082"
  Además el gen es la entidad informacional capaz de persistir un lapso de
  tiempo evolutivamente significante.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Sección Selección para el 3.3, 3.4, 3.5
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -703,18 +681,6 @@ key "Foster2006,Griffin:2002"
 
 \shape italic
 Inclusive Fitness 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\shape italic
-Victor: Da la idea de que es un tipo de selección
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -728,16 +694,6 @@ Kin Selection
  a través de la cantidad de copias de si mismo que produce, sino también
  con sus relativos, es decir aquellos que comparten uno o más genes y por
  lo tanto un ancestro 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: no necesariamente comparten un ancestro
-\end_layout
-
-\end_inset
-
- 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "park2007persistent,WDH_InclusiveFitness"
@@ -784,36 +740,15 @@ Donde
 \begin_inset Formula $b$
 \end_inset
 
- es el beneficio del receptor, 
+ es el beneficio del individuo receptor, 
 \begin_inset Formula $c$
 \end_inset
 
- el costo del actor y 
+ el costo del individuo actor y 
 \begin_inset Formula $r$
 \end_inset
 
- la relación entre ellos.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: 
-\begin_inset Quotes eld
-\end_inset
-
-No goza
-\begin_inset Quotes erd
-\end_inset
-
- terminar con una ecuación
-\end_layout
-
-\end_inset
-
-
+ la relación que hay entre ellos.
 \end_layout
 
 \begin_layout Subsection
@@ -980,7 +915,8 @@ Coeficiente de correlación de Pearson debería ir como subsección o en el
 status open
 
 \begin_layout Plain Layout
-El coeficiente de regresión debería ir como subsección o en el glosario????
+El coeficiente de regresión -> por los mínimos cuadrados debería ir como
+ subsección o en el glosario????
 \end_layout
 
 \end_inset
@@ -1119,17 +1055,8 @@ reference "fig:FdvsFr"
 \begin_inset Formula $f_{d}>-(N-1)f_{r}$
 \end_inset
 
-) y los puntos por encima de ésta son seleccionados en éste caso.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Explicar quién es N
-\end_layout
-
-\end_inset
-
-
+, donde N es la cantidad de individuos en el grupo) y los puntos por encima
+ de ésta son seleccionados en éste caso.
 \end_layout
 
 \begin_layout Standard
@@ -1183,16 +1110,6 @@ y
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Repetir la explicación del gráfico en la leyenda de la imagen
 \end_layout
 
 \end_inset
@@ -2661,6 +2578,442 @@ Al variar la mutación de la población los resultados se ven ligeramente
 Modelo de agentes
 \end_layout
 
+\begin_layout Standard
+El modelo realizado se basa en el presentado por Pepper y Smuts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+, en el que tratan de demostrar que los individuos altruistas se difunden
+ en la población bajo la premisa que las acciones de los individuos disminuyen
+ la calidad del ambiente en el que se encuentran.
+ En la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Parámetros-modelo-agentes"
+
+\end_inset
+
+ se muestran los parámetros con los que fueron realizadas las ejecuciones
+ del modelo original.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Time steps per run
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Plants:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Patch width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Gap width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Minimum number of plants
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Logistic growth rate R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Maximum size (energy)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Foragers:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Total population size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Frequency of restrained foragers (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Metabolic rate (energy units per time step)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Feeding restraint (% uneaten)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+1 or 50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parámetros-modelo-agentes"
+
+\end_inset
+
+Parámetros estándar del modelo original.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La simulación sigue los siguientes pasos:
+\end_layout
+
+\begin_layout Enumerate
+Se ubica la mínima cantidad de plantas en parches cuadrados de acuerdo a
+ los parámetros Patch width (ancho del parche) y Gap width (espacio entre
+ parches en cada eje).
+ Posteriormente se rellena con más plantas con tal que queden parches cuadrados
+ completamente llenos y que el espacio final también sea cuadrado.
+\end_layout
+
+\begin_layout Enumerate
+Se ubican los animales de forma aleatoria en una celda que contenga una
+ planta, pero no otro animal.
+\end_layout
+
+\begin_layout Enumerate
+Cada agente es seleccionado de forma aleatoria para realizar una acción:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de ser animal se mueve de celda y come de la planta en la que se
+ ubica.
+\end_layout
+
+\begin_layout Enumerate
+En caso de ser planta crece.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Todos los animales se mueven bajo la misma regla:
+\end_layout
+
+\begin_layout Enumerate
+Busca entre las 8 celdas vecinas la que tenga la planta con mayor energía,
+ si ésta cumple con el costo metabólico se mueve a ella.
+\end_layout
+
+\begin_layout Enumerate
+Sino, escoge una celda aleatoria que no tenga un animal en ella.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, las siguientes características del modelo hacen que sus resultados
+ sean predecibles:
+\end_layout
+
+\begin_layout Itemize
+Los agentes no mueren, se reproducen ni mutan.
+\end_layout
+
+\begin_layout Itemize
+Los agentes no son afectados de ninguna forma por no alimentarse.
+\end_layout
+
+\begin_layout Standard
+Así que es de esperarse que los individuos cooperadores permanezcan más
+ tiempo en una misma planta y por lo tanto es altamente probable que se
+ agrupen con el paso del tiempo.
+\end_layout
+
 \begin_layout Subsubsection
 Detalles de implementación
 \end_layout
@@ -2685,6 +3038,10 @@ La característica más importante para que un ambiente favorezca la evolución
 
 \begin_layout Section
 TRABAJOS FUTUROS
+\end_layout
+
+\begin_layout Itemize
+Buscar otras características además de la distribución del ambiente.
 \end_layout
 
 \begin_layout Standard
