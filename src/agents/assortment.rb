@@ -42,7 +42,7 @@ class Assortment
 			xVar.concat(Array.new(altruists,1.0))
 			xVar.concat(Array.new(selfish,0.0))
 		}
-		assortment=Statistics.regressionCoeficient xVar, yVar
+		assortment=Statistics.regressionCoeficientLeastSquares xVar, yVar
 		
 		return assortment
 	end

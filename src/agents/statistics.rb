@@ -1,5 +1,29 @@
 class Statistics
 
+	def self.regressionCoeficientLeastSquares xValues, yValues
+		#Reg=n Sum(xy)-Sum(x)Sum(y) / n Sum(x^2) - Sum(x)^2
+		n=xValues.size
+		sumXY=0
+		sumX=0
+		sumY=0
+		sumX2=0
+		
+		xValues.each_index{
+			|i|
+			sumXY+=xValues[i]*yValues[i]
+			sumX+=xValues[i]
+			sumY+=yValues[i]
+			sumX2+=xValues[i]**2
+		}
+# 		p "#{sumXY} - #{sumX} - #{sumY} - #{sumX2}"
+		output=n*sumX2 - sumX**2
+		if output != 0
+			output= (n*sumXY - sumX*sumY) / output
+		end
+		
+		return output
+	end
+	
 	#Recibe dos arreglos de números
 	#Retorna el coeficiente de regresión de la relación entre ellos
 	def self.regressionCoeficient xValues, yValues
