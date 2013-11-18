@@ -5,8 +5,8 @@ require 'dBConnection'
 
 class Model
 	#Los valores por defecto son los del artículo
-	#Parametros para el escenario:      		  , plantas:                          , Animales:
-	def initialize executionTime, width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
+	#Parametros para el escenario: plantas:          								                  , Animales:
+	def initialize executionTime,  width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
 		@mongoDB=connectDB
 		@environment=Environment.new width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 		@amountAnimals=amountAnimals
