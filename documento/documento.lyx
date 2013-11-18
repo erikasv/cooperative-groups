@@ -3,10 +3,15 @@
 \begin_document
 \begin_header
 \textclass article
+\begin_preamble
+\addto\captionsspanish{%
+  \renewcommand\tablename{Tabla}
+}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
-\language_package default
+\language_package babel
 \inputencoding auto
 \fontencoding global
 \font_roman default
@@ -185,7 +190,7 @@ par}
 \backslash
 large
 \backslash
-bf erika.suarez@correunivalle.com} 
+bf erika.suarez@correounivalle.com} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -268,7 +273,7 @@ par}
 \backslash
 large
 \backslash
-bf Ssntiago de Cali, Octubre 29 de 2013 
+bf Ssntiago de Cali, Noviembre 29 de 2013 
 \backslash
 par} 
 \end_layout
@@ -614,24 +619,15 @@ Computación Evolutiva
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Hablar más de computación evolutiva
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Rama de la inteligencia artificial que reúne las diferentes estrategias
  de resolución de problemas inspiradas en el proceso de evolución biológica,
  tales como los algoritmos genéticos, la programación genética y las estrategias
  genéticas, entre otros.
  
+\end_layout
+
+\begin_layout Subsubsection
+Algoritmos genéticos
 \end_layout
 
 \begin_layout Subsection
@@ -656,19 +652,6 @@ key "nla.cat-vn518082"
  Además el gen es la entidad informacional capaz de persistir un lapso de
  tiempo evolutivamente significante.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Sección Selección para el 3.3, 3.4, 3.5
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -703,18 +686,6 @@ key "Foster2006,Griffin:2002"
 
 \shape italic
 Inclusive Fitness 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\shape italic
-Victor: Da la idea de que es un tipo de selección
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -728,16 +699,6 @@ Kin Selection
  a través de la cantidad de copias de si mismo que produce, sino también
  con sus relativos, es decir aquellos que comparten uno o más genes y por
  lo tanto un ancestro 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: no necesariamente comparten un ancestro
-\end_layout
-
-\end_inset
-
- 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "park2007persistent,WDH_InclusiveFitness"
@@ -784,36 +745,15 @@ Donde
 \begin_inset Formula $b$
 \end_inset
 
- es el beneficio del receptor, 
+ es el beneficio del individuo receptor, 
 \begin_inset Formula $c$
 \end_inset
 
- el costo del actor y 
+ el costo del individuo actor y 
 \begin_inset Formula $r$
 \end_inset
 
- la relación entre ellos.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: 
-\begin_inset Quotes eld
-\end_inset
-
-No goza
-\begin_inset Quotes erd
-\end_inset
-
- terminar con una ecuación
-\end_layout
-
-\end_inset
-
-
+ la relación que hay entre ellos.
 \end_layout
 
 \begin_layout Subsection
@@ -980,7 +920,8 @@ Coeficiente de correlación de Pearson debería ir como subsección o en el
 status open
 
 \begin_layout Plain Layout
-El coeficiente de regresión debería ir como subsección o en el glosario????
+El coeficiente de regresión -> por los mínimos cuadrados debería ir como
+ subsección o en el glosario????
 \end_layout
 
 \end_inset
@@ -1031,6 +972,19 @@ status open
 \begin_layout Plain Layout
 Victor:Explicar aptitud absoluta y aptitud relativa -> con respecto a A
  Theory of Group Selection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Similitud genética
 \end_layout
 
 \end_inset
@@ -1119,17 +1073,8 @@ reference "fig:FdvsFr"
 \begin_inset Formula $f_{d}>-(N-1)f_{r}$
 \end_inset
 
-) y los puntos por encima de ésta son seleccionados en éste caso.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Explicar quién es N
-\end_layout
-
-\end_inset
-
-
+, donde N es la cantidad de individuos en el grupo) y los puntos por encima
+ de ésta son seleccionados en éste caso.
 \end_layout
 
 \begin_layout Standard
@@ -1183,16 +1128,6 @@ y
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Repetir la explicación del gráfico en la leyenda de la imagen
 \end_layout
 
 \end_inset
@@ -2661,12 +2596,948 @@ Al variar la mutación de la población los resultados se ven ligeramente
 Modelo de agentes
 \end_layout
 
+\begin_layout Standard
+En el modelo presentado por Pepper y Smuts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+, se trata de demostrar que los individuos altruistas se difunden en la
+ población, bajo la premisa de que las acciones de los individuos disminuyen
+ la calidad del ambiente en el que se encuentran.
+ En la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Parámetros-modelo-agentes"
+
+\end_inset
+
+ se muestran los parámetros con los que fueron realizadas las ejecuciones
+ del modelo original.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="6cm">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Time steps per run
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Plants:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Patch width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Gap width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Minimum number of plants
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Logistic growth rate R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Maximum size (energy)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Foragers:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Total population size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Frequency of restrained foragers (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Metabolic rate (energy units per time step)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Feeding restraint (% uneaten)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1 or 50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parámetros-modelo-agentes"
+
+\end_inset
+
+Parámetros estándar del modelo original.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ejecución del modelo sigue los siguientes pasos:
+\end_layout
+
+\begin_layout Enumerate
+Se ubica la mínima cantidad de plantas en parches cuadrados de acuerdo a
+ los parámetros 
+\shape italic
+Patch width
+\shape default
+ (ancho del parche) y 
+\shape italic
+Gap width
+\shape default
+ (espacio entre parches en cada eje).
+ Posteriormente se rellena con más plantas con tal que queden parches cuadrados
+ completamente llenos y que el espacio global también sea cuadrado.
+\end_layout
+
+\begin_layout Enumerate
+Se ubican los animales de forma aleatoria en una celda que contenga una
+ planta, pero no otro animal.
+\end_layout
+
+\begin_layout Enumerate
+Durante cada unidad de tiempo, todos los agentes son seleccionados uno a
+ uno de forma aleatoria para realizar una acción:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En caso de ser planta crece.
+\end_layout
+
+\begin_layout Enumerate
+En caso de ser animal se mueve de celda y come de la planta en la que se
+ ubica.
+ Todos los animales se mueven bajo la misma regla:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Busca entre las 8 celdas vecinas la que tenga la planta con mayor energía,
+ si ésta cumple con el costo metabólico se mueve a ella.
+\end_layout
+
+\begin_layout Enumerate
+Sino, escoge una celda aleatoria que no tenga un animal en ella.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Sin embargo, las siguientes características del modelo hacen que sus resultados
+ sean predecibles:
+\end_layout
+
+\begin_layout Itemize
+Los agentes animales no mueren, se reproducen ni mutan.
+ Por lo tanto no se puede afirmar que el altruismo se difunde en la población,
+ ya que la cantidad de animales de cada tipo no varía.
+\end_layout
+
+\begin_layout Itemize
+Los agentes animales no son afectados de ninguna forma por no alimentarse,
+ ya que los animales no cuentan con una reserva de energía.
+ Esto significa que el costo metabólico por unidad de tiempo no tiene ningún
+ funcionamiento.
+\end_layout
+
+\begin_layout Standard
+Finalmente, ya que los individuos cooperadores (
+\shape italic
+restrained foragers
+\shape default
+) comen la mitad de lo que comen los egoístas (
+\shape italic
+unrestrained foragers
+\shape default
+) es de esperarse que permanezcan más tiempo en una misma planta y por lo
+ tanto es altamente probable que se agrupen con el paso del tiempo.
+\end_layout
+
 \begin_layout Subsubsection
 Detalles de implementación
 \end_layout
 
+\begin_layout Standard
+El modelo realizado presenta las siguientes modificaciones con respecto
+ al original.
+ Estas modificaciones fueron realizadas con base al libro 
+\shape italic
+Growing Artificial Societies
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein1996growing"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Los animales cuentan con reserva de energía.
+\end_layout
+
+\begin_layout Itemize
+Los agentes animales se reproducen, mutan y mueren.
+\end_layout
+
+\begin_layout Itemize
+La cantidad de animales cooperadores y egoístas no es fija, es aleatoria.
+\end_layout
+
+\begin_layout Itemize
+El porcentaje de alimentación de los animales es aleatorio.
+\end_layout
+
+\begin_layout Standard
+La ejecución sigue los mismos pasos que el modelo original, pero se agrega
+ un paso 4 que consiste en reproducir y mutar los animales, esto se lleva
+ a cabo de la siguiente forma:
+\end_layout
+
+\begin_layout Description
+Selección: Se realiza selección por torneo, la cantidad de energía en la
+ reserva de cada animal corresponde a la aptitud del mismo.
+ El tamaño del 
+\shape italic
+mating pool
+\shape default
+ es el 60% del tamaño de la población.
+\end_layout
+
+\begin_layout Description
+Mutación: Se muta el 1% del 
+\shape italic
+mating pool
+\shape default
+, consiste en sumar al porcentaje de alimentación del animal un número entre
+ -0.1 y 0.1.
+\end_layout
+
+\begin_layout Description
+Reemplazo: Se realiza por torneo, reemplazando al individuo con menor energía
+ de reserva, pero conservando invariante el tamaño de la población.
+\end_layout
+
+\begin_layout Standard
+Los parámetros ajustables al modelos son los mismos que el original, a excepción
+ de la cantidad de cooperadores.
+\end_layout
+
 \begin_layout Subsubsection
 Pruebas y Resultados
+\end_layout
+
+\begin_layout Standard
+La tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Parámetros-pruebas"
+
+\end_inset
+
+ muestra los parámetros con los que se realizaron las pruebas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="6cm">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Runs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Time steps per run
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Plants:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Patch width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Gap width (cells)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Minimum number of plants
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Logistic growth rate R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Maximum size (energy)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Foragers:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Total population size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Metabolic rate (energy units per time step)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parámetros-pruebas"
+
+\end_inset
+
+Parámetros bajo los que se corrieron las pruebas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El trabajo de Pepper y Smuts mide el modelo por medio de la definición de
+ similitud genética gracias al 
+\shape italic
+assortment
+\shape default
+, de acuerdo a la siguiente ecuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r_{a}=r-r_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $r_{s}$
+\end_inset
+
+ es la similitud genética esperada bajo aleatoriedad, 
+\begin_inset Formula $r$
+\end_inset
+
+ es la observada y 
+\begin_inset Formula $r_{a}$
+\end_inset
+
+ es la similitud debida al 
+\shape italic
+assortment
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r_{a}=\beta(G_{W},G_{A})-\frac{g-1}{N-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\beta=$
+\end_inset
+
+coeficiente de regresión, 
+\begin_inset Formula $G_{A}=$
+\end_inset
+
+Genotipo del actor y 
+\begin_inset Formula $G_{W}=$
+\end_inset
+
+Genotipo promedio del grupo.
+ Y 
+\begin_inset Formula $g=$
+\end_inset
+
+Cantidad de grupos y 
+\begin_inset Formula $N=$
+\end_inset
+
+tamaño total de la población.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2685,6 +3556,11 @@ La característica más importante para que un ambiente favorezca la evolución
 
 \begin_layout Section
 TRABAJOS FUTUROS
+\end_layout
+
+\begin_layout Itemize
+Buscar qué otras características además de la distribución del ambiente
+ favorecen la difusión de genes altruistas en la población.
 \end_layout
 
 \begin_layout Standard
