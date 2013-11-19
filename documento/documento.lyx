@@ -82,7 +82,7 @@
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -95,19 +95,6 @@ figref}[1]{
 figurename~
 \backslash
 ref{fig:#1}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand*{
-\backslash
-tablename}[1]{
-\backslash
-tablename~
-\backslash
-ref{tab:#1}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -527,6 +514,7 @@ status open
  sistemas poblacionales)
 \color inherit
 .
+ => De acá se podrá sacar algo para las conclusiones o trabajos futuros?
 \end_layout
 
 \end_inset
@@ -558,19 +546,7 @@ key "PepperSmuts2000"
 \end_layout
 
 \begin_layout Section
-OBJETIVOS 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Los objetivos deberían estar dentro de la introducción.
- Pero entonces donde pongo lo que ahora es la introducción??? <- Creo que
- debe ir en el marco teórico
-\end_layout
-
-\end_inset
-
-
+OBJETIVOS
 \end_layout
 
 \begin_layout Subsection
@@ -877,23 +853,64 @@ clasificación es negativa
 Negative Assortment
 \shape default
 ), pues los individuos son en promedio más parecidos a la población en general
- que a los miembros de su grupo 
+ que a los miembros de su grupo.
+\end_layout
+
+\begin_layout Subsubsection
+Assortative mixing 
+\end_layout
+
+\begin_layout Standard
+Es un concepto equivalente al de 
+\shape italic
+possitive assortment
+\shape default
+.
+ Se dice que una red presenta 
+\shape italic
+assortative mixing
+\shape default
+ cuando los nodos que tienen más conexiones tienden a estar conectados con
+ nodos que también tienen muchas conexiones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "PepperSmuts2000"
+key "PhysRevLett.89.208701"
 
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Standard
+De forma contraria y equivalente a 
+\shape italic
+negative assortment
+\shape default
+, se dice que una red es 
+\shape italic
+disassortative
+\shape default
+ cuando los nodos que tienen más conexiones tienden a estar conectados con
+ nodos que tienen pocas conexiones.
+\end_layout
+
 \begin_layout Subsection
-Assortative mixing 
+Mínimos cuadrados
+\end_layout
+
+\begin_layout Standard
+Método matemático usado para estimar los parámetros de la función que se
+ desea ajustar a un conjunto de datos.
+ Su objetivo es minimizar el error cuadrático entre los puntos reales y
+ los resultantes por la función que se desea ajustar.
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Debería ir aquí o en el glosario
+http://ocw.unican.es/ensenanzas-tecnicas/fisica-i/practicas-1/Ajuste%20por%20minim
+os%20cuadrados.pdf y http://fisica.udea.edu.co/~lab-gicm/Laboratorio%20Fisica%201_20
+11/2010_teoria%20de%20errores/Minimos_cuadrados_2010.pdf ??
 \end_layout
 
 \end_inset
@@ -902,12 +919,27 @@ Debería ir aquí o en el glosario
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+En el caso del modelo de regresión lineal simple, se busca ajustar una recta
+ a los puntos, es decir la función 
+\begin_inset Formula $y=a+bx$
+\end_inset
 
-\begin_layout Plain Layout
-Victor: Hablar de curva logística en el marco teórico -> Función logística
+, donde los parámetros que se estiman son 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+, los cuales corresponden a:
 \end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b=\frac{n\sum xy-\sum x\sum y}{n\sum(x^{2})-(\sum x)^{2}}
+\]
 
 \end_inset
 
@@ -915,17 +947,22 @@ Victor: Hablar de curva logística en el marco teórico -> Función logística
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Coeficiente de correlación de Pearson debería ir como subsección o en el
- glosario
-\end_layout
+\begin_inset Formula 
+\[
+a=\frac{\sum y-b\sum x}{n}
+\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $n$
+\end_inset
+
+ es la cantidad total de puntos.
 \end_layout
 
 \begin_layout Standard
@@ -949,7 +986,32 @@ status open
 
 \begin_layout Plain Layout
 Ángel: el glosario es muy corto.
- Definir todas las palabras claves, como fitness (o traición indicando 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Emergencia: Propiedades o procesos de un sistema que surgen a partir de
+ la interacción de sus partes y que no está definido por ninguna regla o
+ control centralizado.
+\end_layout
+
+\begin_layout Itemize
+Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
+ para hacer referencia a los individuos y agentes que tienen un comportamiento
+ egoísta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Angel: Definir todas las palabras claves, como fitness (o traición indicando
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -958,6 +1020,20 @@ la jugada
 \end_inset
 
  del dilema del prisionero)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Victor: Hablar de curva logística en el marco teórico -> Función logística,
+ creo que queda mejor en el glosario
 \end_layout
 
 \end_inset
@@ -1003,18 +1079,6 @@ Similitud genética
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Emergencia: Propiedades o procesos de un sistema que surgen a partir de
- la interacción de sus partes y que no está definido por ninguna regla o
- control centralizado.
-\end_layout
-
-\begin_layout Itemize
-Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
- para hacer referencia a los individuos y agentes que tienen un comportamiento
- egoísta.
 \end_layout
 
 \begin_layout Section
@@ -3231,6 +3295,16 @@ Para este trabajo se utilizó la misma medida, el coeficiente de regresión
 \end_inset
 
  de acuerdo al método de mínimos cuadrados:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Es mejor referenciar la ecuación que volverla a poner?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3591,6 +3665,7 @@ Parámetros bajo los que se corrieron las pruebas
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -3618,6 +3693,19 @@ reference "tab:Parámetros-pruebas"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Hacer más ejecuciones con otros parámetros?
 \end_layout
 
 \end_inset
@@ -3681,7 +3769,7 @@ Victor: La referencia 11(La del libro de Julián García) está muy cula
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks"
 options "ieeetr"
 
 \end_inset
