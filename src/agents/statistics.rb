@@ -59,12 +59,13 @@ class Statistics
 	def self.variance values
 		#Var(x)=Sum(xi^2)-E(x)^2
 		average=expectedValue values
-		sumSquaredValues=0
+		squaredDifferences=Array.new
 		values.each{
 			|value|
-			sumSquaredValues+=value**2
+			squaredDifferences<<(value-average)**2
 		}
-		return sumSquaredValues - (average**2)
+		averageSquaredDifferences=expectedValue squaredDifferences
+		return averageSquaredDifferences
 	end
 	
 	#Recibe un arreglo de números

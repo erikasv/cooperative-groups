@@ -18,7 +18,7 @@ class Assortment
 	end
 
 	def meassureAssortment
-		for time in 1..@timeUnits do
+		for time in 0..@timeUnits do
 			assortment=oneUnitAssortment time
 			#Escribir el assortment
 			@mongoDB.writeAssortment @executionTime, time, assortment
@@ -42,7 +42,7 @@ class Assortment
 			xVar.concat(Array.new(altruists,1.0))
 			xVar.concat(Array.new(selfish,0.0))
 		}
-		assortment=Statistics.regressionCoeficientLeastSquares xVar, yVar
+		assortment=Statistics.regressionCoeficientLeastSquares yVar, xVar
 		
 		return assortment
 	end

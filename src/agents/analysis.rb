@@ -22,8 +22,8 @@ class Analysis
 		@plusOneSD=Array.new
 		@minusOneSD=Array.new
 		
-		for time in 1..@timeUnits do
-			documents=@mongoDB.findAll "assortment", {'timeUnit' => time, 'executionTime' => @executionTimes-1}
+		for time in 0..@timeUnits do
+			documents=@mongoDB.findAll "assortment", {'timeUnit' => time}
 			
 			xVar=Array.new
 			documents.each{
@@ -44,15 +44,13 @@ class Analysis
 	
 	def graphicAssortment fileName
 		yValues=['assortment', 'plusOneSD', 'minusOneSD']
-		#yValues=["assortment"]
 		data=Array.new
 		
 		@assortment.each_index{
 			|idx|
-			data << OpenStruct.new({ timeUnit: idx+1, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
-			# data << OpenStruct.new({ timeUnit: idx+1, assortment: idx})
+			data << OpenStruct.new({ timeUnit: idx, assortment: @assortment[idx], plusOneSD: @plusOneSD[idx], minusOneSD: @minusOneSD[idx] })
 		}
 		
-		Graphic.makeLineChart @timeUnits, 0.01, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
+		Graphic.makeLineChart @timeUnits, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 end
