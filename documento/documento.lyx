@@ -895,12 +895,12 @@ disassortative
 \end_layout
 
 \begin_layout Subsection
-Mínimos cuadrados
+Regresión lineal por mínimos cuadrados
 \end_layout
 
 \begin_layout Standard
-Método matemático usado para estimar los parámetros de la función que se
- desea ajustar a un conjunto de datos.
+Los mínimos cuadrados es un método matemático usado para estimar los parámetros
+ de la función que mejor modele un conjunto de puntos.
  Su objetivo es minimizar el error cuadrático entre los puntos reales y
  los resultantes por la función que se desea ajustar.
  
@@ -1003,6 +1003,12 @@ Emergencia: Propiedades o procesos de un sistema que surgen a partir de
 Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
  para hacer referencia a los individuos y agentes que tienen un comportamiento
  egoísta.
+\end_layout
+
+\begin_layout Itemize
+Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
+ de la regresión lineal, es decir de la función que mejor se ajusta a un
+ conjunto de puntos.
 \end_layout
 
 \begin_layout Standard
