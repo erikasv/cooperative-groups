@@ -82,7 +82,7 @@
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -95,6 +95,19 @@ figref}[1]{
 figurename~
 \backslash
 ref{fig:#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+tablename}[1]{
+\backslash
+tablename~
+\backslash
+ref{tab:#1}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1497,9 +1510,9 @@ Los cromosomas tienen sólo un gen, un número aleatorio entre 0 y 1 que determi
 
 \begin_layout Itemize
 La aptitud de los cromosomas es determinada en un encuentro de depredación,
- por medio de la matriz de pago mostrada en la Tabla 
+ por medio de la matriz de pago mostrada en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Matriz-de-pago"
 
 \end_inset
@@ -2607,9 +2620,9 @@ key "PepperSmuts2000"
 , se trata de demostrar que los individuos altruistas se difunden en la
  población, bajo la premisa de que las acciones de los individuos disminuyen
  la calidad del ambiente en el que se encuentran.
- En la tabla 
+ En la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Parámetros-modelo-agentes"
 
 \end_inset
@@ -3128,14 +3141,126 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout Standard
-La tabla 
+El trabajo de Pepper y Smuts mide el modelo por medio de la definición de
+ similitud genética gracias al 
+\shape italic
+assortment
+\shape default
+, de acuerdo a la siguiente ecuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r_{a}=r-r_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $r_{s}$
+\end_inset
+
+ es la similitud genética esperada bajo aleatoriedad, 
+\begin_inset Formula $r$
+\end_inset
+
+ es la observada (en la ejecución del modelo) y 
+\begin_inset Formula $r_{a}$
+\end_inset
+
+ es la similitud debida al 
+\shape italic
+assortment
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r_{a}=r-r_{s}=\beta(G_{W},G_{A})-\frac{g-1}{N-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $\beta=$
+\end_inset
+
+coeficiente de regresión, 
+\begin_inset Formula $G_{A}=$
+\end_inset
+
+Genotipo del actor y 
+\begin_inset Formula $G_{W}=$
+\end_inset
+
+Genotipo promedio del grupo.
+ Y 
+\begin_inset Formula $g=$
+\end_inset
+
+Cantidad de grupos y 
+\begin_inset Formula $N=$
+\end_inset
+
+tamaño total de la población.
+\end_layout
+
+\begin_layout Standard
+Para este trabajo se utilizó la misma medida, el coeficiente de regresión
+ (
+\begin_inset Formula $\beta$
+\end_inset
+
+) es la pendiente de la recta de regresión entre 
+\begin_inset Formula $G_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $G_{W}$
+\end_inset
+
+ de acuerdo al método de mínimos cuadrados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta=\frac{n\sum xy-\sum x\sum y}{n\sum(x^{2})-(\sum x)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
+reference "fig:Ejecución-del-modelo"
+
+\end_inset
+
+ muestra el resultado de las ejecuciones del modelo con los parámetros expuestos
+ en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
 reference "tab:Parámetros-pruebas"
 
 \end_inset
 
- muestra los parámetros con los que se realizaron las pruebas:
+:
 \end_layout
 
 \begin_layout Standard
@@ -3465,79 +3590,39 @@ Parámetros bajo los que se corrieron las pruebas
 \end_layout
 
 \begin_layout Standard
-El trabajo de Pepper y Smuts mide el modelo por medio de la definición de
- similitud genética gracias al 
-\shape italic
-assortment
-\shape default
-, de acuerdo a la siguiente ecuación:
-\end_layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-r_{a}=r-r_{s}
-\]
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ejecución-del-modelo"
+
+\end_inset
+
+Ejecución del modelo con los parámetros mostrados en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Parámetros-pruebas"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Donde 
-\begin_inset Formula $r_{s}$
-\end_inset
-
- es la similitud genética esperada bajo aleatoriedad, 
-\begin_inset Formula $r$
-\end_inset
-
- es la observada y 
-\begin_inset Formula $r_{a}$
-\end_inset
-
- es la similitud debida al 
-\shape italic
-assortment
-\shape default
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-r_{a}=\beta(G_{W},G_{A})-\frac{g-1}{N-1}
-\]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Donde 
-\begin_inset Formula $\beta=$
 \end_inset
 
-coeficiente de regresión, 
-\begin_inset Formula $G_{A}=$
-\end_inset
 
-Genotipo del actor y 
-\begin_inset Formula $G_{W}=$
-\end_inset
-
-Genotipo promedio del grupo.
- Y 
-\begin_inset Formula $g=$
-\end_inset
-
-Cantidad de grupos y 
-\begin_inset Formula $N=$
-\end_inset
-
-tamaño total de la población.
 \end_layout
 
 \begin_layout Subsubsection
