@@ -71,7 +71,7 @@ class DBConnection
 	#~ end
 	
 ###READING METHODS
-	def findAll collection, query
+	def findAll collection, query, options={}
 		return @db.collection("#{collection}").find(query)
 	end
 

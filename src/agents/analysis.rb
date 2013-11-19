@@ -53,4 +53,11 @@ class Analysis
 		
 		Graphic.makeLineChart @timeUnits, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
+	
+	def calculateDefinitiveValues
+		#ra=r-rs=assortment - g-1/N-1
+	end
+	
+	def graphicDefinitiveValues
+	end
 end
