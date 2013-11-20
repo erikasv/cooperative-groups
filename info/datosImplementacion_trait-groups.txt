@@ -44,4 +44,3 @@ ALGORITMO:
 3. Que pasa con los que no quepan en los grupos después de la mezcla? <Se pierden>
 
 
-NOTA: El porcentaje de mutación está quemado en el código cuando se llama a la función "mutate".

@@ -14,3 +14,8 @@ Modificaciones con respecto al modelo del artículo:
 Es necesario instalar las siguientes gemas:
 	Para las graficas: rubyvis
 	Para mongo: mongo, bson, bson_ext
+
+*******************************************************************+
+
+No mevolucionar la población
+Sumar la cantidad de cooperadores y restar la de egoístas para hacer semejanza a las empresas con los parches.

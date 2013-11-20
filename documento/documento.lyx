@@ -319,12 +319,12 @@ clearpage
 \end_inset
 
 
+\lang spanish
+
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\lang english
 ESTAR PENDIENTE DE ACTUALIZAR LA FECHA
 \end_layout
 
@@ -613,7 +613,7 @@ Estos algoritmos son los más similares a la selección natural.
  Este proceso evolutivo consiste en seleccionar con mayor probabilidad los
  cromosomas con mayor aptitud para llevarlos al 
 \shape italic
-matting pool
+mating pool
 \shape default
 , donde se les aplican operadores genéticos como el cruce y la mutación,
  para finalmente reintegrarlos a la población.
@@ -904,20 +904,14 @@ Regresión lineal por mínimos cuadrados
 Los mínimos cuadrados es un método matemático usado para estimar los parámetros
  de la función que mejor modele un conjunto de puntos.
  Su objetivo es minimizar el error cuadrático entre los puntos reales y
- los resultantes por la función que se desea ajustar.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-http://ocw.unican.es/ensenanzas-tecnicas/fisica-i/practicas-1/Ajuste%20por%20minim
-os%20cuadrados.pdf y http://fisica.udea.edu.co/~lab-gicm/Laboratorio%20Fisica%201_20
-11/2010_teoria%20de%20errores/Minimos_cuadrados_2010.pdf ??
-\end_layout
+ los resultantes por la función que se desea ajustar 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIN_CUADRADOS2"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -934,7 +928,14 @@ En el caso del modelo de regresión lineal simple, se busca ajustar una recta
 \begin_inset Formula $b$
 \end_inset
 
-, los cuales corresponden a:
+, los cuales corresponden a 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIN_CUADRADOS"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -978,15 +979,18 @@ Emergencia: Propiedades o procesos de un sistema que surgen a partir de
 \end_layout
 
 \begin_layout Itemize
-Gen
+Gen: En biología es una segmento de ADN que codifica una molécula mayor,
+ como una proteína por ejemplo.
+ En los algoritmos genéticos es el equivalente: es cada una de las partes
+ que componen la solución que codifica el cromosoma.
 \end_layout
 
 \begin_layout Itemize
-Genotipo
+Genotipo: Es la codificación misma del cromosoma.
 \end_layout
 
 \begin_layout Itemize
-Fenotipo
+Fenotipo: Corresponde a la solución del problema codificada en el cromosoma.
 \end_layout
 
 \begin_layout Itemize
@@ -1004,7 +1008,7 @@ Aptitud relativa:
 \begin_layout Itemize
 
 \shape italic
-Matting pool
+Mating pool
 \shape default
 :
 \end_layout
@@ -1022,6 +1026,10 @@ jugada
 \end_layout
 
 \begin_layout Itemize
+Similitud genética:
+\end_layout
+
+\begin_layout Itemize
 Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
  de la regresión lineal, es decir de la función que mejor se ajusta a un
  conjunto de puntos.
@@ -1029,10 +1037,6 @@ Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
 
 \begin_layout Itemize
 Curva logística:
-\end_layout
-
-\begin_layout Itemize
-Similitud genética:
 \end_layout
 
 \begin_layout Section
@@ -1104,8 +1108,12 @@ reference "fig:FdvsFr"
 \begin_inset Formula $f_{d}>-(N-1)f_{r}$
 \end_inset
 
-, donde N es la cantidad de individuos en el grupo) y los puntos por encima
- de ésta son seleccionados en éste caso.
+, donde 
+\begin_inset Formula $N$
+\end_inset
+
+ es la cantidad de individuos en el grupo) y los puntos por encima de ésta
+ son seleccionados en éste caso.
 \end_layout
 
 \begin_layout Standard
@@ -1760,7 +1768,31 @@ Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
 \end_layout
 
 \begin_layout Subsubsection
-Pruebas y Resultados
+Pruebas y Resultados 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Manuel: colocar la observación de lo que ocurre en cada una de las gráficas
+ que le muestran
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Explicar un poco mejor las gráficas, depronto ejemplificar!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2577,7 +2609,30 @@ Pruebas con 10 ejecuciones, 0% tasa de mutación y matando los dos desertores
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones del modelo
+Conclusiones del modelo 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Explicar un poco más lo que significan cada una de las gráficas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+El modelo es asimetrico - la mutación es destructiva
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2644,7 +2699,7 @@ reference "tab:Parámetros-modelo-agentes"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -3149,12 +3204,24 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout Standard
-El trabajo de Pepper y Smuts mide el modelo por medio de la definición de
- similitud genética gracias al 
+Para medir el modelo original, los autores hicieron una similitud entre
+ los parches de plantas y los trait-groups expuestos por Wilson 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ref
+\end_layout
+
+\end_inset
+
+, con la finalidad de medir la relación entre los individuos de los grupos.
+ Para ello definieron 
 \shape italic
 assortment
 \shape default
-, de acuerdo a la siguiente ecuación:
+ como la desviación de la similitud genética entre los parches, de acuerdo
+ a la siguiente ecuación:
 \end_layout
 
 \begin_layout Standard
@@ -3190,9 +3257,9 @@ assortment
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-r_{a}=r-r_{s}=\beta(G_{W},G_{A})-\frac{g-1}{N-1}
-\]
+\begin{equation}
+r_{a}=r-r_{s}=\beta(G_{W},G_{A})-\frac{g-1}{N-1}\label{eq:medicion-assortment}
+\end{equation}
 
 \end_inset
 
@@ -3256,8 +3323,8 @@ reference "fig:Ejecución-del-modelo"
 
 \end_inset
 
- muestra el resultado de las ejecuciones del modelo con los parámetros expuestos
- en la 
+ muestra el análisis del assortment (similitud genética) sobre el resultado
+ de las ejecuciones del modelo con los parámetros expuestos en la 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Parámetros-pruebas"
@@ -3601,6 +3668,76 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/graficas/agents/graphicAnalysis_10000_Gw-Ga.svg
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análisis del assortment en las 10000 unidades de tiempo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/erikasv/tg/graficas/agents/graphicAnalysis_100_Gw-Ga.svg
+	lyxscale 10
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Acercamiento del análisis sobre las 100 primeras unidades de tiempo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -3614,6 +3751,19 @@ Ejecución del modelo con los parámetros mostrados en la
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Parámetros-pruebas"
+
+\end_inset
+
+.
+ El eje x corresponde a las unidades de tiempo y el eje y corresponde a
+ la medida del 
+\shape italic
+assortment
+\shape default
+ según la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:medicion-assortment"
 
 \end_inset
 
@@ -3647,6 +3797,19 @@ Hacer más ejecuciones con otros parámetros?
 Conclusiones del modelo
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Las críticas al modelo original
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 CONCLUSIONES
 \end_layout
@@ -3662,21 +3825,9 @@ TRABAJOS FUTUROS
 \end_layout
 
 \begin_layout Itemize
-Buscar qué otras características además de la distribución del ambiente
- favorecen la difusión de genes altruistas en la población.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: definir un modelo de juego completo
-\end_layout
-
-\end_inset
-
-
+Buscar otras características externas a los individuos mismos, además de
+ la distribución de la población, que favorezcan la difusión de genes altruistas
+ en la población.
 \end_layout
 
 \begin_layout Section
@@ -3699,7 +3850,7 @@ Victor: La referencia 11(La del libro de Julián García) está muy cula
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2"
 options "ieeetr"
 
 \end_inset
