@@ -361,15 +361,13 @@ Posteriormente el índice de tablas
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
 
 \series bold
 \size larger
@@ -390,7 +388,7 @@ Con su debida traducción a inglés
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -585,24 +583,6 @@ Analizar resultados del comportamiento del algoritmo ante diferentes entradas
 MARCO TEÓRICO
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Carreta.
-\end_layout
-
-\begin_layout Plain Layout
-No le gustó el marco teórico.
- Que está a mitad del camino entre un glosario y un marco teórico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Computación Evolutiva
 \end_layout
@@ -617,6 +597,28 @@ Rama de la inteligencia artificial que reúne las diferentes estrategias
 
 \begin_layout Subsubsection
 Algoritmos genéticos
+\end_layout
+
+\begin_layout Standard
+Estos algoritmos fueron ideados por John Holland en los años 70's, son algoritmo
+s de búsqueda y optimización que son usados frecuentemente en problemas
+ combinatorios (continuos y discretos).
+\end_layout
+
+\begin_layout Standard
+Estos algoritmos son los más similares a la selección natural.
+ Consiste en codificar las posibles soluciones al problema en un cromosoma,
+ de tal forma que el algoritmo pueda crear una población de soluciones y
+ aplicar sobre ella el proceso evolutivo.
+ Este proceso evolutivo consiste en seleccionar con mayor probabilidad los
+ cromosomas con mayor aptitud para llevarlos al 
+\shape italic
+matting pool
+\shape default
+, donde se les aplican operadores genéticos como el cruce y la mutación,
+ para finalmente reintegrarlos a la población.
+ El proceso se repite hasta que se cumpla un criterio de parada, que suele
+ ser la cantidad de generaciones que transcurren.
 \end_layout
 
 \begin_layout Subsection
@@ -937,9 +939,9 @@ En el caso del modelo de regresión lineal simple, se busca ajustar una recta
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-b=\frac{n\sum xy-\sum x\sum y}{n\sum(x^{2})-(\sum x)^{2}}
-\]
+\begin{equation}
+b=\frac{n\sum xy-\sum x\sum y}{n\sum(x^{2})-(\sum x)^{2}}\label{eq:coef-regresion}
+\end{equation}
 
 \end_inset
 
@@ -965,32 +967,8 @@ Donde
  es la cantidad total de puntos.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-El coeficiente de regresión -> por los mínimos cuadrados debería ir como
- subsección o en el glosario????
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
-Glosario 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ángel: el glosario es muy corto.
-\end_layout
-
-\end_inset
-
-
+Glosario
 \end_layout
 
 \begin_layout Itemize
@@ -1000,9 +978,47 @@ Emergencia: Propiedades o procesos de un sistema que surgen a partir de
 \end_layout
 
 \begin_layout Itemize
-Traicionero / Desertor: En este trabajo serán utilizados como sinónimos
- para hacer referencia a los individuos y agentes que tienen un comportamiento
- egoísta.
+Gen
+\end_layout
+
+\begin_layout Itemize
+Genotipo
+\end_layout
+
+\begin_layout Itemize
+Fenotipo
+\end_layout
+
+\begin_layout Itemize
+Aptitud (fitness):
+\end_layout
+
+\begin_layout Itemize
+Aptitud absoluta:
+\end_layout
+
+\begin_layout Itemize
+Aptitud relativa:
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Matting pool
+\shape default
+:
+\end_layout
+
+\begin_layout Itemize
+Traicionero / Desertor: 
+\begin_inset Quotes eld
+\end_inset
+
+jugada
+\begin_inset Quotes erd
+\end_inset
+
+ del dilema del prisionero
 \end_layout
 
 \begin_layout Itemize
@@ -1011,80 +1027,12 @@ Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
  conjunto de puntos.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Angel: Definir todas las palabras claves, como fitness (o traición indicando
- 
-\begin_inset Quotes eld
-\end_inset
-
-la jugada
-\begin_inset Quotes erd
-\end_inset
-
- del dilema del prisionero)
+\begin_layout Itemize
+Curva logística:
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: Hablar de curva logística en el marco teórico -> Función logística,
- creo que queda mejor en el glosario
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Gen, genotipo y fenotipo
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor:Explicar aptitud absoluta y aptitud relativa -> con respecto a A
- Theory of Group Selection
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Similitud genética
-\end_layout
-
-\end_inset
-
-
+\begin_layout Itemize
+Similitud genética:
 \end_layout
 
 \begin_layout Section
@@ -1745,7 +1693,7 @@ Matriz de pago para la evaluación de los individuos
 En la etapa de depredación, dentro de cada grupo, se enfrentan dos individuos
  seleccionados aleatoriamente 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 comparando los valores de sus aptitudes
@@ -2633,18 +2581,8 @@ Conclusiones del modelo
 \end_layout
 
 \begin_layout Itemize
-El modelo no es completamente robusto
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: cambiar robusto por estable o algo así -> definición de robusto?,
- según lo poco y nada que encontré en este caso si aplica
-\end_layout
-
-\end_inset
-
-, dado que al modificar detalles pequeños los resultados cambian bruscamente.
+El modelo no es completamente robusto, dado que al modificar detalles pequeños
+ los resultados cambian bruscamente.
  Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
  en un encuentro.
 \end_layout
@@ -3139,8 +3077,8 @@ Detalles de implementación
 \end_layout
 
 \begin_layout Standard
-El modelo realizado presenta las siguientes modificaciones con respecto
- al original.
+El modelo realizado pretende tener características más realistas, por lo
+ tanto presenta las siguientes modificaciones con respecto al original.
  Estas modificaciones fueron realizadas con base al libro 
 \shape italic
 Growing Artificial Societies
@@ -3287,41 +3225,27 @@ tamaño total de la población.
 \end_layout
 
 \begin_layout Standard
-Para este trabajo se utilizó la misma medida, el coeficiente de regresión
- (
+Para este trabajo se utilizó la misma medida del modelo original, el coeficiente
+ de regresión (
 \begin_inset Formula $\beta$
 \end_inset
 
 ) es la pendiente de la recta de regresión entre 
-\begin_inset Formula $G_{A}$
-\end_inset
-
- y 
 \begin_inset Formula $G_{W}$
 \end_inset
 
- de acuerdo al método de mínimos cuadrados:
-\begin_inset Note Note
-status open
+ y 
+\begin_inset Formula $G_{A}$
+\end_inset
 
-\begin_layout Plain Layout
-Es mejor referenciar la ecuación que volverla a poner?
-\end_layout
+ de acuerdo al método de mínimos cuadrados, expuesto en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:coef-regresion"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\beta=\frac{n\sum xy-\sum x\sum y}{n\sum(x^{2})-(\sum x)^{2}}
-\]
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
