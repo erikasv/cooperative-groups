@@ -2695,9 +2695,9 @@ El modelo se comporta de acuerdo a lo descrito por D.
 \end_layout
 
 \begin_layout Itemize
-Los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
- donde se muestra que los individuos altruistas son favorecidos en grupos
- pequeños.
+Los resultados son coherentes con las afirmaciones hechas en otros trabajos
+ en la literatura, donde los grupos pequeños son los que permiten el crecimiento
+ de los individuos altruistas.
 \end_layout
 
 \end_deeper
@@ -3143,20 +3143,24 @@ Sin embargo, las siguientes características del modelo hacen que sus resultados
 \end_layout
 
 \begin_layout Itemize
-Los agentes animales no mueren, se reproducen ni mutan.
- Por lo tanto no se puede afirmar que el altruismo se difunde en la población,
- ya que la cantidad de animales de cada tipo no varía.
+En el modelo miden la distribución de la población para afirmar si los genes
+ cooperadores se difunden en la población, pero los agentes animales no
+ mueren, se reproducen ni mutan.
+ Por lo tanto no es correcta la afirmación sobre la difusión de los genes
+ cooperadores, porque la población no varía ni en cantidad ni en composición.
 \end_layout
 
 \begin_layout Itemize
 Los agentes animales no son afectados de ninguna forma por no alimentarse,
- ya que los animales no cuentan con una reserva de energía.
- Esto significa que el costo metabólico por unidad de tiempo no tiene ningún
- funcionamiento.
+ ya que los animales no cuentan con una reserva de energía, es decir que
+ el costo metabólico por unidad de tiempo no tiene ningún funcionamiento.
+ Esto significa que con el tiempo suficiente los animales volverán a encontrar
+ un parche en el cual ubicarse y no morirán al alejarse del alimento.
 \end_layout
 
 \begin_layout Standard
-Finalmente, ya que los individuos cooperadores (
+Debido a las características anteriores y ya que los individuos cooperadores
+ (
 \shape italic
 restrained foragers
 \shape default
@@ -3164,12 +3168,18 @@ restrained foragers
 \shape italic
 unrestrained foragers
 \shape default
-) es de esperarse que permanezcan más tiempo en una misma planta y por lo
- tanto es altamente probable que se agrupen con el paso del tiempo.
+), es de esperarse que permanezcan más tiempo en una misma planta, de manera
+ que tienden a agruparse entre ellos.
 \end_layout
 
 \begin_layout Subsubsection
 Detalles de implementación
+\end_layout
+
+\begin_layout Standard
+Lo que más llama la atención del modelo original es la simpleza y veracidad
+ de la premisa sobre la que se basa el trabajo (las acciones de los individuos
+ disminuyen la calidad del ambiente en el que se encuentran)
 \end_layout
 
 \begin_layout Standard
