@@ -401,11 +401,15 @@ INTRODUCCIÓN
 \begin_layout Standard
 La evolución es el proceso resultante de los cambios heredados en una población
  durante muchas generaciones.
- De una forma más general se puede ver un sistema evolutivo como una población
- de individuos que está sometida a una presión selectiva y que se reproduce
- generando variabilidad durante el proceso debido a las replicas imperfectas
- o a la combinación de dos o más individuos.
- La presión selectiva fue introducida por Darwin 
+ A pesar de haberse encontrado en el campo de la biología es en sí misma
+ un algoritmo, ya que de una forma más general un sistema evolutivo es:
+ (1) una población de individuos que está sometida a (2) una presión selectiva
+ y que (3) se reproduce generando variabilidad durante el proceso debido
+ a las replicas imperfectas o a (4) la combinación de dos o más individuos.
+\end_layout
+
+\begin_layout Standard
+La presión selectiva fue introducida por Darwin 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bhl65514"
@@ -419,30 +423,15 @@ key "bhl65514"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ángel: En la introducción, deberías añadir un segundo párrafo que explique
- que, aunque la evolución se encontró por primera vez en la biología, realmente
- es un algoritmo.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Existen muchos puntos de vista acerca del funcionamiento de la evolución,
- el punto clave de discusión es el de la presión selectiva y esto lleva
- a la generación de discusiones sobre el nivel al que actúa esta presión,
- la discusión se divide principalmente en dos: la selección individual y
- la selección de grupo.
+ donde el punto clave de discusión es el nivel al que actúa esta presión
+ selectiva.
+ Los puntos de vista se dividen principalmente en dos: la selección individual
+ y la selección de grupo.
 \end_layout
 
 \begin_layout Standard
-Por el lado de la selección individual la mayor fuerza está dada por la
+Por el lado de la selección individual, la mayor fuerza está dada por la
  propuesta de Richard Dawkins
 \begin_inset space ~
 \end_inset
@@ -470,11 +459,11 @@ Inclusive Fitness
 \end_layout
 
 \begin_layout Standard
-En cuanto a la selección de grupo existen viarias teorías que explican otros
- medios por los que el comportamiento altruista puede ser objeto de selección,
- algunas teorías estudian situaciones directamente relacionadas con el comportam
-iento entre los individuos y otras lo hacen por medio de las condiciones
- ambientales en el que se encuentra la población.
+En cuanto a la selección de grupo, existen viarias teorías que explican
+ otros medios por los que el comportamiento altruista puede ser objeto de
+ selección, algunas teorías estudian situaciones directamente relacionadas
+ con el comportamiento entre los individuos y otras lo hacen por medio de
+ las condiciones ambientales en el que se encuentra la población.
  En este trabajo se abordaran aquellas teorías a favor de las condiciones
  ambientales.
 \end_layout
@@ -591,7 +580,7 @@ Computación Evolutiva
 Rama de la inteligencia artificial que reúne las diferentes estrategias
  de resolución de problemas inspiradas en el proceso de evolución biológica,
  tales como los algoritmos genéticos, la programación genética y las estrategias
- genéticas, entre otros.
+ genéticas, entre otras.
  
 \end_layout
 
@@ -771,8 +760,8 @@ Existen algunas teorías alternativas a la de
 Kin Selection
 \shape default
  para explicar la evolución del altruismo, éstas se dividen principalmente
- en dos alternativas: Las que requieren habilidades cognitivas específicas
- por parte de los individuos y las que están dadas por el ambiente.
+ en dos grupos: Las que requieren habilidades cognitivas específicas por
+ parte de los individuos y las que están dadas por el ambiente.
 \end_layout
 
 \begin_layout Standard
@@ -873,6 +862,8 @@ Negative Assortment
 \end_layout
 
 \begin_layout Subsubsection
+
+\shape italic
 Assortative mixing 
 \end_layout
 
@@ -908,6 +899,51 @@ disassortative
 \shape default
  cuando los nodos que tienen más conexiones tienden a estar conectados con
  nodos que tienen pocas conexiones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/MarcoTeorico/assortative_mixing.png
+	lyxscale 10
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Red que presenta 
+\shape italic
+assortative mixing
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2010networks"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1824,7 +1860,7 @@ de
 \begin_inset space ~
 \end_inset
 
-generaciones: 100, 1000 y 1000
+generaciones: 100, 1000 y 10000
 \end_layout
 
 \begin_layout Description
@@ -2638,19 +2674,6 @@ Explicar un poco más lo que significan cada una de las gráficas
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-El modelo es asimetrico - la mutación es destructiva
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
 El modelo no es completamente robusto, dado que al modificar detalles pequeños
  los resultados cambian bruscamente.
@@ -2679,9 +2702,11 @@ Los resultados se ajustan a los obtenidos por otros trabajos en la literatura,
 
 \end_deeper
 \begin_layout Itemize
-Al variar la mutación de la población los resultados se ven ligeramente
- afectados con respecto a la cantidad de casos exitosos.
- Sin embargo el patrón de los resultados se conservan.
+Al variar la mutación los resultados se ven ligeramente afectados con respecto
+ a la cantidad de casos exitosos.
+ Lo cual ocurre porque la mutación es destructiva, ya que los individuos
+ cooperadores sólo sobreviven si se encuentran dos de ellos.
+ A pesar de esto, el patrón de los resultados se conserva.
 \end_layout
 
 \begin_layout Subsection
@@ -3867,7 +3892,7 @@ Victor: La referencia 11(La del libro de Julián García) está muy cula
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Algoritmos_Geneticos1,bib/Algoritmos_Geneticos2,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/What_is_wrong_with_absolute_individual_fitness"
+bibfiles "bib/The_origin_of_species,bib/El_gen_egoista,bib/A_Theory_of_Group_Selection,bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/Algoritmos_Geneticos1,bib/Algoritmos_Geneticos2,bib/Adaptation_and_natural_selection,bib/kin_selection_is_the_key_to_altruism,bib/Kin_Selection_fact_and_fiction,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/Ocho_Hitos_de_la_Evolucion,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Assortative_Mixing_in_Networks,bib/Networks_An_Introduction,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/Individual_selection_for_cooperative_group_formation,bib/Growing_Artificial_Societies,bib/What_is_wrong_with_absolute_individual_fitness"
 options "ieeetr"
 
 \end_inset
