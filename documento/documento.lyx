@@ -609,7 +609,14 @@ s de búsqueda y optimización que son usados frecuentemente en problemas
 Estos algoritmos son los más similares a la selección natural.
  Consiste en codificar las posibles soluciones al problema en un cromosoma,
  de tal forma que el algoritmo pueda crear una población de soluciones y
- aplicar sobre ella el proceso evolutivo.
+ aplicar sobre ella el proceso evolutivo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "genetic_alg2"
+
+\end_inset
+
+.
  Este proceso evolutivo consiste en seleccionar con mayor probabilidad los
  cromosomas con mayor aptitud para llevarlos al 
 \shape italic
@@ -618,7 +625,14 @@ mating pool
 , donde se les aplican operadores genéticos como el cruce y la mutación,
  para finalmente reintegrarlos a la población.
  El proceso se repite hasta que se cumpla un criterio de parada, que suele
- ser la cantidad de generaciones que transcurren.
+ ser la cantidad de generaciones que transcurren 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "genetic_alg1"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1032,9 +1046,13 @@ Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
 \end_layout
 
 \begin_layout Itemize
-Curva logística: Función usada frecuentemente para modelar el crecimiento
- de poblaciones y propagación de enfermedades, entre otros.
- 
+Curva logística: Función que modela el crecimiento de una población que
+ depende de la existencia de un recurso, el cual a su vez crece exclusivamente
+ en función del tiempo.
+ El resultado es una función sigmoidea donde se muestra que la población
+ crece exponencialmente al principio, posteriormente se forma un cuello
+ de botella a causa de la falta del recurso y finalmente éste se agota estancand
+o el crecimiento.
 \end_layout
 
 \begin_layout Standard
@@ -3849,7 +3867,7 @@ Victor: La referencia 11(La del libro de Julián García) está muy cula
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/What_is_wrong_with_absolute_individual_fitness"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Algoritmos_Geneticos1,bib/Algoritmos_Geneticos2,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/What_is_wrong_with_absolute_individual_fitness"
 options "ieeetr"
 
 \end_inset
