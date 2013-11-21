@@ -994,15 +994,19 @@ Fenotipo: Corresponde a la solución del problema codificada en el cromosoma.
 \end_layout
 
 \begin_layout Itemize
-Aptitud (fitness):
+Aptitud (fitness): En biología se refiere a la habilidad de un individuo
+ para sobrevivir y reproducirse.
+ En computación es la medida resultante de evaluar la solución que codifica
+ un cromosoma, la cuál sirve para clasificar que tan buena es.
 \end_layout
 
 \begin_layout Itemize
-Aptitud absoluta:
+Aptitud absoluta: La medida de la aptitud de un individuo con respecto a
+ los demás integrantes del mismo grupo.
 \end_layout
 
 \begin_layout Itemize
-Aptitud relativa:
+Aptitud relativa: El valor en sí mismo de la aptitud de un individuo.
 \end_layout
 
 \begin_layout Itemize
@@ -1010,23 +1014,15 @@ Aptitud relativa:
 \shape italic
 Mating pool
 \shape default
-:
+: Subconjunto de la población total, seleccionados para generar los nuevos
+ individuos a partir de ellos.
 \end_layout
 
 \begin_layout Itemize
-Traicionero / Desertor: 
-\begin_inset Quotes eld
-\end_inset
-
-jugada
-\begin_inset Quotes erd
-\end_inset
-
- del dilema del prisionero
-\end_layout
-
-\begin_layout Itemize
-Similitud genética:
+Traicionero / Desertor: En el dilema del prisionero corresponde a la decisión
+ de confesar el crimen, es decir, traicionar al cómplice para que sea éste
+ quien sea condenado.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1036,7 +1032,22 @@ Coeficiente de regresión: Corresponde a la pendiente de la recta resultante
 \end_layout
 
 \begin_layout Itemize
-Curva logística:
+Curva logística: Función usada frecuentemente para modelar el crecimiento
+ de poblaciones y propagación de enfermedades, entre otros.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Similitud genética
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1167,19 +1178,6 @@ y
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: sentido horario y anti horario en lugar de las manecillas del reloj
 \end_layout
 
 \end_inset
@@ -3850,7 +3848,8 @@ Victor: La referencia 11(La del libro de Julián García) está muy cula
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2"
+btprint "btPrintAll"
+bibfiles "bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/A_Theory_of_Group_Selection,bib/Adaptation_and_natural_selection,bib/El_gen_egoista,bib/Growing_Artificial_Societies,bib/Individual_selection_for_cooperative_group_formation,bib/Kin_Selection_fact_and_fiction,bib/kin_selection_is_the_key_to_altruism,bib/Ocho_Hitos_de_la_Evolucion,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/The_origin_of_species,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Assortative_Mixing_in_Networks,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/What_is_wrong_with_absolute_individual_fitness"
 options "ieeetr"
 
 \end_inset
