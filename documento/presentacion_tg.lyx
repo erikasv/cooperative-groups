@@ -417,21 +417,21 @@ Verificar o rechazar la hipótesis de Richard Dawkins en la que afirma que
 Objetivos Específicos
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Recopilar información sobre las características propias de un ambiente que
  favorezca la cooperación de individuos.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Plantear un modelo que incluya estas características y permita el análisis
  de las mismas.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Implementar un algoritmo evolutivo acorde al modelo realizado.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Analizar resultados del comportamiento del algoritmo ante diferentes entradas
  y diferentes configuraciones de las características.
 \end_layout
@@ -609,6 +609,35 @@ Modelo
 \end_layout
 
 \begin_layout BeginFrame
+Fundamentos
+\end_layout
+
+\begin_layout Itemize
+El modelo es basado en dos etapas por las que pasan los individuos en su
+ ciclo de vida.
+ Estas etapas son claramente distinguibles en algunos insectos.
+\end_layout
+
+\begin_layout Itemize
+El modelo permite que sean seleccionados los rasgos que aumenten la aptitud
+ absoluta del inidividuo, sin importar la aptitud relativa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+El objetivo principal es forzar el sistema para que la selección individual
+ lleve a la selección de grupo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
 El modelo
 \end_layout
 
@@ -647,30 +676,6 @@ Ilustración del funcionamiento del modelo
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout BeginFrame
-Fundamentos
-\end_layout
-
-\begin_layout Itemize
-El modelo es basado en dos etapas por las que pasan los individuos en su
- ciclo de vida.
- Estas etapas son claramente distinguibles en algunos insectos.
-\end_layout
-
-\begin_layout Itemize
-El objetivo principal es forzar el sistema para que la selección individual
- lleve a la selección de grupo.
 \end_layout
 
 \end_inset
@@ -979,7 +984,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../graficas/trait-groups/100/copy_casosRepeticiones_10_0.0.svg
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
 	lyxscale 10
 	height 45pheight%
 	BoundingBox 60bp 0bp 660bp 555bp
@@ -2101,7 +2106,7 @@ Conclusiones
 Conclusiones
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 El modelo de los 
 \shape italic
 trait-groups
@@ -2112,7 +2117,7 @@ trait-groups
  en un encuentro.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Los resultados obtenidos en el modelo de agentes, bajo los cambios que hacen
  al modelo más realista, muestran que este tipo de ambiente no favorece
  la cooperación, por el contrario es altamente destructivo.
@@ -2123,13 +2128,13 @@ Los resultados obtenidos en el modelo de agentes, bajo los cambios que hacen
 Conclusiones
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout ItemizeIncremental
 El modelo de los 
 \shape italic
 trait-groups
