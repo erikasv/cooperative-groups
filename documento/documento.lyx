@@ -1923,45 +1923,7 @@ Los demás parámetros del modelo son: la cantidad de grupos, la cantidad
 \end_layout
 
 \begin_layout Subsubsection
-Pruebas y Resultados 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Manuel: colocar la observación de lo que ocurre en cada una de las gráficas
- que le muestran
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Explicar un poco mejor las gráficas, depronto ejemplificar!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Richie: Ejemplos, colocar una imagen de 4x4 con diferentes tamaños del circulo
- y explicar lo que significa.
-\end_layout
-
-\end_inset
-
-
+Pruebas y Resultados
 \end_layout
 
 \begin_layout Standard
@@ -2041,7 +2003,7 @@ reference "tab:Valores-circulos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2673,7 +2635,7 @@ reference "fig:Pruebas-1muerto-variaEjecucion"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -3138,7 +3100,7 @@ reference "fig:Pruebas-1muerto-variaMutacion"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -3286,17 +3248,7 @@ reference "fig:Pruebas-1muerto-variaGeneraciones"
 \end_layout
 
 \begin_layout Subsubsection
-Conclusiones del modelo 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Explicar un poco más lo que significan cada una de las gráficas
-\end_layout
-
-\end_inset
-
-
+Conclusiones del modelo
 \end_layout
 
 \begin_layout Itemize
@@ -3881,7 +3833,11 @@ En el modelo original se desea medir la segmentación de la población (
 assortment
 \shape default
 ), para ello los autores hicieron una similitud entre los parches de plantas
- y los trait-groups expuestos por Wilson 
+ y los 
+\shape italic
+trait-groups
+\shape default
+ expuestos por Wilson 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wilson1975"
@@ -3993,7 +3949,7 @@ reference "eq:coef-regresion"
 La 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Ejecución-del-modelo"
+reference "fig:Ejecución-modelo-assortment"
 
 \end_inset
 
@@ -4423,7 +4379,7 @@ Acercamiento del análisis sobre las 100 primeras unidades de tiempo
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Ejecución-del-modelo"
+name "fig:Ejecución-modelo-assortment"
 
 \end_inset
 
@@ -4461,16 +4417,25 @@ reference "eq:medicion-assortment"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Reducir el espacio entre parches
-\end_layout
+En la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ejecución-modelo-assortment"
 
 \end_inset
 
+ se puede observar como antes de la decima unidad de tiempo el assortment
+ cae completamente a un valor cercano a -0.6, al rededor del cual se mantiene
+ por el resto de las unidades de tiempo.
+ Este valor corresponde a 
+\begin_inset Formula $0-r_{s}$
+\end_inset
 
+, es decir, que la similitud genética observada es 0, lo que significa que
+ los individuos no son más similares a los demás integrandes de su grupo
+ que a la población en general, o sea que no hay possitive assortment.
+ Esto ocurre porque partir de esa unidad de tiempo los animales altruistas
+ desaparecen por completo en a población.
 \end_layout
 
 \begin_layout Subsubsection
