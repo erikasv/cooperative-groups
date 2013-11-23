@@ -3746,13 +3746,13 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/graficas/agents/graphicAnalysis_10000_Gw-Ga.svg
+	filename ../graficas/agents/graphicAnalysis_10000_Gw-Ga.svg
 	lyxscale 10
 	scale 50
 
@@ -3781,13 +3781,13 @@ Análisis del assortment en las 10000 unidades de tiempo
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/erikasv/tg/graficas/agents/graphicAnalysis_100_Gw-Ga.svg
+	filename ../graficas/agents/graphicAnalysis_100_Gw-Ga.svg
 	lyxscale 10
 	scale 50
 
