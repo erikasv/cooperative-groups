@@ -1509,7 +1509,39 @@ assortment
 \end_layout
 
 \begin_layout Section
-TRABAJO REALIZADO 
+TRABAJO REALIZADO
+\end_layout
+
+\begin_layout Standard
+El trabajo realizado se compone de dos partes.
+ La primera es la implementación del modelo de trait-groups de D.
+ S.
+ Wilson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+, con la finalidad de comprobar su veracidad.
+ La segunda parte consiste en una modificación del modelo de agentes de
+ Pepper y Sumts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+, donde los parámetros modificados se hicieron con base al trabajo de Epstein
+ et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "epstein1996growing"
+
+\end_inset
+
+, los cuales reflejan un ambiente más realista.
 \end_layout
 
 \begin_layout Subsection
@@ -1993,12 +2025,345 @@ En todas las pruebas se vario la cantidad de grupos y la cantidad de individuos
 A continuación se muestran los resultados de algunas pruebas realizadas,
  para todas las gráficas el eje x es la cantidad de grupos, el eje y es
  la cantidad de individuos dentro de cada grupo y el tamaño del circulo
- indica el porcentaje de veces en las que la configuración cantidad de grupos
- - individuos por grupo fue exitosa.
+ indica el porcentaje de ejecuciones en las que cada configuración fue exitosa.
+ Para facilitar la interpretación de los resultados la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Valores-circulos"
+
+\end_inset
+
+ muestra algunos posibles valores.
 \end_layout
 
 \begin_layout Standard
-Las gráficas se muestran en grupos de tres para facilitar su comparación.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="middle" width="0pt">
+<column alignment="center" valignment="middle" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Circulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Valor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Interpretación
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/TraitGroups/circulo_100.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100% - Las 20 ejecuciones fueron casos exitosos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/TraitGroups/circulo_50.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50% - 10 de las 20 ejecuciones fueron casos exitosos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/TraitGroups/circulo_10.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10% - 2 de las 20 ejecuciones fueron casos exitosos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/TraitGroups/circulo_0.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 (Ausente)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% - No hubieron casos exitosos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Valores-circulos"
+
+\end_inset
+
+Valores a los que corresponden algunos tamaños de circulos para un ejemplo
+ de 20 ejecuciones, y especificamente la configuración 5 grupos - 2 individuos
+ por grupo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaEjecucion"
+
+\end_inset
+
+ a la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaGeneraciones"
+
+\end_inset
+
+ se muestran pruebas realizadas matando un desertor al encuentro de dos
+ de ellos.
+ Mientras que de la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaEjecuciones"
+
+\end_inset
+
+ a la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaGeneraciones"
+
+\end_inset
+
+ se realizaron matando dos desertores al encuentro de dos de ellos.
 \end_layout
 
 \begin_layout Standard
@@ -2113,6 +2478,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-1muerto-variaEjecucion"
+
+\end_inset
+
 Pruebas con 100 generaciones, 0% tasa de mutación y matando un desertor
  al encuentro de dos de ellos.
 \end_layout
@@ -2125,6 +2496,23 @@ Pruebas con 100 generaciones, 0% tasa de mutación y matando un desertor
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaEjecucion"
+
+\end_inset
+
+ corresponde a pruebas con 100 generaciones y 0% tasa de mutación, con 10,
+ 100 y 1000 ejecuciones.
+ En ellas se puede evidenciar que la cantidad ejecuciones no es un parámetro
+ que afecte los resultados, pues en todos los casos las configuraciones
+ con más éxito se dan en pocos grupos con pocos individuos por grupo.
+ También se puede observar que entre más ejecuciones se realicen aparecen
+ casos exitosos al aumentar uno de los dos ejes.
 \end_layout
 
 \begin_layout Standard
@@ -2236,6 +2624,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-1muerto-variaMutacion"
+
+\end_inset
+
 Pruebas con 100 generaciones, 10 ejecuciones y matando un desertor al encuentro
  de dos de ellos.
 \end_layout
@@ -2251,11 +2645,35 @@ Pruebas con 100 generaciones, 10 ejecuciones y matando un desertor al encuentro
 \end_layout
 
 \begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaMutacion"
+
+\end_inset
+
+ corresponde a pruebas con 100 generaciones y 10 ejecuciones, con 0%, 1%
+ y 10% tasa de mutación.
+ A pesar de que la mutación afecta de manera negativa la cantidad de casos
+ exitosos, se mantiene el mismo patrón que en la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaEjecucion"
+
+\end_inset
+
+, donde ocurren más casos exitosos cuando la cantidad de grupos y los individuos
+ por grupo son pequeños.
+ Esto se debe a que los individuos cooperadores sólo sobreviven si se encuentran
+ dos de ellos, de manera que la mutación es destructiva en más ocasiones.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2359,6 +2777,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-1muerto-variaGeneraciones"
+
+\end_inset
+
 Pruebas con 10 ejecuciones, 0% tasa de mutación y matando un desertor al
  encuentro de dos de ellos.
 \end_layout
@@ -2371,6 +2795,34 @@ Pruebas con 10 ejecuciones, 0% tasa de mutación y matando un desertor al
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaGeneraciones"
+
+\end_inset
+
+ corresponde a pruebas con 10 ejecuciones y 0% tasa de mutación, con 100,
+ 1000 y 10000 generaciones.
+ En este caso se observa que los casos de éxito no ocurren por casualidad,
+ pues aunque la variación en la cantidad de generaciones es significante,
+ los resultados son muy similares.
+ Además, se conserva el patrón de mayor cantidad de casos exitosos cuando
+ la cantidad de grupos y los individuos por grupo son pequeños, al igual
+ que en las Figuras 3 y 4
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+VERIFICAR REFERENCIAS!!
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2485,6 +2937,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-2muertos-variaEjecuciones"
+
+\end_inset
+
 Pruebas con 100 generaciones, 0% tasa de mutación y matando los dos desertores
  al encuentro de dos de ellos.
 \end_layout
@@ -2497,6 +2955,24 @@ Pruebas con 100 generaciones, 0% tasa de mutación y matando los dos desertores
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaEjecuciones"
+
+\end_inset
+
+ corresponde a pruebas con 100 generaciones y 0% tasa de mutación, con 10,
+ 100 y 1000 ejecuciones.
+ En ellas se puede observar que entre mayor sea la cantidad de grupos y
+ de individuos por grupo, más casos de éxito hay.
+ Al igual, éstos casos también aumentan cuando aumenta la cantidad de ejecucione
+s.
+ Lo cual indica que el parámetro más influyente del modelo es cuántos y
+ cómo son afectados los individuos por desertar.
 \end_layout
 
 \begin_layout Standard
@@ -2608,6 +3084,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-2muertos-variaMutacion"
+
+\end_inset
+
 Pruebas con 100 generaciones, 10 ejecuciones y matando los dos desertores
  al encuentro de dos de ellos.
 \end_layout
@@ -2623,11 +3105,40 @@ Pruebas con 100 generaciones, 10 ejecuciones y matando los dos desertores
 \end_layout
 
 \begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaMutacion"
+
+\end_inset
+
+ corresponde a pruebas con 100 generaciones y 10 ejecuciones, con 0%, 1%
+ y 10% tasa de mutación.
+ Estos resultados concuerdan con los de la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaEjecuciones"
+
+\end_inset
+
+, con respecto al aumento de casos exitosos cuando aumenta la cantidad de
+ grupos y de individuos por grupo.
+ Pero se observa el mismo efecto negativo de la mutación que en la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaMutacion"
+
+\end_inset
+
+, ya que las condiciones para que los cooperadores sobrevivan son las mismas.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2731,6 +3242,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pruebas-2muertos-variaGeneraciones"
+
+\end_inset
+
 Pruebas con 10 ejecuciones, 0% tasa de mutación y matando los dos desertores
  al encuentro de dos de ellos.
 \end_layout
@@ -2743,6 +3260,29 @@ Pruebas con 10 ejecuciones, 0% tasa de mutación y matando los dos desertores
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-2muertos-variaGeneraciones"
+
+\end_inset
+
+ corresponde a pruebas con 10 ejecuciones y 0% tasa de mutación, con 100,
+ 1000 y 10000 generaciones.
+ Estos casos corroboran, al igual que la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaGeneraciones"
+
+\end_inset
+
+, que los casos exitosos no ocurren por casualidad, dado que los resultados
+ son muy similares entre sí.
+ Igualmente, afirman que el parámetro de la muerte de los desertores, es
+ el más relevante del modelo.
 \end_layout
 
 \begin_layout Subsubsection
