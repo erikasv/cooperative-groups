@@ -509,13 +509,6 @@ A theory of group selection
 \begin_inset Quotes erd
 \end_inset
 
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "wilson1975"
-
-\end_inset
-
 .
 \end_layout
 
@@ -530,13 +523,6 @@ Utilizado por S.
 
 Individual selection for cooperative group formation
 \begin_inset Quotes erd
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "eps264277"
-
 \end_inset
 
 .
@@ -597,13 +583,6 @@ J.
 “A mechanism for the evolution of altruism among non-kin: Positive assortment
  through environmental feedback”
 \shape default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "PepperSmuts2000"
-
-\end_inset
-
 .
 \end_layout
 
@@ -615,13 +594,6 @@ J.M.
 
 Growing artificial societies
 \begin_inset Quotes erd
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "epstein1996growing"
-
 \end_inset
 
 .
@@ -682,6 +654,10 @@ Ilustración del funcionamiento del modelo
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout BeginFrame
 Fundamentos
 \end_layout
@@ -691,10 +667,6 @@ El modelo es basado en dos etapas por las que pasan los individuos en su
  ciclo de vida.
  Estas etapas son claramente distinguibles en algunos insectos.
 \end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
 
 \begin_layout Itemize
 El objetivo principal es forzar el sistema para que la selección individual
@@ -1006,10 +978,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/100/copy_casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
 
+\size scriptsize
+100 generaciones
 \end_layout
 
 \end_inset
@@ -1026,10 +1009,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/10000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
 
+\size scriptsize
+10000 generaciones
 \end_layout
 
 \end_inset
@@ -1043,8 +1037,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Pruebas con 10 ejecuciones, 0 % tasa de mutación y matando un desertor al
- encuentro de dos de ellos.
+
+\size scriptsize
+10 ejecuciones, 0 % mutación y matando un desertor.
 \end_layout
 
 \end_inset
@@ -1077,10 +1072,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
 
+\size scriptsize
+100 generaciones
 \end_layout
 
 \end_inset
@@ -1097,10 +1103,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/10000/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
 
+\size scriptsize
+10000 generaciones
 \end_layout
 
 \end_inset
@@ -1114,8 +1131,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Pruebas con 100 generaciones, 0 % tasa de mutación y matando los dos desertores
- al encuentro de dos de ellos.
+
+\size scriptsize
+10 ejecuciones, 0 % mutación y matando dos desertores.
 \end_layout
 
 \end_inset
