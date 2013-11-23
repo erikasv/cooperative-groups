@@ -406,6 +406,59 @@ Con su debida traducción a inglés
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{RESUMEN}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+addcontentsline agrega al 
+\begin_inset Quotes eld
+\end_inset
+
+toc
+\begin_inset Quotes erd
+\end_inset
+
+ (table of contents) una 
+\begin_inset Quotes eld
+\end_inset
+
+section
+\begin_inset Quotes erd
+\end_inset
+
+ llamada 
+\begin_inset Quotes eld
+\end_inset
+
+RESUMEN
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
