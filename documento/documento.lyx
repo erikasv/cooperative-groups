@@ -1919,6 +1919,20 @@ Explicar un poco mejor las gráficas, depronto ejemplificar!
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Richie: Ejemplos, colocar una imagen de 4x4 con diferentes tamaños del circulo
+ y explicar lo que significa.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Se realizaron diferentes pruebas, con las siguientes configuraciones:
 \end_layout
 
@@ -3971,11 +3985,18 @@ CONCLUSIONES
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
- Y la estructura poblacional más tratada es de los 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Y la estructura poblacional más tratada es de los 
 \shape italic
 trait-groups
-\shape default
-.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -4016,19 +4037,6 @@ status open
 renewcommand{
 \backslash
 section}[2]{}%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Victor: La referencia 11(La del libro de Julián García) está muy cula
 \end_layout
 
 \end_inset
