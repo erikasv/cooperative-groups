@@ -7,6 +7,11 @@
 \addto\captionsspanish{%
   \renewcommand\tablename{Tabla}
 }
+
+\AtBeginDocument{%
+\let\ref\autoref
+\renewcommand\equationautorefname{\@gobble}
+}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -82,11 +87,11 @@
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 renewcommand*{
 \backslash
@@ -95,6 +100,19 @@ figref}[1]{
 figurename~
 \backslash
 ref{fig:#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+renewcommand*{
+\backslash
+tabref}[1]{
+\backslash
+tablename~
+\backslash
+ref{tab:#1}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1156,7 +1174,7 @@ En el modelo todos los individuos son iguales, solo difieren en un único
  aquellos que son afectados por la manifestación de dicho rasgo.
  La 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:FdvsFr"
 
 \end_inset
@@ -1590,7 +1608,7 @@ Los cromosomas tienen sólo un gen, un número aleatorio entre 0 y 1 que determi
 La aptitud de los cromosomas es determinada en un encuentro de depredación,
  por medio de la matriz de pago mostrada en la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Matriz-de-pago"
 
 \end_inset
@@ -2722,11 +2740,10 @@ key "PepperSmuts2000"
 \end_inset
 
 , se trata de demostrar que los individuos altruistas se difunden en la
- población, bajo la premisa de que las acciones de los individuos disminuyen
- la calidad del ambiente en el que se encuentran.
+ población.
  En la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Parámetros-modelo-agentes"
 
 \end_inset
@@ -3138,16 +3155,18 @@ Sino, escoge una celda aleatoria que no tenga un animal en ella.
 \end_deeper
 \end_deeper
 \begin_layout Standard
-Sin embargo, las siguientes características del modelo hacen que sus resultados
- sean predecibles:
+Lo que más llama la atención del modelo original es la simpleza y veracidad
+ de la premisa sobre la que se basa el trabajo: las acciones de los individuos
+ disminuyen la calidad del ambiente en el que se encuentran.
+ Pero el desarrollo completo del modelo no es realista en las características
+ que se describen a continuación, haciendo que sus resultados sean predecibles:
 \end_layout
 
 \begin_layout Itemize
 En el modelo miden la distribución de la población para afirmar si los genes
  cooperadores se difunden en la población, pero los agentes animales no
  mueren, se reproducen ni mutan.
- Por lo tanto no es correcta la afirmación sobre la difusión de los genes
- cooperadores, porque la población no varía ni en cantidad ni en composición.
+ Esto significa que la población no varía en ningún sentido.
 \end_layout
 
 \begin_layout Itemize
@@ -3177,14 +3196,9 @@ Detalles de implementación
 \end_layout
 
 \begin_layout Standard
-Lo que más llama la atención del modelo original es la simpleza y veracidad
- de la premisa sobre la que se basa el trabajo (las acciones de los individuos
- disminuyen la calidad del ambiente en el que se encuentran)
-\end_layout
-
-\begin_layout Standard
-El modelo realizado pretende tener características más realistas, por lo
- tanto presenta las siguientes modificaciones con respecto al original.
+En el trabajó que se realizó, se ajustan las características mencionadas
+ anteriormente para que sean más realistas, por lo tanto presenta las siguientes
+ modificaciones con respecto al original.
  Estas modificaciones fueron realizadas con base al libro 
 \shape italic
 Growing Artificial Societies
@@ -3217,8 +3231,8 @@ El porcentaje de alimentación de los animales es aleatorio.
 
 \begin_layout Standard
 La ejecución sigue los mismos pasos que el modelo original, pero se agrega
- un paso 4 que consiste en reproducir y mutar los animales, esto se lleva
- a cabo de la siguiente forma:
+ un último paso en el ciclo que consiste en reproducir y mutar los animales,
+ esto se lleva a cabo de la siguiente forma:
 \end_layout
 
 \begin_layout Description
@@ -3236,8 +3250,8 @@ Mutación: Se muta el 1% del
 \shape italic
 mating pool
 \shape default
-, consiste en sumar al porcentaje de alimentación del animal un número entre
- -0.1 y 0.1.
+, consiste en sumar al porcentaje de alimentación del animal un número aleatorio
+ entre -0.1 y 0.1.
 \end_layout
 
 \begin_layout Description
@@ -3247,7 +3261,7 @@ Reemplazo: Se realiza por torneo, reemplazando al individuo con menor energía
 
 \begin_layout Standard
 Los parámetros ajustables al modelos son los mismos que el original, a excepción
- de la cantidad de cooperadores.
+ de la cantidad de cooperadores al iniciar la ejecución.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3255,19 +3269,21 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout Standard
-Para medir el modelo original, los autores hicieron una similitud entre
- los parches de plantas y los trait-groups expuestos por Wilson 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ref
-\end_layout
+En el modelo original se desea medir la segmentación de la población (
+\shape italic
+assortment
+\shape default
+), para ello los autores hicieron una similitud entre los parches de plantas
+ y los trait-groups expuestos por Wilson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
 
 \end_inset
 
-, con la finalidad de medir la relación entre los individuos de los grupos.
- Para ello definieron 
+, con la finalidad de medir la relación entre los individuos al interior
+ de los grupos.
+ Definieron 
 \shape italic
 assortment
 \shape default
@@ -3358,7 +3374,7 @@ Para este trabajo se utilizó la misma medida del modelo original, el coeficient
 
  de acuerdo al método de mínimos cuadrados, expuesto en la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "eq:coef-regresion"
 
 \end_inset
@@ -3369,20 +3385,26 @@ reference "eq:coef-regresion"
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Ejecución-del-modelo"
 
 \end_inset
 
- muestra el análisis del assortment (similitud genética) sobre el resultado
- de las ejecuciones del modelo con los parámetros expuestos en la 
+ muestra el análisis del 
+\shape italic
+assortment
+\shape default
+ (similitud genética) sobre el resultado de las ejecuciones del modelo con
+ los parámetros expuestos en la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Parámetros-pruebas"
 
 \end_inset
 
-:
+.
+ La línea rosada corresponde al promedio de las ejecuciones realizadas,
+ las líneas azul y gris corresponden a las desviaciones estándar.
 \end_layout
 
 \begin_layout Standard
@@ -3800,7 +3822,7 @@ name "fig:Ejecución-del-modelo"
 
 Ejecución del modelo con los parámetros mostrados en la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "tab:Parámetros-pruebas"
 
 \end_inset
@@ -3813,7 +3835,7 @@ assortment
 \shape default
  según la 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "eq:medicion-assortment"
 
 \end_inset
@@ -3836,7 +3858,7 @@ reference "eq:medicion-assortment"
 status open
 
 \begin_layout Plain Layout
-Hacer más ejecuciones con otros parámetros?
+Reducir el espacio entre parches
 \end_layout
 
 \end_inset
@@ -3848,27 +3870,67 @@ Hacer más ejecuciones con otros parámetros?
 Conclusiones del modelo
 \end_layout
 
+\begin_layout Itemize
+Los resultados obtenidos bajo los cambios que hacen al modelo más realista
+ muestran que este tipo de ambiente no favorece la cooperación, por el contrario
+ es altamente destructivo.
+\end_layout
+
+\begin_layout Itemize
+Como se mencionó anteriormente, la población no varía de ninguna forma,
+ por lo tanto es incorrecto la afirmación del trabajo original, que los
+ genes cooperadores se difunden en la población.
+ Esto se evidencia cuando al variar la composición de la población por medio
+ de la reproducción de los agentes, los individuos altruistas desaparecen
+ rápidamente (en menos de 10 unidades de tiempo).
+\end_layout
+
+\begin_layout Itemize
+La similitud hecha con el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ es incorrecta, pues los parches son muy pequeños y al estar tan separados
+ no ocurren migraciones de individuos entre ellos, de manera que es un ejemplo
+ de un ambiente insular, donde cada grupo constituye la población total
+ en sí mismo y aplica el concepto tradicional de selección (selección individual
+).
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Las críticas al modelo original
+Teniendo en cuenta esto, los valores positivos del 
+\shape italic
+assortment
+\shape default
+ en el modelo original se deben (1) a que los animales no son afectados
+ por no comer, ya que eventualmente se encuentran otro parche al cual pertenecer
+, y (2) a que los animales cooperadores comen la mitad de lo que comen los
+ egoístas.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
+\end_deeper
 \begin_layout Section
 CONCLUSIONES
 \end_layout
 
 \begin_layout Itemize
-La característica más importante para que un ambiente favorezca la evolución
- de los individuos altruistas y por tanto de los grupos, es una población
+Un ambiente que favorece la evolución de los individuos altruistas, y por
+ lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
+ Y la estructura poblacional más tratada es de los 
+\shape italic
+trait-groups
+\shape default
+.
+\end_layout
+
+\begin_layout Itemize
+El modelo de los trait-groups sí favorece la difusión de individuos altruistas
+ en la población.
+ Sin embargo, al realizar un modelo que incluya este sistema de una forma
+ práctica se debe tener cuidado con la sutil diferencia entre representar
+ este tipo de ambientes y varios insulares.
 \end_layout
 
 \begin_layout Section
@@ -3879,6 +3941,11 @@ TRABAJOS FUTUROS
 Buscar otras características externas a los individuos mismos, además de
  la distribución de la población, que favorezcan la difusión de genes altruistas
  en la población.
+\end_layout
+
+\begin_layout Itemize
+Realizar un framework que permita llevar el modelo de los trait-groups a
+ situaciones más prácticas en otros campos, como la economía.
 \end_layout
 
 \begin_layout Section
@@ -3910,8 +3977,17 @@ options "ieeetr"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 ANEXOS
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
