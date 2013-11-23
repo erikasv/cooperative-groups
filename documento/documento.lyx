@@ -3171,8 +3171,8 @@ En el modelo miden la distribución de la población para afirmar si los genes
 
 \begin_layout Itemize
 Los agentes animales no son afectados de ninguna forma por no alimentarse,
- ya que los animales no cuentan con una reserva de energía, es decir que
- el costo metabólico por unidad de tiempo no tiene ningún funcionamiento.
+ ya que no cuentan con una reserva de energía, es decir que el costo metabólico
+ por unidad de tiempo no tiene ningún funcionamiento.
  Esto significa que con el tiempo suficiente los animales volverán a encontrar
  un parche en el cual ubicarse y no morirán al alejarse del alimento.
 \end_layout
