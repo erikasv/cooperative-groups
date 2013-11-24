@@ -8,15 +8,14 @@
   \renewcommand\tablename{Tabla}
 }
 
-\AtBeginDocument{%
-\let\ref\autoref
-\renewcommand\equationautorefname{\@gobble}
-}
+\AtBeginDocument{\renewcommand\eqref[1]{Ecuaci\'{o}n (\ref{eq:#1})}}
+\renewcommand*{\figref}[1]{\figurename~\ref{fig:#1}}
+\renewcommand*{\tabref}[1]{\tablename~\ref{tab:#1}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
-\language_package babel
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman default
@@ -88,36 +87,6 @@
 \lang english
 \begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-renewcommand*{
-\backslash
-figref}[1]{
-\backslash
-figurename~
-\backslash
-ref{fig:#1}}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-renewcommand*{
-\backslash
-tabref}[1]{
-\backslash
-tablename~
-\backslash
-ref{tab:#1}}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -361,17 +330,31 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
+\begin_inset Newpage pagebreak
+\end_inset
 
-\series bold
-\size larger
-\begin_inset Note Note
-status open
 
-\begin_layout Plain Layout
-Posteriormente el índice de tablas
 \end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
 
 \end_inset
 
@@ -386,6 +369,8 @@ Posteriormente el índice de tablas
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 
 \series bold
 \size larger
@@ -418,12 +403,9 @@ addcontentsline{toc}{section}{RESUMEN}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 addcontentsline agrega al 
@@ -456,6 +438,46 @@ RESUMEN
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+El trabajo de Richard Dawkins plantea que la presión selectiva en un proceso
+ evolutivo ocurre únicamente al nivel de los genes.
+ En este trabajo se demuestra que bajo ciertas condiciones ajenas a los
+ individuos mismos, la selección puede ocurrir en niveles superiores a éstos.
+ El trabajo se realizó implementando un modelo de selección de grupo propuesto
+ por David S.
+ Wilson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+ y una simulación de agentes basada en el trabajo de Pepper y Smuts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+.
+ Los resultados del primer modelo muestran que el planteamiento de Wilson
+ es correcto, sin embargo éste no es completamente robusto ya que es sensible
+ a características aparentemente irrelevantes.
+ Mientras que los resultados del segundo modelo muestran que para llevar
+ el primer modelo a casos prácticos, hay una línea muy fina entre representar
+ un ambiente que favorezca la cooperación y uno que obedezca el concepto
+ tradicional de selección.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Palabras claves:
+\series default
+ evolución, selección individual, selección de grupo, altruismo, algoritmos
+ genéticos
 \end_layout
 
 \begin_layout Standard
@@ -1227,7 +1249,7 @@ En el modelo todos los individuos son iguales, solo difieren en un único
  aquellos que son afectados por la manifestación de dicho rasgo.
  La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:FdvsFr"
 
 \end_inset
@@ -1257,7 +1279,7 @@ reference "fig:FdvsFr"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -1693,7 +1715,7 @@ Los cromosomas tienen sólo un gen, un número aleatorio entre 0 y 1 que determi
 La aptitud de los cromosomas es determinada en un encuentro de depredación,
  por medio de la matriz de pago mostrada en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Matriz-de-pago"
 
 \end_inset
@@ -1839,7 +1861,7 @@ name "tab:Matriz-de-pago"
 
 \end_inset
 
-Matriz de pago para la evaluación de los individuos
+Matriz de pago para la evaluación de los individuos.
 \end_layout
 
 \end_inset
@@ -1990,7 +2012,7 @@ A continuación se muestran los resultados de algunas pruebas realizadas,
  indica el porcentaje de ejecuciones en las que cada configuración fue exitosa.
  Para facilitar la interpretación de los resultados la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Valores-circulos"
 
 \end_inset
@@ -2297,14 +2319,14 @@ Valores a los que corresponden algunos tamaños de circulos para un ejemplo
 \begin_layout Standard
 De la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaEjecucion"
 
 \end_inset
 
  a la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaGeneraciones"
 
 \end_inset
@@ -2313,14 +2335,14 @@ reference "fig:Pruebas-1muerto-variaGeneraciones"
  de ellos.
  Mientras que de la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaEjecuciones"
 
 \end_inset
 
  a la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaGeneraciones"
 
 \end_inset
@@ -2463,7 +2485,7 @@ Pruebas con 100 generaciones, 0% tasa de mutación y matando un desertor
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaEjecucion"
 
 \end_inset
@@ -2482,7 +2504,7 @@ reference "fig:Pruebas-1muerto-variaEjecucion"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2609,7 +2631,7 @@ Pruebas con 100 generaciones, 10 ejecuciones y matando un desertor al encuentro
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaMutacion"
 
 \end_inset
@@ -2619,7 +2641,7 @@ reference "fig:Pruebas-1muerto-variaMutacion"
  A pesar de que la mutación afecta de manera negativa la cantidad de casos
  exitosos, se mantiene el mismo patrón que en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaEjecucion"
 
 \end_inset
@@ -2762,7 +2784,7 @@ Pruebas con 10 ejecuciones, 0% tasa de mutación y matando un desertor al
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaGeneraciones"
 
 \end_inset
@@ -2774,13 +2796,17 @@ reference "fig:Pruebas-1muerto-variaGeneraciones"
  los resultados son muy similares.
  Además, se conserva el patrón de mayor cantidad de casos exitosos cuando
  la cantidad de grupos y los individuos por grupo son pequeños, al igual
- que en las Figuras 3 y 4
-\begin_inset Note Note
-status open
+ que en las Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaEjecucion"
 
-\begin_layout Plain Layout
-VERIFICAR REFERENCIAS!!
-\end_layout
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pruebas-1muerto-variaMutacion"
 
 \end_inset
 
@@ -2922,7 +2948,7 @@ Pruebas con 100 generaciones, 0% tasa de mutación y matando los dos desertores
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaEjecuciones"
 
 \end_inset
@@ -3069,7 +3095,7 @@ Pruebas con 100 generaciones, 10 ejecuciones y matando los dos desertores
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaMutacion"
 
 \end_inset
@@ -3078,7 +3104,7 @@ reference "fig:Pruebas-2muertos-variaMutacion"
  y 10% tasa de mutación.
  Estos resultados concuerdan con los de la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaEjecuciones"
 
 \end_inset
@@ -3087,7 +3113,7 @@ reference "fig:Pruebas-2muertos-variaEjecuciones"
  grupos y de individuos por grupo.
  Pero se observa el mismo efecto negativo de la mutación que en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaMutacion"
 
 \end_inset
@@ -3227,7 +3253,7 @@ Pruebas con 10 ejecuciones, 0% tasa de mutación y matando los dos desertores
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaGeneraciones"
 
 \end_inset
@@ -3236,7 +3262,7 @@ reference "fig:Pruebas-2muertos-variaGeneraciones"
  1000 y 10000 generaciones.
  Estos casos corroboran, al igual que la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Pruebas-1muerto-variaGeneraciones"
 
 \end_inset
@@ -3302,7 +3328,7 @@ key "PepperSmuts2000"
  población.
  En la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Parámetros-modelo-agentes"
 
 \end_inset
@@ -3937,7 +3963,7 @@ Para este trabajo se utilizó la misma medida del modelo original, el coeficient
 
  de acuerdo al método de mínimos cuadrados, expuesto en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "eq:coef-regresion"
 
 \end_inset
@@ -3948,7 +3974,7 @@ reference "eq:coef-regresion"
 \begin_layout Standard
 La 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Ejecución-modelo-assortment"
 
 \end_inset
@@ -3960,7 +3986,7 @@ assortment
  (similitud genética) sobre el resultado de las ejecuciones del modelo con
  los parámetros expuestos en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Parámetros-pruebas"
 
 \end_inset
@@ -4301,7 +4327,7 @@ Parámetros bajo los que se corrieron las pruebas
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -4385,7 +4411,7 @@ name "fig:Ejecución-modelo-assortment"
 
 Ejecución del modelo con los parámetros mostrados en la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:Parámetros-pruebas"
 
 \end_inset
@@ -4398,7 +4424,7 @@ assortment
 \shape default
  según la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "eq:medicion-assortment"
 
 \end_inset
@@ -4419,7 +4445,7 @@ reference "eq:medicion-assortment"
 \begin_layout Standard
 En la 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:Ejecución-modelo-assortment"
 
 \end_inset
