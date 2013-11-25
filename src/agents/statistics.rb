@@ -15,7 +15,6 @@ class Statistics
 			sumY+=yValues[i]
 			sumX2+=xValues[i]**2
 		}
-# 		p "#{sumXY} - #{sumX} - #{sumY} - #{sumX2}"
 		output=n*sumX2 - sumX**2
 		if output != 0
 			output= (n*sumXY - sumX*sumY) / output

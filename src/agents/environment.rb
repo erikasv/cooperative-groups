@@ -201,7 +201,6 @@ class Environment
 		animal.eat amountOfFood
 		animal.group=plant.group
 		plant.beEaten amountOfFood
-		#~ p plant
 	end
 	
 	#Validar la posición para que el mundo sea ciclico
@@ -211,13 +210,13 @@ class Environment
 	
 	#Sección evolutiva:
 	#Eliminar los animales de toDelete de @grid
-	#Ubicar los animales de toAdd en @grid y agregarlos a @animals => EN ESTE CASO ES NECESARIO UBICARLOS ENCIMA DE UNA PLANTA? Creo que si, porque sino no pertenece a ningún grupo
+	#Ubicar los animales de toAdd en @grid y agregarlos a @animals => Se ubican en una planta para que pertenezcan a un grupo
 	def replace toDelete, toAdd
 		toDelete.each{
 			|animal|
 			@grid[animal.posX][animal.posY]['animal']=nil
 		}
-		toAdd.each{ #Es similar a fillGridSpace, pero no se como reutilizar eso
+		toAdd.each{
 			|animal|
 			again=true
 			while again do

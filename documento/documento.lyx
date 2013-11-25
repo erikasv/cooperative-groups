@@ -4544,18 +4544,29 @@ CONCLUSIONES
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
- Aunque la estructura poblacional más tratada es propuesta por el modelo
+ Aunque la estructura poblacional más tratada es la propuesta por el modelo
  de los 
 \shape italic
 trait-groups.
 \end_layout
 
 \begin_layout Itemize
-El modelo de los trait-groups sí favorece la difusión de individuos altruistas
- en la población.
+El modelo de los 
+\shape italic
+trait-groups
+\shape default
+ sí favorece la difusión de individuos altruistas en la población.
  Sin embargo, al realizar un modelo que incluya este sistema de una forma
  práctica se debe tener cuidado con la sutil diferencia entre representar
- este tipo de ambientes y varios insulares.
+ un ambiente que permita la migración de individuos entre grupos, y la represent
+ación de varios ambientes insulares.
+\end_layout
+
+\begin_layout Itemize
+Los resultados de ambos trabajos evidencian que en algunos casos la presión
+ selectiva ocurre sólo a nivel individual, pero bajo algunas características
+ ambientales ocurre a niveles superiores.
+ De manera que la teoría de Dawikns no se puede rechazar completamente.
 \end_layout
 
 \begin_layout Section

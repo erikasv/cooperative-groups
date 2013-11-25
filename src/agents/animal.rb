@@ -1,13 +1,12 @@
 class Animal
-	#Morir
-	#Reproducción
+
 	@@metabolicCost #Valor por defecto= al expuesto en el artículo, puesto en modelo.rb
 
 	#Los individuos de las nuevas generaciones tienen su propia tasa de alimentación y energía 
 	def initialize posX, posY, group, identifier, energy=rand(10).to_f, feedRatePercent=rand
 		@posX=posX
 		@posY=posY
-		@energy=energy #Es un valor arbitrario por el momento, no se de que deba depender, debería ser mayor al costo metabolico?
+		@energy=energy
 		@feedRatePercent=feedRatePercent
 		@group=group				#Para el análisis del assortment
 		@identifier=identifier		#Para la base de datos
@@ -32,9 +31,9 @@ class Animal
 	def mutate
 		@feedRatePercent+=(rand/5)-0.1
 		if @feedRatePercent <= 0.001
-			@feedRatePercent=0.001			#Cuales son los valores correctos?
+			@feedRatePercent=0.001
 		elsif @feedRatePercent >= 1.0
-			@feedRatePercent=0.99			#Cuales son los valores correctos?
+			@feedRatePercent=0.99
 		end
 	end
 	

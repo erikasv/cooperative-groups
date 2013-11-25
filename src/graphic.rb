@@ -1,4 +1,3 @@
-#Require 'rubyvis', no se coloca acá porque los datos son un arreglo de OpenStruct, con etiquetas x, y, z
 class Graphic
 
 	def self.makeScatterplot data, fileName, limX, limY, labelX, labelY

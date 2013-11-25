@@ -5,7 +5,7 @@ class Plant
 	def initialize posX, posY, group, identifier
 		@energy=0
 		while @energy==0
-			@energy=rand(@@maxSize).to_f #Solo serán enteros, para flotantes usar un objeto de Random
+			@energy=rand(@@maxSize).to_f
 		end
 		@posX=posX
 		@posY=posY

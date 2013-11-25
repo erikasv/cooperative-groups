@@ -3,7 +3,7 @@
 # La Depredación será:
 # 1. Traiciona vs Coopera = Sobrevive el que traiciona
 # 2. Traiciona vs Traiciona = Cualquiera de los dos
-# 3. Coopera vs Coopera = Sobreviven los 2
+# 3. Coopera vs Coopera = Depende de @@killTwoSelfish
 
 require 'chromosome'
 class Group
@@ -21,7 +21,7 @@ class Group
 		@arrayChromosomes << chromosome
 	end
 
-	def predation matchTimes #Cuantos encuentros realizar
+	def predation matchTimes
 		matchTimes.times do |t| 
 			if @arrayChromosomes.size < 2
 				break
@@ -29,16 +29,9 @@ class Group
 			pos1=rand(@arrayChromosomes.size)
 			pos2=rand(@arrayChromosomes.size)
 			
-			#~ p "t #{t} "
-			#~ print "pos1 #{pos1} "
-			#~ print "pos2 #{pos2} "
-			
 			while pos1 == pos2 do
 				pos2=rand(@arrayChromosomes.size)
 			end
-			
-			#~ print "pos1 #{pos1} "
-			#~ print "pos2 #{pos2} "
 			
 			chromosome1=@arrayChromosomes[pos1]
 			chromosome2=@arrayChromosomes[pos2]
@@ -75,9 +68,9 @@ class Group
 	end
 	
 	#Depuración
-	def count
-		@arrayChromosomes.size
-	end
+	#~ def count
+		#~ @arrayChromosomes.size
+	#~ end
 	
 	attr_reader :arrayChromosomes
 end

@@ -38,11 +38,11 @@ class Assortment
 			totalPopGroup=altruists+selfish
 			average=altruists/totalPopGroup
 			
-			yVar.concat(Array.new(totalPopGroup,average))
-			xVar.concat(Array.new(altruists,1.0))
-			xVar.concat(Array.new(selfish,0.0))
+			xVar.concat(Array.new(totalPopGroup,average))
+			yVar.concat(Array.new(altruists,1.0))
+			yVar.concat(Array.new(selfish,0.0))
 		}
-		assortment=Statistics.regressionCoeficientLeastSquares yVar, xVar
+		assortment=Statistics.regressionCoeficientLeastSquares xVar, yVar
 		
 		return assortment
 	end

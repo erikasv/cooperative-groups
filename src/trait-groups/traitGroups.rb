@@ -11,12 +11,6 @@ class TraitGroups
 		@composition=Array.new
 		Group.killTwoSelfish=killTwoSelfish
 		
-		#~ @arrayGroups=Array.new
-		#~ @amountGroups.times do
-			#~ newGroup=Group.new groupSize
-			#~ @arrayGroups << newGroup
-		#~ end
-		
 		chromosomes=Array.new
 		(@amountGroups * @groupSize).times do
 			chromosomes << Chromosome.new
@@ -33,13 +27,12 @@ class TraitGroups
 	
 	def run
 		@generations.times do |g|
-			#~ print "G= #{g} "
-			#~ print "(0.ps #{countGroups})"
+		
 			# 1. Depredación por @predationTimes generaciones
 			@arrayGroups.each do |group|
 				group.predation @predationTimes
 			end
-			#~ print "(1.ps #{countGroups})"
+			
 			# 2. Mezcla = Sacar todos los cromosomas de los grupos
 			totalPopulation=Array.new
 			@arrayGroups.each do |group|
@@ -47,7 +40,6 @@ class TraitGroups
 				group.delete
 			end
 			@arrayGroups=nil
-			#~ print "(2.ps #{totalPopulation.size})"
 			
 			# 3. Reproducirlos: 1 solo hijo por cada uno, sin cruce ni mutación
 			newPopulation=Array.new
@@ -63,13 +55,10 @@ class TraitGroups
 			# 4.5 Contar la cantidad de altruistas y de egoistas
 			count newPopulation
 			
-			#~ print "(4.ps #{newPopulation.size})"
-			# 5. Volver a repartirlos en los grupos -> Deberían armarse grupos adicionales al momento de distribuirlos?
+			# 5. Volver a repartirlos en los grupos
 			distribute newPopulation
 			if newPopulation.size > 0
-				#~ print "(5.ps #{newPopulation.size})"
 			end
-			#~ print "(5.ps #{newPopulation.size})"
 			newPopulation=nil
 		end
 	end
@@ -95,9 +84,6 @@ class TraitGroups
 		if howManyGroups > @amountGroups
 			howManyGroups=@amountGroups
 		end
-		#~ print " (aG #{amountGroups}) "
-		#~ print " (ps ) "
-		#~ print " (gS #{@groupSize}) "
 		 
 		@arrayGroups=Array.new
 		howManyGroups.times do
@@ -110,16 +96,6 @@ class TraitGroups
 			@arrayGroups << group
 		end
 	end
-	
-	#~ def distribute population
-		#~ @arrayGroups.each do |group|4.ps 100) (ps ) (5.ps 0
-			#~ @groupSize.times do
-				#~ pos=rand(population.size)
-				#~ group.add population[pos]
-				#~ population.delete_at pos
-			#~ end
-		#~ end
-	#~ end
 	
 	def countGroups
 		total=0
