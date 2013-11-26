@@ -13,7 +13,7 @@ class Model
 		@executionTime=executionTime
 		
 		#Datos par la base de datos
-		writeAgents @executionTime, 0
+		#~ writeAgents @executionTime, 0
 		aboutAssortment @executionTime, 0
 	end
 	
@@ -47,14 +47,14 @@ class Model
 			@environment.run
 			
 			#Evolucionar la población
-			matingPool=GeneticAlgorithm.select @environment.animals, 0.6
-			GeneticAlgorithm.mutate matingPool, 0.01
-			
-			toDelete=GeneticAlgorithm.replace @environment.animals, matingPool, @amountAnimals
-			@environment.replace toDelete, matingPool
+			#~ matingPool=GeneticAlgorithm.select @environment.animals, 0.6
+			#~ GeneticAlgorithm.mutate matingPool, 0.01
+			#~ 
+			#~ toDelete=GeneticAlgorithm.replace @environment.animals, matingPool, @amountAnimals
+			#~ @environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos
-			writeAgents @executionTime, time
+			#~ writeAgents @executionTime, time
 			aboutAssortment @executionTime, time
 		end
 	end

@@ -17,7 +17,7 @@ class Animal
 	end
 	
 	def move newX, newY
-		@energy=@energy-@@metabolicCost
+		#~ @energy=@energy-@@metabolicCost
 		@posX=newX
 		@posY=newY
 	end
