@@ -1,26 +1,29 @@
-# Dentro del grupo solo ocurre depredación.
-
-# La Depredación será:
-# 1. Traiciona vs Coopera = Sobrevive el que traiciona
-# 2. Traiciona vs Traiciona = Cualquiera de los dos
-# 3. Coopera vs Coopera = Depende de @@killTwoSelfish
+# Author: Erika Suárez Valencia
 
 require 'chromosome'
+# ==Description
+# Represents one group and holds {groupSize}[rdoc-ref:Group::new] chromosomes. Inside only occurs predation.
 class Group
 
-	#Matriz de pago cambiada de acuerdo a la descripción de la depredación
+	# Matriz de pago cambiada de acuerdo a la descripción de la depredación
 	@@predationMatrix=Array[ [[3,3],[0,5]] , [[5,0],[1,1]] ]
 	@@killTwoSelfish=false
 
+	# Creates a new group with size groupSize
+	# grouSize:: how many chromosomes will have the group
 	def initialize groupSize
 		@groupSize=groupSize
 		@arrayChromosomes=Array.new
 	end
 	
+	# Adds a chromosome to the group
+	# chromosome:: the chromosome to add
 	def add chromosome
 		@arrayChromosomes << chromosome
 	end
 
+	# Performs predation
+	# matchTimes:: How many matches occur
 	def predation matchTimes
 		matchTimes.times do |t| 
 			if @arrayChromosomes.size < 2
@@ -57,20 +60,24 @@ class Group
 		end
 	end
 	
+	# Set if kill both selfish
+	# val:: true to kill both selfish, false to kill just one
 	def self.killTwoSelfish= val
 		@@killTwoSelfish=val
 	end
 	
-	# Vaciar los grupos
+	# Empty groups
 	def delete
 		@arrayChromosomes=nil
 		#~ @arrayChromosomes=Array.new
 	end
 	
+	#--
 	#Depuración
 	#~ def count
 		#~ @arrayChromosomes.size
-	#~ end
+	# end
 	
+	# Array with the chromosomes in the group
 	attr_reader :arrayChromosomes
 end

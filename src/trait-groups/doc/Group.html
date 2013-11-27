@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Group - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>group.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-killTwoSelfish-3D">::killTwoSelfish=</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-add">#add</a>
+    
+    <li ><a href="#method-i-delete">#delete</a>
+    
+    <li ><a href="#method-i-predation">#predation</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Analysis_start_end.html">Analysis_start_end</a>
+  
+    <li><a href="./Chromosome.html">Chromosome</a>
+  
+    <li><a href="./Group.html">Group</a>
+  
+    <li><a href="./TraitGroups.html">TraitGroups</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Group</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Represents one group and holds <a
+href="Group.html#method-c-new">groupSize</a> chromosomes. Inside only
+occurs predation.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-arrayChromosomes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">arrayChromosomes</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Array with the chromosomes in the group</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-killTwoSelfish-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">killTwoSelfish=</span><span
+            class="method-args">(val)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Set if kill both selfish</p>
+<dl class="rdoc-list note-list"><dt>val
+<dd>
+<p>true to kill both selfish, false to kill just one</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="killTwoSelfish-3D-source">
+            <pre><span class="ruby-comment"># File group.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">killTwoSelfish=</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-identifier">@@killTwoSelfish</span>=<span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- killTwoSelfish-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- killTwoSelfish-3D-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(groupSize)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new group with size groupSize</p>
+<dl class="rdoc-list note-list"><dt>grouSize
+<dd>
+<p>how many chromosomes will have the group</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File group.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">groupSize</span>
+        <span class="ruby-ivar">@groupSize</span>=<span class="ruby-identifier">groupSize</span>
+        <span class="ruby-ivar">@arrayChromosomes</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add</span><span
+            class="method-args">(chromosome)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adds a chromosome to the group</p>
+<dl class="rdoc-list note-list"><dt>chromosome
+<dd>
+<p>the chromosome to add</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="add-source">
+            <pre><span class="ruby-comment"># File group.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add</span> <span class="ruby-identifier">chromosome</span>
+        <span class="ruby-ivar">@arrayChromosomes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">chromosome</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add-method -->
+
+    
+      <div id="method-i-delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Empty groups</p>
+          
+          
+
+          
+          <div class="method-source-code" id="delete-source">
+            <pre><span class="ruby-comment"># File group.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>
+        <span class="ruby-ivar">@arrayChromosomes</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-comment">#~ @arrayChromosomes=Array.new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete-method -->
+
+    
+      <div id="method-i-predation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">predation</span><span
+            class="method-args">(matchTimes)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Performs predation</p>
+<dl class="rdoc-list note-list"><dt>matchTimes
+<dd>
+<p>How many matches occur</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="predation-source">
+            <pre><span class="ruby-comment"># File group.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">predation</span> <span class="ruby-identifier">matchTimes</span>
+        <span class="ruby-identifier">matchTimes</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> 
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+                        <span class="ruby-keyword">break</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">pos1</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-identifier">pos2</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">size</span>)
+                
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">pos1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos2</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">pos2</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">chromosome1</span>=<span class="ruby-ivar">@arrayChromosomes</span>[<span class="ruby-identifier">pos1</span>]
+                <span class="ruby-identifier">chromosome2</span>=<span class="ruby-ivar">@arrayChromosomes</span>[<span class="ruby-identifier">pos2</span>]
+                <span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">fitness</span>=<span class="ruby-identifier">@@predationMatrix</span>[<span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">decision</span>][<span class="ruby-identifier">chromosome2</span>.<span class="ruby-identifier">decision</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-identifier">chromosome2</span>.<span class="ruby-identifier">fitness</span>=<span class="ruby-identifier">@@predationMatrix</span>[<span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">decision</span>][<span class="ruby-identifier">chromosome2</span>.<span class="ruby-identifier">decision</span>][<span class="ruby-value">1</span>]
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">fitness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">chromosome2</span>.<span class="ruby-identifier">fitness</span>
+                        <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-identifier">pos2</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">fitness</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">chromosome2</span>.<span class="ruby-identifier">fitness</span>
+                        <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-identifier">pos1</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">chromosome1</span>.<span class="ruby-identifier">fitness</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">@@predationMatrix</span>[<span class="ruby-value">1</span>][<span class="ruby-value">1</span>][<span class="ruby-value">1</span>]
+                        <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">@@killTwoSelfish</span> <span class="ruby-comment">###MATAR UNO ALEATORIO</span>
+                                <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">delete_at</span> (<span class="ruby-identifier">rand</span>(<span class="ruby-value">2</span>)<span class="ruby-operator">==</span><span class="ruby-value">0</span>)<span class="ruby-operator">?</span> <span class="ruby-identifier">pos1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">pos2</span>
+                        <span class="ruby-keyword">else</span> <span class="ruby-comment">###MATAR LOS DOS</span>
+                                <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-identifier">pos1</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">pos2</span>
+                                        <span class="ruby-identifier">pos2</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span>
+                                <span class="ruby-keyword">end</span>
+                                <span class="ruby-ivar">@arrayChromosomes</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-identifier">pos2</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- predation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- predation-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

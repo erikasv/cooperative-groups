@@ -13,7 +13,7 @@ class Model
 		@executionTime=executionTime
 		
 		#Datos par la base de datos
-		#~ writeAgents @executionTime, 0
+		writeAgents @executionTime, 0
 		aboutAssortment @executionTime, 0
 	end
 	
@@ -54,7 +54,7 @@ class Model
 			#~ @environment.replace toDelete, matingPool
 			
 			#Datos par la base de datos
-			#~ writeAgents @executionTime, time
+			writeAgents @executionTime, time
 			aboutAssortment @executionTime, time
 		end
 	end

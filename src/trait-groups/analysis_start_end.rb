@@ -3,8 +3,17 @@ require 'traitGroups'
 require '../graphic'
 require 'rubyvis'
 
+# Performs analysis on the number of cooperators at the beginning and
+# end of each run. In addition to testing various configurations of:
+# number of groups - chromosomes on each group
 class Analysis_start_end
 	
+	# Sets the parameters to the model and how many times run the model
+	# generations:: Amount of generations to run
+	# executions:: How many times run the model
+	# mutationRate:: Mutation rate
+	# killTwoSelfish:: true if kill both selfish on the match, default=false
+	# predationTimes:: How many matches occur inside a group, in terms of proportion of the group size
 	def initialize generations, executions, mutationRate=0.0, killTwoSelfish=false, predationTimes=0.5
 		@maxGroups=10
 		@maxGroupSize=10
@@ -16,6 +25,7 @@ class Analysis_start_end
 		@killTwoSelfish=killTwoSelfish
 	end
 	
+	# Run the model {executions}[rdoc-ref:Analysis_start_end::new] times
 	def run
 		cases=Hash.new{|hash,key| hash[key]=0}
 

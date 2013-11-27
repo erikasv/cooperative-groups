@@ -1,7 +1,16 @@
 require '../geneticAlgorithm'
 require 'group'
+# The model, which simulates the pass of generations, a generation
+# consist in the two stages: the grouping fase (predation) and the dispersal fase
 class TraitGroups
 	
+	# Settings to the model
+	# amountGroups:: How many groups
+	# groupSize:: How many chromosomes on each group
+	# generations:: Amount of generations to run
+	# predationTimes:: How many matches occur inside a group, in terms of proportion of the group size
+	# mutationRate:: Mutation rate
+	# killTwoSelfish:: true if kill both selfish on the match, default=false
 	def initialize amountGroups, groupSize, generations, predationTimes, mutationRate, killTwoSelfish=false
 		@amountGroups=amountGroups
 		@groupSize=groupSize
@@ -25,6 +34,7 @@ class TraitGroups
 		chromosomes=nil
 	end
 	
+	# Runs the model
 	def run
 		@generations.times do |g|
 		
@@ -63,6 +73,8 @@ class TraitGroups
 		end
 	end
 	
+	# Count the chromosomes by each type.
+	# population:: all the chromosomes in the model
 	def count population
 		altruist=0
 		selfish=0
@@ -79,6 +91,8 @@ class TraitGroups
 		@composition << values
 	end
 	
+	# Distribute the population in groups
+	# population:: all the chromosomes in the model
 	def distribute population
 		howManyGroups=population.size / @groupSize
 		if howManyGroups > @amountGroups
@@ -97,13 +111,15 @@ class TraitGroups
 		end
 	end
 	
-	def countGroups
-		total=0
-		@arrayGroups.each do |group|
-			total+=group.count
-		end
-		total
-	end
+	#--
+	#~ def countGroups
+		#~ total=0
+		#~ @arrayGroups.each do |group|
+			#~ total+=group.count
+		#~ end
+		#~ total
+	#~ end
 	
+	#Composition of the population.
 	attr_reader :composition
 end
