@@ -1,22 +1,32 @@
+# Author: Erika Suárez Valencia
+
 $:.unshift '.' #Necesario desde 1.9
 require 'dBConnection'
 require 'statistics'
 require 'rubyvis'
 require '../graphic'
 
+# ==Description
+# Used to make analysis about the assortment
 class Analysis
+
+	# Creates new object.
+	# executionTime:: how many executions were made
+	# timeUnits:: how many time units had each execution
 	def initialize executionTimes, timeUnits
 		@timeUnits=timeUnits
 		@mongoDB=connectDB
 		@executionTimes=executionTimes
 	end
 	
+	# Connect to de database
 	def connectDB
 		connection=DBConnection.new
 		connection.connect
 		return connection
 	end
 	
+	# Calculates the assortment in all time units and all executions
 	def calculateAssortment
 		@assortmentMatrix=Array.new
 		for timeUnit in 0..@timeUnits do
@@ -33,6 +43,8 @@ class Analysis
 		end
 	end
 	
+	# Make a chart of the assortment observed values, with average and standard deviations
+	# fileName:: the name for the chart file
 	def graphicAssortment fileName
 		assortment=Array.new
 		plusOneSD=Array.new
@@ -43,17 +55,22 @@ class Analysis
 		@assortmentMatrix.each do |xVar|
 			
 			average=Statistics.expectedValue xVar
-			standarDeviation=Statistics.standarDeviation xVar
+			standardDeviation=Statistics.standardDeviation xVar
 			
 			assortment << average
-			plusOneSD << average+standarDeviation
-			minusOneSD << average-standarDeviation
+			plusOneSD << average+standardDeviation
+			minusOneSD << average-standardDeviation
 			
-			#~ @mongoDB.writeDataGraphics time, average, average+standarDeviation, average-standarDeviation
+			#~ @mongoDB.writeDataGraphics time, average, average+standardDeviation, average-standardDeviation
 		end
 		makeChart assortment, plusOneSD, minusOneSD, fileName
 	end
 	
+	# Makes the chart of the assortment and the standard deviations
+	# assortment:: array with the assortment values
+	# plusOneSD:: array with the values of the assortment plus one standard deviation
+	# minusOneSD:: array with the values of the assortment minus one standard deviation
+	# fileName:: the name for the chart file
 	def makeChart assortment , plusOneSD , minusOneSD , fileName 
 		yValues=['assortment', 'plusOneSD', 'minusOneSD']
 		data=Array.new
@@ -66,6 +83,9 @@ class Analysis
 		Graphic.makeLineChart @timeUnits, 1, yValues, data, fileName, 'Unidades de tiempo (generaciones)', 'Assortment'
 	end
 	
+	# Make a chart of the assortment observed minus the expected under 
+	# random distribution, with average and standard deviations
+	# fileName:: the name for the chart file
 	def graphicAnalysis fileName
 		#ra=r-rs=assortment - g-1/N-1
 		
@@ -88,11 +108,11 @@ class Analysis
 			end
 			
 			average=Statistics.expectedValue xVar
-			standarDeviation=Statistics.standarDeviation xVar
+			standardDeviation=Statistics.standardDeviation xVar
 			
 			assortment << average
-			plusOneSD << average+standarDeviation
-			minusOneSD << average-standarDeviation
+			plusOneSD << average+standardDeviation
+			minusOneSD << average-standardDeviation
 			
 		end
 		makeChart assortment, plusOneSD, minusOneSD, fileName

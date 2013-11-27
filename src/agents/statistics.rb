@@ -1,5 +1,12 @@
+# Author: Erika Suárez Valencia
+
+# ==Description
+# Used to calculate some statistics values
 class Statistics
 
+	# Calculates the regression coeficient by the least squares method
+	# xValues:: independent variable
+	# yValues:: dependent variable
 	def self.regressionCoeficientLeastSquares xValues, yValues
 		#Reg=n Sum(xy)-Sum(x)Sum(y) / n Sum(x^2) - Sum(x)^2
 		n=xValues.size
@@ -23,8 +30,9 @@ class Statistics
 		return output
 	end
 	
-	#Recibe dos arreglos de números
-	#Retorna el coeficiente de regresión de la relación entre ellos
+	# Calculates the regression coeficient
+	# xValues:: independent variable
+	# yValues:: dependent variable
 	def self.regressionCoeficient xValues, yValues
 		#Reg=Covar(x, y) / Var(x)
 		covarianceXY=covariance xValues, yValues
@@ -38,8 +46,9 @@ class Statistics
 		return output
 	end
 	
-	#Recibe dos arreglos de números
-	#Retorna la covarianza de ellos
+	# Calculates the covariance between the variables
+	# xValues:: independent variable
+	# yValues:: dependent variable
 	def self.covariance xValues, yValues
 		#Covar=E(x.y)-E(x).E(y)
 		product=Array.new
@@ -53,8 +62,8 @@ class Statistics
 		return averageProduct - (averageX*averageY)
 	end
 	
-	#Recibe un arreglo de números
-	#Retorna la varianza de ellos
+	# Calculates the variance of the numbers
+	# xValues:: array with the values
 	def self.variance values
 		#Var(x)=Sum(xi^2)-E(x)^2
 		average=expectedValue values
@@ -67,15 +76,15 @@ class Statistics
 		return averageSquaredDifferences
 	end
 	
-	#Recibe un arreglo de números
-	#Retorna la deviación estándar entre ellos
-	def self.standarDeviation values
+	# Calculates the standard deviation of the numbers
+	# xValues:: array with the values
+	def self.standardDeviation values
 		var=variance values
 		return Math.sqrt var
 	end
 	
-	#Recibe un arreglo de números
-	#Retorna el promedio de ellos
+	# Calculates the average of the numbers
+	# xValues:: array with the values
 	def self.expectedValue values
 		#E(x)=Sum(xi)/n
 		total=0

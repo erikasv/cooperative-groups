@@ -1,8 +1,16 @@
-class GeneticAlgorithm
-	#The chromosome must implement:
-	#fitness, mutate
+# Author: Erika Suárez Valencia
 
-	#Returns the mating pool in an array
+# ==Description
+# Class to make a population evolve
+#
+# The chromosome must implement the methods: fitness and mutate
+class GeneticAlgorithm
+	
+	# Selection:
+	# totalPopulation:: array with the population
+	# poolSizePercent:: percent of the population to select
+	#
+	# Returns the mating pool in an array
 	def self.select totalPopulation, poolSizePercent
 		selected=Array.new
 		populationSize=totalPopulation.size
@@ -30,7 +38,10 @@ class GeneticAlgorithm
 		return selected
 	end
 	
-	#Mutate over the mating pool array
+	# Mutation:
+	# Mutate over the mating pool array
+	# population:: array with the mating pool
+	# mutationRate:: percent of the mating pool to mutate
 	def self.mutate population, mutationRate
 		amount=(mutationRate * population.size).ceil.to_i
 		amount.times do
@@ -39,10 +50,14 @@ class GeneticAlgorithm
 		end
 	end
 	
-	#Returns an array with the chromosomes to delete from the population -> Just in case
-	#Also deletes them from the original population
-	#The merge between the pool and the resulting population must be done by the other class
-	#sizeRequired = desired size of the population to maintain it stable. Especially when for other reasons the size decreased
+	# Replacement:
+	# Returns an array with the chromosomes to delete from the population 
+	# and also deletes them from the original population.
+	#
+	# The merge between the pool and the resulting population must be done by the other class.
+	# population:: the original population
+	# pool:: the mating pool
+	# sizeRequired:: desired size of the population to maintain it stable. Especially when for other reasons the size decreased
 	def self.replace population, pool, sizeRequired
 		toDelete=Array.new
 		poolSize=pool.size

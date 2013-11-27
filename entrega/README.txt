@@ -7,12 +7,14 @@ Erika Suárez Valencia
 Estructura de carpetas:
 ^^^^^^^^^^^^^^^^^^^^^^^
 src:
-  trait-groups:
+  trait-groups: (Modelo de trait-groups)
     chromosome.rb
     group.rb
     traitGroups.rb
     analysis_start_end.rb
-  agents:
+    doc:	(Documentación del modelo de trait-groups)
+      index.html
+  agents:	(Modelo de agentes)
     plant.rb
     animal.rb
     environment.rb
@@ -21,11 +23,15 @@ src:
     analysis.rb
     statistics.rb
     dBConnection.rb
+    doc:	(Documentación del modelo de agentes)
+      index.html
   geneticAlgorithm.rb
   graphic.rb
 
-documento:
+documento:	(El mismo documento impreso)
   documento.pdf
+ 
+README.txt	(Este archivo)
 
 -----------------------------------------------------------------------------------------------
 

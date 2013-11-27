@@ -1,9 +1,13 @@
-require 'mongo'
+# Author: Erika Suárez Valencia
 
+require 'mongo'
 include Mongo
 
+# ==Description
+# Class to connect and make operatoions with the database
 class DBConnection
 
+	# Connect to the database
 	def connect
 		mongo_client = MongoClient.new("localhost", 27017)
 		@db = mongo_client.db("agentsModel")
@@ -18,6 +22,11 @@ class DBConnection
 	#~ end
 	
 ###WRITING METHODS
+
+	# Write an animal
+	# executionTime:: execution time
+	# timeUnit:: time unit
+	# animal:: animal to write
 	def writeAnimal executionTime, timeUnit, animal
 		@db.collection("animals").insert(
 			'executionTime' => executionTime,
@@ -31,6 +40,10 @@ class DBConnection
 		)
 	end
 	
+	# Write a plant
+	# executionTime:: execution time
+	# timeUnit:: time unit
+	# plant:: plant to write
 	def writePlant executionTime, timeUnit, plant
 		@db.collection("plants").insert({
 			'executionTime' => executionTime,
@@ -43,6 +56,10 @@ class DBConnection
 		})
 	end
 	
+	# Write the assortment
+	# executionTime:: execution time
+	# timeUnit:: time unit
+	# meassure:: assortment value for that time unit and execution time
 	def writeAssortment executionTime, timeUnit, meassure
 		@db.collection("assortment").insert(
 			'executionTime' => executionTime,
@@ -51,6 +68,12 @@ class DBConnection
 		)
 	end
 	
+	# Write information about the groups
+	# executionTime:: execution time
+	# timeUnit:: time unit
+	# altruist:: amount of altruists
+	# selfish:: amount of selfish
+	# group:: number of the group
 	def writeDataGroups executionTime, timeUnit, altruist, selfish, group
 		@db.collection("dataGroups").insert(
 			'executionTime' => executionTime,
@@ -71,6 +94,11 @@ class DBConnection
 	#~ end
 	
 ###READING METHODS
+
+	# Find all the documents in the collection that satisfy the query
+	# collection:: collection name
+	# query:: query
+	# options:: options
 	def findAll collection, query, options={}
 		return @db.collection("#{collection}").find(query)
 	end

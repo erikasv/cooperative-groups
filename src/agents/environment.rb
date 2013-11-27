@@ -1,12 +1,24 @@
+# Author: Erika Suárez Valencia
+
 #~ $:.unshift '.' #Necesario desde 1.9
 require 'animal'
 require 'plant'
 
+# ==Description
+# Is the squared environment of the model
 class Environment
 	#Lista de plantas: @plants 
 	#Lista de animales: @animals
 	#Espacio: @grid
 	
+	# Creates a new environment
+	# width:: width of each patch (group) of plants in cells
+	# gap:: gap between patches in each axis in cells
+	# minPlants:: minimum number of plants in the environment
+	# maxEnergyPlants:: maximum size (energy) for the plants
+	# plantsRate:: logistic rate to the growth of plants
+	# metabolicCost:: metabolic cost for the animals
+	# amountAnimals:: number of animals on the environment
 	def initialize width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals
 		@amountPlants=minPlants				#Cantidad de plantas minima
 		@amountAnimals=amountAnimals		#cantidad de animales
@@ -30,8 +42,12 @@ class Environment
 		@animals=fillGridSpace amountAnimals
 	end
 	
-	#Crear el escenario de acuerdo a lineas de parches con sus respectivos espacios
-	#Retorna la lista de plantas en el ambiente
+	# Creates the grid according to the rows of patches.
+	# numPatchesRow:: number of rows in terms of patches
+	# widthPatch:: width of each patch
+	# gapPatch:: gap between patches
+	#
+	# Returns an array with the plants on the environment.
 	def createGridSpace numPatchesRow, widthPatch, gapPatch
 		@grid=Array.new
 		i=0
@@ -79,7 +95,8 @@ class Environment
 		return plants
 	end
 	
-	#Crear y ubicar a los animales sobre plantas
+	# Creates and places the animals in the grid
+	# amountAnimals:: Number of animals to create
 	def fillGridSpace amountAnimals
 		animals=Array.new
 		amountAnimals.times do
@@ -100,12 +117,13 @@ class Environment
 		return animals
 	end
 	
-	#Correr una unidad de tiempo en el espacio
+	# Run one time unit
 	def run
 		growPlants
 		@animals=moveAnimals
 	end
 	
+	# Grow each plant
 	def growPlants
 		@plants.each{
 			|plant|
@@ -113,7 +131,7 @@ class Environment
 		}
 	end
 	
-	#Mover y alimentar los animales
+	# Move and feed each animal
 	def moveAnimals #Primero se mueve y luego come, porque así lo explican en el artículo
 		newAnimals=Array.new
 		while not @animals.empty? do
@@ -138,8 +156,11 @@ class Environment
 		return newAnimals
 	end
 	
-	#Buscar la mejor planta que satisfaga el costo metabolico y moverse a ella
-	#Retorna si encontró la mejor planta
+	# Find the best plant that has at least the metabolic cost
+	# and moves the animal to it.
+	# animal:: the animal to move
+	#
+	# Returns if found the best plant.
 	def moveNewPlant animal
 		deltaX=[0,-1,-1,-1,0,1,1,1]
 		deltaY=[-1,-1,0,1,1,1,0,-1]
@@ -167,7 +188,8 @@ class Environment
 		end
 	end
 	
-	#Mover el animal a una posición vecina sin otro animal de forma aleatoria
+	# Moves the animal to a neighbor position without another animal
+	# animal:: the animal to move
 	def moveAnyPlace animal
 		deltaX=[0,-1,-1,-1,0,1,1,1]
 		deltaY=[-1,-1,0,1,1,1,0,-1]
@@ -187,13 +209,18 @@ class Environment
 		end
 	end
 	
-	#Mover el animal a una nueva posición dada
+	# Moves the animal to a new position
+	# animal:: the animal to move
+	# newX:: new x position
+	# newY:: new y position
 	def moveAnimal animal, newX, newY
 		@grid[animal.posX][animal.posY]['animal']=nil
 		@grid[newX][newY]['animal']=animal
 		animal.move newX, newY
 	end
 	
+	# Eat a plant
+	# animal:: the animal that is going to eat
 	def eatPlant animal
 		plant= @grid[animal.posX][animal.posY]['plant']
 		amountOfFood=animal.feedRatePercent*plant.energy
@@ -203,14 +230,16 @@ class Environment
 		plant.beEaten amountOfFood
 	end
 	
-	#Validar la posición para que el mundo sea ciclico
+	# Validates a position. The environment is cyclic
 	def validate pos
 		return pos % @gridSize
 	end
 	
-	#Sección evolutiva:
-	#Eliminar los animales de toDelete de @grid
-	#Ubicar los animales de toAdd en @grid y agregarlos a @animals => Se ubican en una planta para que pertenezcan a un grupo
+	# Evolutive section:
+	#
+	# Deletes from the grid the animals in the toDelete array
+	# 
+	# Places in the grid the animals in the toAdd array
 	def replace toDelete, toAdd
 		toDelete.each{
 			|animal|
@@ -234,6 +263,7 @@ class Environment
 		}
 	end
 	
+	#--
 	#~ def imprimir
 		#~ plants=0
 		#~ animals=0
@@ -252,5 +282,10 @@ class Environment
 		#~ p "plants: #{plants} - animals: #{animals}"
 	#~ end
 	
-	attr_reader :animals, :plants, :amountGroups
+	# Array with the animals on the environment
+	attr_reader :animals
+	# Array with the plants on the environment
+	attr_reader :plants
+	# Quantity of groups (patches with animals) in the environment
+	attr_reader :amountGroups
 end

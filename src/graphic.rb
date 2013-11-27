@@ -1,5 +1,16 @@
+# Author: Erika Suárez Valencia
+
+# ==Description
+# Class to make charts
 class Graphic
 
+	# Make a scatterplot chart.
+	# data:: an OpenStruct array with values for x, y and z
+	# fileName:: the name for the chart file
+	# limX:: maximum value on x axis
+	# limY:: maximum value on y axis
+	# labelX:: label to x axis
+	# labelY:: label to y axis
 	def self.makeScatterplot data, fileName, limX, limY, labelX, labelY
 		##Los ejes
 		w = 600
@@ -57,7 +68,14 @@ class Graphic
 		svg.close
 	end
 	
-	#data es una matriz donde está cada dato del eje x con los valores para el eje y
+	# Make a multiple linechart
+	# limX:: maximum value on x axis
+	# limY:: maximum value on y axis
+	# yPossibleValues:: possible values for y attribute
+	# data:: matrix where each x value has the corresponding values for the y axis
+	# fileName:: the name for the chart file
+	# labelX:: label to x axis
+	# labelY:: label to y axis
 	def self.makeLineChart limX, limY, yPossibleValues, data, fileName, labelX, labelY
 		w = 600
 		h = 300

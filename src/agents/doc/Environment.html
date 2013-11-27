@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Environment - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>environment.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-createGridSpace">#createGridSpace</a>
+    
+    <li ><a href="#method-i-eatPlant">#eatPlant</a>
+    
+    <li ><a href="#method-i-fillGridSpace">#fillGridSpace</a>
+    
+    <li ><a href="#method-i-growPlants">#growPlants</a>
+    
+    <li ><a href="#method-i-moveAnimal">#moveAnimal</a>
+    
+    <li ><a href="#method-i-moveAnimals">#moveAnimals</a>
+    
+    <li ><a href="#method-i-moveAnyPlace">#moveAnyPlace</a>
+    
+    <li ><a href="#method-i-moveNewPlant">#moveNewPlant</a>
+    
+    <li ><a href="#method-i-replace">#replace</a>
+    
+    <li ><a href="#method-i-run">#run</a>
+    
+    <li ><a href="#method-i-validate">#validate</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Analysis.html">Analysis</a>
+  
+    <li><a href="./Animal.html">Animal</a>
+  
+    <li><a href="./Assortment.html">Assortment</a>
+  
+    <li><a href="./DBConnection.html">DBConnection</a>
+  
+    <li><a href="./Environment.html">Environment</a>
+  
+    <li><a href="./GeneticAlgorithm.html">GeneticAlgorithm</a>
+  
+    <li><a href="./Graphic.html">Graphic</a>
+  
+    <li><a href="./Model.html">Model</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Plant.html">Plant</a>
+  
+    <li><a href="./Statistics.html">Statistics</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Environment</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Is the squared environment of the model</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(width, gap, minPlants, maxEnergyPlants, plantsRate, metabolicCost, amountAnimals)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new environment</p>
+<dl class="rdoc-list note-list"><dt>width
+<dd>
+<p>width of each patch (group) of plants in cells</p>
+</dd><dt>gap
+<dd>
+<p>gap between patches in each axis in cells</p>
+</dd><dt>minPlants
+<dd>
+<p>minimum number of plants in the environment</p>
+</dd><dt>maxEnergyPlants
+<dd>
+<p>maximum size (energy) for the plants</p>
+</dd><dt>plantsRate
+<dd>
+<p>logistic rate to the growth of plants</p>
+</dd><dt>metabolicCost
+<dd>
+<p>metabolic cost for the animals</p>
+</dd><dt>amountAnimals
+<dd>
+<p>number of animals on the environment</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">width</span>, <span class="ruby-identifier">gap</span>, <span class="ruby-identifier">minPlants</span>, <span class="ruby-identifier">maxEnergyPlants</span>, <span class="ruby-identifier">plantsRate</span>, <span class="ruby-identifier">metabolicCost</span>, <span class="ruby-identifier">amountAnimals</span>
+        <span class="ruby-ivar">@amountPlants</span>=<span class="ruby-identifier">minPlants</span>                               <span class="ruby-comment">#Cantidad de plantas minima</span>
+        <span class="ruby-ivar">@amountAnimals</span>=<span class="ruby-identifier">amountAnimals</span>          <span class="ruby-comment">#cantidad de animales</span>
+        
+        <span class="ruby-constant">Plant</span>.<span class="ruby-identifier">maxSize</span>=<span class="ruby-identifier">maxEnergyPlants</span>                 <span class="ruby-comment">#Tamaño máximo de las plantas</span>
+        <span class="ruby-constant">Plant</span>.<span class="ruby-identifier">logisticRate</span>=<span class="ruby-identifier">plantsRate</span>         <span class="ruby-comment">#Taza de crecimiento</span>
+        <span class="ruby-constant">Animal</span>.<span class="ruby-identifier">metabolicCost</span>=<span class="ruby-identifier">metabolicCost</span>    <span class="ruby-comment">#Costo metabolico por unidad de tiempos</span>
+        
+        
+        <span class="ruby-comment">#Determinar el lado de la grilla en parches</span>
+        <span class="ruby-identifier">numPatches</span>=(<span class="ruby-ivar">@amountPlants</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">width</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">numPatchesRow</span>=<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">numPatches</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">numPatches</span>=<span class="ruby-identifier">numPatchesRow</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>
+        
+        <span class="ruby-comment">#Se actualiza la cantidad de plantas</span>
+        <span class="ruby-ivar">@amountPlants</span>=<span class="ruby-identifier">numPatches</span><span class="ruby-operator">*</span><span class="ruby-identifier">width</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>
+        
+        <span class="ruby-ivar">@idAnimals</span>=<span class="ruby-value">0</span>                                  <span class="ruby-comment">#El id para diferenciarlos en la base de datos</span>
+        <span class="ruby-ivar">@gridSize</span>=<span class="ruby-identifier">numPatchesRow</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">width</span><span class="ruby-operator">+</span><span class="ruby-identifier">gap</span>)
+        <span class="ruby-ivar">@plants</span>=<span class="ruby-identifier">createGridSpace</span> <span class="ruby-identifier">numPatchesRow</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">gap</span>
+        <span class="ruby-ivar">@animals</span>=<span class="ruby-identifier">fillGridSpace</span> <span class="ruby-identifier">amountAnimals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-createGridSpace" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">createGridSpace</span><span
+            class="method-args">(numPatchesRow, widthPatch, gapPatch)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates the grid according to the rows of patches.</p>
+<dl class="rdoc-list note-list"><dt>numPatchesRow
+<dd>
+<p>number of rows in terms of patches</p>
+</dd><dt>widthPatch
+<dd>
+<p>width of each patch</p>
+</dd><dt>gapPatch
+<dd>
+<p>gap between patches</p>
+</dd></dl>
+
+<p>Returns an array with the plants on the environment.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="createGridSpace-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">createGridSpace</span> <span class="ruby-identifier">numPatchesRow</span>, <span class="ruby-identifier">widthPatch</span>, <span class="ruby-identifier">gapPatch</span>
+        <span class="ruby-ivar">@grid</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+        <span class="ruby-identifier">j</span>=<span class="ruby-value">0</span>
+        <span class="ruby-identifier">plants</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-identifier">a</span>=<span class="ruby-value">0</span>           <span class="ruby-comment">#Para enumerar los grupos de plantas</span>
+        <span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>           <span class="ruby-comment">#Para enumerar los grupos de plantas</span>
+        <span class="ruby-identifier">id</span>=<span class="ruby-value">0</span>  <span class="ruby-comment">#Para diferenciar las plantas en la base de datos</span>
+        <span class="ruby-identifier">numPatchesRow</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-comment">#Filas de parches</span>
+                <span class="ruby-identifier">widthPatch</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-comment">#Filas de celdas en cada parche</span>
+                        <span class="ruby-identifier">row</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+                        
+                        <span class="ruby-identifier">numPatchesRow</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-comment">#Columnas de parches</span>
+                                <span class="ruby-identifier">widthPatch</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-comment">#Columnas de celdas en cada parche</span>
+                                        <span class="ruby-identifier">row</span><span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                                        <span class="ruby-identifier">newPlant</span>=<span class="ruby-constant">Plant</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">a</span><span class="ruby-operator">+</span><span class="ruby-identifier">b</span>, <span class="ruby-identifier">id</span>
+                                        <span class="ruby-identifier">row</span>[<span class="ruby-identifier">j</span>][<span class="ruby-string">&#39;plant&#39;</span>]=<span class="ruby-identifier">newPlant</span>
+                                        <span class="ruby-identifier">plants</span><span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">newPlant</span>
+                                        <span class="ruby-identifier">j</span>=<span class="ruby-identifier">j</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+                                        <span class="ruby-identifier">id</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                                <span class="ruby-keyword">end</span>
+                                
+                                <span class="ruby-identifier">row</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">gapPatch</span>){<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>})
+                                <span class="ruby-identifier">j</span>=<span class="ruby-identifier">j</span><span class="ruby-operator">+</span><span class="ruby-identifier">gapPatch</span>
+                                
+                                <span class="ruby-identifier">a</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span><span class="ruby-operator">%</span><span class="ruby-identifier">numPatchesRow</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+                                        <span class="ruby-identifier">a</span>=<span class="ruby-value">0</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-ivar">@grid</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">row</span>
+                        <span class="ruby-identifier">i</span>=<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+                        <span class="ruby-identifier">j</span>=<span class="ruby-value">0</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">b</span>=<span class="ruby-identifier">b</span><span class="ruby-operator">+</span><span class="ruby-identifier">numPatchesRow</span>
+                
+                <span class="ruby-identifier">gapPatch</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-comment">#Filas de espacio entre parches</span>
+                        <span class="ruby-ivar">@grid</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@gridSize</span>){<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>} <span class="ruby-comment">#Filas de espacios vacios</span>
+                        <span class="ruby-identifier">i</span>=<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@amountGroups</span>=<span class="ruby-identifier">b</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">plants</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- createGridSpace-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- createGridSpace-method -->
+
+    
+      <div id="method-i-eatPlant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">eatPlant</span><span
+            class="method-args">(animal)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Eat a plant</p>
+<dl class="rdoc-list note-list"><dt>animal
+<dd>
+<p>the animal that is going to eat</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="eatPlant-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eatPlant</span> <span class="ruby-identifier">animal</span>
+        <span class="ruby-identifier">plant</span>= <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;plant&#39;</span>]
+        <span class="ruby-identifier">amountOfFood</span>=<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span><span class="ruby-operator">*</span><span class="ruby-identifier">plant</span>.<span class="ruby-identifier">energy</span>
+        
+        <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">eat</span> <span class="ruby-identifier">amountOfFood</span>
+        <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">group</span>=<span class="ruby-identifier">plant</span>.<span class="ruby-identifier">group</span>
+        <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">beEaten</span> <span class="ruby-identifier">amountOfFood</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- eatPlant-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- eatPlant-method -->
+
+    
+      <div id="method-i-fillGridSpace" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fillGridSpace</span><span
+            class="method-args">(amountAnimals)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates and places the animals in the grid</p>
+<dl class="rdoc-list note-list"><dt>amountAnimals
+<dd>
+<p>Number of animals to create</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="fillGridSpace-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fillGridSpace</span> <span class="ruby-identifier">amountAnimals</span>
+        <span class="ruby-identifier">animals</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">amountAnimals</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">again</span>=<span class="ruby-keyword">true</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">again</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">x</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                        <span class="ruby-identifier">y</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                        
+                        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>)
+                                <span class="ruby-identifier">newAnimal</span>=<span class="ruby-constant">Animal</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>].<span class="ruby-identifier">group</span>, <span class="ruby-ivar">@idAnimals</span>
+                                <span class="ruby-identifier">animals</span><span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">newAnimal</span>
+                                <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-identifier">newAnimal</span>
+                                <span class="ruby-identifier">again</span>=<span class="ruby-keyword">false</span>
+                                <span class="ruby-ivar">@idAnimals</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">animals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fillGridSpace-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fillGridSpace-method -->
+
+    
+      <div id="method-i-growPlants" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">growPlants</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Grow each plant</p>
+          
+          
+
+          
+          <div class="method-source-code" id="growPlants-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">growPlants</span>
+        <span class="ruby-ivar">@plants</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">plant</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">grow</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- growPlants-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- growPlants-method -->
+
+    
+      <div id="method-i-moveAnimal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">moveAnimal</span><span
+            class="method-args">(animal, newX, newY)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Moves the animal to a new position</p>
+<dl class="rdoc-list note-list"><dt>animal
+<dd>
+<p>the animal to move</p>
+</dd><dt>newX
+<dd>
+<p>new x position</p>
+</dd><dt>newY
+<dd>
+<p>new y position</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="moveAnimal-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">moveAnimal</span> <span class="ruby-identifier">animal</span>, <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+        <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-keyword">nil</span>
+        <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">newX</span>][<span class="ruby-identifier">newY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-identifier">animal</span>
+        <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">move</span> <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- moveAnimal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- moveAnimal-method -->
+
+    
+      <div id="method-i-moveAnimals" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">moveAnimals</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Move and feed each animal</p>
+          
+          
+
+          
+          <div class="method-source-code" id="moveAnimals-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">moveAnimals</span> <span class="ruby-comment">#Primero se mueve y luego come, porque así lo explican en el artículo</span>
+        <span class="ruby-identifier">newAnimals</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@animals</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">pos</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@animals</span>.<span class="ruby-identifier">size</span>)
+                <span class="ruby-identifier">animal</span>=<span class="ruby-ivar">@animals</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">pos</span>)
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">energy</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">Animal</span>.<span class="ruby-identifier">metabolicCost</span>     <span class="ruby-comment">#Si tiene energía para vivir</span>
+                        <span class="ruby-identifier">newPlant</span>= <span class="ruby-identifier">moveNewPlant</span> <span class="ruby-identifier">animal</span>                       <span class="ruby-comment">#Encontrar la mejor planta y moverse a ella</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">newPlant</span>                                                         <span class="ruby-comment">#Si se movió a una planta</span>
+                                <span class="ruby-identifier">eatPlant</span> <span class="ruby-identifier">animal</span>                                            <span class="ruby-comment">#Comerse la planta</span>
+                        <span class="ruby-keyword">else</span>                                                                        <span class="ruby-comment">#Sino, moverse a cualquier lado</span>
+                                <span class="ruby-identifier">moveAnyPlace</span> <span class="ruby-identifier">animal</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;plant&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-comment">#Si cayó en una planta comerla</span>
+                                        <span class="ruby-identifier">eatPlant</span> <span class="ruby-identifier">animal</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">newAnimals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">animal</span>
+                <span class="ruby-keyword">else</span> <span class="ruby-comment">#Sino muere</span>
+                        <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">newAnimals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- moveAnimals-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- moveAnimals-method -->
+
+    
+      <div id="method-i-moveAnyPlace" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">moveAnyPlace</span><span
+            class="method-args">(animal)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Moves the animal to a neighbor position without another animal</p>
+<dl class="rdoc-list note-list"><dt>animal
+<dd>
+<p>the animal to move</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="moveAnyPlace-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 193</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">moveAnyPlace</span> <span class="ruby-identifier">animal</span>
+                <span class="ruby-identifier">deltaX</span>=[<span class="ruby-value">0</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>]
+                <span class="ruby-identifier">deltaY</span>=[<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">-1</span>]
+                <span class="ruby-identifier">newCell</span>=<span class="ruby-keyword">false</span>
+                <span class="ruby-keyword">while</span> (<span class="ruby-keyword">not</span> <span class="ruby-identifier">newCell</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword">not</span> <span class="ruby-identifier">deltaX</span>.<span class="ruby-identifier">empty?</span>) <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">pos</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">deltaX</span>.<span class="ruby-identifier">size</span>)
+                        <span class="ruby-identifier">newX</span>=<span class="ruby-identifier">validate</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span><span class="ruby-operator">+</span><span class="ruby-identifier">deltaX</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">pos</span>)
+                        <span class="ruby-identifier">newY</span>=<span class="ruby-identifier">validate</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span><span class="ruby-operator">+</span><span class="ruby-identifier">deltaY</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">pos</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">newX</span>][<span class="ruby-identifier">newY</span>][<span class="ruby-string">&#39;animal&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
+                                <span class="ruby-identifier">moveAnimal</span> <span class="ruby-identifier">animal</span>, <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+                                <span class="ruby-identifier">newCell</span>=<span class="ruby-keyword">true</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">newCell</span> <span class="ruby-comment">#Si no hay espacio para moverse, solo se pierde el costo metabolico</span>
+                        <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">move</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>, <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Moves the animal to a new position</span>
+        <span class="ruby-comment"># animal:: the animal to move</span>
+        <span class="ruby-comment"># newX:: new x position</span>
+        <span class="ruby-comment"># newY:: new y position</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">moveAnimal</span> <span class="ruby-identifier">animal</span>, <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+                <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-keyword">nil</span>
+                <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">newX</span>][<span class="ruby-identifier">newY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-identifier">animal</span>
+                <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">move</span> <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Eat a plant</span>
+        <span class="ruby-comment"># animal:: the animal that is going to eat</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">eatPlant</span> <span class="ruby-identifier">animal</span>
+                <span class="ruby-identifier">plant</span>= <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;plant&#39;</span>]
+                <span class="ruby-identifier">amountOfFood</span>=<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span><span class="ruby-operator">*</span><span class="ruby-identifier">plant</span>.<span class="ruby-identifier">energy</span>
+                
+                <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">eat</span> <span class="ruby-identifier">amountOfFood</span>
+                <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">group</span>=<span class="ruby-identifier">plant</span>.<span class="ruby-identifier">group</span>
+                <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">beEaten</span> <span class="ruby-identifier">amountOfFood</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Validates a position. The environment is cyclic</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">validate</span> <span class="ruby-identifier">pos</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@gridSize</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment"># Evolutive section:</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># Deletes from the grid the animals in the toDelete array</span>
+        <span class="ruby-comment"># </span>
+        <span class="ruby-comment"># Places in the grid the animals in the toAdd array</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">replace</span> <span class="ruby-identifier">toDelete</span>, <span class="ruby-identifier">toAdd</span>
+                <span class="ruby-identifier">toDelete</span>.<span class="ruby-identifier">each</span>{
+                        <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-keyword">nil</span>
+                }
+                <span class="ruby-identifier">toAdd</span>.<span class="ruby-identifier">each</span>{
+                        <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">again</span>=<span class="ruby-keyword">true</span>
+                        <span class="ruby-keyword">while</span> <span class="ruby-identifier">again</span> <span class="ruby-keyword">do</span>
+                                <span class="ruby-identifier">x</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                                <span class="ruby-identifier">y</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                                
+                                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>)
+                                        <span class="ruby-identifier">newAnimal</span>=<span class="ruby-constant">Animal</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>].<span class="ruby-identifier">group</span>, <span class="ruby-ivar">@idAnimals</span>, <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">energy</span>, <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span>
+                                        <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-identifier">newAnimal</span>
+                                        <span class="ruby-identifier">again</span>=<span class="ruby-keyword">false</span>
+                                        <span class="ruby-ivar">@idAnimals</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                                        <span class="ruby-ivar">@animals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">newAnimal</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                }
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-comment">#--</span>
+        <span class="ruby-comment">#~ def imprimir</span>
+                <span class="ruby-comment">#~ plants=0</span>
+                <span class="ruby-comment">#~ animals=0</span>
+                <span class="ruby-comment">#~ @grid.each{</span>
+                        <span class="ruby-comment">#~ |row|</span>
+                        <span class="ruby-comment">#~ row.each{</span>
+                                <span class="ruby-comment">#~ |cell|</span>
+                                <span class="ruby-comment">#~ if cell[&#39;plant&#39;]!=nil</span>
+                                        <span class="ruby-comment">#~ plants+=1</span>
+                                <span class="ruby-comment">#~ end</span>
+                                <span class="ruby-comment">#~ if cell[&#39;animal&#39;]!=nil</span>
+                                        <span class="ruby-comment">#~ animals+=1</span>
+                                <span class="ruby-comment">#~ end</span>
+                        <span class="ruby-comment">#~ }</span>
+                <span class="ruby-comment">#~ }</span>
+                <span class="ruby-comment">#~ p &quot;plants: #{plants} - animals: #{animals}&quot;</span>
+        <span class="ruby-comment">#~ end</span>
+        
+        <span class="ruby-comment"># Array with the animals on the environment</span>
+        <span class="ruby-identifier">attr_reader</span> <span class="ruby-value">:animals</span>
+        <span class="ruby-comment"># Array with the plants on the environment</span>
+        <span class="ruby-identifier">attr_reader</span> <span class="ruby-value">:plants</span>
+        <span class="ruby-comment"># Quantity of groups (patches with animals) in the environment</span>
+        <span class="ruby-identifier">attr_reader</span> <span class="ruby-value">:amountGroups</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- moveAnyPlace-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- moveAnyPlace-method -->
+
+    
+      <div id="method-i-moveNewPlant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">moveNewPlant</span><span
+            class="method-args">(animal)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Find the best plant that has at least the metabolic cost and moves the
+animal to it.</p>
+<dl class="rdoc-list note-list"><dt>animal
+<dd>
+<p>the animal to move</p>
+</dd></dl>
+
+<p>Returns if found the best plant.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="moveNewPlant-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">moveNewPlant</span> <span class="ruby-identifier">animal</span>
+        <span class="ruby-identifier">deltaX</span>=[<span class="ruby-value">0</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>]
+        <span class="ruby-identifier">deltaY</span>=[<span class="ruby-value">-1</span>,<span class="ruby-value">-1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">0</span>,<span class="ruby-value">-1</span>]
+        
+        <span class="ruby-identifier">best</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">deltaX</span>.<span class="ruby-identifier">each_index</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">newX</span>=<span class="ruby-identifier">validate</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span><span class="ruby-operator">+</span><span class="ruby-identifier">deltaX</span>[<span class="ruby-identifier">i</span>]
+                <span class="ruby-identifier">newY</span>=<span class="ruby-identifier">validate</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span><span class="ruby-operator">+</span><span class="ruby-identifier">deltaY</span>[<span class="ruby-identifier">i</span>]
+                <span class="ruby-identifier">newCell</span>=<span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">newX</span>][<span class="ruby-identifier">newY</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">newCell</span>[<span class="ruby-string">&#39;plant&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">newCell</span>[<span class="ruby-string">&#39;animal&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-identifier">newEnergy</span>=<span class="ruby-identifier">newCell</span>[<span class="ruby-string">&#39;plant&#39;</span>].<span class="ruby-identifier">energy</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">best</span><span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> ( <span class="ruby-identifier">newEnergy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Animal</span>.<span class="ruby-identifier">metabolicCost</span> )
+                                <span class="ruby-identifier">best</span>=<span class="ruby-identifier">newCell</span>[<span class="ruby-string">&#39;plant&#39;</span>]
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">best!</span>=<span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">newEnergy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">best</span>.<span class="ruby-identifier">energy</span>)
+                                <span class="ruby-identifier">best</span>=<span class="ruby-identifier">newCell</span>[<span class="ruby-string">&#39;plant&#39;</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">best</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">moveAnimal</span> <span class="ruby-identifier">animal</span>, <span class="ruby-identifier">best</span>.<span class="ruby-identifier">posX</span>, <span class="ruby-identifier">best</span>.<span class="ruby-identifier">posY</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- moveNewPlant-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- moveNewPlant-method -->
+
+    
+      <div id="method-i-replace" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">replace</span><span
+            class="method-args">(toDelete, toAdd)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Evolutive section:</p>
+
+<p>Deletes from the grid the animals in the toDelete array</p>
+
+<p>Places in the grid the animals in the toAdd array</p>
+          
+          
+
+          
+          <div class="method-source-code" id="replace-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">replace</span> <span class="ruby-identifier">toDelete</span>, <span class="ruby-identifier">toAdd</span>
+        <span class="ruby-identifier">toDelete</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>][<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-keyword">nil</span>
+        }
+        <span class="ruby-identifier">toAdd</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">again</span>=<span class="ruby-keyword">true</span>
+                <span class="ruby-keyword">while</span> <span class="ruby-identifier">again</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">x</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                        <span class="ruby-identifier">y</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@gridSize</span>)
+                        
+                        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>)
+                                <span class="ruby-identifier">newAnimal</span>=<span class="ruby-constant">Animal</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;plant&#39;</span>].<span class="ruby-identifier">group</span>, <span class="ruby-ivar">@idAnimals</span>, <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">energy</span>, <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span>
+                                <span class="ruby-ivar">@grid</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span>][<span class="ruby-string">&#39;animal&#39;</span>]=<span class="ruby-identifier">newAnimal</span>
+                                <span class="ruby-identifier">again</span>=<span class="ruby-keyword">false</span>
+                                <span class="ruby-ivar">@idAnimals</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                                <span class="ruby-ivar">@animals</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">newAnimal</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- replace-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- replace-method -->
+
+    
+      <div id="method-i-run" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Run one time unit</p>
+          
+          
+
+          
+          <div class="method-source-code" id="run-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+        <span class="ruby-identifier">growPlants</span>
+        <span class="ruby-ivar">@animals</span>=<span class="ruby-identifier">moveAnimals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- run-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- run-method -->
+
+    
+      <div id="method-i-validate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">validate</span><span
+            class="method-args">(pos)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Validates a position. The environment is cyclic</p>
+          
+          
+
+          
+          <div class="method-source-code" id="validate-source">
+            <pre><span class="ruby-comment"># File environment.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">validate</span> <span class="ruby-identifier">pos</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@gridSize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- validate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- validate-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

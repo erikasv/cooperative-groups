@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Animal - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>animal.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-metabolicCost">::metabolicCost</a>
+    
+    <li ><a href="#method-c-metabolicCost-3D">::metabolicCost=</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-eat">#eat</a>
+    
+    <li ><a href="#method-i-fitness">#fitness</a>
+    
+    <li ><a href="#method-i-move">#move</a>
+    
+    <li ><a href="#method-i-mutate">#mutate</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Analysis.html">Analysis</a>
+  
+    <li><a href="./Animal.html">Animal</a>
+  
+    <li><a href="./Assortment.html">Assortment</a>
+  
+    <li><a href="./DBConnection.html">DBConnection</a>
+  
+    <li><a href="./Environment.html">Environment</a>
+  
+    <li><a href="./GeneticAlgorithm.html">GeneticAlgorithm</a>
+  
+    <li><a href="./Graphic.html">Graphic</a>
+  
+    <li><a href="./Model.html">Model</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Plant.html">Plant</a>
+  
+    <li><a href="./Statistics.html">Statistics</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Animal</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Agent that can be one of two types: altruist (eats less than 50% of the
+plant&#39;s energy) or selfish (eats more than 50%)</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-energy" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">energy</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Energy of the animal</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-feedRatePercent" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">feedRatePercent</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Rate of energy that eats of the plant</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-group" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">group</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Number of the group which belongs to</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-identifier" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">identifier</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Identifier on the database</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-posX" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">posX</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>x position on the grid</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-posY" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">posY</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>y position on the grid</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-metabolicCost" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">metabolicCost</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value of the metabolic cost</p>
+          
+          
+
+          
+          <div class="method-source-code" id="metabolicCost-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metabolicCost</span>
+        <span class="ruby-identifier">@@metabolicCost</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- metabolicCost-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- metabolicCost-method -->
+
+    
+      <div id="method-c-metabolicCost-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">metabolicCost=</span><span
+            class="method-args">(val)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Set the metabolic cost for the animals</p>
+<dl class="rdoc-list note-list"><dt>val
+<dd>
+<p>new metabolic cost value</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="metabolicCost-3D-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metabolicCost=</span> <span class="ruby-identifier">val</span>
+        <span class="ruby-identifier">@@metabolicCost</span>=<span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- metabolicCost-3D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- metabolicCost-3D-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(posX, posY, group, identifier, energy=rand(10).to_f, feedRatePercent=rand)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Inserts a new animal. When it appears in a generation different than the 0,
+it has its own energy and feed rate percent</p>
+<dl class="rdoc-list note-list"><dt>posX
+<dd>
+<p>x position on the grid</p>
+</dd><dt>posY
+<dd>
+<p>y position on the grid</p>
+</dd><dt>group
+<dd>
+<p>number of the group which belongs to</p>
+</dd><dt>identifier
+<dd>
+<p>identifier on the database</p>
+</dd><dt>energy
+<dd>
+<p>current energy</p>
+</dd><dt>feedRatePercent
+<dd>
+<p>rate of energy that eats of the plant</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">posX</span>, <span class="ruby-identifier">posY</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">energy</span>=<span class="ruby-identifier">rand</span>(<span class="ruby-value">10</span>).<span class="ruby-identifier">to_f</span>, <span class="ruby-identifier">feedRatePercent</span>=<span class="ruby-identifier">rand</span>
+        <span class="ruby-ivar">@posX</span>=<span class="ruby-identifier">posX</span>
+        <span class="ruby-ivar">@posY</span>=<span class="ruby-identifier">posY</span>
+        <span class="ruby-ivar">@energy</span>=<span class="ruby-identifier">energy</span>
+        <span class="ruby-ivar">@feedRatePercent</span>=<span class="ruby-identifier">feedRatePercent</span>
+        <span class="ruby-ivar">@group</span>=<span class="ruby-identifier">group</span>                          <span class="ruby-comment">#Para el análisis del assortment</span>
+        <span class="ruby-ivar">@identifier</span>=<span class="ruby-identifier">identifier</span>                <span class="ruby-comment">#Para la base de datos</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-eat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">eat</span><span
+            class="method-args">(amount)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>To earn energy</p>
+<dl class="rdoc-list note-list"><dt>amount
+<dd>
+<p>quantity of energy</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="eat-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eat</span> <span class="ruby-identifier">amount</span>
+        <span class="ruby-ivar">@energy</span>=<span class="ruby-ivar">@energy</span><span class="ruby-operator">+</span><span class="ruby-identifier">amount</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- eat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- eat-method -->
+
+    
+      <div id="method-i-fitness" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fitness</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fitness, it will be used by <a
+href="GeneticAlgorithm.html">GeneticAlgorithm</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="fitness-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fitness</span>
+        <span class="ruby-ivar">@energy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fitness-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fitness-method -->
+
+    
+      <div id="method-i-move" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">move</span><span
+            class="method-args">(newX, newY)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Move to a new cell in the grid</p>
+<dl class="rdoc-list note-list"><dt>newX
+<dd>
+<p>new x position</p>
+</dd><dt>newY
+<dd>
+<p>new y position</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="move-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move</span> <span class="ruby-identifier">newX</span>, <span class="ruby-identifier">newY</span>
+        <span class="ruby-ivar">@energy</span>=<span class="ruby-ivar">@energy</span><span class="ruby-operator">-</span><span class="ruby-identifier">@@metabolicCost</span>
+        <span class="ruby-ivar">@posX</span>=<span class="ruby-identifier">newX</span>
+        <span class="ruby-ivar">@posY</span>=<span class="ruby-identifier">newY</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- move-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- move-method -->
+
+    
+      <div id="method-i-mutate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mutate</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Mutation, it will be used by <a
+href="GeneticAlgorithm.html">GeneticAlgorithm</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="mutate-source">
+            <pre><span class="ruby-comment"># File animal.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mutate</span>
+        <span class="ruby-ivar">@feedRatePercent</span><span class="ruby-operator">+=</span>(<span class="ruby-identifier">rand</span><span class="ruby-operator">/</span><span class="ruby-value">5</span>)<span class="ruby-operator">-</span><span class="ruby-value">0.1</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@feedRatePercent</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0.001</span>
+                <span class="ruby-ivar">@feedRatePercent</span>=<span class="ruby-value">0.001</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@feedRatePercent</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1.0</span>
+                <span class="ruby-ivar">@feedRatePercent</span>=<span class="ruby-value">0.99</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mutate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mutate-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

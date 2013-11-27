@@ -1,8 +1,11 @@
+# Author: Erika Suárez Valencia
+
 #~ $:.unshift '.' #Necesario desde 1.9, solo es necesario hacerlo una vez en la capa mas superior
 require 'traitGroups'
 require '../graphic'
 require 'rubyvis'
 
+# ==Description
 # Performs analysis on the number of cooperators at the beginning and
 # end of each run. In addition to testing various configurations of:
 # number of groups - chromosomes on each group

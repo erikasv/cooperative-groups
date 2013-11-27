@@ -1460,6 +1460,32 @@ trait-groups
 \end_layout
 
 \begin_layout Subsection
+The Concurrent Evolution of Cooperation and the Population Structures that
+ Support it 
+\end_layout
+
+\begin_layout Standard
+Los autores plantean que en muchos modelos se imponen las estructuras poblaciona
+les que favorecen la selección del altruismo y la cooperación en lugar de
+ permitir que éstas evolucionen, por lo cuál realizaron el trabajo anterior
+ (
+\shape italic
+Individual Selection for Cooperative Group Formation
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eps264277"
+
+\end_inset
+
+).
+ Pero también ocurre que dichas estructuras son invariables, por lo que
+ no proveen una explicación a cómo surgieron lo requisitos para el funcionamient
+o de ellas.
+\end_layout
+
+\begin_layout Subsection
 A Mechanism for the Evolution of Altruism among Nonkin: Positive Assortment
  through Environmental Feedback
 \end_layout
@@ -1531,7 +1557,7 @@ assortment
 \end_layout
 
 \begin_layout Section
-TRABAJO REALIZADO
+TRABAJO REALIZADO 
 \end_layout
 
 \begin_layout Standard

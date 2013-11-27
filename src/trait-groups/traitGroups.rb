@@ -1,5 +1,8 @@
+# Author: Erika Suárez Valencia
+
 require '../geneticAlgorithm'
 require 'group'
+# ==Description
 # The model, which simulates the pass of generations, a generation
 # consist in the two stages: the grouping fase (predation) and the dispersal fase
 class TraitGroups

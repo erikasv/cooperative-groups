@@ -93,6 +93,10 @@
   
     <li><a href="./Chromosome.html">Chromosome</a>
   
+    <li><a href="./GeneticAlgorithm.html">GeneticAlgorithm</a>
+  
+    <li><a href="./Graphic.html">Graphic</a>
+  
     <li><a href="./Group.html">Group</a>
   
     <li><a href="./TraitGroups.html">TraitGroups</a>
@@ -108,6 +112,8 @@
 
   <div id="description" class="description">
     
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
 <p>Performs analysis on the number of cooperators at the beginning and end of
 each run. In addition to testing various configurations of: number of
 groups - chromosomes on each group</p>
@@ -168,7 +174,7 @@ size</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File analysis_start_end.rb, line 17</span>
+            <pre><span class="ruby-comment"># File analysis_start_end.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">generations</span>, <span class="ruby-identifier">executions</span>, <span class="ruby-identifier">mutationRate</span>=<span class="ruby-value">0.0</span>, <span class="ruby-identifier">killTwoSelfish</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">predationTimes</span>=<span class="ruby-value">0.5</span>
         <span class="ruby-ivar">@maxGroups</span>=<span class="ruby-value">10</span>
         <span class="ruby-ivar">@maxGroupSize</span>=<span class="ruby-value">10</span>
@@ -215,7 +221,7 @@ times</p>
 
           
           <div class="method-source-code" id="run-source">
-            <pre><span class="ruby-comment"># File analysis_start_end.rb, line 29</span>
+            <pre><span class="ruby-comment"># File analysis_start_end.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
         <span class="ruby-identifier">cases</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-value">0</span>}
 

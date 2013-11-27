@@ -1,10 +1,25 @@
+# Author: Erika Suárez Valencia
+
 $:.unshift '.' #Necesario desde 1.9
 require 'environment'
 require '../geneticAlgorithm'
 require 'dBConnection'
 
+# ==Description
+# Is the model itself
 class Model
-	#Los valores por defecto son los del artículo
+	# Receives the parameters to initialize the environment and 
+	# the number of the current execution.
+	# The default values are the same in the paper
+	# executionTime:: number of the execution
+	# width:: width of each patch (group) of plants in cells
+	# gap:: gap between patches in each axis in cells
+	# minPlants:: minimum number of plants in the environment
+	# maxEnergyPlants:: maximum size (energy) for the plants
+	# plantsRate:: logistic rate to the growth of plants
+	# metabolicCost:: metabolic cost for the animals
+	# amountAnimals:: number of animals on the environment
+	#--
 	#Parametros para el escenario: plantas:          								                 , Animales:
 	def initialize executionTime, width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80
 		@mongoDB=connectDB
@@ -17,6 +32,7 @@ class Model
 		aboutAssortment @executionTime, 0
 	end
 	
+	# Connect to de database
 	def connectDB
 		connection=DBConnection.new
 		connection.connect
@@ -24,7 +40,9 @@ class Model
 		return connection
 	end
 	
-	#Escribir en la base de datos la información de plantas y animales
+	# Writes in the database the information about plants and animals
+	# executionTime:: execution time
+	# timeUnit:: time unit
 	def writeAgents executionTime, timeUnit
 		@environment.plants.each{
 			|plant|
@@ -36,12 +54,18 @@ class Model
 		}
 	end
 	
-	#Escribir en la base de datos la composición de los grupos
+	# Writes in the database the groups' composition
+	# executionTime:: execution time
+	# timeUnit:: time unit
+	# altruists:: amount of altruists
+	# selfish:: amount of selfish
+	# group:: number of the group
 	def writeDataGroups executionTime, timeUnit, altruists, selfish, group
 		@mongoDB.writeDataGroups executionTime, timeUnit, altruists, selfish, group
 	end
 	
-	#Ejecutar el modelo
+	# Run the model
+	# timeUnits:: how many time units
 	def run timeUnits
 		for time in 1..timeUnits do
 			@environment.run
@@ -59,6 +83,9 @@ class Model
 		end
 	end
 	
+	# Calculates the variables for after analyse the assortment
+	# executionTime:: execution time
+	# timeUnit:: time unit
 	def aboutAssortment executionTime, timeUnit
 		altruists=Hash.new{|hash,key| hash[key]=0}
 		selfish=Hash.new{|hash,key| hash[key]=0}

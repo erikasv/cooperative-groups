@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DBConnection - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>dBConnection.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-connect">#connect</a>
+    
+    <li ><a href="#method-i-findAll">#findAll</a>
+    
+    <li ><a href="#method-i-writeAnimal">#writeAnimal</a>
+    
+    <li ><a href="#method-i-writeAssortment">#writeAssortment</a>
+    
+    <li ><a href="#method-i-writeDataGroups">#writeDataGroups</a>
+    
+    <li ><a href="#method-i-writePlant">#writePlant</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Analysis.html">Analysis</a>
+  
+    <li><a href="./Animal.html">Animal</a>
+  
+    <li><a href="./Assortment.html">Assortment</a>
+  
+    <li><a href="./DBConnection.html">DBConnection</a>
+  
+    <li><a href="./Environment.html">Environment</a>
+  
+    <li><a href="./GeneticAlgorithm.html">GeneticAlgorithm</a>
+  
+    <li><a href="./Graphic.html">Graphic</a>
+  
+    <li><a href="./Model.html">Model</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Plant.html">Plant</a>
+  
+    <li><a href="./Statistics.html">Statistics</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DBConnection</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Class to connect and make operatoions with the database</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-connect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">connect</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connect to the database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="connect-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>
+        <span class="ruby-identifier">mongo_client</span> = <span class="ruby-constant">MongoClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;localhost&quot;</span>, <span class="ruby-value">27017</span>)
+        <span class="ruby-ivar">@db</span> = <span class="ruby-identifier">mongo_client</span>.<span class="ruby-identifier">db</span>(<span class="ruby-string">&quot;agentsModel&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- connect-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- connect-method -->
+
+    
+      <div id="method-i-findAll" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">findAll</span><span
+            class="method-args">(collection, query, options={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Find all the documents in the collection that satisfy the query</p>
+<dl class="rdoc-list note-list"><dt>collection
+<dd>
+<p>collection name</p>
+</dd><dt>query
+<dd>
+<p>query</p>
+</dd><dt>options
+<dd>
+<p>options</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="findAll-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">findAll</span> <span class="ruby-identifier">collection</span>, <span class="ruby-identifier">query</span>, <span class="ruby-identifier">options</span>={}
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collection</span>(<span class="ruby-node">&quot;#{collection}&quot;</span>).<span class="ruby-identifier">find</span>(<span class="ruby-identifier">query</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- findAll-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- findAll-method -->
+
+    
+      <div id="method-i-writeAnimal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeAnimal</span><span
+            class="method-args">(executionTime, timeUnit, animal)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Write an animal</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd><dt>animal
+<dd>
+<p>animal to write</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writeAnimal-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeAnimal</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">animal</span>
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collection</span>(<span class="ruby-string">&quot;animals&quot;</span>).<span class="ruby-identifier">insert</span>(
+                <span class="ruby-string">&#39;executionTime&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">executionTime</span>,
+                <span class="ruby-string">&#39;timeUnit&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeUnit</span>,
+                <span class="ruby-string">&#39;identifier&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">identifier</span>,
+                <span class="ruby-string">&#39;posX&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posX</span>,
+                <span class="ruby-string">&#39;posY&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">posY</span>,
+                <span class="ruby-string">&#39;energy&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">energy</span>,
+                <span class="ruby-string">&#39;feedRatePercent&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span>,
+                <span class="ruby-string">&#39;group&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">animal</span>.<span class="ruby-identifier">group</span>
+        )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeAnimal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeAnimal-method -->
+
+    
+      <div id="method-i-writeAssortment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeAssortment</span><span
+            class="method-args">(executionTime, timeUnit, meassure)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Write the assortment</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd><dt>meassure
+<dd>
+<p>assortment value for that time unit and execution time</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writeAssortment-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeAssortment</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">meassure</span>
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collection</span>(<span class="ruby-string">&quot;assortment&quot;</span>).<span class="ruby-identifier">insert</span>(
+                <span class="ruby-string">&#39;executionTime&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">executionTime</span>,
+                <span class="ruby-string">&#39;timeUnit&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeUnit</span>,
+                <span class="ruby-string">&#39;assortment&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">meassure</span>
+        )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeAssortment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeAssortment-method -->
+
+    
+      <div id="method-i-writeDataGroups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeDataGroups</span><span
+            class="method-args">(executionTime, timeUnit, altruist, selfish, group)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Write information about the groups</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd><dt>altruist
+<dd>
+<p>amount of altruists</p>
+</dd><dt>selfish
+<dd>
+<p>amount of selfish</p>
+</dd><dt>group
+<dd>
+<p>number of the group</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writeDataGroups-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeDataGroups</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">altruist</span>, <span class="ruby-identifier">selfish</span>, <span class="ruby-identifier">group</span>
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collection</span>(<span class="ruby-string">&quot;dataGroups&quot;</span>).<span class="ruby-identifier">insert</span>(
+                <span class="ruby-string">&#39;executionTime&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">executionTime</span>,
+                <span class="ruby-string">&#39;timeUnit&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeUnit</span>,
+                <span class="ruby-string">&#39;altruist&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">altruist</span>,
+                <span class="ruby-string">&#39;selfish&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">selfish</span>,
+                <span class="ruby-string">&#39;group&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group</span>
+        )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeDataGroups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeDataGroups-method -->
+
+    
+      <div id="method-i-writePlant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writePlant</span><span
+            class="method-args">(executionTime, timeUnit, plant)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Write a plant</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd><dt>plant
+<dd>
+<p>plant to write</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writePlant-source">
+            <pre><span class="ruby-comment"># File dBConnection.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writePlant</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">plant</span>
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collection</span>(<span class="ruby-string">&quot;plants&quot;</span>).<span class="ruby-identifier">insert</span>({
+                <span class="ruby-string">&#39;executionTime&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">executionTime</span>,
+                <span class="ruby-string">&#39;timeUnit&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeUnit</span>,
+                <span class="ruby-string">&#39;identifier&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">identifier</span>,
+                <span class="ruby-string">&#39;posX&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">posX</span>,
+                <span class="ruby-string">&#39;posY&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">posY</span>,
+                <span class="ruby-string">&#39;energy&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">energy</span>,
+                <span class="ruby-string">&#39;group&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plant</span>.<span class="ruby-identifier">group</span>
+        })
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writePlant-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writePlant-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
