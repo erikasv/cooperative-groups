@@ -95,7 +95,8 @@ class Analysis
 		
 		calculateAssortment
 		cursor = @mongoDB.findAll "animals",{'executionTime'=>0,'timeUnit'=>0}
-		n = cursor.count().to_f
+		#~ n = cursor.count().to_f
+		n=80
 		
 		for timeUnit in 0..@timeUnits do
 			xVar = Array.new

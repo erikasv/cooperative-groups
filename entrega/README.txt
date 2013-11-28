@@ -1,6 +1,12 @@
+-----------------------------------------------------------------------------------------------
 
 EMERGENCIA EVOLUTIVA DE GRUPOS COOPERATIVOS GUIADOS POR EL ENTORNO
 Erika Suárez Valencia
+
+Resumen:
+El trabajo de Richard Dawkins plantea que la presión selectiva en un proceso evolutivo ocurre únicamente al nivel de los genes. En este trabajo se demuestra que bajo ciertas condiciones ajenas a los individuos mismos, la selección puede ocurrir en niveles superiores a éstos. El trabajo se realizó implementando un modelo de selección de grupo propuesto por David S. Wilson [wilson1975] y una simulación de agentes basada en el trabajo de Pepper y Smuts [PepperSmuts2000]. Los resultados del primer modelo muestran que el planteamiento de Wilson es correcto, sin embargo éste no es completamente robusto ya que es sensible a características aparentemente irrelevantes. Mientras que los resultados del segundo modelo muestran que para llevar el primer modelo a casos prácticos, hay una línea muy fina entre representar un ambiente que favorezca la cooperación y uno que obedezca el concepto tradicional de selección.
+
+Palabras claves: evolución, selección individual, selección de grupo, altruismo, algoritmos genéticos
 
 -----------------------------------------------------------------------------------------------
 

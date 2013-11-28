@@ -260,7 +260,7 @@ par}
 \backslash
 large
 \backslash
-bf Ssntiago de Cali, Noviembre 29 de 2013 
+bf Santiago de Cali, Noviembre 29 de 2013 
 \backslash
 par} 
 \end_layout
@@ -1165,7 +1165,11 @@ Mating pool
 Traicionero / Desertor: En el dilema del prisionero corresponde a la decisión
  de confesar el crimen, es decir, traicionar al cómplice para que sea éste
  quien sea condenado.
- 
+\end_layout
+
+\begin_layout Itemize
+Snowdrift game: Juego similar al dilema del prisionero, pero con valores
+ de pago diferentes.
 \end_layout
 
 \begin_layout Itemize
@@ -1182,19 +1186,6 @@ Curva logística: Función que modela el crecimiento de una población que
  crece exponencialmente al principio, posteriormente se forma un cuello
  de botella a causa de la falta del recurso y finalmente éste se agota estancand
 o el crecimiento.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Similitud genética
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -1465,9 +1456,7 @@ The Concurrent Evolution of Cooperation and the Population Structures that
 \end_layout
 
 \begin_layout Standard
-Los autores plantean que en muchos modelos se imponen las estructuras poblaciona
-les que favorecen la selección del altruismo y la cooperación en lugar de
- permitir que éstas evolucionen, por lo cuál realizaron el trabajo anterior
+Los autores de este trabajo son los mismos que los del trabajo anterior
  (
 \shape italic
 Individual Selection for Cooperative Group Formation
@@ -1479,10 +1468,218 @@ key "eps264277"
 
 \end_inset
 
-).
- Pero también ocurre que dichas estructuras son invariables, por lo que
- no proveen una explicación a cómo surgieron lo requisitos para el funcionamient
-o de ellas.
+), y su objetivo es un poco diferente.
+ Además de argumentar que las estructuras poblacionales que favorecen la
+ selección del altruismo no deben ser impuestas, también plantean que dichas
+ estructuras son invariables en otros modelos, por lo que no proveen una
+ explicación a cómo surgieron.
+\end_layout
+
+\begin_layout Standard
+Su finalidad es encontrar los requisitos para el funcionamiento de este
+ tipo de estructuras y por qué se formaron.
+ Como punto de partida sugieren que el tamaño del grupo inicial coevoluciona
+ con la producción de bienes públicos, específicamente, que la selección
+ de la cooperación es inversamente proporcional al tamaño inicial del grupo.
+ 
+\end_layout
+
+\begin_layout Standard
+El modelo que proponen se basa en el modelo expuesto por Maynard Smith que
+ consiste en dos etapas: dispersión y agregación.
+ En la etapa de dispersión los individuos se mezclan para formar nuevos
+ grupos, mientras que en la etapa de agregación transcurren cierto número
+ de generaciones.
+\end_layout
+
+\begin_layout Standard
+Cada individuo del modelo codifica (1) las preferencias del tamaño inicial
+ del grupo y (2) el comportamiento social, es decir si es egoísta y no contribuy
+e a los bienes públicos, o cooperador y sí contribuye.
+ La aptitud de los cromosomas está dada por medio de ingresos para el grupo
+ al que pertenecen, modelado con una función basada en el dilema del prisionero
+ y 
+\shape italic
+snowdrift game
+\shape default
+, la matriz de pago se muestra en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:pago-powers-et-al"
+
+\end_inset
+
+.
+ La mutación sólo afecta uno de los dos genes del cromosoma, en caso de
+ ser la preferencia del tamaño, se aumenta o disminuye en 1 con probabilidad
+ del 50%, y en caso de ser el comportamiento cambia al otro valor posible.
+\end_layout
+
+\begin_layout Standard
+Inicialmente organizan la población con preferencias por los grupos grandes,
+ representando poca variación entre los grupos.
+ Posteriormente examinan situaciones en las que la mutación introduce preferenci
+as por grupos pequeños, lo cual aumenta la variación entre grupos y facilita
+ la selección de la cooperación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cooperar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Traicionar
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pago por cooperar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b-\frac{c}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b-c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pago por traicionar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:pago-powers-et-al"
+
+\end_inset
+
+Matriz de pago para asignar la aptitud de los individuos.
+ Donde 
+\begin_inset Formula $b$
+\end_inset
+
+ es el beneficio que reciben ambos individuos y 
+\begin_inset Formula $c$
+\end_inset
+
+ es el costo de cooperar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados muestran que las preferencias por grupos pequeños se ven
+ enlazadas evolutivamente al comportamiento altruista, ya que la cooperación
+ aumenta la aptitud media del grupo, es decir que los individuos con esta
+ configuración tienen mayor aptitud media que los demás individuos en la
+ población.
 \end_layout
 
 \begin_layout Subsection
@@ -4570,10 +4767,6 @@ CONCLUSIONES
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
- Aunque la estructura poblacional más tratada es la propuesta por el modelo
- de los 
-\shape italic
-trait-groups.
 \end_layout
 
 \begin_layout Itemize
@@ -4582,10 +4775,19 @@ El modelo de los
 trait-groups
 \shape default
  sí favorece la difusión de individuos altruistas en la población.
- Sin embargo, al realizar un modelo que incluya este sistema de una forma
- práctica se debe tener cuidado con la sutil diferencia entre representar
- un ambiente que permita la migración de individuos entre grupos, y la represent
-ación de varios ambientes insulares.
+ Sin embargo, hay que tener cuidado en la representación de la depredación
+ al momento de implementarlo, ya que el modelo depende principalmente de
+ esta característica.
+\end_layout
+
+\begin_layout Itemize
+Al realizar un modelo que represente el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ de una forma práctica se debe tener cuidado con la sutil diferencia entre
+ representar un ambiente que permita la migración de individuos entre grupos,
+ y la representación de varios ambientes insulares.
 \end_layout
 
 \begin_layout Itemize
@@ -4619,13 +4821,23 @@ Realizar un
 \shape italic
 framework
 \shape default
- que permita llevar el modelo de los 
+ que permita:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Llevar el modelo de los 
 \shape italic
 trait-groups
 \shape default
  a situaciones más prácticas en otros campos, como la economía.
 \end_layout
 
+\begin_layout Itemize
+Comparar los resultados de varias implementaciones del modelo.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 REFERENCIAS
 \end_layout

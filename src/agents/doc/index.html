@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>class Model - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,53 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>model.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-aboutAssortment">#aboutAssortment</a>
+    
+    <li ><a href="#method-i-connectDB">#connectDB</a>
+    
+    <li ><a href="#method-i-run">#run</a>
+    
+    <li ><a href="#method-i-writeAgents">#writeAgents</a>
+    
+    <li ><a href="#method-i-writeDataGroups">#writeDataGroups</a>
+    
+  </ul>
+</nav>
+
+  </div>
 
   <div id="project-metadata">
     
@@ -78,9 +125,356 @@
   </div>
 </nav>
 
-<div id="documentation" class="description">
-<p>This is the API documentation for RDoc Documentation.
-</div>
+<div id="documentation">
+  <h1 class="class">class Model</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Is the model itself</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(executionTime, width=4, gap=10, minPlants=1000, maxEnergyPlants=10, plantsRate=0.2, metabolicCost=2, amountAnimals=80)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Receives the parameters to initialize the environment and  the number of
+the current execution. The default values are the same in the paper</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>number of the execution</p>
+</dd><dt>width
+<dd>
+<p>width of each patch (group) of plants in cells</p>
+</dd><dt>gap
+<dd>
+<p>gap between patches in each axis in cells</p>
+</dd><dt>minPlants
+<dd>
+<p>minimum number of plants in the environment</p>
+</dd><dt>maxEnergyPlants
+<dd>
+<p>maximum size (energy) for the plants</p>
+</dd><dt>plantsRate
+<dd>
+<p>logistic rate to the growth of plants</p>
+</dd><dt>metabolicCost
+<dd>
+<p>metabolic cost for the animals</p>
+</dd><dt>amountAnimals
+<dd>
+<p>number of animals on the environment</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File model.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">width</span>=<span class="ruby-value">4</span>, <span class="ruby-identifier">gap</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">minPlants</span>=<span class="ruby-value">1000</span>, <span class="ruby-identifier">maxEnergyPlants</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">plantsRate</span>=<span class="ruby-value">0.2</span>, <span class="ruby-identifier">metabolicCost</span>=<span class="ruby-value">2</span>, <span class="ruby-identifier">amountAnimals</span>=<span class="ruby-value">80</span>
+        <span class="ruby-ivar">@mongoDB</span>=<span class="ruby-identifier">connectDB</span>
+        <span class="ruby-ivar">@environment</span>=<span class="ruby-constant">Environment</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">width</span>, <span class="ruby-identifier">gap</span>, <span class="ruby-identifier">minPlants</span>, <span class="ruby-identifier">maxEnergyPlants</span>, <span class="ruby-identifier">plantsRate</span>, <span class="ruby-identifier">metabolicCost</span>, <span class="ruby-identifier">amountAnimals</span>
+        <span class="ruby-ivar">@amountAnimals</span>=<span class="ruby-identifier">amountAnimals</span>
+        <span class="ruby-ivar">@executionTime</span>=<span class="ruby-identifier">executionTime</span>
+        
+        <span class="ruby-comment">#Datos par la base de datos</span>
+        <span class="ruby-identifier">writeAgents</span> <span class="ruby-ivar">@executionTime</span>, <span class="ruby-value">0</span>
+        <span class="ruby-identifier">aboutAssortment</span> <span class="ruby-ivar">@executionTime</span>, <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-aboutAssortment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">aboutAssortment</span><span
+            class="method-args">(executionTime, timeUnit)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calculates the variables for after analyse the assortment</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="aboutAssortment-source">
+            <pre><span class="ruby-comment"># File model.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">aboutAssortment</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>
+        <span class="ruby-identifier">altruists</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-value">0</span>}
+        <span class="ruby-identifier">selfish</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-value">0</span>}
+        <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">animals</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">feedRatePercent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>)
+                        <span class="ruby-identifier">selfish</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">group</span>]<span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">altruists</span>[<span class="ruby-identifier">animal</span>.<span class="ruby-identifier">group</span>]<span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                <span class="ruby-keyword">end</span>
+        }
+        
+        <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">amountGroups</span>.<span class="ruby-identifier">times</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">amountAltruist</span>=<span class="ruby-identifier">altruists</span>[<span class="ruby-identifier">group</span>]
+                <span class="ruby-identifier">amountSelfish</span>=<span class="ruby-identifier">selfish</span>[<span class="ruby-identifier">group</span>]
+                
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">amountAltruist</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>) <span class="ruby-keyword">or</span> (<span class="ruby-identifier">amountSelfish</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+                        <span class="ruby-identifier">writeDataGroups</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">amountAltruist</span>, <span class="ruby-identifier">amountSelfish</span>, <span class="ruby-identifier">group</span>
+                <span class="ruby-keyword">end</span>
+        }
+        
+        <span class="ruby-identifier">altruists</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">selfish</span>=<span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- aboutAssortment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- aboutAssortment-method -->
+
+    
+      <div id="method-i-connectDB" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">connectDB</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connect to de database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="connectDB-source">
+            <pre><span class="ruby-comment"># File model.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connectDB</span>
+        <span class="ruby-identifier">connection</span>=<span class="ruby-constant">DBConnection</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">connect</span>
+        <span class="ruby-comment">#~ connection.cleanDB</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">connection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- connectDB-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- connectDB-method -->
+
+    
+      <div id="method-i-run" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run</span><span
+            class="method-args">(timeUnits)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Run the model</p>
+<dl class="rdoc-list note-list"><dt>timeUnits
+<dd>
+<p>how many time units</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="run-source">
+            <pre><span class="ruby-comment"># File model.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span> <span class="ruby-identifier">timeUnits</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">time</span> <span class="ruby-keyword">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">timeUnits</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">run</span>
+                
+                <span class="ruby-comment">#Evolucionar la población</span>
+                <span class="ruby-identifier">matingPool</span>=<span class="ruby-constant">GeneticAlgorithm</span>.<span class="ruby-identifier">select</span> <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">animals</span>, <span class="ruby-value">0.6</span>
+                <span class="ruby-constant">GeneticAlgorithm</span>.<span class="ruby-identifier">mutate</span> <span class="ruby-identifier">matingPool</span>, <span class="ruby-value">0.01</span>
+                
+                <span class="ruby-identifier">toDelete</span>=<span class="ruby-constant">GeneticAlgorithm</span>.<span class="ruby-identifier">replace</span> <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">animals</span>, <span class="ruby-identifier">matingPool</span>, <span class="ruby-ivar">@amountAnimals</span>
+                <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">toDelete</span>, <span class="ruby-identifier">matingPool</span>
+                
+                <span class="ruby-comment">#Datos par la base de datos</span>
+                <span class="ruby-identifier">writeAgents</span> <span class="ruby-ivar">@executionTime</span>, <span class="ruby-identifier">time</span>
+                <span class="ruby-identifier">aboutAssortment</span> <span class="ruby-ivar">@executionTime</span>, <span class="ruby-identifier">time</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- run-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- run-method -->
+
+    
+      <div id="method-i-writeAgents" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeAgents</span><span
+            class="method-args">(executionTime, timeUnit)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Writes in the database the information about plants and animals</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writeAgents-source">
+            <pre><span class="ruby-comment"># File model.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeAgents</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>
+        <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">plants</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">plant</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@mongoDB</span>.<span class="ruby-identifier">writePlant</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">plant</span>
+        }
+        <span class="ruby-ivar">@environment</span>.<span class="ruby-identifier">animals</span>.<span class="ruby-identifier">each</span>{
+                <span class="ruby-operator">|</span><span class="ruby-identifier">animal</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@mongoDB</span>.<span class="ruby-identifier">writeAnimal</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">animal</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeAgents-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeAgents-method -->
+
+    
+      <div id="method-i-writeDataGroups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">writeDataGroups</span><span
+            class="method-args">(executionTime, timeUnit, altruists, selfish, group)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Writes in the database the groups&#39; composition</p>
+<dl class="rdoc-list note-list"><dt>executionTime
+<dd>
+<p>execution time</p>
+</dd><dt>timeUnit
+<dd>
+<p>time unit</p>
+</dd><dt>altruists
+<dd>
+<p>amount of altruists</p>
+</dd><dt>selfish
+<dd>
+<p>amount of selfish</p>
+</dd><dt>group
+<dd>
+<p>number of the group</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="writeDataGroups-source">
+            <pre><span class="ruby-comment"># File model.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeDataGroups</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">altruists</span>, <span class="ruby-identifier">selfish</span>, <span class="ruby-identifier">group</span>
+        <span class="ruby-ivar">@mongoDB</span>.<span class="ruby-identifier">writeDataGroups</span> <span class="ruby-identifier">executionTime</span>, <span class="ruby-identifier">timeUnit</span>, <span class="ruby-identifier">altruists</span>, <span class="ruby-identifier">selfish</span>, <span class="ruby-identifier">group</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- writeDataGroups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- writeDataGroups-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
 <footer id="validator-badges">
