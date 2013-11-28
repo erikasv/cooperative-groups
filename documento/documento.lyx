@@ -124,15 +124,6 @@ par}
 
 \begin_layout Plain Layout
 
-{
-\backslash
-large 
-\backslash
-bf Proyecto de Ingeniería}
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 vfill
@@ -260,7 +251,7 @@ par}
 \backslash
 large
 \backslash
-bf Santiago de Cali, Noviembre 29 de 2013 
+bf Santiago de Cali, Noviembre 28 de 2013 
 \backslash
 par} 
 \end_layout
@@ -375,19 +366,6 @@ LatexCommand tableofcontents
 \series bold
 \size larger
 Resumen 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\size larger
-Con su debida traducción a inglés
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -583,23 +561,6 @@ key "wilson1975"
 
  que ha sido utilizado ampliamente como base, tanto teórica como práctica
  en otros trabajos.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\color red
-(Decir que es importante porque así ayuda a estar seguros de usar un modelo
- que funciona y deja un ¿software? que se puede usar para modelar otros
- sistemas poblacionales)
-\color inherit
-.
- => De acá se podrá sacar algo para las conclusiones o trabajos futuros?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1533,6 +1494,30 @@ status open
 \begin_layout Plain Layout
 \noindent
 \align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+arraystretch{1.2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+tabcolsep}{0.5ex}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
@@ -1553,6 +1538,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Cooperar
 \end_layout
 
@@ -1562,6 +1549,8 @@ Cooperar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Traicionar
 \end_layout
 
@@ -1573,6 +1562,8 @@ Traicionar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Pago por cooperar
 \end_layout
 
@@ -1582,7 +1573,9 @@ Pago por cooperar
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $b-\frac{c}{2}$
+
+\size small
+\begin_inset Formula $b-c/2$
 \end_inset
 
 
@@ -1594,6 +1587,8 @@ Pago por cooperar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Formula $b-c$
 \end_inset
 
@@ -1608,6 +1603,8 @@ Pago por cooperar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Pago por traicionar
 \end_layout
 
@@ -1617,6 +1614,8 @@ Pago por traicionar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Formula $b$
 \end_inset
 
@@ -1629,6 +1628,8 @@ Pago por traicionar
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Formula $0$
 \end_inset
 
@@ -1982,7 +1983,7 @@ status open
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 Coopera
 \end_layout
 
@@ -1993,7 +1994,7 @@ Coopera
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 Traiciona
 \end_layout
 
@@ -2006,7 +2007,7 @@ Traiciona
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 Coopera
 \end_layout
 
@@ -2017,7 +2018,7 @@ Coopera
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 3,3
 \end_layout
 
@@ -2028,7 +2029,7 @@ Coopera
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 0,5
 \end_layout
 
@@ -2041,7 +2042,7 @@ Coopera
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 Traiciona
 \end_layout
 
@@ -2052,7 +2053,7 @@ Traiciona
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 5,0
 \end_layout
 
@@ -2063,7 +2064,7 @@ Traiciona
 
 \begin_layout Plain Layout
 
-\size scriptsize
+\size small
 1,1
 \end_layout
 
@@ -4223,31 +4224,6 @@ reference "eq:coef-regresion"
 \end_layout
 
 \begin_layout Standard
-La 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Ejecución-modelo-assortment"
-
-\end_inset
-
- muestra el análisis del 
-\shape italic
-assortment
-\shape default
- (similitud genética) sobre el resultado de las ejecuciones del modelo con
- los parámetros expuestos en la 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:Parámetros-pruebas"
-
-\end_inset
-
-.
- La línea rosada corresponde al promedio de las ejecuciones realizadas,
- las líneas azul y gris corresponden a las desviaciones estándar.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -4574,11 +4550,36 @@ Parámetros bajo los que se corrieron las pruebas
 \end_layout
 
 \begin_layout Standard
+La 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Ejecución-modelo-assortment"
+
+\end_inset
+
+ muestra el análisis del 
+\shape italic
+assortment
+\shape default
+ (similitud genética) sobre el resultado de las ejecuciones del modelo con
+ los parámetros expuestos en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Parámetros-pruebas"
+
+\end_inset
+
+.
+ La línea rosada corresponde al promedio de las ejecuciones realizadas,
+ las líneas azul y gris corresponden a las desviaciones estándar.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -4614,6 +4615,18 @@ Análisis del assortment en las 10000 unidades de tiempo
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \noindent
