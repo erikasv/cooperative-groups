@@ -1441,8 +1441,15 @@ Su finalidad es encontrar los requisitos para el funcionamiento de este
  tipo de estructuras y por qué se formaron.
  Como punto de partida sugieren que el tamaño del grupo inicial coevoluciona
  con la producción de bienes públicos, específicamente, que la selección
- de la cooperación es inversamente proporcional al tamaño inicial del grupo.
+ de la cooperación es inversamente proporcional al tamaño inicial del grupo
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EVO:EVO1250"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4877,7 +4884,7 @@ section}[2]{}%
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "bib/The_origin_of_species,bib/El_gen_egoista,bib/A_Theory_of_Group_Selection,bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/Algoritmos_Geneticos1,bib/Algoritmos_Geneticos2,bib/Adaptation_and_natural_selection,bib/kin_selection_is_the_key_to_altruism,bib/Kin_Selection_fact_and_fiction,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/Ocho_Hitos_de_la_Evolucion,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Assortative_Mixing_in_Networks,bib/Networks_An_Introduction,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/Individual_selection_for_cooperative_group_formation,bib/Growing_Artificial_Societies,bib/What_is_wrong_with_absolute_individual_fitness"
+bibfiles "bib/The_origin_of_species,bib/El_gen_egoista,bib/A_Theory_of_Group_Selection,bib/A_mechanism_for_the_evolution_of_altruism_among_nonkin_positive_assortment_through_environmental_feedback,bib/Algoritmos_Geneticos1,bib/Algoritmos_Geneticos2,bib/Adaptation_and_natural_selection,bib/kin_selection_is_the_key_to_altruism,bib/Kin_Selection_fact_and_fiction,bib/Willia_D_Hamilton_by_Alicia_Parks,bib/Persistent_misunderstandings_of_inclusive_fitness_and_kin_selection,bib/Ocho_Hitos_de_la_Evolucion,bib/The_Moral_Herd_Groups_and_the_Evolution_of_Altruism_and_Cooperation,bib/Assortative_Mixing_in_Networks,bib/Networks_An_Introduction,bib/Minimos_Cuadrados_1,bib/Minimos_Cuadrados_2,bib/Individual_selection_for_cooperative_group_formation,bib/The_Concurrent_Evolution_of_Cooperativ_and_the_Population_Structures_that_Support_it,bib/Growing_Artificial_Societies,bib/What_is_wrong_with_absolute_individual_fitness"
 options "ieeetr"
 
 \end_inset
