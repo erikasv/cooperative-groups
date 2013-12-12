@@ -1,0 +1,94 @@
+Trait-groups:
+
+// Trait-Groups diagram
+// Classes
+[Chromosome|-gen;-decision;-fitness|+initialize;+mutate]
+[Group|-groupSize;-arrayChromosomes;+predationMatrix;+killTwoSelfish|+initialize;+add;+predation;+delete]
+[TraitGroups|-amountGroups;-groupSize;-generations;-predationTimes;-mutationRate;-composition;-arrayGroups|+initialize;+run;+count;+distribute]
+[Analysis_start_end|-maxGroups;-maxGroupSize;-generations;-predationTimes;-mutationRate;-executions;-fileNumber;-killTwoSelfish|+initialize;+run]
+[GeneticAlgorithm|+select;+mutate;+replace]
+[Graphic|+makeScatterplot;+makeLineChart]
+// Relations
+[Group]->[Chromosome]
+[TraitGroups]->[Group]
+[Analysis_start_end]->[TraitGroups]
+[Analysis_start_end]->[Graphic]
+[TraitGroups]->[GeneticAlgorithm]
+
+http://yuml.me/69a65bea
+
+Agents:
+
+// Agents diagram
+// General
+[Graphic]<-[Analysis]
+[Statistics]<-[Analysis]
+[DBConnection]<-[Analysis]
+[Model]->[DBConnection]
+[Model]->[GeneticAlgorithm]
+[Environment]<-[Model]
+[Plant]<-[Environment]
+[Animal]<-[Environment]
+[Assortment]->[DBConnection]
+[Assortment]->[Statistics]
+
+http://yuml.me/a2e4231b
+
+// Agents diagram
+// Classes
+[Animal|-posX;-posY;-energy;-feedRatePercent;-group;-identifier;+metabolicCost|+initialize;+eat;+move;+fitness;+mutate]
+[Plant|-energy;-posX;-posY;-group;-identifier;+maxSize;+logisticRate|+initialize;+grow;+beEaten]
+[Environment|-amountPlants;-amountAnimals;-idAnimals;-gridSize;-plants;-animals|+initialize;+createGridSpace;+fillGridSpace;+run;+growPlants;+moveAnimals;+moveNewPlant;+moveAnyPlace;+moveAnimal;+eatPlant;+validate;+replace]
+[Model|-mongoDB;-environment;-amountAnimals;-executionTime|+initialize;+connectDB;+writeAgents;+writeDataGroups;+run;+aboutAssortment]
+[DBConnection|+connect;+writeAnimal;+writePlant;+writeAssortment;+writeDataGroups;+findAll]
+[GeneticAlgorithm|+select;+mutate;+replace]
+// Relations
+[Model]->[DBConnection]
+[Model]->[GeneticAlgorithm]
+[Environment]<-[Model]
+[Plant]<-[Environment]
+[Animal]<-[Environment]
+
+http://yuml.me/fb15c09b
+
+// Agents diagram
+// Classes
+[DBConnection|+connect;+writeAnimal;+writePlant;+writeAssortment;+writeDataGroups;+findAll]
+[Analysis|-timeUnits;-mongoDB;-executionTimes;-assortmentMatrix|+initialize;+connectDB;+calculateAssortment;+graphicAssortment;+makeChart;+graphicAnalysis]
+[Graphic|+makeScatterplot;+makeLineChart]
+[Statistics|+regressionCoeficientLeastSquares;+regressionCoeficient;+covariance;+variance;+standardDeviation;+expectedValue]
+[Assortment|-timeUnits;-mongoDB;-executionTime|+initialize;+connectDB;+meassureAssortment;+oneUnitAssortment]
+// Relations
+[Graphic]<-[Analysis]
+[Statistics]<-[Analysis]
+[DBConnection]<-[Analysis]
+[Assortment]->[DBConnection]
+[Assortment]->[Statistics]
+
+http://yuml.me/5fed985b
+
+// Agents diagram
+// Classes
+[Animal|-posX;-posY;-energy;-feedRatePercent;-group;-identifier;+metabolicCost|+initialize;+eat;+move;+fitness;+mutate]
+[Plant|-energy;-posX;-posY;-group;-identifier;+maxSize;+logisticRate|+initialize;+grow;+beEaten]
+[Environment|-amountPlants;-amountAnimals;-idAnimals;-gridSize;-plants;-animals|+initialize;+createGridSpace;+fillGridSpace;+run;+growPlants;+moveAnimals;+moveNewPlant;+moveAnyPlace;+moveAnimal;+eatPlant;+validate;+replace]
+[Model|-mongoDB;-environment;-amountAnimals;-executionTime|+initialize;+connectDB;+writeAgents;+writeDataGroups;+run;+aboutAssortment]
+[DBConnection|+connect;+writeAnimal;+writePlant;+writeAssortment;+writeDataGroups;+findAll]
+[GeneticAlgorithm|+select;+mutate;+replace]
+[Analysis|-timeUnits;-mongoDB;-executionTimes;-assortmentMatrix|+initialize;+connectDB;+calculateAssortment;+graphicAssortment;+makeChart;+graphicAnalysis]
+[Graphic|+makeScatterplot;+makeLineChart]
+[Statistics|+regressionCoeficientLeastSquares;+regressionCoeficient;+covariance;+variance;+standardDeviation;+expectedValue]
+[Assortment|-timeUnits;-mongoDB;-executionTime|+initialize;+connectDB;+meassureAssortment;+oneUnitAssortment]
+// Relations
+[Graphic]<-[Analysis]
+[Statistics]<-[Analysis]
+[DBConnection]<-[Analysis]
+[Model]->[DBConnection]
+[Model]->[GeneticAlgorithm]
+[Environment]<-[Model]
+[Plant]<-[Environment]
+[Animal]<-[Environment]
+[Assortment]->[DBConnection]
+[Assortment]->[Statistics]
+
+http://yuml.me/15cc978a
