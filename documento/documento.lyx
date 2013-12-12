@@ -4869,11 +4869,11 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 renewcommand{
 \backslash
-section}[2]{}%
+section}[1]{}%
 \end_layout
 
 \end_inset
@@ -4914,10 +4914,7 @@ ANEXOS
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\size large
-\begin_inset VSpace 0.8cm
+\begin_inset VSpace 5mm
 \end_inset
 
 
@@ -4947,7 +4944,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/TraitGroups/clases.png
+	filename img/TraitGroups/clases.svg
 	width 110page%
 	clip
 
@@ -5036,7 +5033,7 @@ status collapsed
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases.png
+	filename img/agents/clases_white.png
 	width 110page%
 	clip
 
@@ -5112,7 +5109,7 @@ status collapsed
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases_acercamiento1.png
+	filename img/agents/clases_acercamiento1_white.png
 	width 110page%
 	clip
 
@@ -5182,13 +5179,13 @@ begin{landscape}
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases_acercamiento2.png
+	filename img/agents/clases_acercamiento2_white.png
 	width 110page%
 	clip
 
