@@ -50,16 +50,19 @@ class Statistics
 	# xValues:: independent variable
 	# yValues:: dependent variable
 	def self.covariance xValues, yValues
-		#Covar=E(x.y)-E(x).E(y)
-		product=Array.new
+		#Covar=E[(x-E[x])-(y-E[y])]
+		averageX= expectedValue xValues
+		averageY= expectedValue yValues
+		finalValues=Array.new
+		
 		xValues.each_index{
 			|i|
-			product << xValues[i]*yValues[i]
+			finalValues<< (xValues[i]-averageX)*(yValues[i]-averageY)
 		}
-		averageProduct=expectedValue product
-		averageX=expectedValue xValues
-		averageY=expectedValue yValues
-		return averageProduct - (averageX*averageY)
+		
+		result=expectedValue finalValues
+		
+		return result
 	end
 	
 	# Calculates the variance of the numbers

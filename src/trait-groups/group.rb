@@ -3,6 +3,8 @@
 require 'chromosome'
 # ==Description
 # Represents one group and holds {groupSize}[rdoc-ref:Group::new] chromosomes. Inside only occurs predation.
+
+# type of @arrayChromosomes: Chromosome
 class Group
 
 	# Matriz de pago cambiada de acuerdo a la descripción de la depredación
