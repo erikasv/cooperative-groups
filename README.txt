@@ -1,5 +1,3 @@
------------------------------------------------------------------------------------------------
-
 EMERGENCIA EVOLUTIVA DE GRUPOS COOPERATIVOS GUIADOS POR EL ENTORNO
 Erika Suárez Valencia
 
