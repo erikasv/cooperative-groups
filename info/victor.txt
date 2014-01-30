@@ -1,9 +1,0 @@
--Cambiar el enfoque a replantear el modelo de los trait-groups
-
--Limitar la iteración (cantidad generaciones) en los grupos antes de mezclar -> Introducir una variable para esto (3 ejes)
--Se está suprimiendo la epecialización por localidad
-
-*Jugar con la cantidad de individuos que se mezclan (No mezclar toda la población)
-
--Ya se me olvido la referencia a la tesis de Diego.
-
