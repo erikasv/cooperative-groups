@@ -515,9 +515,9 @@ key "dawkins2000gen"
 
 \end_inset
 
-, en la que afirma que la selección ocurre solo al nivel de los genes, pues
+, en la que afirma que la selección ocurre sólo al nivel de los genes, pues
  son los que especifican el fenotipo de los organismos, y que el comportamiento
- altruista solo es aparente ya que ocurre entre individuos relacionados,
+ altruista sólo es aparente ya que ocurre entre individuos relacionados,
  es decir, que tienen genes idénticos.
  Esta teoría es respaldada por las teorías de 
 \shape italic
@@ -544,7 +544,7 @@ En cuanto a la selección de grupo, existen viarias teorías que explican
 Es importante resaltar que en el momento que algunas de las teorías nacieron
  no se tenía la capacidad de cómputo con la que se cuenta ahora, por lo
  tanto no había forma de probar con una simulación de los modelos si éstos
- funcionaban o eran realmente útiles, éste es el caso del modelo de los
+ funcionaban o eran realmente útiles, este es el caso del modelo de los
  
 \shape italic
 trait-groups
@@ -632,10 +632,10 @@ Computación Evolutiva
 \end_layout
 
 \begin_layout Standard
-Rama de la inteligencia artificial que reúne las diferentes estrategias
- de resolución de problemas inspiradas en el proceso de evolución biológica,
- tales como los algoritmos genéticos, la programación genética y las estrategias
- genéticas, entre otras.
+La computación evolutiva es una rama de la inteligencia artificial que reúne
+ las diferentes estrategias de resolución de problemas inspiradas en el
+ proceso de evolución biológica, tales como los algoritmos genéticos, la
+ programación genética y las estrategias genéticas, entre otras.
  
 \end_layout
 
@@ -651,9 +651,9 @@ s de búsqueda y optimización que son usados frecuentemente en problemas
 
 \begin_layout Standard
 Estos algoritmos son los más similares a la selección natural.
- Consiste en codificar las posibles soluciones al problema en un cromosoma,
- de tal forma que el algoritmo pueda crear una población de soluciones y
- aplicar sobre ella el proceso evolutivo 
+ El algoritmo consiste en codificar las posibles soluciones al problema
+ en un cromosoma, de tal forma que pueda crear una población de soluciones
+ y aplicar sobre ella el proceso evolutivo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "genetic_alg2"
@@ -744,7 +744,7 @@ Kin Selection
 \shape default
 , pero muy a menudo se usan como sinónimos.
  Representa los efectos acumulativos de los genes que ocasionan comportamientos
- específicos relacionados no solo con la aptitud del individuo mismo, medida
+ específicos relacionados no sólo con la aptitud del individuo mismo, medida
  a través de la cantidad de copias de si mismo que produce, sino también
  con sus relativos, es decir aquellos que comparten uno o más genes y por
  lo tanto un ancestro 
@@ -1169,14 +1169,15 @@ A Theory of Group Selection
 \end_layout
 
 \begin_layout Standard
-El autor presenta un modelo teórico que se basa en los diferentes tipos
- de etapas por las que pasan los organismos en su ciclo de vida.
+En este trabajo David S.
+ Wilson presenta un modelo teórico que se basa en los diferentes tipos de
+ etapas por las que pasan los organismos en su ciclo de vida.
  El modelo se compone de dos estados claramente distinguidos, el primero
  consiste en que los individuos son separados en grupos donde se lleva a
  cabo el proceso de depredación.
  Y en el segundo estado los individuos salen de los grupos, son mezclados,
  se reproducen y posteriormente redistribuidos en la misma cantidad de grupos,
- éste último estado corresponde a la etapa de dispersión que es la unidad
+ este último estado corresponde a la etapa de dispersión que es la unidad
  de población mayormente concebida.
  El autor destaca que la mayoría de las interacciones ecológicas, como alimentac
 ión y depredación, entre otras, ocurren en la primera etapa, por lo tanto
@@ -1195,7 +1196,7 @@ key "wilson1975"
 \end_layout
 
 \begin_layout Standard
-En el modelo todos los individuos son iguales, solo difieren en un único
+En el modelo todos los individuos son iguales, sólo difieren en un único
  rasgo, que los distingue entre altruistas y egoístas.
  Por esto se definen dos tipos de individuos, el donante que es quien manifiesta
  un rasgo (sin importar el tipo del rasgo), y el receptor que son todos
@@ -1224,7 +1225,7 @@ reference "fig:FdvsFr"
 \end_inset
 
  es la cantidad de individuos en el grupo) y los puntos por encima de ésta
- son seleccionados en éste caso.
+ son seleccionados en este caso.
 \end_layout
 
 \begin_layout Standard
@@ -1308,8 +1309,8 @@ trait-group
  y (2) la variación en la composición de los grupos.
  En la práctica la heterogeneidad espacial es considerada una forma de grupos
  de rasgos ya que al partir la población espacialmente, pero permitiendo
- migración de individuos, es un mecanismo equivalente al modelo propuesto.
- Mientras que los ambientes insulares pequeños constituyen un solo grupo
+ migración de individuos, es un mecanismo equivalente al modelo propuesto,
+ mientras que los ambientes insulares pequeños constituyen un solo grupo
  de rasgo y clasifican en la selección individual.
 \end_layout
 
@@ -1724,7 +1725,7 @@ El trabajo consiste en una simulación, en un espacio de dos dimensiones
  cuadrados y su única característica es la energía que tienen la cual crece
  de acuerdo a una curva logística.
  Para el otro tipo de agentes existen dos tipos de animales: moderado (altruista
-) y abusivo (egoísta), solo difieren en la cantidad de energía que consumen
+) y abusivo (egoísta), sólo difieren en la cantidad de energía que consumen
  de una planta, los moderados consumen el 50% y los abusivos el 99%.
  Ambos tipos de animales tienen el mismo comportamiento de desplazamiento
  y costo metabólico por unidad de tiempo, y ninguno de ellos guarda una
@@ -1824,7 +1825,7 @@ key "wilson1975"
 \end_layout
 
 \begin_layout Standard
-Algunos trabajos solo tomaron la idea de una estructura de población y sus
+Algunos trabajos sólo tomaron la idea de una estructura de población y sus
  manifestaciones, tal como la división espacial 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1922,7 +1923,7 @@ Detalles de implementación
 \begin_layout Standard
 El modelo implementado cumple con los mismos pasos, pero permite agregar
  un paso entre el 3 y el 4: mutar la población.
- Éste paso es opcional y se ingresa al modelo como un parámetro de entrada,
+ Este paso es opcional y se ingresa al modelo como un parámetro de entrada,
  indicando la tasa de mutación que se desea.
 \end_layout
 
@@ -2181,7 +2182,57 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout Standard
-Se realizaron diferentes pruebas, con las siguientes configuraciones:
+Cada ejecución realizada consiste en una configuración de valores para los
+ parámetros 
+\series bold
+Cantidad
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+generaciones
+\series default
+, 
+\series bold
+Tasa
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+mutación
+\series default
+ y 
+\series bold
+Al
+\begin_inset space ~
+\end_inset
+
+encuentro
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+dos
+\begin_inset space ~
+\end_inset
+
+desertores
+\series default
+ y una variación en la cantidad de grupos y la cantidad de individuos por
+ grupo entre 2 y 10.
+\end_layout
+
+\begin_layout Standard
+Los posibles valores para los parámetros son:
 \end_layout
 
 \begin_layout Description
@@ -2193,7 +2244,7 @@ de
 \begin_inset space ~
 \end_inset
 
-generaciones: 100, 1000 y 10000
+generaciones: 100, 1000, 10000
 \end_layout
 
 \begin_layout Description
@@ -2205,7 +2256,7 @@ de
 \begin_inset space ~
 \end_inset
 
-mutación: 0%, 1% y 10%
+mutación: 0%, 1%, 10%
 \end_layout
 
 \begin_layout Description
@@ -2229,12 +2280,17 @@ desertores: muere uno, mueren los dos
 \end_layout
 
 \begin_layout Standard
-En todas las pruebas se varió la cantidad de grupos y la cantidad de individuos
- por grupos entre 2 y 10.
- Y se realizaron 10, 100 y 1000 ejecuciones del algoritmo, para contar cuantas
- veces cada configuración cantidad de grupos - individuos por grupo es exitosa,
- es decir, que la cantidad de individuos cooperadores en la población aumenta
- tras finalizar la ejecución del modelo.
+Una configuración cantidad de grupos - individuos por grupo es exitosa si
+ la cantidad de individuos cooperadores en la población aumenta tras finalizar
+ la ejecución del modelo.
+\end_layout
+
+\begin_layout Standard
+Con el fin de averiguar que tan exitosa es cada configuración cantidad de
+ grupos - individuos por grupo, se realizaron 10, 100 y 1000 ejecuciones
+ del algoritmo por cada configuración de valores para los parámetros y se
+ contó cuantas veces cada configuración cantidad de grupos - individuos
+ por grupo fue exitosa.
 \end_layout
 
 \begin_layout Standard
@@ -2564,8 +2620,7 @@ reference "fig:Pruebas-1muerto-variaGeneraciones"
 \end_inset
 
  se muestran pruebas realizadas matando un desertor al encuentro de dos
- de ellos.
- Mientras que de la 
+ de ellos, mientras que de la 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Pruebas-2muertos-variaEjecuciones"
@@ -2878,8 +2933,8 @@ reference "fig:Pruebas-1muerto-variaEjecucion"
 
 \end_inset
 
-, donde ocurren más casos exitosos cuando la cantidad de grupos y los individuos
- por grupo son pequeños.
+, donde ocurren más casos exitosos cuando la cantidad de grupos y el número
+ de individuos por grupo es pequeños.
  Esto se debe a que los individuos cooperadores sólo sobreviven si se encuentran
  dos de ellos, de manera que la mutación es destructiva en más ocasiones.
 \end_layout
@@ -3189,10 +3244,10 @@ reference "fig:Pruebas-2muertos-variaEjecuciones"
  100 y 1000 ejecuciones.
  En ellas se puede observar que entre mayor sea la cantidad de grupos y
  de individuos por grupo, más casos de éxito hay.
- Al igual, éstos casos también aumentan cuando aumenta la cantidad de ejecucione
+ Al igual, estos casos también aumentan cuando aumenta la cantidad de ejecucione
 s.
- Lo cual indica que el parámetro más influyente del modelo es cuántos y
- cómo son afectados los individuos por desertar.
+ Esto indica que el parámetro más influyente del modelo es cuántos y cómo
+ son afectados los individuos por desertar.
 \end_layout
 
 \begin_layout Standard
@@ -3538,9 +3593,9 @@ Los resultados son coherentes con las afirmaciones hechas en otros trabajos
 \end_deeper
 \begin_layout Itemize
 Al variar la mutación los resultados se ven ligeramente afectados con respecto
- a la cantidad de casos exitosos.
- Lo cual ocurre porque la mutación es más destructiva para la cooperación,
- dado que, para que se dé, se requieren dos individuos cooperadores.
+ a la cantidad de casos exitosos, lo cual ocurre porque la mutación es más
+ destructiva para la cooperación, dado que, para que se dé, se requieren
+ dos individuos cooperadores.
  Si la mutación destruye a uno de ellos (o a ambos) ya no hay cooperación.
  Pero a pesar de esto, el patrón de los resultados se conserva.
 \end_layout
@@ -3977,7 +4032,6 @@ Donde
 \end_layout
 
 \end_deeper
-\end_deeper
 \begin_layout Enumerate
 En caso de que el agente seleccionado sea un animal, éste se mueve de celda
  y come de la planta en la que se ubica.
@@ -3990,7 +4044,6 @@ Busca entre las 8 celdas vecinas la que tenga la planta con mayor energía,
  si ésta cumple con el costo metabólico se mueve a ella.
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 Sino, escoge una celda aleatoria que no tenga un animal en ella.
 \end_layout
@@ -4039,7 +4092,7 @@ Detalles de implementación
 \end_layout
 
 \begin_layout Standard
-En el trabajó que se realizó, se ajustan las características mencionadas
+En el trabajo que se realizó, se ajustan las características mencionadas
  anteriormente para que sean más realistas, por lo tanto presenta las siguientes
  modificaciones con respecto al original.
  Estas modificaciones fueron realizadas con base al libro 
@@ -5027,13 +5080,13 @@ Diagrama de clases
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases.svg
+	filename img/agents/clases.png
 	width 110page%
 	clip
 
@@ -5103,13 +5156,13 @@ begin{landscape}
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases_acercamiento1.svg
+	filename img/agents/clases_acercamiento1.png
 	width 110page%
 	clip
 
@@ -5179,13 +5232,13 @@ begin{landscape}
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/agents/clases_acercamiento2.svg
+	filename img/agents/clases_acercamiento2.png
 	width 110page%
 	clip
 
