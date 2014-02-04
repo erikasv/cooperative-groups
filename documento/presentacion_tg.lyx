@@ -380,11 +380,55 @@ No quiero que aparezca nada en la barrita gris
 Contexto
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Presentacion/evolucion.jpe
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Itemize
 La teoría de Richard Dawkins plantea que la presión selectiva en el proceso
  evolutivo se ejerce únicamente sobre los genes, ya que estos son lo suficientem
 ente longevos para ser beneficiarios de la selección de un individuo.
  Lo cual explica el altruismo que ocurre sólo entre individuos emparentados.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+En su libro 
+\shape italic
+El gen egoísta
+\shape default
+, Richard Dawkins plantea que la unidad fundamental de la evolución es el
+ gen y rechaza que unidades más grandes como el individuo o los grupos de
+ individuos sean objeto de selección.
+ También plantea que un comportamiento altruista entre dichas unidades superiore
+s, sólo es aparente ya que ocurre entre individuos relacionados.
 \end_layout
 
 \begin_layout Itemize
@@ -394,8 +438,13 @@ Por otra parte, otros científicos argumentan que hay características, tales
 \end_layout
 
 \begin_layout Itemize
-En este trabajo se busca realizar un modelo en el que las características
- del ambiente favorezcan los individuos cooperadores.
+En este trabajo se busca mostrar por medio de un modelo que las características
+ del ambiente pueden favorecer a los individuos cooperadores.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2144,6 +2193,18 @@ trait-groups
  práctica se debe tener cuidado con la sutil diferencia entre representar
  este tipo de ambientes y varios insulares.
  
+\end_layout
+
+\begin_layout Section
+Trabajos futuros
+\end_layout
+
+\begin_layout BeginFrame
+Trabajos futuros
+\end_layout
+
+\begin_layout ItemizeIncremental
+.
 \end_layout
 
 \begin_layout EndFrame

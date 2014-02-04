@@ -432,11 +432,12 @@ key "dawkins1994gen"
 \end_inset
 
 , Richard Dawkins plantea que la unidad fundamental de la evolución es el
- gen y rechaza que unidades más grandes como el individuo o los grupos de
- individuos sean objeto de selección.
+ gen y rechaza que unidades más grandes como los grupos de individuos sean
+ objeto de selección.
  También plantea que la propiedad más importante de un gen para ser seleccionado
  es el egoísmo y por lo tanto, el altruismo es una característica considerada
- como mala.
+ como mala (o al menos, como algo no obvio, que requeriría una detallada
+ investigación).
  En este trabajo se muestra que bajo ciertas condiciones ajenas a los individuos
  mismos, la selección puede ocurrir en niveles superiores a éstos y que
  los individuos altruistas pueden ser seleccionados.
@@ -554,8 +555,8 @@ key "bhl65514"
 Existen muchos puntos de vista acerca del funcionamiento de la evolución,
  donde el punto clave de discusión es el nivel al que actúa esta presión
  selectiva.
- Los puntos de vista se dividen principalmente en dos: la selección individual
- y la selección de grupo.
+ Los puntos de vista relevantes para este trabajo se dividen principalmente
+ en dos: la selección individual y la selección de grupo.
 \end_layout
 
 \begin_layout Standard
@@ -2347,8 +2348,9 @@ dos
 
 desertores
 \series default
- y una variación en la cantidad de grupos y la cantidad de individuos por
- grupo entre 2 y 10.
+.
+ Y en cada ejecución se varía la cantidad de grupos y la cantidad de individuos
+ por grupo entre 2 y 10.
 \end_layout
 
 \begin_layout Standard
@@ -3684,17 +3686,9 @@ reference "fig:Pruebas-1muerto-variaGeneraciones"
 Conclusiones del modelo
 \end_layout
 
-\begin_layout Itemize
-El modelo no es completamente robusto, dado que al modificar detalles de
- implementación que aparentan tener poca importancia, los resultados cambian
- bruscamente.
- Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
- en un encuentro.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 El modelo no es completamente robusto, dado que al modificar detalles pequeños
@@ -3706,6 +3700,14 @@ El modelo no es completamente robusto, dado que al modificar detalles pequeños
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+El modelo no es completamente robusto, dado que al modificar detalles de
+ implementación que aparentan tener poca importancia, los resultados cambian
+ bruscamente.
+ Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
+ en un encuentro.
 \end_layout
 
 \begin_layout Itemize
@@ -5171,7 +5173,7 @@ status collapsed
 \noindent
 \align center
 \begin_inset Graphics
-	filename img/TraitGroups/clases.svg
+	filename img/TraitGroups/clases.png
 	width 110page%
 	clip
 
