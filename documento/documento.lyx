@@ -420,6 +420,57 @@ RESUMEN
 \end_layout
 
 \begin_layout Standard
+En su libro 
+\shape italic
+El gen egoísta
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dawkins1994gen"
+
+\end_inset
+
+, Richard Dawkins plantea que la unidad fundamental de la evolución es el
+ gen y rechaza que unidades más grandes como el individuo o los grupos de
+ individuos sean objeto de selección.
+ También plantea que la propiedad más importante de un gen para ser seleccionado
+ es el egoísmo y por lo tanto, el altruismo es una característica considerada
+ como mala.
+ En este trabajo se muestra que bajo ciertas condiciones ajenas a los individuos
+ mismos, la selección puede ocurrir en niveles superiores a éstos y que
+ los individuos altruistas pueden ser seleccionados.
+ El trabajo se realizó implementando un modelo de selección de grupo propuesto
+ por David S.
+ Wilson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wilson1975"
+
+\end_inset
+
+ y una simulación de agentes basada en el trabajo de Pepper y Smuts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PepperSmuts2000"
+
+\end_inset
+
+.
+ Los resultados del primer modelo muestran que el planteamiento de Wilson
+ es correcto, sin embargo éste no es completamente robusto ya que es sensible
+ a características que aparentan tener poca importancia.
+ Mientras que los resultados del segundo modelo muestran que para llevar
+ el primer modelo a casos prácticos, hay una línea muy fina entre representar
+ un ambiente que favorezca la cooperación y uno que obedezca el concepto
+ tradicional de selección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 El trabajo de Richard Dawkins plantea que la presión selectiva en un proceso
  evolutivo ocurre únicamente al nivel de los genes.
  En este trabajo se demuestra que bajo ciertas condiciones ajenas a los
@@ -448,6 +499,11 @@ key "PepperSmuts2000"
  el primer modelo a casos prácticos, hay una línea muy fina entre representar
  un ambiente que favorezca la cooperación y uno que obedezca el concepto
  tradicional de selección.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -504,6 +560,64 @@ Existen muchos puntos de vista acerca del funcionamiento de la evolución,
 
 \begin_layout Standard
 Por el lado de la selección individual, la mayor fuerza está dada por la
+ propuesta de Richard Dawkins, quien plantea que la unidad que sea objeto
+ de selección debe cumplir con las siguientes propiedades: “
+\shape italic
+longevidad, fecundidad y fidelidad en la copia
+\shape default
+”
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Explicar a que se refiere con cada una?
+\end_layout
+
+\end_inset
+
+, de manera que propone al gen como 
+\begin_inset Quotes eld
+\end_inset
+
+
+\shape italic
+la unidad fundamental de selección natural y, por lo tanto, como la unidad
+ fundamental del egoísmo
+\shape default
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dawkins1994gen"
+
+\end_inset
+
+ ya que es lo suficientemente pequeño para, potencialmente, cumplir con
+ dichas propiedades.
+ Partiendo de esto, plantea que el altruismo en un gen es una característica
+ negativa que no es favorecida por la selección natural, y un comportamiento
+ altruista entre unidades superiores, como los individuos, sólo es aparente
+ ya que ocurre entre individuos relacionados.
+ Esta teoría es respaldada por las teorías de 
+\shape italic
+Kin Selection 
+\shape default
+e 
+\shape italic
+Inclusive Fitness
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Por el lado de la selección individual, la mayor fuerza está dada por la
  propuesta de Richard Dawkins
 \begin_inset space ~
 \end_inset
@@ -511,7 +625,7 @@ Por el lado de la selección individual, la mayor fuerza está dada por la
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "dawkins2000gen"
+key "dawkins1994gen"
 
 \end_inset
 
@@ -528,6 +642,11 @@ e
 Inclusive Fitness
 \shape default
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1753,7 +1872,8 @@ Sin embargo, hay algunas características que son completamente necesarias
  para la veracidad de los resultados y están ausentes: Los individuos no
  se reproducen, mutan o mueren.
  Bajo estas condiciones es fácil deducir el resultado de las simulaciones,
- pues los animales moderados permanecerán más tiempo en una planta.
+ pues los animales moderados permanecerán más tiempo alimentándose de la
+ misma planta.
  Finalmente, debido a todo esto no se se puede afirmar que el rasgo cooperativo
  se difunda en la población y menos definiendo 
 \shape italic
@@ -3565,10 +3685,27 @@ Conclusiones del modelo
 \end_layout
 
 \begin_layout Itemize
+El modelo no es completamente robusto, dado que al modificar detalles de
+ implementación que aparentan tener poca importancia, los resultados cambian
+ bruscamente.
+ Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
+ en un encuentro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
 El modelo no es completamente robusto, dado que al modificar detalles pequeños
  los resultados cambian bruscamente.
  Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
  en un encuentro.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -4865,10 +5002,28 @@ trait-groups
 \end_layout
 
 \begin_layout Itemize
+Los resultados de ambos trabajos evidencian que en algunos casos las característ
+icas favorecidas por la presión selectiva obedecen a la teoría tradicional
+ de selección individual, pero bajo algunas propiedades ambientales los
+ resultados concuerdan con teorías que plantean la selección a niveles superiore
+s.
+ De manera que la teoría de Dawkins no se puede rechazar completamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
 Los resultados de ambos trabajos evidencian que en algunos casos la presión
  selectiva ocurre sólo a nivel individual, pero bajo algunas características
  ambientales ocurre a niveles superiores.
  De manera que la teoría de Dawkins no se puede rechazar completamente.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4888,6 +5043,25 @@ trait-groups
 Buscar otras características propias del ambiente y no de los individuos,
  que permitan la difusión de genes altruistas en la población, además de
  las poblaciones espacialmente estructuradas.
+\end_layout
+
+\begin_layout Itemize
+Suavizar el parámetro que controla la cantidad de individuos desertores
+ que mueren en un encuentro en el modelo de los trait-groups, de manera
+ que se pueda encontrar hasta que punto el modelo permite la difusión de
+ individuos altruistas en la población.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Por ejemplo, por medio de una probabilidad para la muerte de uno o dos desertore
+s.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -5080,7 +5254,7 @@ Diagrama de clases
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -5156,7 +5330,7 @@ begin{landscape}
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -5232,7 +5406,7 @@ begin{landscape}
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
