@@ -4,10 +4,15 @@
 \begin_header
 \textclass beamer
 \begin_preamble
+%\usetheme{Darmstadt}
 \usetheme{Ilmenau}
 % or ...
 
+%\usecolortheme[RGB={150,0,0}]{default}
 \usecolortheme{beaver}
+
+\usecolortheme{whale}
+\usecolortheme{orchid}
 
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
@@ -25,6 +30,8 @@
 \usepackage{multicol} 
 
 \setbeamertemplate{caption}[numbered]
+
+\setbeamerfont{footnote}{size=\tiny}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -204,7 +211,7 @@ EISC
 \end_layout
 
 \begin_layout Date
-Noviembre 25 de 2013
+Febrero de 2014
 \end_layout
 
 \begin_layout Standard
@@ -359,11 +366,8 @@ LatexCommand tableofcontents
 Introducción
 \end_layout
 
-\begin_layout Subsection*
-\begin_inset space ~
-\end_inset
-
-
+\begin_layout Subsection
+Contexto
 \begin_inset Note Note
 status open
 
@@ -377,7 +381,7 @@ No quiero que aparezca nada en la barrita gris
 \end_layout
 
 \begin_layout BeginFrame
-Contexto
+La evolución
 \end_layout
 
 \begin_layout Standard
@@ -658,7 +662,7 @@ Modelo
 \end_layout
 
 \begin_layout BeginFrame
-Fundamentos
+
 \end_layout
 
 \begin_layout Itemize
@@ -670,20 +674,6 @@ El modelo es basado en dos etapas por las que pasan los individuos en su
 \begin_layout Itemize
 El modelo permite que sean seleccionados los rasgos que aumenten la aptitud
  absoluta del inidividuo, sin importar la aptitud relativa.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-El objetivo principal es forzar el sistema para que la selección individual
- lleve a la selección de grupo.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout BeginFrame
@@ -720,45 +710,16 @@ status open
 
 \begin_layout Plain Layout
 Ilustración del funcionamiento del modelo
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
-\begin_layout BeginFrame
-Selección individual vs Selección de grupo
-\end_layout
-
 \begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename img/EstadoDelArte/ATheoryOfGroupSelection.png
-	scale 40
-
-\end_inset
 
 
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Aptitud del donante (fd) vs aptitud del receptor (fr).
+\backslash
+footnotetext[1]{Tomado de: "A theory of group selection", D.
+ S.
+ Wilson}
 \end_layout
 
 \end_inset
@@ -1014,7 +975,20 @@ Ejecuciones: 10, 100, 1000
 
 \end_deeper
 \begin_layout BeginFrame
-Resultados
+Matando un desertor: Resultados I
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Poner más resultados, con otras variantes
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1093,7 +1067,7 @@ status open
 \begin_layout Plain Layout
 
 \size scriptsize
-10 ejecuciones, 0 % mutación y matando un desertor.
+10 ejecuciones, 0 % mutación.
 \end_layout
 
 \end_inset
@@ -1107,7 +1081,193 @@ status open
 \end_layout
 
 \begin_layout BeginFrame
-Resultados
+Matando un desertor: Resultados II
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10 ejecuciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/100/casosRepeticiones_1000_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1000 ejecuciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+100 generaciones, 0 % mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Matando un desertor: Resultados III
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0 % mutación 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups/100/casosRepeticiones_10_0.01.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1 % mutación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10 ejecuciones, 100 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Matando dos desertores: Resultados I
 \end_layout
 
 \begin_layout Standard
@@ -1200,6 +1360,192 @@ status open
 
 \end_layout
 
+\begin_layout BeginFrame
+Matando dos desertores: Resultados II
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10 ejecuciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_1000_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1000 ejecuciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+100 generaciones, 0 % mutación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Matando dos desertores: Resultados III
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.0.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 60bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0 % mutación 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../graficas/trait-groups_matar2/100/casosRepeticiones_10_0.01.svg
+	lyxscale 10
+	height 45pheight%
+	BoundingBox 0bp 0bp 660bp 555bp
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1 % mutación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10 ejecuciones, 100 generaciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Simulación de Agentes
 \end_layout
@@ -1209,7 +1555,7 @@ Modelo
 \end_layout
 
 \begin_layout BeginFrame
-Fundamentos
+
 \end_layout
 
 \begin_layout Itemize
@@ -2053,7 +2399,7 @@ Pruebas y Resultados
 \end_layout
 
 \begin_layout BeginFrame
-Resultados
+Resultados I
 \end_layout
 
 \begin_layout Standard
@@ -2097,7 +2443,7 @@ assortment
 \end_layout
 
 \begin_layout BeginFrame
-Resultados
+Resultados II
 \end_layout
 
 \begin_layout Standard
@@ -2145,6 +2491,63 @@ Conclusiones
 \end_layout
 
 \begin_layout Subsection
+Trait-groups
+\end_layout
+
+\begin_layout BeginFrame
+Conclusiones I
+\end_layout
+
+\begin_layout Itemize
+El modelo no es completamente robusto, dado que al modificar detalles de
+ implementación que aparentan tener poca importancia, los resultados cambian
+ bruscamente.
+\end_layout
+
+\begin_layout Itemize
+Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
+ los resultados son coherentes con los trabajos en la literatura, donde
+ se evidencia que los grupos pequeños son los que permiten el crecimiento
+ de los individuos altruistas.
+\end_layout
+
+\begin_layout Itemize
+Al variar la mutación los resultados se ven ligeramente afectados con respecto
+ a la cantidad de casos exitosos, lo cual ocurre porque la mutación es más
+ destructiva para la cooperación, dado que, para que se dé, se requieren
+ dos individuos cooperadores.
+\end_layout
+
+\begin_layout Subsection
+Modelo de agentes
+\end_layout
+
+\begin_layout BeginFrame
+Conclusiones II
+\end_layout
+
+\begin_layout Itemize
+El ambiente presentado en el modelo original no favorece la cooperación,
+ por el contrario es altamente destructivo.
+\end_layout
+
+\begin_layout Itemize
+La afirmación del trabajo original, que los genes cooperadores se difunden
+ en la población, es incorrecta.
+ Ya que la población no cambia.
+\end_layout
+
+\begin_layout Itemize
+La similitud hecha con el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ es incorrecta, pues los parches son muy pequeños y al estar tan separados
+ no ocurren migraciones de individuos entre ellos, de manera que es un ejemplo
+ de multiples ambientes insulares.
+\end_layout
+
+\begin_layout Subsection
 \begin_inset space ~
 \end_inset
 
@@ -2152,59 +2555,148 @@ Conclusiones
 \end_layout
 
 \begin_layout BeginFrame
-Conclusiones
+Conclusiones III
 \end_layout
 
-\begin_layout ItemizeIncremental
-El modelo de los 
-\shape italic
-trait-groups
-\shape default
- no es completamente robusto, dado que al modificar detalles pequeños los
- resultados cambian bruscamente.
- Esto se ve reflejado cuando cambia la cantidad de desertores que mueren
- en un encuentro.
-\end_layout
-
-\begin_layout ItemizeIncremental
-Los resultados obtenidos en el modelo de agentes, bajo los cambios que hacen
- al modelo más realista, muestran que este tipo de ambiente no favorece
- la cooperación, por el contrario es altamente destructivo.
- 
-\end_layout
-
-\begin_layout BeginFrame
-Conclusiones
-\end_layout
-
-\begin_layout ItemizeIncremental
+\begin_layout Itemize
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
  espacialmente estructurada.
 \end_layout
 
-\begin_layout ItemizeIncremental
+\begin_layout Itemize
 El modelo de los 
 \shape italic
 trait-groups
 \shape default
  sí favorece la difusión de individuos altruistas en la población.
- Sin embargo, al realizar un modelo que incluya este sistema de una forma
- práctica se debe tener cuidado con la sutil diferencia entre representar
- este tipo de ambientes y varios insulares.
- 
+ Sin embargo, hay que tener cuidado en la representación de la depredación
+ al momento de implementarlo, ya que el modelo depende principalmente de
+ esta característica.
+\end_layout
+
+\begin_layout BeginFrame
+Conclusiones IV
+\end_layout
+
+\begin_layout Itemize
+Al realizar un modelo que represente el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ de una forma práctica se debe tener cuidado con la sutil diferencia entre
+ representar un ambiente que permita la migración de individuos entre grupos,
+ y la representación de varios ambientes insulares.
+\end_layout
+
+\begin_layout Itemize
+Los resultados de ambos trabajos evidencian que en algunos casos las característ
+icas favorecidas por la presión selectiva obedecen a la teoría tradicional
+ de selección individual, pero bajo algunas propiedades ambientales los
+ resultados concuerdan con teorías que plantean la selección a niveles superiore
+s.
+ De manera que la teoría de Dawkins no se puede rechazar completamente.
 \end_layout
 
 \begin_layout Section
 Trabajos futuros
 \end_layout
 
-\begin_layout BeginFrame
-Trabajos futuros
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
-\begin_layout ItemizeIncremental
-.
+\begin_layout BeginFrame
+Trabajos futuros I
+\end_layout
+
+\begin_layout Itemize
+Buscar otros tipos de estructuras de poblaciones, además de la distribución
+ propuesta por los 
+\shape italic
+trait-groups
+\shape default
+, que favorezcan la evolución del altruismo.
+\end_layout
+
+\begin_layout Itemize
+Buscar otras características propias del ambiente y no de los individuos,
+ que permitan la difusión de genes altruistas en la población, además de
+ las poblaciones espacialmente estructuradas.
+\end_layout
+
+\begin_layout BeginFrame
+Trabajos futuros II
+\end_layout
+
+\begin_layout Itemize
+Suavizar el parámetro que controla la cantidad de individuos desertores
+ que mueren en un encuentro en el modelo de los trait-groups, de manera
+ que se pueda encontrar hasta que punto el modelo permite la difusión de
+ individuos altruistas en la población.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Por ejemplo, por medio de una probabilidad para la muerte de uno o dos desertore
+s.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Realizar un 
+\shape italic
+framework
+\shape default
+ que permita:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Llevar el modelo de los 
+\shape italic
+trait-groups
+\shape default
+ a situaciones más prácticas en otros campos, como la economía.
+\end_layout
+
+\begin_layout Itemize
+Comparar los resultados de varias implementaciones del modelo.
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Presentacion/gracias.gif
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
