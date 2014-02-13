@@ -451,6 +451,32 @@ En este trabajo se busca mostrar por medio de un modelo que las características
 
 \end_layout
 
+\begin_layout BeginFrame
+La evolución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Presentacion/evolucion.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Objetivos
 \end_layout
@@ -462,8 +488,7 @@ Objetivo General
 \begin_layout Standard
 \align block
 Verificar o rechazar la hipótesis de Richard Dawkins en la que afirma que
- la presión selectiva no puede darse a nivel de grupo.
- 
+ la presión selectiva no puede darse a nivel de grupo
 \end_layout
 
 \begin_layout BeginFrame
@@ -472,21 +497,21 @@ Objetivos Específicos
 
 \begin_layout ItemizeIncremental
 Recopilar información sobre las características propias de un ambiente que
- favorezca la cooperación de individuos.
+ favorezca la cooperación de individuos
 \end_layout
 
 \begin_layout ItemizeIncremental
 Plantear un modelo que incluya estas características y permita el análisis
- de las mismas.
+ de las mismas
 \end_layout
 
 \begin_layout ItemizeIncremental
-Implementar un algoritmo evolutivo acorde al modelo realizado.
+Implementar un algoritmo evolutivo acorde al modelo realizado
 \end_layout
 
 \begin_layout ItemizeIncremental
 Analizar resultados del comportamiento del algoritmo ante diferentes entradas
- y diferentes configuraciones de las características.
+ y diferentes configuraciones de las características
 \end_layout
 
 \begin_layout Subsection*
@@ -562,7 +587,7 @@ A theory of group selection
 \begin_inset Quotes erd
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Itemize
@@ -578,7 +603,7 @@ Individual selection for cooperative group formation
 \begin_inset Quotes erd
 \end_inset
 
-.
+
 \end_layout
 
 \end_deeper
@@ -635,8 +660,6 @@ J.
 \shape italic
 “A mechanism for the evolution of altruism among non-kin: Positive assortment
  through environmental feedback”
-\shape default
-.
 \end_layout
 
 \begin_layout Itemize
@@ -649,7 +672,7 @@ Growing artificial societies
 \begin_inset Quotes erd
 \end_inset
 
-.
+
 \end_layout
 
 \end_deeper
@@ -662,18 +685,18 @@ Modelo
 \end_layout
 
 \begin_layout BeginFrame
-
+El modelo
 \end_layout
 
 \begin_layout Itemize
 El modelo es basado en dos etapas por las que pasan los individuos en su
  ciclo de vida.
- Estas etapas son claramente distinguibles en algunos insectos.
+ Estas etapas son claramente distinguibles en algunos insectos
 \end_layout
 
 \begin_layout Itemize
 El modelo permite que sean seleccionados los rasgos que aumenten la aptitud
- absoluta del inidividuo, sin importar la aptitud relativa.
+ absoluta del inidividuo, sin importar la aptitud relativa
 \end_layout
 
 \begin_layout BeginFrame
@@ -785,8 +808,7 @@ Cromosoma:
 \begin_deeper
 \begin_layout Standard
 Sólo un gen, un número aleatorio entre 0 y 1 que determina si el individuo
- es altruista (< 0,5) o egoísta (≥ 0,5).
- 
+ es altruista (< 0,5) o egoísta (≥ 0,5)
 \end_layout
 
 \end_deeper
@@ -927,7 +949,7 @@ Traiciona
 
 \end_deeper
 \begin_layout Itemize
-Selección por torneo.
+Selección por torneo
 \end_layout
 
 \begin_layout Subsection
@@ -1555,7 +1577,7 @@ Modelo
 \end_layout
 
 \begin_layout BeginFrame
-
+El modelo
 \end_layout
 
 \begin_layout Itemize
@@ -1574,7 +1596,7 @@ inclusive fitness
 
 \begin_layout Itemize
 Las acciones de los individuos disminuyen la calidad del ambiente en el
- que se encuentran.
+ que se encuentran
 \end_layout
 
 \begin_layout Itemize
@@ -1582,7 +1604,7 @@ Las acciones de los individuos disminuyen la calidad del ambiente en el
 \shape italic
 Positive Assortment
 \shape default
-: Agrupación espacial de individuos similares.
+: Agrupación espacial de individuos similares
 \end_layout
 
 \begin_layout BeginFrame
@@ -1666,15 +1688,15 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-Costo metabólico por unidad de tiempo.
+Costo metabólico por unidad de tiempo
 \end_layout
 
 \begin_layout Itemize
-Desplazamiento entre las 8 celdas adyacentes.
+Desplazamiento entre las 8 celdas adyacentes
 \end_layout
 
 \begin_layout Itemize
-Porcentaje de alimentación 50% o 99%.
+Porcentaje de alimentación 50% o 99%
 \end_layout
 
 \end_deeper
@@ -2111,7 +2133,7 @@ Assortment
  (Segmentación):
 \series default
  Desviación de la similitud genética entre parches observada con respecto
- la esperada bajo aleatoriedad.
+ la esperada bajo aleatoriedad
 \end_layout
 
 \begin_layout Block
@@ -2192,8 +2214,6 @@ r_{a}=r-r_{s}=\beta(G_{W,}G_{A})-\frac{g-1}{N-1}
 : similitud genética debida al 
 \shape italic
 assortment
-\shape default
-.
 \end_layout
 
 \begin_layout Column
@@ -2242,8 +2262,7 @@ assortment
 \begin_inset Formula $N$
 \end_inset
 
-: tamaño total de la población.
- 
+: tamaño total de la población
 \end_layout
 
 \end_deeper
@@ -2252,19 +2271,19 @@ Críticas
 \end_layout
 
 \begin_layout Itemize
-Los agentes animales no mueren, se reproducen ni mutan.
+Los agentes animales no mueren, se reproducen ni mutan
 \end_layout
 
 \begin_layout Itemize
 Los agentes animales no son afectados de ninguna forma por no alimentarse,
  por lo tanto el costo metabólico por unidad de tiempo no tiene ningún funcionam
-iento.
+iento
 \end_layout
 
 \begin_layout Itemize
 Entre las conclusiones del modelo se afirma que los genes cooperadores se
  difunden en la población.
- Esto es incorrecto, ya que la población no varía y por ende no evoluciona.
+ Esto es incorrecto, ya que la población no varía y por ende no evoluciona
 \end_layout
 
 \begin_layout Itemize
@@ -2275,8 +2294,7 @@ trait-groups
 \shape default
 .
  Pero es incorrecta, pues los parches son muy pequeños y están muy separados,
- de manera que no ocurren migraciones de individuos entre ellos.
- 
+ de manera que no ocurren migraciones de individuos entre ellos
 \end_layout
 
 \begin_layout Subsection
@@ -2501,21 +2519,21 @@ Conclusiones I
 \begin_layout Itemize
 El modelo no es completamente robusto, dado que al modificar detalles de
  implementación que aparentan tener poca importancia, los resultados cambian
- bruscamente.
+ bruscamente
 \end_layout
 
 \begin_layout Itemize
 Bajo la condición de matar solo un desertor al encuentro de dos de ellos,
  los resultados son coherentes con los trabajos en la literatura, donde
  se evidencia que los grupos pequeños son los que permiten el crecimiento
- de los individuos altruistas.
+ de los individuos altruistas
 \end_layout
 
 \begin_layout Itemize
 Al variar la mutación los resultados se ven ligeramente afectados con respecto
  a la cantidad de casos exitosos, lo cual ocurre porque la mutación es más
  destructiva para la cooperación, dado que, para que se dé, se requieren
- dos individuos cooperadores.
+ dos individuos cooperadores
 \end_layout
 
 \begin_layout Subsection
@@ -2528,13 +2546,13 @@ Conclusiones II
 
 \begin_layout Itemize
 El ambiente presentado en el modelo original no favorece la cooperación,
- por el contrario es altamente destructivo.
+ por el contrario es altamente destructivo
 \end_layout
 
 \begin_layout Itemize
 La afirmación del trabajo original, que los genes cooperadores se difunden
  en la población, es incorrecta.
- Ya que la población no cambia.
+ Ya que la población no cambia
 \end_layout
 
 \begin_layout Itemize
@@ -2544,7 +2562,7 @@ trait-groups
 \shape default
  es incorrecta, pues los parches son muy pequeños y al estar tan separados
  no ocurren migraciones de individuos entre ellos, de manera que es un ejemplo
- de multiples ambientes insulares.
+ de multiples ambientes insulares
 \end_layout
 
 \begin_layout Subsection
@@ -2561,7 +2579,7 @@ Conclusiones III
 \begin_layout Itemize
 Un ambiente que favorece la evolución de los individuos altruistas, y por
  lo tanto de los grupos, tiene como característica principal una población
- espacialmente estructurada.
+ espacialmente estructurada
 \end_layout
 
 \begin_layout Itemize
@@ -2572,7 +2590,7 @@ trait-groups
  sí favorece la difusión de individuos altruistas en la población.
  Sin embargo, hay que tener cuidado en la representación de la depredación
  al momento de implementarlo, ya que el modelo depende principalmente de
- esta característica.
+ esta característica
 \end_layout
 
 \begin_layout BeginFrame
@@ -2586,7 +2604,7 @@ trait-groups
 \shape default
  de una forma práctica se debe tener cuidado con la sutil diferencia entre
  representar un ambiente que permita la migración de individuos entre grupos,
- y la representación de varios ambientes insulares.
+ y la representación de varios ambientes insulares
 \end_layout
 
 \begin_layout Itemize
@@ -2595,7 +2613,7 @@ icas favorecidas por la presión selectiva obedecen a la teoría tradicional
  de selección individual, pero bajo algunas propiedades ambientales los
  resultados concuerdan con teorías que plantean la selección a niveles superiore
 s.
- De manera que la teoría de Dawkins no se puede rechazar completamente.
+ De manera que la teoría de Dawkins no se puede rechazar completamente
 \end_layout
 
 \begin_layout Section
@@ -2619,13 +2637,13 @@ Buscar otros tipos de estructuras de poblaciones, además de la distribución
 \shape italic
 trait-groups
 \shape default
-, que favorezcan la evolución del altruismo.
+, que favorezcan la evolución del altruismo
 \end_layout
 
 \begin_layout Itemize
 Buscar otras características propias del ambiente y no de los individuos,
  que permitan la difusión de genes altruistas en la población, además de
- las poblaciones espacialmente estructuradas.
+ las poblaciones espacialmente estructuradas
 \end_layout
 
 \begin_layout BeginFrame
@@ -2636,8 +2654,7 @@ Trabajos futuros II
 Suavizar el parámetro que controla la cantidad de individuos desertores
  que mueren en un encuentro en el modelo de los trait-groups, de manera
  que se pueda encontrar hasta que punto el modelo permite la difusión de
- individuos altruistas en la población.
- 
+ individuos altruistas en la población
 \begin_inset Note Note
 status open
 
@@ -2665,14 +2682,21 @@ Llevar el modelo de los
 \shape italic
 trait-groups
 \shape default
- a situaciones más prácticas en otros campos, como la economía.
+ a situaciones más prácticas en otros campos, como la economía
 \end_layout
 
 \begin_layout Itemize
-Comparar los resultados de varias implementaciones del modelo.
+Comparar los resultados de varias implementaciones del modelo
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
 
 \end_layout
