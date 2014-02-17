@@ -4,34 +4,32 @@
 \begin_header
 \textclass beamer
 \begin_preamble
-%\usetheme{Darmstadt}
-\usetheme{Ilmenau}
-% or ...
+\definecolor{rojo}{rgb}{0.78125,0,0}
+\definecolor{gris}{rgb}{0.25,0.25,0.25}
+\usetheme[style=simple,basecolour=gris,topbarcolour=rojo,not@ku={Universidad del Valle},totalframes=hide]{Frederiksberg}
+%\usetheme{Ilmenau}
+%\usetheme{CambridgeUS}
+% or ... 
 
-%\usecolortheme[RGB={150,0,0}]{default}
-\usecolortheme{beaver}
-
-\usecolortheme{whale}
-\usecolortheme{orchid}
+%Cosas para el tema Freferiksberg
+\logo{\color{red}\large {\includegraphics[scale=0.2]{img/Presentacion/logo-uv}}}
 
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
 
 %Viñetas rojas
-\setbeamercolor*{item}{fg=red}
+\setbeamercolor*{item}{fg=rojo}
 
 %Para poder justificar
 \usepackage{ragged2e}
 
 %Color del bloque
-\setbeamercolor{block title}{fg=white,bg=red!50!black}
+%\setbeamercolor{block title}{fg=white,bg=red!50!black}
 
 %Varias columnas
 \usepackage{multicol} 
 
 \setbeamertemplate{caption}[numbered]
-
-\setbeamerfont{footnote}{size=\tiny}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -128,6 +126,53 @@ justifying
 olditem}
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Poner en negrilla los titulos de los frames (frametitle) y del titulo (title)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+setbeamerfont{frametitle}{series=
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamerfont{title}{series=
+\backslash
+bfseries}
+\end_layout
+
+\begin_layout Plain Layout
+
+%Cambiar el color de los titulos de los frames (frametitle) y del titulo
+ (title)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor{frametitle}{fg=rojo}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor{title}{fg=rojo}
+\end_layout
+
 \end_inset
 
 
@@ -149,12 +194,16 @@ Importar el modulo beamer-incremented-lists.module en la carpeta .lyx/layouts/
 \end_layout
 
 \begin_layout Title
-EMERGENCIA EVOLUTIVA DE GRUPOS COOPERATIVOS GUIADOS POR EL ENTORNO
+EMERGENCIA EVOLUTIVA DE
+\begin_inset Newline newline
+\end_inset
+
+GRUPOS COOPERATIVOS GUIADOS POR EL ENTORNO
 \begin_inset Argument
 status open
 
 \begin_layout Plain Layout
-Emergencia Evolutiva de Grupos Cooperativos Guiados por el Entorno - EVALAB
+Grupos Cooperativos
 \end_layout
 
 \end_inset
@@ -175,11 +224,7 @@ Valencia
 \begin_inset Newline newline
 \end_inset
 
-Director:
-\begin_inset Newline newline
-\end_inset
-
-Ángel García Baños, Ph.D.
+Director: Ángel García Baños, Ph.D.
 \begin_inset Argument
 status open
 
@@ -202,7 +247,7 @@ Laboratorio de Computación Evolutiva y Vida Artificial
 status open
 
 \begin_layout Plain Layout
-EISC
+EVALAB
 \end_layout
 
 \end_inset
@@ -211,7 +256,7 @@ EISC
 \end_layout
 
 \begin_layout Date
-Febrero de 2014
+Febrero 2014
 \end_layout
 
 \begin_layout Standard
@@ -535,6 +580,22 @@ No quiero que aparezca nada en la barrita gris
 Trabajo Realizado
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor*{item}{fg=black}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Block
 \begin_inset ERT
 status open
@@ -740,7 +801,7 @@ status open
 
 
 \backslash
-footnotetext[1]{Tomado de: "A theory of group selection", D.
+footnotetext[1]{Tomado de: A theory of group selection, D.
  S.
  Wilson}
 \end_layout
@@ -1611,6 +1672,22 @@ Positive Assortment
 Agentes
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor*{item}{fg=black}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Block
 \begin_inset ERT
 status open
@@ -2113,6 +2190,27 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotetext[2]{Tomado de: A mechanism for the evolution of altruism among
+ non-kin: Positive assortment through environmental feedback, J.
+ W.
+ Pepper and B.
+ B.
+ Smuts}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 \begin_inset space ~
 \end_inset
@@ -2286,7 +2384,11 @@ Entre las conclusiones del modelo se afirma que los genes cooperadores se
  Esto es incorrecto, ya que la población no varía y por ende no evoluciona
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Para el análisis del modelo se hace una similitud de los parches de plantas
  como 
 \shape italic
@@ -2297,12 +2399,33 @@ trait-groups
  de manera que no ocurren migraciones de individuos entre ellos
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Implementación
 \end_layout
 
 \begin_layout BeginFrame
 Modificaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamercolor*{item}{fg=black}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Block
