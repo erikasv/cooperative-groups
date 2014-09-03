@@ -191,6 +191,21 @@ Importar el modulo beamer-incremented-lists.module en la carpeta .lyx/layouts/
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Para instalar un tema de beamer ubicarlo en /usr/share/texmf/tex/latex/beamer/
+\end_layout
+
+\begin_layout Plain Layout
+El tema Frederiksberg se puede descargar de: Chttp://www.matdat.life.ku.dk/LaTeX/Fre
+deriksberg/download/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Title
